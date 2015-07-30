@@ -43,7 +43,7 @@ public class TwoSortedArray {
 	}
 	
 	
-	//approach 2- 
+	//approach 2- http://stackoverflow.com/a/8935157
 //	public static int kthSmallest(int[] A, int[] B, int k){
 //		if (A == null || B == null || k > A.length + B.length)
 //			throw new IllegalArgumentException();
