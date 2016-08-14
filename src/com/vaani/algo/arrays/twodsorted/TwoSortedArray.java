@@ -1,4 +1,4 @@
-package com.vaani.algo.array.twosorted;
+package com.vaani.algo.arrays.twodsorted;
 
 public class TwoSortedArray {
 	//////////////////////     Kth Minimum element    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

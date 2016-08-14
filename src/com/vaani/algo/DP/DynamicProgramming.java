@@ -1,4 +1,4 @@
-package com.vaani.algo;
+package com.vaani.algo.DP;
 
 public class DynamicProgramming {
 	public static String Lcs(String x, String y){
