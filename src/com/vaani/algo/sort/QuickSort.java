@@ -1,4 +1,4 @@
-package com.vaani.sort;
+package com.vaani.algo.sort;
 
 public class QuickSort {
 
