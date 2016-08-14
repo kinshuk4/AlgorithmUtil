@@ -1,6 +1,6 @@
 package com.vaani.sort;
 
-public class SortingAlgos {
+public class QuickSort {
 
 	public static void quickSort(int values[]){
 		if (values ==null || values.length==0){

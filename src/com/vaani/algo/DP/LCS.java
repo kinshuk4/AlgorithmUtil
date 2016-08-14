@@ -1,6 +1,6 @@
 package com.vaani.algo.DP;
 
-public class DynamicProgramming {
+public class LCS {
 	public static String Lcs(String x, String y){
 		int M = x.length();
 		int N = y.length();
