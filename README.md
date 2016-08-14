@@ -57,7 +57,7 @@ Problems
 
 ### Sorting Algorithms
 
-* [Bubble sorting](src/com/vaani/algo/sort/BubbleSort.java)
+* [Bubble sorting](src%2Fcom%2Fvaani%2Falgo%2Fsort%2FBubbleSort.java)
 * [Insert sorting](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fsorting%2FInsertSort.java)
 * [Quick sorting](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fsorting%2FQuickSort.java)
 * [SelectionSort sorting](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fsorting%2FSelectionSort.java)
