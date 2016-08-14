@@ -1,4 +1,4 @@
-package com.vaani.algo.perm;
+package com.vaani.algo.strings.perm;
 
 public class Permutations {
 
