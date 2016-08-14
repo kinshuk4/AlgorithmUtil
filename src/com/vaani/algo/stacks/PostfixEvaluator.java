@@ -1,4 +1,4 @@
-package com.vaani.algo.stack;
+package com.vaani.algo.stacks;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

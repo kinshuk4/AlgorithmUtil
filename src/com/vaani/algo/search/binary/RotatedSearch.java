@@ -1,6 +1,6 @@
 package com.vaani.algo.search.binary;
 
-public class BinarySearchUtil {
+public class RotatedSearch {
 	public static int rotatedSearch(int[] values, int start, int end,
 			int x){
 		if(values[start] == x){
