@@ -28,8 +28,8 @@ public class AddTwoNumber {
         ListNode head = null;
         while(l1 != null || l2 != null || carry != 0) {
             int val = carry;
-            val += l1 == null? 0 : l1.value;
-            val += l2 == null? 0 : l2.value;
+            val += l1 == null? 0 : l1.val;
+            val += l2 == null? 0 : l2.val;
             if (val > 9) {
                 val -= 10;
                 carry = 1;

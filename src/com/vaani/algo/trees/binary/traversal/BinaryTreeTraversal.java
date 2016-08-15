@@ -1,4 +1,4 @@
-package com.vaani.algo.trees.binary;
+package com.vaani.algo.trees.binary.traversal;
 
 import com.vaani.algo.trees.binary.ds.TreeNode;
 
@@ -27,7 +27,7 @@ public class BinaryTreeTraversal {
         if (root == null) {
             return;
         }
-        System.out.print(root.data + "\t");
+        System.out.print(root.val + "\t");
         if (root.left != null) {
             preOrder(root.left);
         }
@@ -43,7 +43,7 @@ public class BinaryTreeTraversal {
         if (root.left != null) {
             inOrder(root.left);
         }
-        System.out.print(root.data + "\t");
+        System.out.print(root.val + "\t");
         if (root.right != null) {
             inOrder(root.right);
         }
@@ -59,6 +59,6 @@ public class BinaryTreeTraversal {
         if (root.right != null) {
             postOrder(root.right);
         }
-        System.out.print(root.data + "\t");
+        System.out.print(root.val + "\t");
 }
 }

@@ -20,13 +20,13 @@ public class PathsBySum {
         root.right = r1;
         l1.left = l2;
         l1.right = r2;
-        int num = 22;//给定的整数
+        int num = 22;
         dfs(root, new ArrayList<TreeNode>());
-        //这样就获取到了所有路径的集合
+
         for (List<TreeNode> list : pathsList) {
             int temp = 0;
             for (TreeNode t : list) {
-                temp += t.data;
+                temp += t.val;
             }
             if (temp == num) {
                 System.out.println(list);
@@ -38,15 +38,15 @@ public class PathsBySum {
         if (null == root) {
             return;
         }
-        //设置访问标记
+
         root.isVisited = true;
-        //入栈
+
         stack.push(root);
-        //加入链表
+
         path.add(root);
-        //开始弹栈
+
         while (!stack.isEmpty()) {
-            //在弹栈的同时也要将该结点从路径中移除，但是在移除前要判断是否已经是一条完整的路径，如果是一条完整的路径，则存储之
+
             TreeNode pop = stack.pop();
             if (pop.left != null && !pop.left.isVisited) {
                 dfs(pop.left, path);
@@ -55,10 +55,10 @@ public class PathsBySum {
                 dfs(pop.right, path);
             }
             if (pop.left == null && pop.right == null) {
-                //说明到了叶子结点了
+
                 pathsList.add(new ArrayList<>(path));
             }
-            path.remove(pop);//从一条路径中移除
+            path.remove(pop);
         }
 }
 }

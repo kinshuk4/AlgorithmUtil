@@ -1,4 +1,4 @@
-package com.vaani.algo.trees.binary;
+package com.vaani.algo.trees.binary.traversal;
 
 import java.util.Stack;
 
@@ -24,7 +24,7 @@ public class ZigZagLevelOrder {
 			TreeNode node = cur_level.firstElement(); //top();
 			cur_level.pop();
 			if (node!=null) {
-				out.println(node.data+" ");
+				out.println(node.val+" ");
 				//cout << node.data << " ";
 				if (left2right) {
 					//if left to right, start pushing from left

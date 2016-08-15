@@ -1,4 +1,4 @@
-package com.vaani.algo.trees.binary;
+package com.vaani.algo.trees.binary.traversal;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -6,7 +6,7 @@ import java.util.Queue;
 import com.vaani.algo.trees.binary.ds.TreeNode;
 
 
-public class LevelTraverseBinaryTree {
+public class LevelOrderTraversal1 {
     public static void main(String[] args) {
         Queue queue = new ArrayDeque<>();
         TreeNode root = new TreeNode(1);
@@ -32,7 +32,7 @@ public class LevelTraverseBinaryTree {
         queue.add(root);
         while (!queue.isEmpty()) {
             TreeNode remove = queue.remove();
-            System.out.print(remove.data + "\t");
+            System.out.print(remove.val + "\t");
             if (remove.left != null) {
                 queue.add(remove.left);
             }
@@ -42,4 +42,6 @@ public class LevelTraverseBinaryTree {
 
         }
     }
+    
+    
 }

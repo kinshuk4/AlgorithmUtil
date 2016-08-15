@@ -3,16 +3,16 @@ package com.vaani.algo.trees.binary.ds;
 public class TreeNode {
     public TreeNode left;
     public TreeNode right;
-    public int data;
+    public int val;
     public boolean isVisited;
     
     public TreeNode(int data) {
-        this.data = data;
+        this.val = data;
     }
 
     @Override
     public String toString() {
-        return String.valueOf(this.data);
+        return String.valueOf(this.val);
 }
     
     public String detailedToString(){
@@ -27,6 +27,6 @@ public class TreeNode {
             return "";
         builder.append(detailedToStringHelper(root.left));
         builder.append(detailedToStringHelper(root.right));
-        return builder.append(String.valueOf(root.data)).toString();
+        return builder.append(String.valueOf(root.val)).toString();
     }
 }
