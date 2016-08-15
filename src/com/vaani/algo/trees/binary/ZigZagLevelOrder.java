@@ -1,4 +1,4 @@
-package com.vaani.algo.trees;
+package com.vaani.algo.trees.binary;
 
 import java.util.Stack;
 

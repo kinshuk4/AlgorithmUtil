@@ -1,4 +1,4 @@
-package com.vaani.algo.misc;
+package com.vaani.algo.number;
 
 import org.junit.Assert;
 import org.junit.Test;

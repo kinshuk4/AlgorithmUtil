@@ -1,4 +1,4 @@
-package com.vaani.algo.trees;
+package com.vaani.algo.trees.binary;
 import java.util.Arrays;
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Ftrees%2FVerifySequenceOfBST.java
 /*

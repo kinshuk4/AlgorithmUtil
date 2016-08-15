@@ -1,4 +1,4 @@
-package com.vaani.algo.subarray;
+package com.vaani.algo.DP;
 
 public class MaxProductSubArray {
 
