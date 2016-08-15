@@ -3,7 +3,7 @@ package com.vaani.algo.trees.binary;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-import com.vaani.algo.ds.utils.TreeNode;
+import com.vaani.algo.trees.binary.ds.TreeNode;
 
 
 public class LevelTraverseBinaryTree {

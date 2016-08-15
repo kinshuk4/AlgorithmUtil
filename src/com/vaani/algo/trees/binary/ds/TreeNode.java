@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.utils;
+package com.vaani.algo.trees.binary.ds;
 
 public class TreeNode {
     public TreeNode left;
