@@ -438,3 +438,19 @@ Took help from :
 - https://github.com/xiaoningning/algorithm
 - https://github.com/yxjiang/algorithms
 - https://github.com/zdlgrj/Algorithm/
+
+Also, I have to improve from:
+- https://github.com/zhou-dong/algorithm
+- https://github.com/soulmachine/algorithm-essentials/tree/master/java
+- https://github.com/rayjun/awesome-algorithm/tree/master/ranking
+- https://github.com/phishman3579/java-algorithms-implementation/tree/master/src/com/jwetherell/algorithms
+- https://github.com/KeepMoving/AlgorithmsLibrary/tree/master/src
+- https://github.com/zhichaoh/Coursera-Algorithms/tree/master/src
+- https://github.com/AlgorithmsNYC/AlgorithmsNYC
+- https://github.com/aistrate/AlgorithmsSedgewick
+- https://github.com/pedrovgs/Algorithms
+- https://github.com/allenlipeng47/algorithm/tree/master/src/test/java/com/pli/project/algorithm
+- https://github.com/heyalexchoi/Algorithms
+- https://github.com/diwu001/Algorithm
+- https://github.com/kamyu104/LeetCode#bit-manipulation
+- https://github.com/xiaoningning/algorithm-exercise
