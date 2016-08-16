@@ -1,10 +1,6 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-
-import com.vaani.algo.trees.binary.ds.TreeNode;
-
-import java.util.ArrayList;
+import com.vaani.algo.tree.binary.ds.TreeNode;
 /*
 Given a binary tree, find its minimum depth.
 

@@ -1,11 +1,9 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.Stack;
 
-import com.vaani.algo.trees.binary.ds.TreeNode;
+import com.vaani.algo.tree.binary.ds.TreeNode;
 
-import java.util.ArrayList;
 /*
 Given a binary tree, flatten it to a linked list in-place.
 

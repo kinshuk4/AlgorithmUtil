@@ -2,148 +2,146 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3e8b84-67ed-4d2c-abd2-d5ffb4d40152" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/DP/Coin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/DP/LongestCommonSubsequence.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/DP/MinCostPath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arithmetic/AddBinary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arithmetic/DivideTwoIntegers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arithmetic/MultiplyStrings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindKthSmallest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindMinimumInRotatedSortedArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindMinimumInRotatedSortedArray2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindPeakElement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FirstMissingPositive.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/JumpGame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/JumpGame2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/LongestConsecutiveSequence.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MedianTwoSortedArrays.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MergeSortedArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MissingRanges.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/NearlySortedArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/PlusOne.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/RemoveDuplicates.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/RemoveDuplicates2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/RemoveElement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchForRange.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchInsertPosition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchRotatedSortedArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchRotatedSortedArray2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SetColors.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SingleNumber.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SingleNumber2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/ThreeSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/TwoSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/TwoSum3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/container/ContainerWithMostWater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/container/LargestRectangleHistogram.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/container/TrappingRainWater.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/maxDist.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/sorted/find2DArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap8recursiondp/ClimbStairs2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/DirectedGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/Interval.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/ListNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/Point.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/RandomListNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/TreeLinkNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/TreeNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/TreeNodeWithParent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/Trie.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/TrieNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/UndirectedGraphNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/core/Vertex.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/graph/IsBipartiteGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/CheckSubsetOfAnotherArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindAllPossibleInterpretation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindCharacterOrderFromAlienDict.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindDuplicates.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindNodeInOtherTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindPair.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindRotationLength.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindSubarrayWithGivenSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindTrailingZerosInFactorial.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FizzBuzz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/HammingDistance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/JumpIterator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/JumpRiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/MergeKSortedArrays.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/MutateArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/NoAdjacentMaxSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/NthElementInorderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PeekIterator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PlaceZero.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PossibleCombination.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PossiblePassword.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PrintAllPaths.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/RePack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/Read4096.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ReadLine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ReverseDoublyLinkedList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/RotateIterator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/SchedulingProblems.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/SortArrayBasedOnAnotherArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/SquareRoot.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ThreeSum2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/TreeIsomorphism.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/URLShortener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/recursion/CaseCombination.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stacks/InfixCalculator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/strings/RegularExpressionMatching2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trees/BinaryTreeVerticalSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/BinarySerialization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor1.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor3.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/FindRangeInBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trie/EditDistanceTrie.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trie/EditDistanceTrie2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/trie/LongestPrefixMatching.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question4.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question5.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question6.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question7.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter1/Question8.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap1arrstring/Question8.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question4.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question5.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question6.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter2/Question7.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap2/Question7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question4.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question5.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question6.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter3/Question7.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap3/Question7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question4.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question5.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question6.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question7.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question8.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question8.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter4/Question9.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap4treegraph/Question9.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter5/Question1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap5/Question1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter5/Question2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap5/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter5/Question3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap5/Question3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter5/Question5.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap5/Question5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter5/Question6.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap5/Question6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter5/Question7.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap5/Question7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question1.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question2.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question3.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question4.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question4.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question5.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question5.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question6.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question6.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chapter7/Question7.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/cc150/chap7/Question7.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/graphs/Dijkstra.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/graph/Dijkstra.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/ClimbingStairs.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/ClimbingStairs.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/Coin.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/Coin.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/ContainerWithMostWater.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/ContainerWithMostWater.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/DecodeWays.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/DecodeWays.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/FindLargestSubMatrixWith1s.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/FindLargestSubMatrixWith1s.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/FindScores.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/FindScores.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/LCS.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/LCS.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/LIS.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/LIS.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/LongestCommonSubsequence.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/LongestCommonSubsequence.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/LongestDecreasingSubSequence.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/LongestDecreasingSubSequence.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/MaxProductSubArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/MaxProductSubArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/MaximalOverlap.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/MaximalOverlap.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/MaximumProduct.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/MaximumProduct.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/MaximumSubarray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/MaximumSubarray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/MaximumSubarraySum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/MaximumSubarraySum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/MinCostPath.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/MinCostPath.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/NumOfIncreasingSubsequences.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/NumOfIncreasingSubsequences.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/DP/SetsIntersection.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/dp/SetsIntersection.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/ArrayElementMultiplication.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/ArrayElementMultiplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/BestTimeToBuyAndSellStock.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/BestTimeToBuyAndSellStock.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/BestTimeToBuyAndSellStock2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/BestTimeToBuyAndSellStock2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/BestTimeToBuyAndSellStock3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/BestTimeToBuyAndSellStock3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/Candy.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/Candy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/CircularArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/CircularArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/CombinationSum1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/CombinationSum1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/CombinationSum2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/CombinationSum2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindKth.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FindKth.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindKthSmallest.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FindKthSmallest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindMinimumInRotatedSortedArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FindMinimumInRotatedSortedArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindMinimumInRotatedSortedArray2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FindMinimumInRotatedSortedArray2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FindPeakElement.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FindPeakElement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FirstMissingPositive.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FirstMissingPositive.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/FourSum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/FourSum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/JumpGame.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/JumpGame.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/JumpGame2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/JumpGame2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/LongestConsecutiveSequence.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/LongestConsecutiveSequence.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MajorityNumber.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MedianTwoSortedArrays.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MedianTwoSortedArrays.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MergeSortedArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MergeSortedArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MissingRanges.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MissingRanges.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/MostRepeatedNumber.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MostRepeatedNumber.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/NearlySortedArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/NearlySortedArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/PlusOne.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/PlusOne.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/RemoveDuplicates.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/RemoveDuplicates.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/RemoveDuplicates2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/RemoveDuplicates2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/RemoveElement.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/RemoveElement.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchForRange.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SearchForRange.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchInsertPosition.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SearchInsertPosition.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchRotatedSortedArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SearchRotatedSortedArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SearchRotatedSortedArray2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SearchRotatedSortedArray2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SetColors.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SetColors.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SingleNumber.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumber.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SingleNumber2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumber2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/SingleNumberOthersRepeat.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumberOthersRepeat.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/ThreeSum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/ThreeSum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/ThreeSumClosest.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/ThreeSumClosest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/ThreeSumToZero.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/ThreeSumToZero.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/TwoSum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/TwoSum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/TwoSum3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/TwoSum3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/container/ContainerWithMostWater.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/container/ContainerWithMostWater.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/container/LargestRectangleHistogram.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/container/LargestRectangleHistogram.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/container/TrappingRainWater.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/container/TrappingRainWater.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/maxDist.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/maxDist.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/sorted/twoarrays/MedianOfSortedArrays.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/sorted/twoarrays/MedianOfSortedArrays.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/ClockwiseSpiralMatrixPrint.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/ClockwiseSpiralMatrixPrint.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/LargestSquareInMatrix.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/LargestSquareInMatrix.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/MatrixMultiplication.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/MatrixMultiplication.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/sorted/FindKthSmallestInSortedMatrix.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/FindKthSmallestInSortedMatrix.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/sorted/TwoSortedArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/TwoSortedArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/sorted/find2DArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/find2DArray.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/BracketChecker.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/BracketChecker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/CheckStackSequence.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/CheckStackSequence.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/ExpressionCalculate.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/ExpressionCalculate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/InfixCalculator.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/InfixCalculator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/InfixToPostfix.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/InfixToPostfix.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/MinStack.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/MinStack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/PostfixEvaluator.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/PostfixEvaluator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/QueueFromStack.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/QueueFromStack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/SortAStack.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/SortAStack.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/stacks/StackSort.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/stack/StackSort.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/GetMostRepeatedCharacters.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/GetMostRepeatedCharacters.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/GroupOfAnagramFromList.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/GroupOfAnagramFromList.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/IntToString.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/IntToString.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/JaccardSimilarityCoefficient.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/JaccardSimilarityCoefficient.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/LevenshteinDistance.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/LevenshteinDistance.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/RegularExpressionMatching2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/RegularExpressionMatching2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/ReverseString.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/ReverseString.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/Strcmp.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/Strcmp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/perm/Combination.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/perm/Combination.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/strings/perm/Permutations.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/perm/Permutations.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/BinaryTreeVerticalSum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/BinaryTreeVerticalSum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/BinarySerialization.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/BinarySerialization.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/CheckBinaryTreeBalanced.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/CheckBinaryTreeBalanced.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/ConvertSortedArrayToBST.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/ConvertSortedArrayToBST.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/ConvertSortedListToBst.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/ConvertSortedListToBst.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/GetBinaryTreePaths.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/GetBinaryTreePaths.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/LowestCommonAncestor1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor2.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/LowestCommonAncestor2.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor3.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/LowestCommonAncestor3.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/MaximumDepthOfBinaryTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/MaximumDepthOfBinaryTree.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/PathsBySum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/PathsBySum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/SameTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/SameTree.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/SymmetricTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/SymmetricTree.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/VerifySequenceOfBST.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/VerifySequenceOfBST.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/ds/TreeNode.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/ds/TreeNode.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/BinaryTreeCombinedIterator.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/BinaryTreeCombinedIterator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/BinaryTreeInorderIterator.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/BinaryTreeInorderIterator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/BinaryTreePostorderIterator.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/BinaryTreePostorderIterator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/BinaryTreePreOrderIterator.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/BinaryTreePreOrderIterator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/BinaryTreeTraversal.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/BinaryTreeTraversal.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/ConstructBinaryTreeFromInPostOrder.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/ConstructBinaryTreeFromInPostOrder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/ConstructBinaryTreeFromInPreorder.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/ConstructBinaryTreeFromInPreorder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/DfsBfsonTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/DfsBfsonTree.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/InorderTraversal.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/InorderTraversal.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/IsBSTPostOrder.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/IsBSTPostOrder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/LevelOrderTraversal1.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/LevelOrderTraversal1.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/LevelOrderTraversalBottomUp.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/LevelOrderTraversalBottomUp.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/LevelOrderTraversalByLevel.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/LevelOrderTraversalByLevel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/MaximumPathSum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/MaximumPathSum.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/PostOrderTraversal.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/PostOrderTraversal.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/PreorderTraversal.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/PreorderTraversal.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/ZigZagLevelOrder.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/ZigZagLevelOrder.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/BSTtoDLL.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/BSTtoDLL.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/CompareArrayBST.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/CompareArrayBST.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/FindRangeInBST.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/FindRangeInBST.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/IsBST.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/IsBST.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/LCAofBST.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/LCAofBST.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/LargestBSTSubtree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/LargestBSTSubtree.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/trees/bst/NumOfUniqueBSTs.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/tree/bst/NumOfUniqueBSTs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/FlattenBinaryTreeToLinkedList.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FlattenBinaryTreeToLinkedList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/MinimumDepthofBinaryTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/MinimumDepthofBinaryTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/PathSum.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PathSum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/PathSumII.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PathSumII.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/RecoverBinarySearchTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/RecoverBinarySearchTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/SameTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/SameTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/SumRoottoLeafNumbers.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/SumRoottoLeafNumbers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/SymmetricTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/SymmetricTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/UniqueBinarySearchTreesII.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/UniqueBinarySearchTreesII.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vaani/algo/misc/ValidateBinarySearchTree.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ValidateBinarySearchTree.java" />
     </list>
     <ignored path="AlgorithmUtil.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -167,7 +165,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="FindKthSmallest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/FindKthSmallest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/FindKthSmallest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -177,7 +175,7 @@
         </entry>
       </file>
       <file leaf-file-name="FindRangeInBST.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/bst/FindRangeInBST.java">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/bst/FindRangeInBST.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -227,7 +225,7 @@
         </entry>
       </file>
       <file leaf-file-name="TrappingRainWater.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/container/TrappingRainWater.java">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/container/TrappingRainWater.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -237,7 +235,7 @@
         </entry>
       </file>
       <file leaf-file-name="FindMinimumInRotatedSortedArray.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/FindMinimumInRotatedSortedArray.java">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/FindMinimumInRotatedSortedArray.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -561,11 +559,11 @@
     <configuration default="false" name="LevelOrderTraversal1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.vaani.algo.trees.binary.traversal.*" />
+          <option name="PATTERN" value="com.vaani.algo.tree.binary.traversal.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.vaani.algo.trees.binary.traversal.LevelOrderTraversal1" />
+      <option name="MAIN_CLASS_NAME" value="com.vaani.algo.tree.binary.traversal.LevelOrderTraversal1" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1276,16 +1274,16 @@
       <workItem from="1428787370480" duration="1146000" />
       <workItem from="1428788689668" duration="244000" />
       <workItem from="1471248307504" duration="5481000" />
-      <workItem from="1471326215482" duration="2749000" />
+      <workItem from="1471326215482" duration="2971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9620000" />
+    <option name="totallyTimeSpent" value="9842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1298,7 +1296,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25035766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25035766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1335,7 +1333,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/binary/traversal/IsBSTPostOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/binary/traversal/IsBSTPostOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1343,7 +1341,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/bst/LargestBSTSubtree.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/bst/LargestBSTSubtree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1439,7 +1437,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/maxDist.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/maxDist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1447,7 +1445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/sorted/TwoSortedArray.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/TwoSortedArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -1455,7 +1453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/twod/sorted/find2DArray.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/find2DArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1463,7 +1461,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/DP/Coin.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/dp/Coin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1511,7 +1509,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/NearlySortedArray.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/NearlySortedArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1519,7 +1517,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/strings/RegularExpressionMatching2.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/string/RegularExpressionMatching2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1583,7 +1581,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/binary/LowestCommonAncestor1.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/binary/LowestCommonAncestor1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1599,7 +1597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/binary/BinarySerialization.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/binary/BinarySerialization.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1607,7 +1605,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/BinaryTreeVerticalSum.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/BinaryTreeVerticalSum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1623,7 +1621,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/stacks/InfixCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/stack/InfixCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1631,7 +1629,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/DP/LongestCommonSubsequence.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/dp/LongestCommonSubsequence.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1647,7 +1645,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/DP/MinCostPath.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/dp/MinCostPath.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1663,7 +1661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/FindKthSmallest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/FindKthSmallest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1671,7 +1669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/trees/bst/FindRangeInBST.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/tree/bst/FindRangeInBST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1711,7 +1709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/container/TrappingRainWater.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/container/TrappingRainWater.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1719,7 +1717,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arrays/FindMinimumInRotatedSortedArray.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/FindMinimumInRotatedSortedArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />

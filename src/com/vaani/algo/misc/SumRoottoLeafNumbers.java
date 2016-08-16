@@ -1,10 +1,6 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-
-import com.vaani.algo.trees.binary.ds.TreeNode;
-
-import java.util.ArrayList;
+import com.vaani.algo.tree.binary.ds.TreeNode;
 /*
 Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
 
