@@ -1,6 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.tree.binary.ds.TreeNode;
 /*Given two binary trees, write a function to check if they are equal or not.*/
 
 /**

@@ -1,6 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.tree.binary.ds.TreeNode;
 /*
 Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
 

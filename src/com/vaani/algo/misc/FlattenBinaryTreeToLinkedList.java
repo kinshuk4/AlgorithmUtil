@@ -2,7 +2,7 @@ package com.vaani.algo.misc;
 
 import java.util.Stack;
 
-import com.vaani.algo.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.tree.binary.ds.TreeNode;
 
 /*
 Given a binary tree, flatten it to a linked list in-place.
