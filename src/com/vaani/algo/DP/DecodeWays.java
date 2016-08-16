@@ -1,4 +1,4 @@
-package com.vaani.algo.misc;
+package com.vaani.algo.DP;
 
 import java.util.HashMap;
 import java.util.ArrayList;
