@@ -2,71 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b3e8b84-67ed-4d2c-abd2-d5ffb4d40152" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/MaximalRectangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/SurroundedRegions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/BalancedBinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/BinaryTreeMaximumPathSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/BinaryTreeUpsideDown.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/ConstructFromInorderAndPostorder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/ConstructFromPreorderAndInorder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/ConvertSortedArrayToBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/ConvertSortedListToBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/FlattenBinaryTreeToLinkedList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/InorderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/LevelOrderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/LevelOrderTraversal2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/MaximumDepthBinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/MinimumDepthBinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/PathSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/PathSum2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/PopulatingNextRightPointers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/PopulatingNextRightPointers2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/PostorderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/PreorderTraversal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/RecoverBinarySearchTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/SameTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/SumRootToLeafNumbers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/SymmetricTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/UniqueBinarySearchTrees.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/UniqueBinarySearchTrees2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/ValidateBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/ZigzagLevelOrder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/Anagrams.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/CloneGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ExcelSheetColumnTitle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/GreyCode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/IntegerToRoman.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/LRUCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/MaxPointsOnALine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PascalTriangle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/PascalTriangle2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ReadNCharactersGivenRead4.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ReadNCharactersGivenRead42.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/RomanToInteger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/StringToInteger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/WildcardMatching.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/parentheses/GenerateParentheses.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/parentheses/LongestValidParentheses.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/parentheses/ValidParentheses.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/CompareVersionNumbers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/ImplementstrStr.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/LengthOfLastWord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/LongestCommonPrefix.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/LongestPalindromicSubstring.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/LongestSubstringWithoutRepeatingCharacters.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/MinimumWindowSubstring.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/OneEditDistance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/ReverseWordsInString.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/SubstringWithConcatenationAllWords.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/string/ZigZagConversion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/ClockwiseSpiralMatrixPrint.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/ClockwiseSpiralMatrixPrint.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/LargestSquareInMatrix.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/LargestSquareInMatrix.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/MatrixMultiplication.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/MatrixMultiplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/FindKthSmallestInSortedMatrix.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/sorted/FindKthSmallestInSortedMatrix.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/TwoSortedArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/sorted/TwoSortedArray.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/vaani/algo/array/twod/sorted/find2DArray.java" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/matrix/sorted/find2DArray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/arithmetic/APlusB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/Median.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumber3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/ArmstrongNumber.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/Factorial.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/Fibonacci.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindMidNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/FindPrimeNumbers.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vaani/algo/misc/Swap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="AlgorithmUtil.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,76 +36,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/math/Pow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PowerOfThree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/math/PowerOfThree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sqrt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/math/Sqrt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SquareRoot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/math/SquareRoot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaximalRectangle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/matrix/MaximalRectangle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Anagrams.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/Anagrams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidParentheses.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/parentheses/ValidParentheses.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CompareVersionNumbers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/string/CompareVersionNumbers.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -179,11 +56,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="716">
               <caret line="439" column="38" selection-start-line="439" selection-start-column="38" selection-end-line="439" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Median.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/Median.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="APlusB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arithmetic/APlusB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MajorityNumber2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MajorityNumber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingleNumber3.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumber3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArmstrongNumber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/ArmstrongNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Swap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/Swap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -209,12 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/LongestBalanceSubstring.java" />
-        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/LongestPalindrome.java" />
-        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/LongestStringWithoutRepeat.java" />
-        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/MaxInWindow.java" />
-        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/MinCostSortedArray.java" />
-        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/MinPathSum.java" />
         <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/RandX.java" />
         <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/RegexMatch.java" />
         <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/TreeLeafPath.java" />
@@ -260,6 +201,12 @@
         <option value="$PROJECT_DIR$/src/com/vaani/algo/string/CompareVersionNumbers.java" />
         <option value="$PROJECT_DIR$/src/com/vaani/algo/ds/tree/BalancedBinaryTree.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/com/vaani/algo/array/Median.java" />
+        <option value="$PROJECT_DIR$/src/com/vaani/algo/arithmetic/APlusB.java" />
+        <option value="$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber2.java" />
+        <option value="$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumber3.java" />
+        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/ArmstrongNumber.java" />
+        <option value="$PROJECT_DIR$/src/com/vaani/algo/misc/Swap.java" />
       </list>
     </option>
   </component>
@@ -393,7 +340,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="string" />
+              <option name="myItemId" value="misc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlgorithmUtil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlgorithmUtil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vaani" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arithmetic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,11 +394,11 @@
       <recent name="com.vaani.algo.trees.binary.traversal" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/vaani/algo/misc" />
+      <recent name="$PROJECT_DIR$/src/com/vaani/algo/array" />
+      <recent name="$PROJECT_DIR$/src/com/vaani/algo/arithmetic" />
       <recent name="$PROJECT_DIR$/src/com/vaani/algo/ds/tree" />
       <recent name="$PROJECT_DIR$/src/com/vaani/algo/string" />
-      <recent name="$PROJECT_DIR$/src/com/vaani/algo/misc" />
-      <recent name="$PROJECT_DIR$/src/com/vaani/algo/array/matrix" />
-      <recent name="$PROJECT_DIR$/src/com/vaani/algo/ds/list/linked" />
     </key>
   </component>
   <component name="RunManager" selected="Application.LevelOrderTraversal1">
@@ -1147,12 +1120,12 @@
       <workItem from="1428787370480" duration="1146000" />
       <workItem from="1428788689668" duration="244000" />
       <workItem from="1471248307504" duration="5481000" />
-      <workItem from="1471326215482" duration="3651000" />
+      <workItem from="1471326215482" duration="3930000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10522000" />
+    <option name="totallyTimeSpent" value="10801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1206,62 +1179,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/TreeLeafPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/RePack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/maxDist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/matrix/sorted/TwoSortedArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/matrix/sorted/find2DArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/dp/Coin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/recursion/CaseCombination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/ds/trie/EditDistanceTrie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1610,6 +1527,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="716">
           <caret line="439" column="38" selection-start-line="439" selection-start-column="38" selection-end-line="439" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/Median.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/arithmetic/APlusB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/MajorityNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/array/SingleNumber3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/ArmstrongNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vaani/algo/misc/Swap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
