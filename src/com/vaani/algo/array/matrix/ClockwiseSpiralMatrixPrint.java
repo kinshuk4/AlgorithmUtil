@@ -1,4 +1,4 @@
-package com.vaani.algo.array.twod;
+package com.vaani.algo.array.matrix;
 import java.util.ArrayList;
 import java.util.List;
 

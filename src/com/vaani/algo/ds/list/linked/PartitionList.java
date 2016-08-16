@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.leetcode.core.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  * Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.

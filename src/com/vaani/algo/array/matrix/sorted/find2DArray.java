@@ -1,4 +1,4 @@
-package com.vaani.algo.array.twod.sorted;
+package com.vaani.algo.array.matrix.sorted;
 
 import java.util.Arrays;
 

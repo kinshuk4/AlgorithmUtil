@@ -86,6 +86,10 @@ public class TreeNode {
 
     }
     
+    public void display(){
+    	System.out.println(this.detailedToString());
+    }
+    
     public int size() {
         int size = 0;
         if (left != null) {

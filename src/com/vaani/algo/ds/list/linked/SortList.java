@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.leetcode.core.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  * Sort a linked list in O(n log n) time using constant space complexity.

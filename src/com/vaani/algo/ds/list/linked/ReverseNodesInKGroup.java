@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.leetcode.core.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  *  Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.

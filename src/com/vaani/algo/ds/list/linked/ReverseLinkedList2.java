@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.leetcode.core.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  *  Reverse a linked list from position m to n. Do it in-place and in one-pass.

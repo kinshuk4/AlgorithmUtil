@@ -1,4 +1,4 @@
-package com.vaani.algo.array.twod;
+package com.vaani.algo.array.matrix;
 
 /*https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fmatrix%2FMatrix.java
  * */

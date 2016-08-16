@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.leetcode.core.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  * Created by Xiaomeng on 7/14/2014.

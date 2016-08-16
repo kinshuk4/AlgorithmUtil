@@ -1,4 +1,4 @@
-package com.vaani.algo.array.twod;
+package com.vaani.algo.array.matrix;
 
 /**
  * Find the largest all 1 square matrix in side the given matrix.
