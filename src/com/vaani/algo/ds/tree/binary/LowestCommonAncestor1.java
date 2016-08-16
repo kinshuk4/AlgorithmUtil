@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.binary;
 
-import com.leetcode.core.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Given a binary search tree (BST), find the lowest common ancestor of two given nodes in the BST.

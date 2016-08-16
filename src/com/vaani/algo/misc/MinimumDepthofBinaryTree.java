@@ -1,11 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
-/*
-Given a binary tree, find its minimum depth.
-
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-*/
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Definition for binary tree

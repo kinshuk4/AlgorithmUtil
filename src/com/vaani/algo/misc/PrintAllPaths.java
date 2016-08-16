@@ -1,7 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.leetcode.core.TreeNode;
-
+import com.vaani.algo.ds.core.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;

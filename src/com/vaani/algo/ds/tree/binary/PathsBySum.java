@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Ftrees%2FGetPathsBySum.java
 public class PathsBySum {

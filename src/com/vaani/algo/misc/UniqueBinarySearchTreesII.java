@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
-
 import java.util.ArrayList;
 /*
 Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
@@ -30,6 +28,8 @@ Here's an example:
      5
 The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 */
+
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Definition for binary tree

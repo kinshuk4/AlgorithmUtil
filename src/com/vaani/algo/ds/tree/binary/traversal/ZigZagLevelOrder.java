@@ -2,7 +2,7 @@ package com.vaani.algo.ds.tree.binary.traversal;
 
 import java.util.Stack;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 import static java.lang.System.out;;
 public class ZigZagLevelOrder {

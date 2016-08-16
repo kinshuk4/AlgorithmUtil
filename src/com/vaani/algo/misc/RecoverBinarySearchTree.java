@@ -1,8 +1,8 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
-
 import java.util.ArrayList;
+
+import com.vaani.algo.ds.core.TreeNode;
 /**
  * Definition for binary tree
  * public class TreeNode {

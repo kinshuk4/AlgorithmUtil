@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.binary;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 /*
 Given a binary tree, determine if it is height-balanced.

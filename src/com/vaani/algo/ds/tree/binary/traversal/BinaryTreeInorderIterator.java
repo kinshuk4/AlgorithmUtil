@@ -1,8 +1,8 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
-
 import java.util.*;
+
+import com.vaani.algo.ds.core.TreeNode;
 
 
 /*

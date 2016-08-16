@@ -1,12 +1,14 @@
 package com.vaani.algo.misc;
 
-import com.cc150.TreeAndGraph.TopologicalSort;
-import com.leetcode.core.DirectedGraph;
-import com.leetcode.core.Vertex;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import com.vaani.algo.cc150.chap4treegraph.TopologicalSort;
+import com.vaani.algo.ds.core.DirectedGraph;
+import com.vaani.algo.ds.core.Vertex;
 
 /**
  * Given a sorted dictionary (array of words) of an alien language, find order of characters in the language.

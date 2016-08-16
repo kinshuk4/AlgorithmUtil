@@ -1,9 +1,11 @@
 package com.vaani.algo.ds.tree.bst;
 
-import com.leetcode.core.TreeNode;
+
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Given two values k1 and k2 (where k1 < k2) and a root pointer to a Binary Search Tree.

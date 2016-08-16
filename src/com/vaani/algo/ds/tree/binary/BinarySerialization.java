@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.binary;
 
-import com.leetcode.core.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Design an algorithm and write code to serialize and deserialize a binary tree.
@@ -64,6 +64,6 @@ public class BinarySerialization {
         root.right.right = new TreeNode(35);
         System.out.println(writeBinaryTree(root));
         String input = "30 10 50 # # # 20 45 # # 35 # # ";
-        readBinaryTree(input).display();
+        System.out.println(readBinaryTree(input).detailedToString());
     }
 }

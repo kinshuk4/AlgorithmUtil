@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 //https://github.com/paopao2/Algorithm-Practice/blob/master/Breadth:Depth%20First%20Search.java
 public class DfsBfsonTree {
 	static Stack<TreeNode> stack = new Stack<>();

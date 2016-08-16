@@ -2,7 +2,7 @@ package com.vaani.algo.ds.tree.binary.traversal;
 
 import java.util.ArrayList;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 /*
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).

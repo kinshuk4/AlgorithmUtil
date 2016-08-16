@@ -1,6 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.leetcode.core.Interval;
+import com.vaani.algo.ds.core.Interval;
 
 import java.util.ArrayList;
 import java.util.Collections;

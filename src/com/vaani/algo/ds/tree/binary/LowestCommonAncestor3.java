@@ -1,7 +1,6 @@
 package com.vaani.algo.ds.tree.binary;
 
-
-import com.leetcode.core.TreeNodeWithParent;
+import com.vaani.algo.ds.core.TreeNodeWithParent;
 
 /**
  * Given a binary tree, find the lowest common ancestor of two given nodes in the tree. Each node contains a parent pointer which links to its parent.

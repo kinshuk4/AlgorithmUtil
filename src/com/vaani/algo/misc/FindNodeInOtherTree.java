@@ -1,9 +1,10 @@
 package com.vaani.algo.misc;
 
-import com.leetcode.core.TreeNodeWithParent;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.vaani.algo.ds.core.TreeNodeWithParent;
 
 /**
  * 然后出了一个编程题：有两个一样的树A和B，每个节点都有父指针，要求写一个函数，参数是A的一个子节点x，和B的根节点，要求返回B中对应x的那个节点。也就是说A的根节点未知。

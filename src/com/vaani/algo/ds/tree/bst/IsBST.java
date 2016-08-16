@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.bst;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 import com.vaani.algo.ds.tree.binary.traversal.BinaryTreeInorderIterator;
 import com.vaani.algo.ds.tree.binary.traversal.BinaryTreePostorderIterator;
 import com.vaani.algo.ds.tree.binary.traversal.BinaryTreePreOrderIterator;

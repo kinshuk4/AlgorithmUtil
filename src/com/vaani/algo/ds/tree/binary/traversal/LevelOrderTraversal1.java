@@ -3,7 +3,7 @@ package com.vaani.algo.ds.tree.binary.traversal;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 
 public class LevelOrderTraversal1 {

@@ -2,7 +2,7 @@ package com.vaani.algo.ds.tree.binary.traversal;
 
 import java.util.ArrayList;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 /*
 Given a binary tree, find the maximum path sum.

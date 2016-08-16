@@ -3,7 +3,7 @@ package com.vaani.algo.ds.tree.binary.traversal;
 import java.util.ArrayList;
 import java.util.Stack;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 /*
 Given a binary tree, return the preorder traversal of its nodes' values.

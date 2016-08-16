@@ -1,9 +1,10 @@
 package com.vaani.algo.ds.tree;
 
-import com.leetcode.core.TreeNode;
 
 import java.util.Map;
 import java.util.TreeMap;
+
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Given a Binary Tree, find vertical sum of the nodes that are in same vertical line. Print all sums through different vertical lines.

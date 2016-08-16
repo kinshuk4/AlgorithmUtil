@@ -1,5 +1,5 @@
 package com.vaani.algo.ds.tree.binary;
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
+import com.vaani.algo.ds.core.TreeNode;
 
 
 

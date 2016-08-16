@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.tree.bst;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
-
 import java.util.ArrayList;
 import java.util.Stack;
+
+import com.vaani.algo.ds.core.TreeNode;
 
 
 /**

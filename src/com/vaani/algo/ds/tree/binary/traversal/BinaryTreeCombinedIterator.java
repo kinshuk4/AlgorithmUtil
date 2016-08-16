@@ -1,11 +1,11 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
-import com.vaani.algo.ds.tree.binary.ds.TreeNode;
-
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 import java.util.Stack;
+
+import com.vaani.algo.ds.core.TreeNode;
 
 public class BinaryTreeCombinedIterator {
     private TreeNode root;

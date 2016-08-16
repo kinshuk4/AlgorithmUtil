@@ -1,8 +1,7 @@
 package com.vaani.algo.ds.trie;
 
-import com.leetcode.core.Trie;
-import com.leetcode.core.TrieNode;
-
+import com.vaani.algo.ds.core.Trie;
+import com.vaani.algo.ds.core.TrieNode;
 import java.util.ArrayList;
 import java.util.List;
 
