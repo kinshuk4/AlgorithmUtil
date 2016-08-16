@@ -1,4 +1,4 @@
-package com.vaani.algo.misc;
+package com.vaani.algo.math;
 
 /**
  *	Check whether a number is power of 3.

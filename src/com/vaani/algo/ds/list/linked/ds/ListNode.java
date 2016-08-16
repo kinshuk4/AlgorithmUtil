@@ -1,4 +1,4 @@
-package com.vaani.algo.list.linked.ds;
+package com.vaani.algo.ds.list.linked.ds;
 
 public class ListNode {
 	public int val;

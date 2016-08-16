@@ -1,9 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
-import com.vaani.algo.list.linked.ds.*;
-
 public class ReverseLinkedList{
 //interative
 public ListNode reverseLinkedListIter(ListNode head) {

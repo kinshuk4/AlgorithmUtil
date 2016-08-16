@@ -1,4 +1,4 @@
-package com.vaani.algo.list.linked;
+package com.vaani.algo.ds.list.linked;
 
 import java.util.ArrayList;
 import java.util.List;

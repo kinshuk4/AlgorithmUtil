@@ -1,6 +1,6 @@
-package com.vaani.algo.list.linked;
+package com.vaani.algo.ds.list.linked;
 
-import com.vaani.algo.list.linked.ds.ListNode;
+import com.vaani.algo.ds.list.linked.ds.ListNode;
 
 /*
 You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.

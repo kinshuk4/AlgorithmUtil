@@ -1,4 +1,4 @@
-package com.vaani.algo.list.linked;
+package com.vaani.algo.ds.list.linked;
 
 public class SumDigit {
 

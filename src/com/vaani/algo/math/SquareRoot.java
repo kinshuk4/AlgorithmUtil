@@ -1,4 +1,4 @@
-package com.vaani.algo.misc;
+package com.vaani.algo.math;
 
 /**
  * Write a program to find the square root of a double.

@@ -1,6 +1,6 @@
 package com.vaani.algo.cc150.chap2;
 
-import com.vaani.algo.list.linked.ds.ListNode;
+import com.vaani.algo.ds.list.linked.ds.ListNode;
 
 /**
  * You have two numbers represented by a linked list, where each node contains a
