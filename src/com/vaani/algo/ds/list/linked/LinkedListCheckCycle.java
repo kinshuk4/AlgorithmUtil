@@ -1,5 +1,7 @@
 package com.vaani.algo.ds.list.linked;
 
+import com.vaani.algo.ds.core.ListNode;
+
 public class LinkedListCheckCycle {
     public boolean hasCycle(ListNode head) {
 
@@ -24,13 +26,5 @@ public class LinkedListCheckCycle {
         return false;
     }
 
-    class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
 }

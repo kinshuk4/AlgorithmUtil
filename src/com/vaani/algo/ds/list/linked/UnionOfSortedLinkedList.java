@@ -3,6 +3,8 @@ package com.vaani.algo.ds.list.linked;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vaani.algo.ds.core.ListNode;
+
 /**
  * Get the union of two sorted linked list.
  */
@@ -30,13 +32,6 @@ public class UnionOfSortedLinkedList {
         return res;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(int val) {
-            this.val = val;
-        }
-    }
+    
 
 }

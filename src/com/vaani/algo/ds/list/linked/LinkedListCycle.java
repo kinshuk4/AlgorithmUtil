@@ -6,8 +6,7 @@ import com.vaani.algo.ds.core.ListNode;
  * Given a linked list, determine if it has a cycle in it.
  * Follow up:
  * Can you solve it without using extra space?
- * <p>
- * Created by Xiaomeng on 5/22/2014.
+ *
  */
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {

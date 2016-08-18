@@ -454,3 +454,5 @@ Also, I have to improve from:
 - https://github.com/diwu001/Algorithm
 - https://github.com/kamyu104/LeetCode#bit-manipulation
 - https://github.com/xiaoningning/algorithm-exercise
+- https://github.com/shashi45/DataStructuresAndAlgorithms
+- https://github.com/sudeep91soni/Java-Codes
