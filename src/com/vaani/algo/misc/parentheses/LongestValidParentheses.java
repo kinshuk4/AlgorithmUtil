@@ -13,7 +13,7 @@ import java.util.Stack;
  */
 public class LongestValidParentheses {
     /**
-     * Stack solution
+     * IStack solution
      *
      */
     public int longestValidParentheses1(String s) {

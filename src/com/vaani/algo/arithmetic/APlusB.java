@@ -8,6 +8,7 @@ package com.vaani.algo.arithmetic;
  *
  * Example
  * If a=1 and b=2 return 3
+ * binary(a) = 1, binary(b)=10
  *
  * Challenge
  * Can you do it with out + operation?
@@ -26,12 +27,18 @@ public class APlusB {
      * param b: The second integer
      * return: The sum of a and b
      */
-    public int aplusb(int a, int b) {
+    public static int aplusb(int a, int b) {
         while(b != 0){
             int carry = a & b;
             a = a ^ b;
             b = carry << 1;
+            System.out.println(a+ " "  + carry +" " + b);
         }
         return a;
     }
+
+    public static void main(String[] args) {
+        System.out.println(aplusb(3,2));
+    }
+
 }

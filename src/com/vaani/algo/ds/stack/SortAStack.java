@@ -14,8 +14,8 @@ public class SortAStack {
 		return auxiliary;
 	}
 
-//	public static Stack<Integer> sort2(Stack<Integer> s1) {
-//		Stack<Integer> s2 = new Stack<Integer>();// s2:auxiliary stack
+//	public static IStack<Integer> sort2(IStack<Integer> s1) {
+//		IStack<Integer> s2 = new IStack<Integer>();// s2:auxiliary stack
 //		int a = s1.pop();
 //		int b = s2.pop();
 //		while (true)

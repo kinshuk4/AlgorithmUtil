@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.stack;
 import java.util.Stack;
 
-//Validate Pop Sequence of Stack
+//Validate Pop Sequence of IStack
 //http://www.sigmainfy.com/blog/interview-question-6-validate-pop-sequence-of-stack.html
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstack%2FCheckStackSequence.java
 public class CheckStackSequence {

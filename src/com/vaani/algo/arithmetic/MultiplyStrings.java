@@ -7,10 +7,10 @@ package com.vaani.algo.arithmetic;
  *
  * Cleaner solution: http://blog.csdn.net/fightforyourdream/article/details/17370495
  *
- * Created by Xiaomeng on 9/5/2014.
+ *
  */
 public class MultiplyStrings {
-    public String multiply(String num1, String num2) {
+    public static String multiply(String num1, String num2) {
         if(num1.equals("0") || num2.equals("0")) return "0";
         String result = new String();
         for(int i = num2.length() - 1; i >= 0; i--){
@@ -23,7 +23,7 @@ public class MultiplyStrings {
         return result;
     }
 
-    public String mulitplySingle(String num, char single){
+    public static String mulitplySingle(String num, char single){
         int index = num.length() - 1;
         int singleNum = Character.getNumericValue(single);
         StringBuilder result = new StringBuilder();
@@ -40,7 +40,7 @@ public class MultiplyStrings {
         return result.reverse().toString();
     }
 
-    public String add(String a, String b){
+    public static String add(String a, String b){
         if(a == null) return b;
         if(b == null) return a;
         StringBuilder result = new StringBuilder();
@@ -62,9 +62,8 @@ public class MultiplyStrings {
     }
 
     public static void main(String[] args){
-        MultiplyStrings test = new MultiplyStrings();
-        System.out.println(test.mulitplySingle("23", '6'));
-        System.out.println(test.add("138", "1150"));
-        System.out.println(test.multiply("9311", "1"));
+        System.out.println(MultiplyStrings.mulitplySingle("23", '6'));
+        System.out.println(MultiplyStrings.add("138", "1150"));
+        System.out.println(MultiplyStrings.multiply("9311", "1"));
     }
 }

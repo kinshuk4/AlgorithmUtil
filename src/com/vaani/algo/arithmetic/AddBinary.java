@@ -8,7 +8,7 @@ package com.vaani.algo.arithmetic;
  *  b = "1"
  *  Return "100".
  *
- *  Created by Xiaomeng on 9/4/2014.
+ *
  */
 public class AddBinary {
     public String addBinary(String a, String b) {
