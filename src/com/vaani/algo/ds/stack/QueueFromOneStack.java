@@ -2,13 +2,27 @@ package com.vaani.algo.ds.stack;
 
 import java.util.Stack;
 
+/**
+ * Created by kchandra on 18/08/16.
+ */
+public class QueueFromOneStack {
+    Stack<String> stack = new Stack<>();
+    public void enqueue(String elem) {
+        if (!stack.empty()) {
+            String topElem = stack.pop();
+            enqueue(elem);
+            stack.push(topElem);
+        }
+        else
+            stack.push(elem);
+    }
 
-public class QueueFromStack {
-    Stack<String> inStack = new Stack<>();
-    Stack<String> outStack = new Stack<>();
+    public String dequeue() {
+        return stack.pop();
+    }
 
     public static void main(String[] args) {
-        QueueFromStack queue = new QueueFromStack();
+        QueueFromOneStack queue = new QueueFromOneStack();
         queue.enqueue("first");
         queue.enqueue("second");
         queue.enqueue("third");
@@ -19,18 +33,5 @@ public class QueueFromStack {
         System.out.println("3. " + queue.dequeue());
         System.out.println("4. " + queue.dequeue());
         System.out.println("5. " + queue.dequeue());
-    }
-
-    public void enqueue(String value) {
-        inStack.push(value);
-    }
-
-    public String dequeue() {
-        if (outStack.isEmpty()) {
-            while (!inStack.isEmpty()) {
-                outStack.push(inStack.pop());
-            }
-        }
-        return outStack.pop();
     }
 }

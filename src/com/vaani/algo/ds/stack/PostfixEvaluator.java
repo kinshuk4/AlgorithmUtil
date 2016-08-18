@@ -1,11 +1,12 @@
 package com.vaani.algo.ds.stack;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.security.InvalidAlgorithmParameterException;
 import java.util.Stack;
 
+import static com.vaani.algo.util.IOUtilX.readString;
+
 public class PostfixEvaluator {
-    private Stack<Integer> theStack;
+    private Stack<Integer> operandStack;
     private String input;
 
     public PostfixEvaluator(String s) {
@@ -16,9 +17,9 @@ public class PostfixEvaluator {
         String input;
         int output;
         while (true) {
-            System.out.print("Enter postfix:");
+            System.out.print("Enter postfix (Enter to end):");
             System.out.flush();
-            input = getString();
+            input = readString();
             if (input.equals("")) {
                 break;
             }
@@ -28,25 +29,24 @@ public class PostfixEvaluator {
         }
     }
 
-    public static String getString() throws Exception {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader buf = new BufferedReader(isr);
-        String s = buf.readLine();
-        return s;
-    }
 
-    public int doParse() {
-        theStack = new Stack<Integer>();
+
+    public int doParse() throws InvalidAlgorithmParameterException {
+        operandStack = new Stack<Integer>();
         char ch;
         int j;
         int num1, num2, interAns;
         for (j = 0; j < input.length(); j++) {
             ch = input.charAt(j);
             if (ch >= '0' && ch <= '9') {
-                theStack.push((int) (ch - '0'));
+                operandStack.push((int) (ch - '0'));
             } else {
-                num2 = theStack.pop();
-                num1 = theStack.pop();
+                //assuming only dealing with binary operators
+                if(operandStack.size()<2){
+                    throw new InvalidAlgorithmParameterException("Invalid postfix expression.");
+                }
+                num2 = operandStack.pop();
+                num1 = operandStack.pop();
                 switch (ch) {
                     case '+':
                         interAns = num1 + num2;
@@ -64,10 +64,10 @@ public class PostfixEvaluator {
                         interAns = 0;
                         break;
                 }
-                theStack.push(interAns);
+                operandStack.push(interAns);
             }
         }
-        interAns = theStack.pop();
+        interAns = operandStack.pop();
         return interAns;
     }
 }

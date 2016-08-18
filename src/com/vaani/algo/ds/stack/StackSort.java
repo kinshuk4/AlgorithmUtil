@@ -53,4 +53,15 @@ public class StackSort {
 
     }
 
+    public static Stack<Integer> sortUsingAuxStack(Stack<Integer> stack) {
+        Stack<Integer> auxiliary = new Stack<Integer>();
+        while (!stack.isEmpty()) {
+            Integer value = stack.pop();
+            while (!auxiliary.isEmpty() && value < auxiliary.peek())
+                stack.push(auxiliary.pop());
+            auxiliary.push(value);
+        }
+        return auxiliary;
+    }
+
 }

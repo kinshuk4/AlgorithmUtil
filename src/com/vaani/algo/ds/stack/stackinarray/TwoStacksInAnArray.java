@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.stack;
+package com.vaani.algo.ds.stack.stackinarray;
 
 public class TwoStacksInAnArray {
 
