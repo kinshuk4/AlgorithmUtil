@@ -8,10 +8,10 @@ import java.util.Stack;
 /*https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstack%2FBracketsApp.java
  * 
  */
-public class BracketChecker {
+public class BracketMatchChecker {
     private String input;
 
-    public BracketChecker(String in) {
+    public BracketMatchChecker(String in) {
         this.input = in;
     }
 
@@ -24,13 +24,12 @@ public class BracketChecker {
             if (input.equals("")) {
                 break;
             }
-            BracketChecker theChecker = new BracketChecker(input);
+            BracketMatchChecker theChecker = new BracketMatchChecker(input);
             theChecker.check();
         }
     }
 
-    public void check() {
-        int stackSize = input.length();
+    public boolean check() {
         Stack<Character> theStack = new Stack<>();
         for (int j = 0; j < input.length(); j++) {
             char ch = input.charAt(j);
@@ -44,13 +43,18 @@ public class BracketChecker {
                 case ']':
                 case ')':
                     if (!theStack.isEmpty()) {
-                        char chx = theStack.pop();
+                        char chx = theStack.peek();
                         if ((ch == '}' && chx != '{') || (ch == ']' && chx != '[')
                                 || (ch == ')' && chx != '(')) {
                             System.out.println("Error:" + ch + " at " + (j + 1));
+                            break;
+                        }else{
+                            //it is fine
+                            theStack.pop();
                         }
                     } else {
                         System.out.println("Error:" + ch + " at " + (j + 1));
+                        break;
                     }
                 default:
                     break;
@@ -58,8 +62,10 @@ public class BracketChecker {
         }
         if (!theStack.isEmpty()) {
             System.out.println("Error:missing right delimiter");
+            return false;
         } else {
             System.out.println("It is legitimate!");
+            return true;
         }
     }
 
