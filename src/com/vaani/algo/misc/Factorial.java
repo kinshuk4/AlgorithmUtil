@@ -1,8 +1,6 @@
 package com.vaani.algo.misc;
 
-/**
- * Created by Xiaomeng on 10/8/2014.
- */
+
 public class Factorial {
     /**
      * Recursive

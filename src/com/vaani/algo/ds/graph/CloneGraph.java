@@ -1,10 +1,10 @@
 package com.vaani.algo.ds.graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
+import com.vaani.algo.ds.core.UndirectedGraphNode;
 
+import java.util.*;
+
+//formatter:off
 /*
 Clone an undirected graph. Each node in the graph contains a label and a list of its neighbors.
 OJ's undirected graph serialization:
@@ -15,6 +15,7 @@ The graph has a total of three nodes, and therefore contains three parts as sepa
 First node is labeled as 0. Connect node 0 to both nodes 1 and 2.
 Second node is labeled as 1. Connect node 1 to node 2.
 Third node is labeled as 2. Connect node 2 to node 2 (itself), thus forming a self-cycle.
+
 Visually, the graph looks like the following:
        1
       / \
@@ -24,19 +25,21 @@ Visually, the graph looks like the following:
          \_/
 */
 
+//formatter:on
+
 /**
  * Definition for undirected graph.
  */
-class UndirectedGraphNode {
-    int label;
-    ArrayList<UndirectedGraphNode> neighbors;
-
-    UndirectedGraphNode(int x) {
-        label = x;
-        neighbors = new ArrayList<UndirectedGraphNode>();
-    }
-};
-
+//class UndirectedGraphNode {
+//    int label;
+//    ArrayList<UndirectedGraphNode> neighbors;
+//
+//    UndirectedGraphNode(int x) {
+//        label = x;
+//        neighbors = new ArrayList<UndirectedGraphNode>();
+//    }
+//};
+// NOTE: we dont have to use visited flag here.
 public class CloneGraph {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -68,5 +71,34 @@ public class CloneGraph {
         }
         return head;
 
+    }
+
+    public com.vaani.algo.ds.core.UndirectedGraphNode cloneGraph2(UndirectedGraphNode node) {
+        if (node == null) return null;
+        Queue<com.vaani.algo.ds.core.UndirectedGraphNode> queue = new LinkedList<com.vaani.algo.ds.core.UndirectedGraphNode>();
+        Map<com.vaani.algo.ds.core.UndirectedGraphNode, com.vaani.algo.ds.core.UndirectedGraphNode> map = new HashMap<com.vaani.algo.ds.core.UndirectedGraphNode, com.vaani.algo.ds.core.UndirectedGraphNode>();
+        queue.add(node);
+        while (!queue.isEmpty()) {
+            com.vaani.algo.ds.core.UndirectedGraphNode oldNode = queue.poll();
+            com.vaani.algo.ds.core.UndirectedGraphNode newNode;
+            if (!map.containsKey(oldNode)) {
+                newNode = new com.vaani.algo.ds.core.UndirectedGraphNode(oldNode.label);
+                map.put(oldNode, newNode);
+            } else {
+                newNode = map.get(oldNode);
+            }
+            for (com.vaani.algo.ds.core.UndirectedGraphNode oldNeighbor : oldNode.neighbors) {
+                com.vaani.algo.ds.core.UndirectedGraphNode newNeighbor;
+                if (!map.containsKey(oldNeighbor)) {
+                    newNeighbor = new com.vaani.algo.ds.core.UndirectedGraphNode(oldNeighbor.label);
+                    queue.add(oldNeighbor);
+                    map.put(oldNeighbor, newNeighbor);
+                } else {
+                    newNeighbor = map.get(oldNeighbor);
+                }
+                newNode.neighbors.add(newNeighbor);
+            }
+        }
+        return map.get(node);
     }
 }

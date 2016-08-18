@@ -3,9 +3,7 @@ package com.vaani.algo.misc;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Xiaomeng on 10/8/2014.
- */
+
 public class Fibonacci {
     /**
      * Native recursive without memorization
