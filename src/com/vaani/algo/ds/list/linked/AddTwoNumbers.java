@@ -10,7 +10,7 @@ import com.vaani.algo.ds.core.ListNode;
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
  * <p>
- * Created by Xiaomeng on 7/28/2014.
+ * 
  */
 public class AddTwoNumbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {

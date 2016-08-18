@@ -1,6 +1,6 @@
 package com.vaani.algo.cc150.chap2;
 
-import com.vaani.algo.ds.list.linked.ds.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  * Implement an algorithm to delete a node in the middle of a singly linked

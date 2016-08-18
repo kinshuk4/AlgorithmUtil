@@ -1,11 +1,11 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.vaani.algo.ds.core.ListNode;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
+
+import com.vaani.algo.ds.core.ListNode;
 
 /**
  * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.

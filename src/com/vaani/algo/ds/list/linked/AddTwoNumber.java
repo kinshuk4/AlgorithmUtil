@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.vaani.algo.ds.list.linked.ds.ListNode;
+import com.vaani.algo.ds.core.ListNode;
 
 /*
 You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
@@ -20,7 +20,7 @@ Output: 7 -> 0 -> 8
  * }
  */
 public class AddTwoNumber {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         int carry = 0;
@@ -49,5 +49,21 @@ public class AddTwoNumber {
         }
 
         return head;
+    }
+
+    public static void main(String[] args) {
+        ListNode head1 = new ListNode(1);
+        head1.setNext(new ListNode(4));
+        head1.getNext().setNext(new ListNode(5));
+        head1.getNext().getNext().setNext(new ListNode(7));
+        System.out.println(head1.detailedToString());
+        ListNode head2 = new ListNode(0);
+        head2.setNext(new ListNode(2));
+        head2.getNext().setNext(new ListNode(4));
+        head2.getNext().getNext().setNext(new ListNode(8));
+        System.out.println(head2.detailedToString());
+        ListNode headAdd = addTwoNumbers(head1, head2);
+
+        System.out.println(headAdd.detailedToString());
     }
 }

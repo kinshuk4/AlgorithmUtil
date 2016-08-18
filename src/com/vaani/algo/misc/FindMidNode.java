@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.core.ListNode;
-
 /**
  * Created by Xiaomeng on 10/9/2014.
  */
