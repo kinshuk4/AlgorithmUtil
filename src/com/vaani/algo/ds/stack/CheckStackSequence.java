@@ -31,13 +31,13 @@ public class CheckStackSequence {
         Stack<Integer> stack = new Stack();
         int current = 0;
         for (int i = 0; i < nums1.length; i++) {
-            if (nums2[current] == nums1[i]) {//说明该元素入栈之后即刻出栈，所以将i和current递增即刻
+            if (nums2[current] == nums1[i]) {//This element stack immediately after the stack, so the current i and increments instantly
                 current++;
             } else {
                 if (!stack.isEmpty() && nums2[current] == stack.peek()) {
                     current++;
                     stack.pop();
-                    stack.push(nums1[i]);//别忘记将新的元素入栈
+                    stack.push(nums1[i]);//Do not forget to push new elements onto the stack
                 } else {
                     stack.push(nums1[i]);
                 }
