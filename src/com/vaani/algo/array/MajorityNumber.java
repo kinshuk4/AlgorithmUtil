@@ -1,9 +1,10 @@
 package com.vaani.algo.array;
+
 import java.util.ArrayList;
 
 /*https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fcommons%2FMajorityNumber.java
  * */
- 
+
 public class MajorityNumber {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 2, 3, 2, 2, 4, 2, 5, 8, 2};

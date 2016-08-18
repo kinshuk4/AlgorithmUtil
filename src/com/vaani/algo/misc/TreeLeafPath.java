@@ -2,7 +2,6 @@ package com.vaani.algo.misc;
 
 import java.util.ArrayList;
 import java.util.Stack;
-import java.util.List;
 
 /**
  * print out all leaf node path with non recursive method
@@ -30,10 +29,6 @@ public class TreeLeafPath {
     public TreeLeafPath(Integer v) {
         value = v;
         children = new ArrayList<TreeLeafPath>();
-    }
-
-    public void addTree(TreeLeafPath node) {
-        children.add(node);
     }
 
     public static void printPath(Stack<TreeLeafPath> s) {
@@ -68,7 +63,6 @@ public class TreeLeafPath {
 
     }
 
-
     public static void main(String[] args) {
 
         TreeLeafPath root = new TreeLeafPath(12);
@@ -96,5 +90,9 @@ public class TreeLeafPath {
         leafPath(root, stack);
         System.out.println();
 
+    }
+
+    public void addTree(TreeLeafPath node) {
+        children.add(node);
     }
 }

@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Reverse a linked list from position m to n. Do it in-place and in one-pass.
 
@@ -18,12 +16,12 @@ Given m, n satisfy the following condition:
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class ReverseLinkedListii {
@@ -46,8 +44,8 @@ public class ReverseLinkedListii {
             afterHead = afterHead.next;
             n--;
         }
-        
-        ListNode node = beforeTail == null? head : beforeTail.next;
+
+        ListNode node = beforeTail == null ? head : beforeTail.next;
         ListNode tail = afterHead;
         while (node != afterHead) {
             ListNode next = node.next;

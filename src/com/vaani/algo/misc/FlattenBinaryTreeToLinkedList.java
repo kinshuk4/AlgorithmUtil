@@ -1,8 +1,8 @@
 package com.vaani.algo.misc;
 
-import java.util.Stack;
-
 import com.vaani.algo.ds.core.TreeNode;
+
+import java.util.Stack;
 
 /*
 Given a binary tree, flatten it to a linked list in-place.
@@ -39,29 +39,29 @@ public class FlattenBinaryTreeToLinkedList {
         if (root == null) {
             return;
         }
-        
+
         Stack<TreeNode> rightStack = new Stack<TreeNode>();
-        
+
         root = nextNode(root, rightStack);
     }
-    
-    public TreeNode nextNode (TreeNode node, Stack<TreeNode> rightStack) {
+
+    public TreeNode nextNode(TreeNode node, Stack<TreeNode> rightStack) {
         Stack<TreeNode> stack = new Stack<TreeNode>();
-    	stack = (Stack<TreeNode>) rightStack.clone();
+        stack = (Stack<TreeNode>) rightStack.clone();
         if (node.right != null) {
-        	stack.push(node.right);
+            stack.push(node.right);
         }
-        
+
         if (node.left == null) {
-        	if (!stack.isEmpty()) {
-        		TreeNode temp = stack.pop();
-        		node.right = nextNode(temp, stack);
-        	}   	
+            if (!stack.isEmpty()) {
+                TreeNode temp = stack.pop();
+                node.right = nextNode(temp, stack);
+            }
         } else {
             node.right = nextNode(node.left, stack);
         }
         node.left = null;
         //System.out.println(node.val);
         return node;
-    } 
+    }
 }

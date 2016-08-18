@@ -1,11 +1,10 @@
 package com.vaani.algo.ds.trie;
 
 
-
-import java.util.ArrayList;
-
 import com.vaani.algo.ds.core.Trie;
 import com.vaani.algo.ds.core.TrieNode;
+
+import java.util.ArrayList;
 
 /**
  * Created by Xiaomeng on 11/12/2014.
@@ -15,7 +14,7 @@ public class EditDistanceTrie {
      * Computes the minimum Levenshtein Distance between the given word (represented as an array of Characters) and the
      * words stored in theTrie. This algorithm is modeled after Steve Hanov's blog article "Fast and Easy Levenshtein
      * distance using a Trie" and Murilo Vasconcelo's revised version in C++.
-     *
+     * <p>
      * http://stevehanov.ca/blog/index.php?id=114
      * http://murilo.wordpress.com/2011/02/01/fast-and-easy-levenshtein-distance-using-a-trie-in-c/
      *
@@ -46,9 +45,9 @@ public class EditDistanceTrie {
     /**
      * Recursive helper function. Traverses theTrie in search of the minimum Levenshtein Distance.
      *
-     * @param node - the current TrieNode
-     * @param letter - the current character of the current word we're working with
-     * @param word - an array representation of the current word
+     * @param node        - the current TrieNode
+     * @param letter      - the current character of the current word we're working with
+     * @param word        - an array representation of the current word
      * @param previousRow - a row in the Levenshtein Distance matrix
      */
     private static void traverseTrie(TrieNode node, char letter, ArrayList<Character> word, int[] previousRow, Trie theTrie) {
@@ -90,7 +89,7 @@ public class EditDistanceTrie {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Trie dict = new Trie();
         dict.insert("arb");
         dict.insert("area");

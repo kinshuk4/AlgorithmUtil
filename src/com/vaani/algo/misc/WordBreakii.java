@@ -1,8 +1,7 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.Set;
 import java.util.ArrayList;
+import java.util.Set;
 /*
 Given a string s and a dictionary of words dict, add spaces in s to construct a sentence where each word is a valid dictionary word.
 
@@ -25,7 +24,7 @@ public class WordBreakii {
         helper(s, new StringBuilder(), result, 0, dict);
         return result;
     }
-    
+
     public void helper(String s, StringBuilder sb, ArrayList<String> result, int curIndex, Set<String> dict) {
         if (curIndex == s.length()) result.add(sb.toString());
         else if (curIndex < s.length()) {
@@ -40,7 +39,7 @@ public class WordBreakii {
                 }
             }
         }
-        
+
     }
 }
 

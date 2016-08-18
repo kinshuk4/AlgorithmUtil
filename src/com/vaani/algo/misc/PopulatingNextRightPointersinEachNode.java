@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 Given a binary tree
@@ -36,17 +35,21 @@ After calling your function, the tree should look like:
 /**
  * Definition for binary tree with next pointer.
  * public class TreeLinkNode {
- *     int val;
- *     TreeLinkNode left, right, next;
- *     TreeLinkNode(int x) { val = x; }
+ * int val;
+ * TreeLinkNode left, right, next;
+ * TreeLinkNode(int x) { val = x; }
  * }
  */
 
 class TreeLinkNode {
-	      int val;
-	      TreeLinkNode left, right, next;
-	      TreeLinkNode(int x) { val = x; }
-	  }
+    int val;
+    TreeLinkNode left, right, next;
+
+    TreeLinkNode(int x) {
+        val = x;
+    }
+}
+
 public class PopulatingNextRightPointersinEachNode {
     public void connect(TreeLinkNode root) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -56,7 +59,7 @@ public class PopulatingNextRightPointersinEachNode {
         }
         ArrayList<TreeLinkNode> levelList = new ArrayList<TreeLinkNode>();
         levelList.add(root);
-        
+
         while (!levelList.isEmpty()) {
             ArrayList<TreeLinkNode> nextLevel = new ArrayList<TreeLinkNode>();
             for (int i = 0; i < levelList.size(); i++) {

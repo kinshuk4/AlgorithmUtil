@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Determine whether an integer is a palindrome. Do this without extra space.
 
@@ -24,28 +22,28 @@ public class PalindromeNumber {
         // if (x < 0) {
         //     x = 0 - x;
         // }
-        
+
         if (x < 0) {
             return false;
         }
-        
+
         int divide = 1;
         while (x / divide >= 10) {
             divide *= 10;
         }
-        
+
         while (x > 9) {
             int firstDigit = x / divide;
             int lastDigit = x % 10;
-            
+
             if (firstDigit != lastDigit) {
                 return false;
             }
-            
+
             x = x % divide / 10;
             divide /= 100;
         }
-        
+
         return true;
     }
 }

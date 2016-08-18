@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a 2D board and a word, find if the word exists in the grid.
 
@@ -24,30 +22,30 @@ public class WordSearch {
     public boolean exist(char[][] board, String word) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-        
+
         int rowLength = board.length;
         int colLength = board[0].length;
-        
+
         for (int i = 0; i < rowLength; i++) {
             for (int j = 0; j < colLength; j++) {
                 if (board[i][j] == word.charAt(0)) {
                     if (existsHelper(board, i, j, word.substring(1))) {
                         return true;
                     }
-                }  
+                }
             }
         }
-        
+
         return false;
-        
+
     }
-    
+
     public boolean existsHelper(char[][] board, int r, int c, String word) {
-        
+
         if (word.length() == 0) {
             return true;
         }
-        
+
         //left
         if (c > 0 && board[r][c - 1] == word.charAt(0)) {
             char cur = board[r][c];
@@ -57,7 +55,7 @@ public class WordSearch {
             }
             board[r][c] = cur;
         }
-        
+
         //up
         if (r > 0 && board[r - 1][c] == word.charAt(0)) {
             char cur = board[r][c];
@@ -67,7 +65,7 @@ public class WordSearch {
             }
             board[r][c] = cur;
         }
-        
+
         //down
         if (r < board.length - 1 && board[r + 1][c] == word.charAt(0)) {
             char cur = board[r][c];
@@ -77,7 +75,7 @@ public class WordSearch {
             }
             board[r][c] = cur;
         }
-        
+
         //right
         if (c < board[0].length - 1 && board[r][c + 1] == word.charAt(0)) {
             char cur = board[r][c];
@@ -87,7 +85,7 @@ public class WordSearch {
             }
             board[r][c] = cur;
         }
-        
+
         return false;
     }
 }

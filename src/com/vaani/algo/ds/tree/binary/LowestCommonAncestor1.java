@@ -4,14 +4,13 @@ import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Given a binary search tree (BST), find the lowest common ancestor of two given nodes in the BST.
- *
+ * <p>
  * Created by Xiaomeng on 10/26/2014.
  */
 public class LowestCommonAncestor1 {
     /**
      * O(logN) Time
      * Reference: http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html
-     *
      */
     public static TreeNode getLCA(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || p == null || q == null) return null;
@@ -24,7 +23,7 @@ public class LowestCommonAncestor1 {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         TreeNode root = new TreeNode(6);
         root.left = new TreeNode(2);
         root.right = new TreeNode(8);

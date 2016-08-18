@@ -1,13 +1,13 @@
 package com.vaani.algo.array;
 
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
- *  For a given array arr[], returns the maximum j – i such that
- *  arr[j] > arr[i]
+ * For a given array arr[], returns the maximum j – i such that
+ * arr[j] > arr[i]
  */
 public class maxDist {
     private static int maxDist(List<Integer> list) {
@@ -27,13 +27,11 @@ public class maxDist {
 
             } else {
 
-                if (list.get(s) < list.get(e-1)) {
+                if (list.get(s) < list.get(e - 1)) {
                     e--;
-                }
-                else if (list.get(e) > list.get(s+1)) {
+                } else if (list.get(e) > list.get(s + 1)) {
                     s++;
-                }
-                else{
+                } else {
                     s++;
                     e--;
                 }

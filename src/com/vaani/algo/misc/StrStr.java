@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Implement strStr().
 
@@ -20,7 +18,7 @@ public class StrStr {
         if (length2 > length1) {
             return null;
         }
-        
+
         for (int i = 0; i + length2 <= length1; i++) {
             if (haystack.charAt(i) != needle.charAt(0)) {
                 continue;

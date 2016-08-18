@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
 
@@ -17,11 +15,11 @@ public class ValidSudoku {
         // the same Solution instance will be reused for each test case.
         int rowLength = board.length;
         int columnLength = board[0].length;
-        
+
         if (rowLength != 9 || columnLength != 9) {
             return false;
         }
-        
+
         int row = 0;
         //check rows
         while (row < rowLength) {
@@ -36,7 +34,7 @@ public class ValidSudoku {
                         nums[number] = true;
                     }
                 }
-                
+
             }
             row++;
         }
@@ -54,11 +52,11 @@ public class ValidSudoku {
                         nums[number] = true;
                     }
                 }
-                
+
             }
             col++;
         }
-        
+
         //check square
         for (row = 0; row < 9; row += 3) {
             for (col = 0; col < 9; col += 3) {
@@ -66,7 +64,7 @@ public class ValidSudoku {
                 for (int i = row; i < row + 3; i++) {
                     for (int j = col; j < col + 3; j++) {
                         if (board[i][j] == '.') {
-                            
+
                         } else {
                             int number = board[i][j] - '1';
                             if (nums[number] == true) {
@@ -75,12 +73,12 @@ public class ValidSudoku {
                                 nums[number] = true;
                             }
                         }
-                        
+
                     }
                 }
             }
         }
-        
+
         return true;
     }
 }

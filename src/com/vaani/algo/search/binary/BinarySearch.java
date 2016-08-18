@@ -1,4 +1,5 @@
 package com.vaani.algo.search.binary;
+
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstrings%2FBinarySearch.java
 public class BinarySearch {
     private static int recursionBinarySearch(int[] nums, int start, int end, int key) {
@@ -17,7 +18,7 @@ public class BinarySearch {
 
     }
 
-    
+
     private static int nonRecursionBinarySearch(int[] nums, int key) {
         int start = 0;
         int end = nums.length - 1;
@@ -40,5 +41,5 @@ public class BinarySearch {
         System.out.println(i);
         int i1 = nonRecursionBinarySearch(nums, 1);
         System.out.println(i1);
-}
+    }
 }

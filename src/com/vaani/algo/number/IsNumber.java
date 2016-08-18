@@ -1,7 +1,8 @@
 package com.vaani.algo.number;
+
 //https://github.com/xiaoningning/algorithm/blob/master/isNumber/src/IsNumber.java
 public class IsNumber {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String s1 = "abc";
         String s2 = "-1.2";
         String s3 = "1e-2";
@@ -15,7 +16,7 @@ public class IsNumber {
         System.out.println(s5 + " " + isNumber(s5));
     }
 
-    public static boolean isNumber(String s){
+    public static boolean isNumber(String s) {
         boolean num = false;
         boolean exp = false;
         boolean dot = false;
@@ -24,33 +25,30 @@ public class IsNumber {
         int N = s.length();
         int i = 0;
 
-        while(i < N){
-            if(s.charAt(i) == ' ')
+        while (i < N) {
+            if (s.charAt(i) == ' ')
                 space = true;
-            else if(space)
+            else if (space)
                 return false; // no space for a number
-            else if(s.charAt(i) == '-' || s.charAt(i) == '+'){
+            else if (s.charAt(i) == '-' || s.charAt(i) == '+') {
                 // +/- should be after e
                 if (i > 0)
-                    if (s.charAt(i-1) != 'e' && s.charAt(i-1) != 'E')
+                    if (s.charAt(i - 1) != 'e' && s.charAt(i - 1) != 'E')
                         return false;
                 // i == 0 true if num == true
-            }
-            else if (s.charAt(i) >= '0' && s.charAt(i) <= '9')
+            } else if (s.charAt(i) >= '0' && s.charAt(i) <= '9')
                 num = true;
-            else if(s.charAt(i) == 'e' || s.charAt(i) == 'E'){
+            else if (s.charAt(i) == 'e' || s.charAt(i) == 'E') {
                 // only one e, at least one num in the front
                 if (exp || !num)
                     return false;
                 exp = true;
-            }
-            else if (s.charAt(i) == '.'){
+            } else if (s.charAt(i) == '.') {
                 // no e if dot, only one dot
-                if(exp || dot)
+                if (exp || dot)
                     return false;
                 dot = true;
-            }
-            else
+            } else
                 return false;
 
             i++;

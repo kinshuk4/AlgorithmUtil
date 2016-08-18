@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*Given an array of integers, every element appears twice except for one. Find that single one.*/
 public class SingleNumber {
     public int singleNumber(int[] A) {
@@ -9,7 +7,7 @@ public class SingleNumber {
         /*
         XOR each element in the array, the final result is the one that appears only once.
         */
-        
+
         int result = 0;
         for (int i = 0; i < A.length; i++) {
             result ^= A[i];

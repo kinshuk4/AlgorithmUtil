@@ -29,22 +29,22 @@ public class IsBST {
         System.out.println(isBST1(root, Integer.MIN_VALUE));
 
         BinaryTreeInorderIterator treeIterator = new BinaryTreeInorderIterator(root);
-        while (treeIterator.hasNext()){
-            TreeNode  next = treeIterator.next();
+        while (treeIterator.hasNext()) {
+            TreeNode next = treeIterator.next();
             System.out.print(next.val + " ");
         }
         System.out.println();
 
         BinaryTreePostorderIterator postOrderIter = new BinaryTreePostorderIterator(root);
-        while (postOrderIter.hasNext()){
-            TreeNode  next = treeIterator.next();
+        while (postOrderIter.hasNext()) {
+            TreeNode next = treeIterator.next();
             System.out.print(next.val + " ");
         }
         System.out.println();
 
         BinaryTreePreOrderIterator preOrderIter = new BinaryTreePreOrderIterator(root);
-        while (preOrderIter.hasNext()){
-            TreeNode  next = preOrderIter.next();
+        while (preOrderIter.hasNext()) {
+            TreeNode next = preOrderIter.next();
             System.out.print(next.val + " ");
         }
         System.out.println();

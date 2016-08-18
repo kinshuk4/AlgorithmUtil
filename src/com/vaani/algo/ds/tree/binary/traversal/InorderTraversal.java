@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
-
-import com.vaani.algo.ds.core.TreeNode;
 
 /*
 Given a binary tree, return the inorder traversal of its nodes' values.
@@ -33,21 +33,21 @@ The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 
 public class InorderTraversal {
-	//iterative
+    //iterative
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        
+
         TreeNode node = root;
         while (!stack.isEmpty() || node != null) {
             if (node != null) {
@@ -60,8 +60,8 @@ public class InorderTraversal {
             }
         }
         return result;
-    } 
-    
+    }
+
     //recursive
     public ArrayList<Integer> inorderTraversalRecursive(TreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -70,7 +70,7 @@ public class InorderTraversal {
         helper(root, result);
         return result;
     }
-    
+
     public void helper(TreeNode root, ArrayList<Integer> result) {
         if (root == null) return;
         helper(root.left, result);

@@ -11,84 +11,83 @@ import java.util.LinkedList;
  * data structures to maintain this system and implement operations such as
  * enqueue, dequeueAny, dequeueDog and dequeueCat. You may use the built-in
  * LinkedList data structure.
- * 
  */
 // space: all O(1)
 // time: enqueue O(1), dequeue O(1), dequeueCat O(n), dequeueDog O(n)
 public class Question7 {
 
-  private LinkedList<Animal> animals = new LinkedList<Animal>();
+    private LinkedList<Animal> animals = new LinkedList<Animal>();
 
-  public static abstract class Animal {
-    public int id;
+    public void enqueue(Animal animal) {
+        // write implementation here
+        animals.add(animal);
+    }
 
-    public Animal(int id) {
-      this.id = id;
+    public Animal dequeueDog() {
+        // write implementation here
+        if (animals.size() == 0) {
+            return null;
+        }
+        Animal selected = null;
+        int index = -1;
+        for (int i = 0; i < animals.size(); ++i) {
+            if (animals.get(i) instanceof Dog) {
+                index = i;
+                selected = animals.get(i);
+                break;
+            }
+        }
+        animals.remove(index);
+        return selected;
     }
-  }
 
-  public static class Dog extends Animal {
-    public Dog(int id) {
-      super(id);
+    public Animal dequeueCat() {
+        // write implementation here
+        if (animals.size() == 0) {
+            return null;
+        }
+        Animal selected = null;
+        int index = -1;
+        for (int i = 0; i < animals.size(); ++i) {
+            if (animals.get(i) instanceof Cat) {
+                index = i;
+                selected = animals.get(i);
+                break;
+            }
+        }
+        animals.remove(index);
+        return selected;
     }
-  }
 
-  public static class Cat extends Animal {
-    public Cat(int id) {
-      super(id);
+    public Animal dequeueAny() {
+        // write implementation here
+        if (animals.size() != 0) {
+            Animal selected = animals.get(0);
+            animals.remove(0);
+            return selected;
+        }
+        return null;
     }
-  }
 
-  public void enqueue(Animal animal) {
-    // write implementation here
-    animals.add(animal);
-  }
+    public static abstract class Animal {
+        public int id;
 
-  public Animal dequeueDog() {
-    // write implementation here
-    if (animals.size() == 0) {
-      return null;
+        public Animal(int id) {
+            this.id = id;
+        }
     }
-    Animal selected = null;
-    int index = -1;
-    for (int i = 0; i < animals.size(); ++i) {
-      if (animals.get(i) instanceof Dog) {
-        index = i;
-        selected = animals.get(i);
-        break;
-      }
-    }
-    animals.remove(index);
-    return selected;
-  }
 
-  public Animal dequeueCat() {
-    // write implementation here
-    if (animals.size() == 0) {
-      return null;
+    public static class Dog extends Animal {
+        public Dog(int id) {
+            super(id);
+        }
     }
-    Animal selected = null;
-    int index = -1;
-    for (int i = 0; i < animals.size(); ++i) {
-      if (animals.get(i) instanceof Cat) {
-        index = i;
-        selected = animals.get(i);
-        break;
-      }
-    }
-    animals.remove(index);
-    return selected;
-  }
 
-  public Animal dequeueAny() {
-    // write implementation here
-    if (animals.size() != 0) {
-      Animal selected = animals.get(0);
-      animals.remove(0);
-      return selected;
+    public static class Cat extends Animal {
+        public Cat(int id) {
+            super(id);
+        }
     }
-    return null;
-  }
 
 }
 

@@ -14,7 +14,7 @@ public class IntToBinaryString {
             builder.append(String.valueOf(temp % 2));
             // if insert at 0, no need to reverse
             // builder.insert(0, String.valueOf(temp % 2));
-            if(integer ==0)
+            if (integer == 0)
                 break;
         }
         return builder.reverse().toString();

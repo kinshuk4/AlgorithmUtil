@@ -10,10 +10,10 @@ package com.vaani.algo.cc150.chap7;
  */
 public class Question2 {
 
-  public double probability(int nVertices) {
-    // write implementation here
-    return 1 - 2 / Math.pow(2, nVertices);
-  }
+    public double probability(int nVertices) {
+        // write implementation here
+        return 1 - 2 / Math.pow(2, nVertices);
+    }
 
 }
 

@@ -10,10 +10,6 @@ public class Vertex {
     public int discover;
     public int finish;
 
-    public enum Color {
-        WHITE, GRAY, BLACK
-    }
-
     public Vertex(Character name) {
         this.name = name;
         this.color = Color.WHITE;
@@ -82,5 +78,9 @@ public class Vertex {
         } else if (!name.equals(other.name))
             return false;
         return true;
+    }
+
+    public enum Color {
+        WHITE, GRAY, BLACK
     }
 }

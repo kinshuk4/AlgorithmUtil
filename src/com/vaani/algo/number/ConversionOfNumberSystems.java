@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ConversionOfNumberSystems {
-    
+
     public static String conversion(int number, int base) {
         StringBuilder sb = new StringBuilder();
         while (number > 0) {
@@ -34,7 +34,7 @@ public class ConversionOfNumberSystems {
         return sb.reverse().toString();
     }
 
-    
+
     public static String baseString(int num, int base) {
         String str, digit = "0123456789abcdef";
         if (num == 0) {

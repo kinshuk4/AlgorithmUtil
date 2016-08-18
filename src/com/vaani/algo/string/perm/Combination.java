@@ -1,4 +1,5 @@
 package com.vaani.algo.string.perm;
+
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstrings%2FCombination.java
 public class Combination {
     static StringBuilder sb = new StringBuilder();
@@ -12,7 +13,7 @@ public class Combination {
         combination();
     }
 
-    
+
     public static void combination(char[] strs, int start, int number) {
         if (number <= 0 || start >= strs.length) {
             System.out.println(sb.toString());
@@ -27,13 +28,13 @@ public class Combination {
 
     }
 
-    
+
     public static void combination() {
         String[] str = {"a", "b", "c"};
-        int n = str.length; 
+        int n = str.length;
         int nbit = 1 << n;
-        for (int i = 0; i < nbit; i++) { 
-            for (int j = 0; j < n; j++) { 
+        for (int i = 0; i < nbit; i++) {
+            for (int j = 0; j < n; j++) {
                 int tmp = 1 << j;
                 if ((tmp & i) != 0) { // & 表示与。两个位都为1时，结果才为1
                     System.out.print(str[j]);
@@ -41,5 +42,5 @@ public class Combination {
             }
             System.out.println();
         }
-}
+    }
 }

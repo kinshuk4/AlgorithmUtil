@@ -1,16 +1,16 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 
@@ -23,43 +23,43 @@ public class ReorderList {
         if (head == null) {
             return;
         }
-        
+
         ListNode fast = head;
         ListNode slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
-        
+
         ListNode secondHead = slow.next;
         slow.next = null;
-        
+
         ListNode node = head;
         while (node != null) {
             node = findLastAndInsert(node, secondHead);
         }
     }
-    
+
     public ListNode findLastAndInsert(ListNode cur, ListNode head) {
         if (cur.next == null || head == null) {
             return null;
         }
         ListNode next = cur.next;
         ListNode node = head;
-        
+
         if (node.next == null) {
             node.next = cur.next;
             cur.next = node.next;
             return null;
         }
-        
+
         while (node.next.next != null) {
             node = node.next;
         }
         node.next.next = cur.next;
         cur.next = node.next;
         node.next = null;
-        
+
         return next;
     }
 }
@@ -73,24 +73,24 @@ class ReorderList2 {
         if (head == null) {
             return;
         }
-        
+
         ArrayList<ListNode> list = new ArrayList<ListNode>();
         ListNode node = head;
         while (node != null) {
             list.add(node);
             node = node.next;
         }
-        
+
         int back = list.size() - 1;
         int front = 0;
-        
+
         while (back > front) {
             ListNode a = list.get(front);
             ListNode b = list.get(back);
-            
+
             b.next = a.next;
             a.next = b;
-            
+
             back--;
             front++;
         }
@@ -100,5 +100,5 @@ class ReorderList2 {
             list.get(back + 1).next = null;
         }
     }
-    
+
 }

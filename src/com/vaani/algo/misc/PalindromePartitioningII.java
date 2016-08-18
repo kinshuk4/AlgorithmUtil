@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a string s, partition s such that every substring of the partition is a palindrome.
 
@@ -19,7 +17,7 @@ public class PalindromePartitioningII {
         boolean[][] isPal = new boolean[length][length];
         //dp[i] --> how many cuts from s.charAt(i) to the end of s.
         int[] dp = new int[length + 1];
-        
+
         for (int i = 0; i < length - 1; i++) {
             //initial value of dp[i]: each char is palindrome
             dp[i] = length - i - 1;
@@ -29,13 +27,13 @@ public class PalindromePartitioningII {
         isPal[length - 1][length - 1] = true;
         dp[length - 1] = 0;
         dp[length] = -1;
-        
+
         for (int i = length - 2; i >= 0; i--) {
             for (int j = i + 2; j < length; j++) {
                 isPal[i][j] = isPal[i + 1][j - 1] && (s.charAt(i) == s.charAt(j));
             }
         }
-        
+
         for (int i = length - 2; i >= 0; i--) {
             for (int j = i; j < length; j++) {
                 if (isPal[i][j]) {
@@ -44,6 +42,6 @@ public class PalindromePartitioningII {
             }
         }
         return dp[0];
-        
+
     }
 }

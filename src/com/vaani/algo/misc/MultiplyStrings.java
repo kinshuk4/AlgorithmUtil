@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given two numbers represented as strings, return multiplication of the numbers as a string.
 
@@ -15,7 +13,7 @@ public class MultiplyStrings {
         if (num1 == null || num2 == null) return null;
         int length1 = num1.length();
         int length2 = num2.length();
-        
+
         int[] result = new int[length1 + length2];
         for (int i = 0; i < length1; i++) {
             int a = num1.charAt(length1 - i - 1) - '0';
@@ -28,7 +26,7 @@ public class MultiplyStrings {
             }
             result[i + length2] += carry;
         }
-        
+
         StringBuilder s = new StringBuilder();
         for (int i = length1 + length2 - 1; i >= 0; i--) {
             if (i != 0 && result[i] == 0 && s.length() == 0) continue;

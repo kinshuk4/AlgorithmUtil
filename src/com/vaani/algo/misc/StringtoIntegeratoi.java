@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Implement atoi to convert a string to an integer.
 
@@ -26,14 +24,14 @@ public class StringtoIntegeratoi {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (str == null || str.equals("")) return 0;
-        
+
         int num = 0;
         int sign = 1;
         int length = str.length();
         int i = 0;
-        
+
         while (str.charAt(i) == ' ' && i < length) i++;
-        
+
         if (str.charAt(i) == '+') i++;
         if (str.charAt(i) == '-') {
             sign = -1;
@@ -41,7 +39,8 @@ public class StringtoIntegeratoi {
         }
         for (; i < length; i++) {
             if (str.charAt(i) < '0' || str.charAt(i) > '9') break;
-            if (num > Integer.MAX_VALUE / 10 || (num == Integer.MAX_VALUE / 10 && str.charAt(i) - '0' > Integer.MAX_VALUE % 10)) return sign == -1? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            if (num > Integer.MAX_VALUE / 10 || (num == Integer.MAX_VALUE / 10 && str.charAt(i) - '0' > Integer.MAX_VALUE % 10))
+                return sign == -1 ? Integer.MIN_VALUE : Integer.MAX_VALUE;
             num = num * 10 + str.charAt(i) - '0';
         }
         return num * sign;

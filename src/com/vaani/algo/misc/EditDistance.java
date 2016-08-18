@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given two words word1 and word2, find the minimum number of steps required to convert word1 to word2. (each operation is counted as 1 step.)
 
@@ -29,23 +27,23 @@ public class EditDistance {
     public int minDistance(String word1, String word2) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-        
+
         int length1 = word1.length();
         int length2 = word2.length();
-        
+
         if (length1 == 0 || length2 == 0) {
-            return length1 > length2? length1 : length2;
+            return length1 > length2 ? length1 : length2;
         }
-        
+
         int[][] dis = new int[length1 + 1][length2 + 1];
-        
+
         for (int i = 1; i <= length1; i++) {
             dis[i][0] = i;
         }
         for (int j = 1; j <= length2; j++) {
             dis[0][j] = j;
         }
-        
+
         for (int i = 1; i <= length1; i++) {
             for (int j = 1; j <= length2; j++) {
                 if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
@@ -57,7 +55,7 @@ public class EditDistance {
         }
         return dis[length1][length2];
     }
-    
+
     public int min(int a, int b, int c) {
         int temp = Math.min(a, b);
         return Math.min(temp, c);

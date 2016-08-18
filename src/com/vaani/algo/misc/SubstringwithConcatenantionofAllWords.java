@@ -1,7 +1,7 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.HashMap;
 /*
 You are given a string, S, and a list of words, L, that are all of the same length. Find all starting indices of substring(s) in S that is a concatenation of each word in L exactly once and without any intervening characters.
 
@@ -20,39 +20,37 @@ public class SubstringwithConcatenantionofAllWords {
 
         int singleWordSize = L[0].length();
         int LSize = L.length;
-        
+
         int concatLength = LSize * singleWordSize;
-        
+
         ArrayList<Integer> result = new ArrayList<Integer>();
-        
-        for(String s : L) {
-            mapL.put(s, mapL.get(s) == null? 1 : (mapL.get(s) + 1));
+
+        for (String s : L) {
+            mapL.put(s, mapL.get(s) == null ? 1 : (mapL.get(s) + 1));
         }
-        
-        for(int i = 0; i <= S.length() - concatLength; i++) {
+
+        for (int i = 0; i <= S.length() - concatLength; i++) {
             String s = S.substring(i, i + concatLength);
             HashMap<String, Integer> temp = new HashMap<String, Integer>(mapL);
-            
-            for(int j = 0; j < concatLength; j += singleWordSize) {
+
+            for (int j = 0; j < concatLength; j += singleWordSize) {
                 String cur = s.substring(j, j + singleWordSize);
-                if(temp.containsKey(cur)) {
-                    if(temp.get(cur) == 1) {
+                if (temp.containsKey(cur)) {
+                    if (temp.get(cur) == 1) {
                         temp.remove(cur);
-                    }
-                    else{
+                    } else {
                         temp.put(cur, temp.get(cur) - 1);
                     }
-                    
-                }
-                else {
+
+                } else {
                     break;
                 }
-                
+
             }
-            if(temp.isEmpty()) {
+            if (temp.isEmpty()) {
                 result.add(i);
             }
-            
+
         }
         return result;
     }

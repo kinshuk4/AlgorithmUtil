@@ -23,13 +23,12 @@ public class find2DArray {
 
     public static void find2DArrayNum(int[][] n, int x) {
         int r = 0;
-        int c = n[0].length -1;
-        while( r < n.length && c >= 0){
-            if(n[r][c] == x){
-                System.out.println(r + " " + c );
+        int c = n[0].length - 1;
+        while (r < n.length && c >= 0) {
+            if (n[r][c] == x) {
+                System.out.println(r + " " + c);
                 return;
-            }
-            else if (n[r][c] < x)
+            } else if (n[r][c] < x)
                 r++;
             else // n[r][c] >x
                 c--;

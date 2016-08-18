@@ -27,12 +27,16 @@ Visually, the graph looks like the following:
 /**
  * Definition for undirected graph.
  */
-  class UndirectedGraphNode {
-      int label;
-      ArrayList<UndirectedGraphNode> neighbors;
-      UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
-  };
- 
+class UndirectedGraphNode {
+    int label;
+    ArrayList<UndirectedGraphNode> neighbors;
+
+    UndirectedGraphNode(int x) {
+        label = x;
+        neighbors = new ArrayList<UndirectedGraphNode>();
+    }
+};
+
 public class CloneGraph {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -41,28 +45,28 @@ public class CloneGraph {
             return null;
         }
         HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-        
+
         UndirectedGraphNode head = new UndirectedGraphNode(node.label);
         Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
         queue.add(node);
         map.put(node, head);
-        
-        while(!queue.isEmpty()) {
+
+        while (!queue.isEmpty()) {
             UndirectedGraphNode cur = queue.poll();
             for (UndirectedGraphNode n : cur.neighbors) {
-                
+
                 if (!map.containsKey(n)) {
                     UndirectedGraphNode nb = new UndirectedGraphNode(n.label);
                     queue.add(n);
                     map.put(n, nb);
                     map.get(cur).neighbors.add(nb);
                 } else {
-                    map.get(cur).neighbors.add(map.get(n));   
+                    map.get(cur).neighbors.add(map.get(n));
                 }
-                
+
             }
         }
         return head;
-        
+
     }
 }

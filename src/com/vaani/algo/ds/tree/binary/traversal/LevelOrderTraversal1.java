@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
-
-import com.vaani.algo.ds.core.TreeNode;
 
 
 public class LevelOrderTraversal1 {
@@ -42,6 +42,6 @@ public class LevelOrderTraversal1 {
 
         }
     }
-    
-    
+
+
 }

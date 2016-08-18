@@ -1,8 +1,8 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
-import java.util.ArrayList;
-
 import com.vaani.algo.ds.core.TreeNode;
+
+import java.util.ArrayList;
 
 /*
 Given a binary tree, find the maximum path sum.
@@ -19,10 +19,10 @@ https://github.com/paopao2/Algorithm-Practice/blob/master/Binary%20Tree%20Maximu
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class MaximumPathSum {
@@ -35,7 +35,7 @@ public class MaximumPathSum {
         //getMaxSum(root, curMax);
         return curMax.get(0);
     }
-    
+
     public int subPath(TreeNode root, ArrayList<Integer> curMax) {
         if (root == null) return 0;
         int left = Math.max(0, subPath(root.left, curMax));

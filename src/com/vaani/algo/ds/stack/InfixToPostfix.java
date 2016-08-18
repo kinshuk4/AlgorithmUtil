@@ -1,9 +1,10 @@
 package com.vaani.algo.ds.stack;
 
-import java.util.Stack;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
+
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstack%2FInfixApp.java
 public class InfixToPostfix {
     private Stack<Character> theStack;
@@ -16,10 +17,33 @@ public class InfixToPostfix {
         theStack = new Stack<Character>();
     }
 
+    public static void main(String[] args) throws IOException {
+        String input, output;
+        while (true) {
+            System.out.println("Enter infix:");
+            System.out.flush();
+            input = getString();
+            if (input.equals("")) {
+                break;
+            }
+            InfixToPostfix theTrans = new InfixToPostfix(input);
+            output = theTrans.doTrans();
+            System.out.println("Postfix is " + output + "\n");
+        }
+
+    }
+
+    public static String getString() throws IOException {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        String s = br.readLine();
+        return s;
+    }
+
     public String doTrans() {
         for (int j = 0; j < input.length(); j++) {
             char ch = input.charAt(j);
-            
+
             switch (ch) {
                 case '+':
                 case '-':
@@ -41,10 +65,10 @@ public class InfixToPostfix {
             }
         }
         while (!theStack.isEmpty()) {
-            
+
             output = output + theStack.pop();
         }
-        
+
         return output;
     }
 
@@ -81,28 +105,5 @@ public class InfixToPostfix {
                 output = output + chx;
             }
         }
-}
-    
-    public static void main(String[] args) throws IOException {
-        String input, output;
-        while (true) {
-            System.out.println("Enter infix:");
-            System.out.flush();
-            input = getString();
-            if (input.equals("")) {
-                break;
-            }
-            InfixToPostfix theTrans = new InfixToPostfix(input);
-            output = theTrans.doTrans();
-            System.out.println("Postfix is " + output + "\n");
-        }
-
     }
-
-    public static String getString() throws IOException {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        String s = br.readLine();
-        return s;
-}
 }

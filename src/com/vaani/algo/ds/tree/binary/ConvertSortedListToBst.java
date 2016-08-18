@@ -10,11 +10,12 @@ Given a singly linked list where elements are sorted in ascending order, convert
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; next = null; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; next = null; }
  * }
  */
+
 /**
  * Definition for binary tree
  * public class TreeNode {
@@ -58,7 +59,7 @@ public class ConvertSortedListToBst {
         }
         return getNode(head, end);
     }
-    
+
     public TreeNode getNode(ListNode start, ListNode end) {
         ListNode fast = start;
         ListNode slow = start;

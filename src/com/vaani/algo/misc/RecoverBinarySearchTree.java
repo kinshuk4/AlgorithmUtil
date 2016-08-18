@@ -1,15 +1,16 @@
 package com.vaani.algo.misc;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 
-import com.vaani.algo.ds.core.TreeNode;
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 /*
@@ -32,19 +33,20 @@ After traversal, swap the values of first and second node. Only need two pointer
 public class RecoverBinarySearchTree {
     ArrayList<TreeNode> track;
     TreeNode previous;
+
     public void recoverTree(TreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         track = new ArrayList<TreeNode>();
         previous = null;
         inorderTraverse(root);
-        
+
         int size = track.size();
         int temp = track.get(0).val;
         track.get(0).val = track.get(size - 1).val;
         track.get(size - 1).val = temp;
     }
-    
+
     public void inorderTraverse(TreeNode root) {
         if (root == null) {
             return;

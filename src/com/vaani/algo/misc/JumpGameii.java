@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given an array of non-negative integers, you are initially positioned at the first index of the array.
 
@@ -29,9 +27,9 @@ public class JumpGameii {
         int last = 0;
         int curr = 0;
         int steps = 0;
-        
+
         for (int i = 0; i < A.length; i++) {
-            
+
             if (i > last) {
                 last = curr;
                 steps++;

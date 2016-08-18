@@ -9,20 +9,6 @@ import com.vaani.algo.ds.core.TreeNode;
  */
 public class LargestBSTSubtree {
 
-    public static class LargestBST {
-        public TreeNode node;
-        public int maxNode;
-        public int min;
-        public int max;
-
-        public LargestBST(TreeNode n, int number, int min_value, int max_value) {
-            node = n;
-            max = max_value;
-            min = min_value;
-            maxNode = number;
-        }
-    } // end of class LargestBST
-
     public static void main(String[] args) {
         TreeNode root = new TreeNode(10);
         TreeNode node5 = new TreeNode(5);
@@ -102,7 +88,7 @@ public class LargestBSTSubtree {
             return new LargestBST(node, node.size(), node.val, node.val);
         }
 
-        LargestBST leftNode  = largestBSTSubtree1(node.left);
+        LargestBST leftNode = largestBSTSubtree1(node.left);
         LargestBST rightNode = largestBSTSubtree1(node.right);
 
         if (leftNode != null && rightNode != null) {
@@ -183,6 +169,20 @@ public class LargestBSTSubtree {
         }
         return null;
     }
+
+    public static class LargestBST {
+        public TreeNode node;
+        public int maxNode;
+        public int min;
+        public int max;
+
+        public LargestBST(TreeNode n, int number, int min_value, int max_value) {
+            node = n;
+            max = max_value;
+            min = min_value;
+            maxNode = number;
+        }
+    } // end of class LargestBST
 
 
 }

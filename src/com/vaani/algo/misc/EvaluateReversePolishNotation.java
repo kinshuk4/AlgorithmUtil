@@ -1,8 +1,6 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.Stack;
-import java.util.ArrayList;
 /*
 Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
@@ -17,7 +15,7 @@ public class EvaluateReversePolishNotation {
     public int evalRPN(String[] exp) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-         Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<Integer>();
 
         for (int i = 0; i < exp.length; i++) {
             if (exp[i].matches("-?[\\d]+")) {

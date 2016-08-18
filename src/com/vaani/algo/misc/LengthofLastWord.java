@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
 
@@ -20,18 +18,18 @@ public class LengthofLastWord {
         // if(s == null || s.equals("")) {
         //     return 0;
         // }
-        
+
         // String[] words = s.split(" ");
         // int lastWordIndex = words.length - 1;
         // return words[lastWordIndex].length();
-        int p = s.length()-1;
-        int len=0;
-        boolean trailing=true;
+        int p = s.length() - 1;
+        int len = 0;
+        boolean trailing = true;
         while (p >= 0) {
             if (s.charAt(p) != ' ') {
-                len ++;
-                trailing=false;
-                p --;
+                len++;
+                trailing = false;
+                p--;
             } else if (trailing) {
                 p--;
             } else {

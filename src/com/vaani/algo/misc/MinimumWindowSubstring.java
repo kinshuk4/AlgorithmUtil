@@ -1,8 +1,6 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.ArrayList;
 /*
 Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
 
@@ -27,21 +25,21 @@ public class MinimumWindowSubstring {
         int length2 = T.length();
 
         int[] needToFind = new int[256];
-        for(char c : T.toCharArray()) {
+        for (char c : T.toCharArray()) {
             needToFind[c]++;
         }
-        
+
         int[] hasFound = new int[256];
-        
+
         int min = Integer.MAX_VALUE;
         String minWindow = "";
         int count = 0;
         for (int begin = 0, end = 0; end < length1; end++) {
             if (needToFind[S.charAt(end)] == 0) continue;
-            
+
             hasFound[S.charAt(end)]++;
             if (hasFound[S.charAt(end)] <= needToFind[S.charAt(end)]) count++;
-            
+
             if (count == length2) {
                 while (needToFind[S.charAt(begin)] == 0 || hasFound[S.charAt(begin)] > needToFind[S.charAt(begin)]) {
                     if (hasFound[S.charAt(begin)] > needToFind[S.charAt(begin)]) hasFound[S.charAt(begin)]--;
@@ -52,11 +50,11 @@ public class MinimumWindowSubstring {
                     minWindow = S.substring(begin, end + 1);
                 }
             }
-            
+
         }
         return minWindow;
     }
-    
+
     //Too Slow
     public String minWindow2(String S, String T) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -65,15 +63,15 @@ public class MinimumWindowSubstring {
         int length1 = S.length();
         int length2 = T.length();
         if (length1 < length2) return "";
-        
+
         int min = Integer.MAX_VALUE;
         String minWindow = "";
-        
+
         HashSet<Character> set = new HashSet<Character>();
         for (char c : T.toCharArray()) {
             set.add(c);
         }
-        
+
         for (int i = 0; i + length2 <= length1; i++) {
             HashSet<Character> temp = new HashSet<Character>(set);
             int k = i;

@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 Given an absolute path for a file (Unix-style), simplify it.
@@ -22,14 +21,14 @@ public class SimplifyPath {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         StringBuilder s = new StringBuilder(path);
-	        
+
         String cleanPath = s.toString();
         String[] paths = cleanPath.split("/");
-        
+
         ArrayList<String> result = new ArrayList<String>();
         for (int i = 0; i < paths.length; i++) {
             if (paths[i].equals(".") || paths[i].length() == 0) {
-                
+
             } else if (paths[i].equals("..")) {
                 //remove previous path location
                 if (result.isEmpty()) {
@@ -37,17 +36,17 @@ public class SimplifyPath {
                 }
                 //System.out.println("REMOVE:  " + result.get(result.size() - 1));
                 result.remove(result.size() - 1);
-                
+
             } else {
-            	//System.out.println("ADD:  " + paths[i]);
+                //System.out.println("ADD:  " + paths[i]);
                 result.add(paths[i]);
             }
         }
-        
+
         if (result.isEmpty()) {
             return "/";
         }
-        
+
         StringBuilder finalPath = new StringBuilder();
         for (int i = 0; i < result.size(); i++) {
             if (result.get(i).length() != 0) {
@@ -60,8 +59,7 @@ public class SimplifyPath {
         } else {
             return "/";
         }
-    
-        
-        
+
+
     }
 }

@@ -4,7 +4,7 @@ package com.vaani.algo.misc;
  * Given a function which generates a random integer in the range 1 to 7,
  * write a function which generates a random integer in the range 1 to 10 uniformly.
  * <p/>
- *    1  2  3  4  5  6  7
+ * 1  2  3  4  5  6  7
  * 1  1  2  3  4  5  6  7
  * 2  8  9 10  1  2  3  4
  * 3  5  6  7  8  9 10  1

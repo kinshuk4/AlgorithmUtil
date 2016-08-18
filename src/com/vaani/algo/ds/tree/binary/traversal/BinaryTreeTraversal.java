@@ -60,5 +60,5 @@ public class BinaryTreeTraversal {
             postOrder(root.right);
         }
         System.out.print(root.val + "\t");
-}
+    }
 }

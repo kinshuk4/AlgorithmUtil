@@ -1,6 +1,8 @@
 package com.vaani.algo.misc;
-import java.util.ArrayList;
-import java.util.HashMap;
+
+import java.util.HashSet;
+import java.util.Set;
+
 /*
 Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
 
@@ -10,8 +12,6 @@ dict = ["leet", "code"].
 
 Return true because "leetcode" can be segmented as "leet code".
 */
-import java.util.HashSet;
-import java.util.Set;
 
 public class WordBreak {
     public boolean wordBreak(String s, Set<String> dict) {
@@ -20,7 +20,7 @@ public class WordBreak {
         }
         boolean[] chars = new boolean[s.length() + 1];
         chars[0] = true;
-        
+
         for (int i = 1; i <= s.length(); i++) {
             for (int j = 0; j < i; j++) {
                 if (chars[j] && dict.contains(s.substring(j, i))) {
@@ -38,8 +38,7 @@ class WordBreak2 {
         //TODO: CANNOT PASS THE LAST TEST CASE
         if (s.length() == 0) {
             return true;
-        }
-        else {
+        } else {
             int i;
             HashSet<String> currentWords = new HashSet<String>();
             for (i = 1; i <= s.length(); i++) {

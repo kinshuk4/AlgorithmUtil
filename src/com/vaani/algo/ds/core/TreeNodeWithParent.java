@@ -9,7 +9,7 @@ public class TreeNodeWithParent {
     public TreeNodeWithParent parent;
     public int val;
 
-    public TreeNodeWithParent(int val){
+    public TreeNodeWithParent(int val) {
         this.val = val;
     }
 }

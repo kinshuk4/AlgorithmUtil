@@ -5,7 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 
-/**https://github.com/xiaoningning/algorithm/blob/master/LRU/src/LRUCache.java
+/**
+ * https://github.com/xiaoningning/algorithm/blob/master/LRU/src/LRUCache.java
  * least-recently-used cache
  * hashmap + queue with a fixed size to implement LRU
  */
@@ -18,6 +19,27 @@ public class LRUCacheWithQHM<K, V> {
         lru = new HashMap<K, V>();
         queue = new LinkedList<K>();
         max = n;
+    }
+
+    public static void main(String[] args) {
+        LRUCacheWithQHM<String, Integer> lruCache = new LRUCacheWithQHM<String, Integer>(2);
+
+        lruCache.add("A", 1);
+        lruCache.add("B", 2);
+        System.out.println("getfirst: " + lruCache.getFirst());
+        lruCache.add("C", 3);
+
+        System.out.println("size: " + lruCache.size());
+        System.out.println("c: " + lruCache.get("C"));
+        System.out.println("getfirst: " + lruCache.getFirst());
+
+        try {
+            System.out.println(lruCache.get("A"));
+        } catch (NullPointerException e) {
+            System.out.println("null");
+        }
+
+
     }
 
     public boolean add(K key, V value) {
@@ -54,32 +76,11 @@ public class LRUCacheWithQHM<K, V> {
         } else
             return null;
     }
-    public V getFirst(){
-        if(!queue.isEmpty()){
+
+    public V getFirst() {
+        if (!queue.isEmpty()) {
             return lru.get(queue.peek());
-        }
-        else
+        } else
             return null;
-    }
-
-    public static void main(String[] args) {
-        LRUCacheWithQHM<String, Integer> lruCache = new LRUCacheWithQHM<String, Integer>(2);
-
-        lruCache.add("A", 1);
-        lruCache.add("B", 2);
-        System.out.println("getfirst: "+lruCache.getFirst());
-        lruCache.add("C", 3);
-
-        System.out.println("size: " +lruCache.size());
-        System.out.println("c: " + lruCache.get("C"));
-        System.out.println("getfirst: "+lruCache.getFirst());
-
-        try {
-            System.out.println(lruCache.get("A"));
-        } catch (NullPointerException e) {
-            System.out.println("null");
-        }
-
-
     }
 }

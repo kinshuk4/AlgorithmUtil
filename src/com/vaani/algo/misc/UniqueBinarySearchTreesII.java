@@ -1,6 +1,9 @@
 package com.vaani.algo.misc;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
+
 /*
 Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
 
@@ -29,15 +32,13 @@ Here's an example:
 The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 */
 
-import com.vaani.algo.ds.core.TreeNode;
-
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; left = null; right = null; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; left = null; right = null; }
  * }
  */
 public class UniqueBinarySearchTreesII {
@@ -46,14 +47,14 @@ public class UniqueBinarySearchTreesII {
         // the same Solution instance will be reused for each test case.
         return helper(1, n);
     }
-    
+
     public ArrayList<TreeNode> helper(int start, int end) {
         ArrayList<TreeNode> result = new ArrayList<TreeNode>();
         if (start > end) {
             result.add(null);
             return result;
         }
-        
+
         for (int i = start; i <= end; i++) {
             for (TreeNode left : helper(start, i - 1)) {
                 for (TreeNode right : helper(i + 1, end)) {

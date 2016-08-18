@@ -1,8 +1,6 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.Stack;
-import java.util.ArrayList;
 /*
 Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 
@@ -27,11 +25,11 @@ public class LargestRectangleinHistogram {
         int[] heights = new int[height.length + 1];
         for (int i = 0; i <= height.length; i++) {
             if (i == height.length) heights[i] = 0;
-            else  {
+            else {
                 heights[i] = height[i];
             }
         }
-        for (int i = 0; i < heights.length;) {
+        for (int i = 0; i < heights.length; ) {
             if (stack.isEmpty() || heights[i] > heights[stack.peek()]) {
                 stack.push(i++);
             } else {

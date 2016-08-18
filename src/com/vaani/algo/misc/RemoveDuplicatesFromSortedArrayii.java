@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Follow up for "Remove Duplicates":
 What if duplicates are allowed at most twice?

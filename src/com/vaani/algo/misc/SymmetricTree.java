@@ -5,10 +5,10 @@ import com.vaani.algo.ds.core.TreeNode;
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class SymmetricTree {
@@ -18,10 +18,10 @@ public class SymmetricTree {
         if (root == null) {
             return true;
         }
-        
+
         return isSymmetricHelper(root.left, root.right);
     }
-    
+
     public boolean isSymmetricHelper(TreeNode n1, TreeNode n2) {
         if (n1 == null && n2 == null) {
             return true;
@@ -29,7 +29,7 @@ public class SymmetricTree {
             return false;
         } else {
             return isSymmetricHelper(n1.left, n2.right) && isSymmetricHelper(n1.right, n2.left);
-            
+
         }
     }
 }

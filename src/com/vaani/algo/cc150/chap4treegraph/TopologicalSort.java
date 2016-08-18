@@ -1,7 +1,6 @@
 package com.vaani.algo.cc150.chap4treegraph;
 
 
-import com.sun.corba.se.impl.orbutil.graph.Graph;
 import com.vaani.algo.ds.core.DirectedGraph;
 import com.vaani.algo.ds.core.Vertex;
 
@@ -11,18 +10,6 @@ import java.util.*;
  * Created by Xiaomeng on 11/25/2014.
  */
 public class TopologicalSort {
-    public static class TimeRecorder {
-        private int time = 0;
-
-        public int getTime() {
-            return time;
-        }
-
-        public void setTime(int time) {
-            this.time = time;
-        }
-    }
-
     public static Vertex[] topologicalSort(DirectedGraph graph) {
         Set<Vertex> vertexSet = graph.getVertexSet();
         if (vertexSet.size() < 2) {
@@ -100,5 +87,17 @@ public class TopologicalSort {
 
         Vertex[] sortedVertexs = topologicalSort(graph);
         printVertex(sortedVertexs);
+    }
+
+    public static class TimeRecorder {
+        private int time = 0;
+
+        public int getTime() {
+            return time;
+        }
+
+        public void setTime(int time) {
+            this.time = time;
+        }
     }
 }

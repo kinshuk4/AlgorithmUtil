@@ -3,29 +3,29 @@ package com.vaani.algo.ds.list.linked;
 import com.vaani.algo.ds.core.ListNode;
 
 /**
- *  Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
- *
- *  Follow up:
- *  Can you solve it without using extra space?
- *
- *  Created by Xiaomeng on 5/22/2014.
+ * Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+ * <p>
+ * Follow up:
+ * Can you solve it without using extra space?
+ * <p>
+ * Created by Xiaomeng on 5/22/2014.
  */
 public class LinkedListCycle2 {
     public static ListNode detectCycle(ListNode head) {
-        if(head == null || head.next == null) return null;
+        if (head == null || head.next == null) return null;
 
         ListNode slow = head.next;
         ListNode fast = head.next.next;
 
-        while(fast != null && fast.next != null){
-            if(slow == fast){
+        while (fast != null && fast.next != null) {
+            if (slow == fast) {
                 ListNode node = head;
-                while(node != slow){
+                while (node != slow) {
                     node = node.next;
                     slow = slow.next;
                 }
                 return node;
-            }else{
+            } else {
                 slow = slow.next;
                 fast = fast.next.next;
             }
@@ -33,7 +33,7 @@ public class LinkedListCycle2 {
         return null;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);

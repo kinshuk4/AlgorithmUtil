@@ -1,7 +1,7 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.HashMap;
 /*
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -16,7 +16,7 @@ public class ValidParentheses {
         parenthese.put(')', '(');
         parenthese.put('}', '{');
         parenthese.put(']', '[');
-        
+
         ArrayList<Character> toBeClosed = new ArrayList<Character>();
         for (int i = 0; i < s.length(); i++) {
             char cur = s.charAt(i);
@@ -35,7 +35,7 @@ public class ValidParentheses {
                 }
             }
         }
-        
+
         if (toBeClosed.isEmpty()) {
             return true;
         } else {

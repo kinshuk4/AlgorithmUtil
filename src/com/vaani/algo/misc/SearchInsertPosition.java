@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
 
@@ -20,9 +18,9 @@ public class SearchInsertPosition {
         // the same Solution instance will be reused for each test case.
         int low = 0;
         int high = A.length - 1;
-        
+
         while (low <= high) {
-            int mid = (low + high)/2;
+            int mid = (low + high) / 2;
             int cur = A[mid];
             if (cur == target) {
                 return mid;
@@ -32,7 +30,7 @@ public class SearchInsertPosition {
                 high = mid - 1;
             }
         }
-        
+
         return low;
     }
 }

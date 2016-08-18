@@ -18,18 +18,18 @@ public class BestTimeToBuyAndSellStock3 {
         }
         int[] historyProfit = new int[length];
         int[] futureProfit = new int[length];
-        
+
         int valley = prices[0];
         int peak = prices[length - 1];
         int max = 0;
-        
+
         for (int i = 1; i < length; i++) {
             if (valley > prices[i]) {
                 valley = prices[i];
             }
             historyProfit[i] = Math.max(historyProfit[i - 1], prices[i] - valley);
         }
-        
+
         for (int j = length - 2; j >= 0; j--) {
             if (peak < prices[j]) {
                 peak = prices[j];
@@ -37,7 +37,7 @@ public class BestTimeToBuyAndSellStock3 {
             futureProfit[j] = Math.max(futureProfit[j + 1], peak - prices[j]);
             max = Math.max(max, futureProfit[j] + historyProfit[j]);
         }
-        
+
         return max;
-     }
+    }
 }

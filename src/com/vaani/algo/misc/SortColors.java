@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 
@@ -25,14 +23,14 @@ public class SortColors {
         // the same Solution instance will be reused for each test case.
         int i = -1;
         int j = A.length;
-        
+
         for (int cur = 0; cur < j; cur++) {
             if (A[cur] == 0) {
                 i++;
                 int temp = A[cur];
                 A[cur] = A[i];
                 A[i] = temp;
-                
+
             } else if (A[cur] == 2) {
                 j--;
                 int temp = A[cur];

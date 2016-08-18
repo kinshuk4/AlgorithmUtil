@@ -15,20 +15,19 @@ import java.util.Stack;
  */
 public class RePack {
 
+    int capacity = 313;
+    int countRound = 0;
+    Queue<Integer> pack = new LinkedList<Integer>();
+    Stack<Integer> desk = new Stack<Integer>();
+    int countAction = 0;
+    boolean done = false;
+
     public static void main(String args[]) {
         RePack rp = new RePack();
         rp.init();
         rp.goOverAllRounds();
 
     }
-
-    int capacity = 313;
-    int countRound = 0;
-
-    Queue<Integer> pack = new LinkedList<Integer>();
-    Stack<Integer> desk = new Stack<Integer>();
-    int countAction = 0;
-    boolean done = false;
 
     public void init() {
         for (int i = 0; i < capacity; i++) {

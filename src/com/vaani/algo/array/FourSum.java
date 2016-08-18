@@ -20,19 +20,19 @@ public class FourSum {
     public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-        
+
         Arrays.sort(num);
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         int length = num.length;
         if (length < 4) {
             return result;
         }
-        
+
         for (int i = 0; i < length - 3; i++) {
             if (i != 0 && num[i] == num[i - 1]) {
                 continue;
             }
-            for (int j = length - 1; j >= 2 ; j--) {
+            for (int j = length - 1; j >= 2; j--) {
                 if (j != length - 1 && num[j] == num[j + 1]) {
                     continue;
                 }
@@ -44,7 +44,7 @@ public class FourSum {
                     if (L != i + 1 && num[L] == num[L - 1]) {
                         L++;
                         continue;
-                    } 
+                    }
                     if (R != j - 1 && num[R] == num[R + 1]) {
                         R--;
                         continue;

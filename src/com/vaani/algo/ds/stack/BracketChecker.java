@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.stack;
 
-import java.util.Stack;
-import java.io.BufferedReader;
+import com.vaani.algo.util.IOUtilX;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Stack;
 
 /*https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstack%2FBracketsApp.java
  * 
@@ -13,6 +13,20 @@ public class BracketChecker {
 
     public BracketChecker(String in) {
         this.input = in;
+    }
+
+    public static void main(String[] args) throws IOException {
+        String input;
+        while (true) {
+            System.out.println("Enter string containing delimiters:");
+            System.out.flush();
+            input = IOUtilX.readString();
+            if (input.equals("")) {
+                break;
+            }
+            BracketChecker theChecker = new BracketChecker(input);
+            theChecker.check();
+        }
     }
 
     public void check() {
@@ -47,26 +61,7 @@ public class BracketChecker {
         } else {
             System.out.println("It is legitimate!");
         }
-}
-    
-    public static void main(String[] args) throws IOException {
-        String input;
-        while (true) {
-            System.out.println("Enter string containing delimiters:");
-            System.out.flush();
-            input = getString();
-            if (input.equals("")) {
-                break;
-            }
-            BracketChecker theChecker = new BracketChecker(input);
-            theChecker.check();
-        }
     }
 
-    public static String getString() throws IOException {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        String str = br.readLine();
-        return str;
-}
+
 }

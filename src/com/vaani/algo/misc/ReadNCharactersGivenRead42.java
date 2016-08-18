@@ -2,14 +2,14 @@ package com.vaani.algo.misc;
 
 /**
  * the read function may be called multiple times.
- *
  */
 public class ReadNCharactersGivenRead42 {
-    private char[] buffer = new char[4];
     int offset = 0, bufsize = 0;
+    private char[] buffer = new char[4];
+
     /**
      * @param buf Destination buffer
-     * @param n Maximum number of characters to read
+     * @param n   Maximum number of characters to read
      * @return The number of characters read
      */
     public int read(char[] buf, int n) {
@@ -28,7 +28,7 @@ public class ReadNCharactersGivenRead42 {
         return readBytes;
     }
 
-    private int read4(char[] buf){
+    private int read4(char[] buf) {
         return 0;
     }
 }

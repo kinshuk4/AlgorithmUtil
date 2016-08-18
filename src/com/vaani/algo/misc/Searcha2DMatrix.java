@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 
@@ -24,31 +22,29 @@ public class Searcha2DMatrix {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         int rowLength = matrix.length;
         int columnLength = matrix[0].length;
-        
+
         boolean found = false;
-        
+
         int low = 0, high = rowLength * columnLength;
-        
-        
-        while(low <= high) {
-            int cur = (low + high)/2;
+
+
+        while (low <= high) {
+            int cur = (low + high) / 2;
             int row = cur / columnLength;
             int column = cur % columnLength;
-            if(row > rowLength - 1 || column > columnLength - 1) {
+            if (row > rowLength - 1 || column > columnLength - 1) {
                 break;
             }
-            if(matrix[row][column] == target) {
+            if (matrix[row][column] == target) {
                 found = true;
                 break;
-            }
-            else if(matrix[row][column] > target) {
+            } else if (matrix[row][column] > target) {
                 high = cur - 1;
-            }
-            else {
+            } else {
                 low = cur + 1;
             }
         }
-        
+
         return found;
     }
 }

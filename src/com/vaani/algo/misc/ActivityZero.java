@@ -1,20 +1,18 @@
 package com.vaani.algo.misc;
-import java.util.HashMap;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 //https://github.com/xiaoningning/algorithm/blob/master/ActivityZero/src/ActivityZero.java
+
 /**
-  *
  * You'll be given a list of activities and their caloric impact.
  * Write a program that outputs the names of activities one should choose to partake in
  * so that the sum of their caloric impact is zero.
  * Once an activity is selected, it cannot be chosen again.
- *
+ * <p>
  * It is a question to find a sum to zero from all possible elements of an array
  * Basically use gray code to pick element from a given array and calculate the sum
- *
  */
 
 public class ActivityZero {

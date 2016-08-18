@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given two sorted integer arrays A and B, merge B into A as one sorted array.
 
@@ -22,7 +20,7 @@ public class MergeSortedArray {
                 n--;
             }
         }
-        
+
         if (n > 0) {
             while (n > 0) {
                 A[n - 1] = B[n - 1];

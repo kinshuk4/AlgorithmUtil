@@ -1,4 +1,5 @@
 package com.vaani.algo.ds.stack;
+
 import java.util.Stack;
 
 //Validate Pop Sequence of IStack
@@ -50,5 +51,5 @@ public class CheckStackSequence {
             return true;
         }
         return false;
-}
+    }
 }

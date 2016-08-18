@@ -24,5 +24,5 @@ public class InsertionSort {
         int temp = nums[first];
         nums[first] = nums[second];
         nums[second] = temp;
-}
+    }
 }

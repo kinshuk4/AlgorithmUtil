@@ -1,7 +1,8 @@
 package com.vaani.algo.ds.tree.binary.traversal;
-import java.util.ArrayList;
 
 import com.vaani.algo.ds.core.TreeNode;
+
+import java.util.ArrayList;
 
 /*
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
@@ -39,15 +40,15 @@ public class LevelOrderTraversalByLevel {
         if (root == null) {
             return result;
         }
-        
+
         ArrayList<TreeNode> currentList = new ArrayList<TreeNode>();
         currentList.add(root);
-       
-        
+
+
         while (currentList.size() != 0) {
             ArrayList<TreeNode> nextLevelList = new ArrayList<TreeNode>();
             ArrayList<Integer> parentLevelData = new ArrayList<Integer>();
-            
+
             for (TreeNode s : currentList) {
                 parentLevelData.add(s.val);
                 if (s.left != null) {
@@ -61,7 +62,7 @@ public class LevelOrderTraversalByLevel {
             //currentList = new ArrayList<TreeNode>(nextLevelList);
             currentList = nextLevelList;
         }
-        
+
         return result;
     }
 }

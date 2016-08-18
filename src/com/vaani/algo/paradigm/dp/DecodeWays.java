@@ -30,8 +30,8 @@ public class DecodeWays {
         count[0] = 1;
         if (s.charAt(0) != '0') count[1] = 1;
         else return 0;
-        
-        
+
+
         for (int i = 2; i <= length; i++) {
             if (s.charAt(i - 1) != '0') {
                 int value = Integer.parseInt(s.substring(i - 2, i));
@@ -49,6 +49,6 @@ public class DecodeWays {
             }
         }
         return count[length];
-        
+
     }
 }

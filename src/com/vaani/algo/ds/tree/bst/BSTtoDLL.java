@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.tree.bst;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
-
-import com.vaani.algo.ds.core.TreeNode;
 
 
 /**
@@ -18,6 +18,9 @@ import com.vaani.algo.ds.core.TreeNode;
  * do it in place. time complexity: O(n)
  */
 public class BSTtoDLL {
+    // in place approach
+    static TreeNode prev, head;
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(10);
         TreeNode node5 = new TreeNode(5);
@@ -94,8 +97,6 @@ public class BSTtoDLL {
         return dll;
     }
 
-    // in place approach
-    static TreeNode prev, head;
     public static void bstToDllinPlace(TreeNode p) {
         if (p == null)
             return;

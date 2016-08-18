@@ -13,40 +13,39 @@ public class BestTimeToBuyAndSellStock2 {
         int max = Integer.MIN_VALUE;
         boolean bought = false;
         int profit = 0;
-        
-        if(prices.length == 0||prices.length == 1) {
+
+        if (prices.length == 0 || prices.length == 1) {
             return 0;
         }
-        
-        for(int i = 0; i < prices.length - 1; i++) {
-            if(!bought) {
-                if(prices[i] <= min) {
+
+        for (int i = 0; i < prices.length - 1; i++) {
+            if (!bought) {
+                if (prices[i] <= min) {
                     min = prices[i];
-                    if(prices[i+1] > min) {
+                    if (prices[i + 1] > min) {
                         bought = true;
                         profit -= min;
                     }
                 }
-                
-            }
-            else {
-                if(prices[i] >= max) {
+
+            } else {
+                if (prices[i] >= max) {
                     max = prices[i];
-                    if(prices[i+1] < max) {
+                    if (prices[i + 1] < max) {
                         bought = false;
                         profit += max;
                         min = Integer.MAX_VALUE;
                         max = Integer.MIN_VALUE;
                     }
                 }
-                
+
             }
         }
-        if(bought) {
+        if (bought) {
             max = prices[prices.length - 1];
             profit += max;
         }
-        
+
         return profit;
     }
 }

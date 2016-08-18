@@ -5,11 +5,22 @@ import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
- *
+ * <p>
  * Created by Xiaomeng on 8/16/2014.
  */
 public class ConvertSortedListToBST {
     ListNode head;
+
+    public static void main(String[] args) {
+        ConvertSortedListToBST test = new ConvertSortedListToBST();
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        test.sortedListToBST2(head).display();
+    }
+
     /**
      * Native solution as Convert Sorted Array to BST.
      * Top-down approach
@@ -19,8 +30,8 @@ public class ConvertSortedListToBST {
      * @return
      */
     public TreeNode sortedListToBST(ListNode head) {
-        if(head == null) return null;
-        if(head.next == null) return new TreeNode(head.val);
+        if (head == null) return null;
+        if (head.next == null) return new TreeNode(head.val);
         ListNode preMid = getPreMid(head);
         ListNode mid = preMid.next;
         preMid.next = null;
@@ -31,10 +42,10 @@ public class ConvertSortedListToBST {
         return root;
     }
 
-    public ListNode getPreMid(ListNode head){
-        if(head == null || head.next == null) return head;
+    public ListNode getPreMid(ListNode head) {
+        if (head == null || head.next == null) return head;
         ListNode first = head, second = head.next.next;
-        while(second != null && second.next != null){
+        while (second != null && second.next != null) {
             first = first.next;
             second = second.next.next;
         }
@@ -53,31 +64,21 @@ public class ConvertSortedListToBST {
         ListNode node = head;
         this.head = head;
         int len = 0;
-        while(node != null){
+        while (node != null) {
             node = node.next;
             len++;
         }
         return sortedListToBST2(0, len - 1);
     }
 
-    public TreeNode sortedListToBST2(int start, int end){
-        if(start > end) return null;
-        int mid = start + (end - start)/2;
+    public TreeNode sortedListToBST2(int start, int end) {
+        if (start > end) return null;
+        int mid = start + (end - start) / 2;
         TreeNode left = sortedListToBST2(start, mid - 1);
         TreeNode root = new TreeNode(head.val);
         head = head.next;
         root.left = left;
         root.right = sortedListToBST2(mid + 1, end);
         return root;
-    }
-
-    public static void main(String[] args){
-        ConvertSortedListToBST test = new ConvertSortedListToBST();
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-        test.sortedListToBST2(head).display();
     }
 }

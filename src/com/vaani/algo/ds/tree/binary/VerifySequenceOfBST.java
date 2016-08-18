@@ -1,5 +1,7 @@
 package com.vaani.algo.ds.tree.binary;
+
 import java.util.Arrays;
+
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Ftrees%2FVerifySequenceOfBST.java
 /*
  * * Title: Enter an integer array, the array is not a judgment after preorder result of a binary search tree, if it returns true, false otherwise
@@ -38,5 +40,5 @@ public class VerifySequenceOfBST {
             right = verify(Arrays.copyOfRange(sequences, index, sequences.length - 1));
         }
         return left && right;
-}
+    }
 }

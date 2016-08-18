@@ -14,9 +14,9 @@ public class IsBSTPostOrder {
     public static boolean isBstPostOrder(int[] a, int left, int right) {
         if (left > right)
             return false;
-        if ( right == left)
+        if (right == left)
             return true;
-        if(right - left == 1){
+        if (right - left == 1) {
             return true; //[left, root] or [root, right]
         }
 
@@ -31,7 +31,7 @@ public class IsBSTPostOrder {
                 return false;
         }
 
-        return isBstPostOrder(a, left, i - 1) && isBstPostOrder(a, i, j-1);
+        return isBstPostOrder(a, left, i - 1) && isBstPostOrder(a, i, j - 1);
 
     }
 }

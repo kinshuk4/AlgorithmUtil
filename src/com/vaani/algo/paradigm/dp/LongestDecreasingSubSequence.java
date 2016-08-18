@@ -15,7 +15,7 @@ public class LongestDecreasingSubSequence {
 
     }
 
-    
+
     public List<Integer> getLongestDecreaseSubSequence(int[] nums) {
         int[] dp = new int[nums.length];
         int[] priors = new int[nums.length];
@@ -51,7 +51,7 @@ public class LongestDecreasingSubSequence {
         return result;
     }
 
-    
+
     public List<Integer> getLongestIncreaseSubSequence(int[] nums) {
         int[] dp = new int[nums.length];
         int[] priors = new int[nums.length];

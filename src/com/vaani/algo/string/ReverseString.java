@@ -3,6 +3,7 @@ package com.vaani.algo.string;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
+
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fstrings%2FReverseString.java
 public class ReverseString {
     private String input;
@@ -10,20 +11,6 @@ public class ReverseString {
 
     public ReverseString(String in) {
         input = in;
-    }
-
-    public String doRev() {
-        int stackSize = input.length();
-        Stack<Character> theStack = new Stack<>();
-        for (int j = 0; j < input.length(); j++) {
-            char ch = input.charAt(j);
-            theStack.push(ch);
-        }
-        while (!theStack.isEmpty()) {
-            char ch = theStack.pop();
-            output = output + ch;
-        }
-        return output;
     }
 
     public static String getString() throws Exception {
@@ -48,5 +35,19 @@ public class ReverseString {
 
         }
 
-}
+    }
+
+    public String doRev() {
+        int stackSize = input.length();
+        Stack<Character> theStack = new Stack<>();
+        for (int j = 0; j < input.length(); j++) {
+            char ch = input.charAt(j);
+            theStack.push(ch);
+        }
+        while (!theStack.isEmpty()) {
+            char ch = theStack.pop();
+            output = output + ch;
+        }
+        return output;
+    }
 }

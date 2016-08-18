@@ -1,7 +1,5 @@
 package com.vaani.algo.math;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Implement pow(x, n).
 */
@@ -12,13 +10,13 @@ public class Pow {
         // the same Solution instance will be reused for each test case.
         if (n == 0) return 1;
         if (n == 1) return x;
-        if (n == -1) return 1/x;
-        
+        if (n == -1) return 1 / x;
+
         if (n % 2 == 0) {
-            double temp = pow(x, n/2);
+            double temp = pow(x, n / 2);
             return temp * temp;
         } else {
-            double temp = pow(x, (n - 1)/2);
+            double temp = pow(x, (n - 1) / 2);
             return temp * temp * x;
         }
     }
@@ -32,7 +30,7 @@ class Pow2 {
         boolean neg = false;
         if (n == 0) return 1;
         if (n < 0) neg = true;
-        
+
         n = Math.abs(n);
         double result = 1;
         int i = 1, k = 0;
@@ -44,8 +42,8 @@ class Pow2 {
             k += i;
             result *= temp;
         }
-        
-        if (neg) return 1.0/result;
+
+        if (neg) return 1.0 / result;
         else return result;
     }
 }

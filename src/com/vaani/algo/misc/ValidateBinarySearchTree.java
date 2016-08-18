@@ -5,15 +5,16 @@ import com.vaani.algo.ds.core.TreeNode;
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class ValidateBinarySearchTree {
     TreeNode previous;
     boolean valid;
+
     public boolean isValidBST(TreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
@@ -22,7 +23,7 @@ public class ValidateBinarySearchTree {
         isValid(root);
         return valid;
     }
-    
+
     public void isValid(TreeNode root) {
         if (root == null) {
             return;
@@ -35,5 +36,5 @@ public class ValidateBinarySearchTree {
         previous = root;
         isValid(root.right);
     }
-    
+
 }

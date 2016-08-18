@@ -9,12 +9,12 @@ import java.util.PriorityQueue;
 
 /**
  * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
- *
+ * <p>
  * Created by Xiaomeng on 7/24/2014.
  */
 public class MergeKSortedLists {
     public static ListNode mergeKLists(List<ListNode> lists) {
-        if(lists.size() == 0) return null;
+        if (lists.size() == 0) return null;
 
         Comparator<ListNode> comparator = new Comparator<ListNode>() {
             @Override
@@ -24,22 +24,22 @@ public class MergeKSortedLists {
         };
 
         PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(lists.size(), comparator);
-        for(ListNode node : lists){
-            if(node != null) queue.offer(node);
+        for (ListNode node : lists) {
+            if (node != null) queue.offer(node);
         }
 
         ListNode dummy = new ListNode(-1);
         ListNode dummyHead = dummy;
-        while(!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             ListNode node = queue.poll();
             dummy.next = node;
-            if(node.next != null) queue.offer(node.next);
+            if (node.next != null) queue.offer(node.next);
             dummy = dummy.next;
         }
         return dummyHead.next;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(5);
         l1.next.next = new ListNode(8);

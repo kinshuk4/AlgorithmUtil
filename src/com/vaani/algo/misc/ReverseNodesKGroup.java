@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 If the number of nodes is not a multiple of k then le-out nodes in the end should remain as it is. You may not alter the values in the nodes, only nodes itself may be changed.
@@ -14,12 +12,12 @@ For k = 3, you should return: 3->2->1->4->5
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class ReverseNodesKGroup {
@@ -32,9 +30,10 @@ public class ReverseNodesKGroup {
             if (newHead == null) return head;
             newHead = newHead.next;
         }
-        
+
         ListNode newGroupHead = reverseKGroup(newHead, k);
-        ListNode pre = newGroupHead; ListNode cur = head;
+        ListNode pre = newGroupHead;
+        ListNode cur = head;
         for (int i = 0; i < k; i++) {
             ListNode next = cur.next;
             cur.next = pre;

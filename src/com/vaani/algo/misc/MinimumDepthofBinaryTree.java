@@ -5,10 +5,10 @@ import com.vaani.algo.ds.core.TreeNode;
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class MinimumDepthofBinaryTree {
@@ -20,7 +20,7 @@ public class MinimumDepthofBinaryTree {
         }
         return getDepth(root);
     }
-    
+
     public int getDepth(TreeNode node) {
         if (node.left == null && node.right == null) {
             return 1;

@@ -1,8 +1,8 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
-import java.util.ArrayList;
-
 import com.vaani.algo.ds.core.TreeNode;
+
+import java.util.ArrayList;
 
 /*
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).
@@ -36,16 +36,16 @@ The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class LevelOrderTraversalBottomUp {
     public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
-        
+
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;
@@ -53,8 +53,8 @@ public class LevelOrderTraversalBottomUp {
         ArrayList<TreeNode> list = new ArrayList<TreeNode>();
         list.add(root);
         ArrayList<TreeNode> parent = list;
-        while(!parent.isEmpty()) {
-            
+        while (!parent.isEmpty()) {
+
             ArrayList<TreeNode> cur = new ArrayList<TreeNode>();
             ArrayList<Integer> parentData = new ArrayList<Integer>();
             for (TreeNode n : parent) {
@@ -68,9 +68,9 @@ public class LevelOrderTraversalBottomUp {
             }
             result.add(0, parentData);
             parent = cur;
-            
+
         }
         return result;
-        
+
     }
 }

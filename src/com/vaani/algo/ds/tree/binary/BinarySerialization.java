@@ -5,28 +5,29 @@ import com.vaani.algo.ds.core.TreeNode;
 /**
  * Design an algorithm and write code to serialize and deserialize a binary tree.
  * Writing the tree to a file is called ‘serialization’ and reading back from the file to reconstruct the exact same binary tree is ‘deserialization’
- *
+ * <p>
  * Reference: http://www.geeksforgeeks.org/serialize-deserialize-binary-tree/
- *
  */
 public class BinarySerialization {
+    private static int index = 0;
+
     /**
-     *      30
-     *    /    \
-     *   10    20
-     *  /     /  \
+     * 30
+     * /    \
+     * 10    20
+     * /     /  \
      * 50    45  35
-     *
+     * <p>
      * Serialized string: 30 10 50 # # # 20 45 # # 35 # #
      */
-    public static String writeBinaryTree(TreeNode head){
+    public static String writeBinaryTree(TreeNode head) {
         StringBuilder result = new StringBuilder();
         preorder(head, result);
         return result.toString();
     }
 
-    private static void preorder(TreeNode head, StringBuilder result){
-        if(head == null){
+    private static void preorder(TreeNode head, StringBuilder result) {
+        if (head == null) {
             result.append("#");
             result.append(" ");
             return;
@@ -37,14 +38,13 @@ public class BinarySerialization {
         preorder(head.right, result);
     }
 
-    private static int index = 0;
-    public static TreeNode readBinaryTree(String input){
+    public static TreeNode readBinaryTree(String input) {
         String[] tokens = input.split(" ");
         return deserialize(tokens);
     }
 
-    private static TreeNode deserialize(String[] tokens){
-        if(index >= tokens.length || tokens[index].equals("#")){
+    private static TreeNode deserialize(String[] tokens) {
+        if (index >= tokens.length || tokens[index].equals("#")) {
             index++;
             return null;
         }
@@ -55,7 +55,7 @@ public class BinarySerialization {
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         TreeNode root = new TreeNode(30);
         root.left = new TreeNode(10);
         root.right = new TreeNode(20);

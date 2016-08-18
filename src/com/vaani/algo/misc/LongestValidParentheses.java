@@ -1,8 +1,6 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.Stack;
-import java.util.ArrayList;
 /*
 Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
 
@@ -17,15 +15,15 @@ public class LongestValidParentheses {
     public int longestValidParentheses(String s) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-        
+
         int maxLen = 0;
-        
+
         //the position of the last ')'
         //so when left stack is empty(all matched), use this to calculate the length
         int last = -1;
-        
+
         Stack<Integer> left = new Stack<Integer>();
-        
+
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 left.push(i);
@@ -41,12 +39,12 @@ public class LongestValidParentheses {
                         maxLen = Math.max(maxLen, i - left.peek());
                     }
                 }
-                
+
             }
         }
-        
+
         return maxLen;
-        
+
     }
 }
 

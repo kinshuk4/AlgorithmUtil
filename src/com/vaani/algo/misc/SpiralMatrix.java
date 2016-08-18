@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
@@ -19,17 +18,17 @@ You should return [1,2,3,6,9,8,7,4,5].
 public class SpiralMatrix {
     public ArrayList<Integer> spiralOrder(int[][] matrix) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
-         int rowLength = matrix.length;
-         ArrayList<Integer> results = new ArrayList<Integer>();
-         if (rowLength == 0) {
-             return results;
-         }
-         int columnLength = matrix[0].length;
-         
-         spiralOrderHelper(0, rowLength, columnLength, matrix, results);
-         return results;
+        int rowLength = matrix.length;
+        ArrayList<Integer> results = new ArrayList<Integer>();
+        if (rowLength == 0) {
+            return results;
+        }
+        int columnLength = matrix[0].length;
+
+        spiralOrderHelper(0, rowLength, columnLength, matrix, results);
+        return results;
     }
-    
+
     public void spiralOrderHelper(int layer, int row, int col, int[][] matrix, ArrayList<Integer> res) {
         if (row == 0 || col == 0) {
             return;
@@ -60,7 +59,7 @@ public class SpiralMatrix {
             for (int i = row - 1; i > 0; i--) {
                 res.add(matrix[i + layer][layer]);
             }
-            
+
             spiralOrderHelper(layer + 1, row - 2, col - 2, matrix, res);
         }
     }

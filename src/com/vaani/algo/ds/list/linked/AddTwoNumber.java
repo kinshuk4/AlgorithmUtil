@@ -11,12 +11,12 @@ Output: 7 -> 0 -> 8
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class AddTwoNumber {
@@ -26,10 +26,10 @@ public class AddTwoNumber {
         int carry = 0;
         ListNode node = null;
         ListNode head = null;
-        while(l1 != null || l2 != null || carry != 0) {
+        while (l1 != null || l2 != null || carry != 0) {
             int val = carry;
-            val += l1 == null? 0 : l1.val;
-            val += l2 == null? 0 : l2.val;
+            val += l1 == null ? 0 : l1.val;
+            val += l2 == null ? 0 : l2.val;
             if (val > 9) {
                 val -= 10;
                 carry = 1;
@@ -44,10 +44,10 @@ public class AddTwoNumber {
                 node.next = cur;
                 node = cur;
             }
-            l1 = l1 == null? null : l1.next;
-            l2 = l2 == null? null : l2.next;
+            l1 = l1 == null ? null : l1.next;
+            l2 = l2 == null ? null : l2.next;
         }
-    
+
         return head;
     }
 }

@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a string S and a string T, count the number of distinct subsequences of T in S.
 
@@ -26,9 +24,9 @@ public class DistinctSubsequences {
             return 0;
         }
         if (S.length() == T.length()) {
-            return S.equals(T)? 1 : 0;
+            return S.equals(T) ? 1 : 0;
         }
-        
+
         int[][] distinct = new int[S.length() + 1][T.length() + 1];
         for (int i = 0; i <= S.length(); i++) {
             distinct[i][0] = 1;
@@ -42,7 +40,7 @@ public class DistinctSubsequences {
                     distinct[i][j] = distinct[i - 1][j];
                 }
             }
-            
+
         }
         return distinct[S.length()][T.length()];
     }

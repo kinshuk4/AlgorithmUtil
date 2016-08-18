@@ -3,16 +3,16 @@ package com.vaani.algo.ds.stack;
 import java.util.Stack;
 
 public class SortAStack {
-	public static Stack<Integer> sort(Stack<Integer> stack) {
-		Stack<Integer> auxiliary = new Stack<Integer>();
-		while (!stack.isEmpty()) {
-			Integer value = stack.pop();
-			while (!auxiliary.isEmpty() && value < auxiliary.peek())
-				stack.push(auxiliary.pop());
-			auxiliary.push(value);
-		}
-		return auxiliary;
-	}
+    public static Stack<Integer> sort(Stack<Integer> stack) {
+        Stack<Integer> auxiliary = new Stack<Integer>();
+        while (!stack.isEmpty()) {
+            Integer value = stack.pop();
+            while (!auxiliary.isEmpty() && value < auxiliary.peek())
+                stack.push(auxiliary.pop());
+            auxiliary.push(value);
+        }
+        return auxiliary;
+    }
 
 //	public static IStack<Integer> sort2(IStack<Integer> s1) {
 //		IStack<Integer> s2 = new IStack<Integer>();// s2:auxiliary stack

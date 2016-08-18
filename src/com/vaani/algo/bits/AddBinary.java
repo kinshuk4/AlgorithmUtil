@@ -14,15 +14,15 @@ public class AddBinary {
         // the same Solution instance will be reused for each test case.
         if (a == null || a.equals("")) return b;
         if (b == null || b.equals("")) return a;
-        
+
         int length1 = a.length() - 1;
         int length2 = b.length() - 1;
         int carry = 0;
         StringBuilder sb = new StringBuilder();
-        while(length1 >= 0 || length2 >= 0 || carry != 0) {
-            char a1,b1;
+        while (length1 >= 0 || length2 >= 0 || carry != 0) {
+            char a1, b1;
             if (length1 < 0) a1 = '0';
-            else a1 =  a.charAt(length1);
+            else a1 = a.charAt(length1);
             if (length2 < 0) b1 = '0';
             else b1 = b.charAt(length2);
             int sum = (int) (a1 - '0' + b1 - '0' + carry);

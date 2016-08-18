@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 http://oj.leetcode.com/problems/sudoku-solver/
 Write a program to solve a Sudoku puzzle by filling the empty cells.
@@ -23,7 +21,7 @@ public class SudokuSolver {
         // the same Solution instance will be reused for each test case.
         solveSudokuHelper(board);
     }
-    
+
     public boolean solveSudokuHelper(char[][] board) {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -39,22 +37,22 @@ public class SudokuSolver {
         }
         return true;
     }
-    
+
     public boolean isValid(char[][] board, int row, int col) {
         char c = board[row][col];
-        
+
         //check row
         for (int j = 0; j < 9; j++) {
             if (j == col) continue;
             if (board[row][j] == c) return false;
         }
-        
+
         //check column
         for (int i = 0; i < 9; i++) {
             if (i == row) continue;
             if (board[i][col] == c) return false;
         }
-        
+
         //check square
         int baseRow = row / 3;
         int baseCol = col / 3;

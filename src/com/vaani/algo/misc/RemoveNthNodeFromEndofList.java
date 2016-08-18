@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a linked list, remove the nth node from the end of list and return its head.
 
@@ -18,12 +16,12 @@ Try to do this in one pass.
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class RemoveNthNodeFromEndofList {
@@ -31,7 +29,7 @@ public class RemoveNthNodeFromEndofList {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (head == null) return null;
-        
+
         ListNode p1 = head;
         ListNode p2 = head;
         ListNode pre = head;
@@ -45,7 +43,7 @@ public class RemoveNthNodeFromEndofList {
         }
         if (p2 == head) return head.next;
         else pre.next = p2.next;
-        
+
         return head;
     }
 }

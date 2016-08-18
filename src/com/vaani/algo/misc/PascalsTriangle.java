@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 Given numRows, generate the first numRows of Pascal's triangle.

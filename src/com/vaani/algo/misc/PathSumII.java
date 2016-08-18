@@ -1,6 +1,9 @@
 package com.vaani.algo.misc;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
+
 /*
 Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
 
@@ -20,19 +23,18 @@ return
 ]
 */
 
-import com.vaani.algo.ds.core.TreeNode;
-
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class PathSumII {
     ArrayList<ArrayList<Integer>> result;
+
     public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
@@ -43,7 +45,7 @@ public class PathSumII {
         helper(root, 0, sum, new ArrayList<Integer>());
         return result;
     }
-    
+
     public void helper(TreeNode root, int curSum, int target, ArrayList<Integer> list) {
         ArrayList<Integer> curList = new ArrayList<Integer>(list);
         if (root == null) {
@@ -55,9 +57,9 @@ public class PathSumII {
                 result.add(curList);
             }
         }
-        
+
         helper(root.left, curSum + root.val, target, curList);
         helper(root.right, curSum + root.val, target, curList);
-        
+
     }
 }

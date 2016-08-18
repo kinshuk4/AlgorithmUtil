@@ -7,13 +7,13 @@ import com.vaani.algo.ds.core.ListNode;
  */
 public class FindMidNode {
 
-    public static ListNode findMid(ListNode head){
-        if(head == null || head.next == null) return head;
+    public static ListNode findMid(ListNode head) {
+        if (head == null || head.next == null) return head;
         ListNode first = head;
         ListNode second = head;
-        while(second.next != null){
+        while (second.next != null) {
             second = second.next;
-            if(second.next != null){
+            if (second.next != null) {
                 second = second.next;
                 first = first.next;
             }
@@ -21,7 +21,7 @@ public class FindMidNode {
         return first;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode((2));
         head.next.next = new ListNode(3);

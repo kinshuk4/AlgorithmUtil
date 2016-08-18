@@ -1,32 +1,31 @@
 package com.vaani.algo.misc;
 
 import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * Check if two binary trees are Isomorphic
- *
+ * <p>
  * Write a function to detect if two trees are isomorphic.
  * Two trees are called isomorphic if one of them can be obtained from other by a series of flips, i.e. by swapping left and right children of a number of nodes.
  * Any number of nodes at any level can have their children swapped. Two empty trees are isomorphic.
- *
  */
 public class TreeIsomorphism {
     /**
      * Reference: http://www.geeksforgeeks.org/tree-isomorphism-problem/
      * Time complexity??
-     *
      */
-    public static boolean isIsomorphic(TreeNode p, TreeNode q){
-        if(p == null && q == null)
+    public static boolean isIsomorphic(TreeNode p, TreeNode q) {
+        if (p == null && q == null)
             return true;
-        else if(p == null || q == null || p.val != q.val)
+        else if (p == null || q == null || p.val != q.val)
             return false;
-        else{
+        else {
             return (isIsomorphic(p.left, q.left) && isIsomorphic(p.right, q.right))
-                 ||(isIsomorphic(p.left, q.right) && isIsomorphic(p.right, q.left));
+                    || (isIsomorphic(p.left, q.right) && isIsomorphic(p.right, q.left));
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         TreeNode root1 = new TreeNode(1);
         root1.left = new TreeNode(2);
         root1.left.left = new TreeNode(4);

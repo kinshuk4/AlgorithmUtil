@@ -1,11 +1,11 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 import java.util.Stack;
-
-import com.vaani.algo.ds.core.TreeNode;
 
 public class BinaryTreeCombinedIterator {
     private TreeNode root;
@@ -25,6 +25,7 @@ public class BinaryTreeCombinedIterator {
         preOrderStack = new Stack<TreeNode>();
         preOrderStack.push(root);
     }
+
     //in-order
     public boolean hasNext() {
         return !stack.isEmpty();
@@ -62,7 +63,7 @@ public class BinaryTreeCombinedIterator {
         }
     }
 
-    public boolean hasNextPreOrder(){
+    public boolean hasNextPreOrder() {
         return !preOrderStack.isEmpty();
     }
 
@@ -81,19 +82,22 @@ public class BinaryTreeCombinedIterator {
             return null;
         }
     }
-    public void pushPostOrder(TreeNode n){
-        if(n == null)
+
+    public void pushPostOrder(TreeNode n) {
+        if (n == null)
             return;
-        if(n.left != null)
+        if (n.left != null)
             pushPostOrder(n.left);
-        if(n.right != null)
+        if (n.right != null)
             pushPostOrder(n.right);
 
         postOrderQueue.add(n);
     }
-    public boolean hasNextPostOrder(){
+
+    public boolean hasNextPostOrder() {
         return !postOrderQueue.isEmpty();
     }
+
     //post-order: left, right, root
     public TreeNode postOrderNext() {
         if (!postOrderQueue.isEmpty()) {

@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
@@ -24,7 +22,7 @@ public class ZigzagConversion {
             return s;
         }
         String result = "";
-        
+
         for (int i = 0; i < nRows; i++) {
             for (int j = i; j < s.length(); j += size) {
                 result += s.charAt(j);
@@ -33,7 +31,7 @@ public class ZigzagConversion {
                     if (mid < s.length()) {
                         result += s.charAt(mid);
                     }
-                    
+
                 }
             }
         }

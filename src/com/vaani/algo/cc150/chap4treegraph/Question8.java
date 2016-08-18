@@ -6,44 +6,43 @@ package com.vaani.algo.cc150.chap4treegraph;
  * T1. A tree T2 is a subtree of T1 if there exists a node n in T1 such that the
  * subtree of n is identical to T2. That is, if you cut off the tree at node n,
  * the two trees would be identical.
- * 
  */
 // O(1) space, O(mn) time
 public class Question8 {
 
-  public static class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
+    public boolean isSub(TreeNode haystack, TreeNode needle) {
+        if (haystack == null) {
+            return false;
+        }
+        if (needle == null) {
+            return true;
+        }
+        if (haystack.val == needle.val) { // root match
+            if (match(haystack, needle)) {
+                return true;
+            }
+        }
+        return isSub(haystack.left, needle) || isSub(haystack.right, needle);
+    }
 
-    public TreeNode(int val) {
-      this.val = val;
+    private boolean match(TreeNode haystack, TreeNode needle) {
+        if (haystack == null && needle == null) {
+            return true;
+        }
+        if (haystack.val != needle.val) {
+            return false;
+        }
+        // compare left and right
+        return match(haystack.left, needle.left) && match(haystack.right, needle.right);
     }
-  }
 
-  public boolean isSub(TreeNode haystack, TreeNode needle) {
-    if (haystack == null) {
-      return false;
-    }
-    if (needle == null) {
-      return true;
-    }
-    if (haystack.val == needle.val) { // root match
-      if (match(haystack, needle)) {
-        return true;
-      }
-    }
-    return isSub(haystack.left, needle) || isSub(haystack.right, needle);
-  }
+    public static class TreeNode {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
 
-  private boolean match(TreeNode haystack, TreeNode needle) {
-    if (haystack == null && needle == null) {
-      return true;
+        public TreeNode(int val) {
+            this.val = val;
+        }
     }
-    if (haystack.val != needle.val) {
-      return false;
-    }
-    // compare left and right
-    return match(haystack.left, needle.left) && match(haystack.right, needle.right);
-  }
 }

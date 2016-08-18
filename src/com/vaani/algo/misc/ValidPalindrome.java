@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
@@ -22,30 +20,30 @@ public class ValidPalindrome {
         if (s == null || s.length() == 0) {
             return true;
         }
-        
+
         StringBuilder sanitizedString = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
-            
+
             char cur = s.charAt(i);
-            
+
             if ((cur >= 'a' && cur <= 'z') || (cur >= '0' && cur <= '9')) {
                 sanitizedString.append(cur);
             }
-            
+
             if (cur >= 'A' && cur <= 'Z') {
                 cur = Character.toLowerCase(cur);
                 sanitizedString.append(cur);
             }
-            
+
         }
-        
+
         int size = sanitizedString.length();
-        for (int i = 0; i < size/2; i++) {
+        for (int i = 0; i < size / 2; i++) {
             if (sanitizedString.charAt(i) != sanitizedString.charAt(size - i - 1)) {
-                return false; 
+                return false;
             }
         }
-        
+
         return true;
     }
 }

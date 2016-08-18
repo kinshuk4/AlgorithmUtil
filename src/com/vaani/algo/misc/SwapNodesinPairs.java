@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a linked list, swap every two adjacent nodes and return its head.
 
@@ -15,22 +13,24 @@ Your algorithm should use only constant space. You may not modify the values in 
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
- class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
-  }
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
+
 public class SwapNodesinPairs {
     public ListNode swapPairs(ListNode head) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -41,7 +41,7 @@ public class SwapNodesinPairs {
         ListNode nex = head.next.next;
         a.next = b.next;
         b.next = a;
-        
+
         ListNode newHead = b;
         while (nex != null && nex.next != null) {
             a.next = nex.next;
@@ -52,7 +52,7 @@ public class SwapNodesinPairs {
             b.next = a;
             nex = t;
         }
-        
+
         return newHead;
     }
 }

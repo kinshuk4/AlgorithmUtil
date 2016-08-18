@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given an array of integers, find two numbers such that they add up to a specific target number.
 
@@ -18,7 +16,7 @@ public class TwoSum {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         int[] result = new int[2];
-        
+
         int length = numbers.length;
         for (int i = 0; i < length; i++) {
             int cur = numbers[i];

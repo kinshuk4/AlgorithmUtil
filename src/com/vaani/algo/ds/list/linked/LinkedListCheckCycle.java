@@ -1,6 +1,29 @@
 package com.vaani.algo.ds.list.linked;
 
 public class LinkedListCheckCycle {
+    public boolean hasCycle(ListNode head) {
+
+        ListNode slowNode = head;
+        ListNode fastNode = head;
+        if (head != null && head.next != null) {
+            fastNode = head.next;
+        } else {
+            return false;
+        }
+
+        while (slowNode != null && fastNode != null) {
+            if (slowNode.val == fastNode.val) return true;
+
+            slowNode = slowNode.next;
+            fastNode = fastNode.next;
+            if (fastNode != null) {
+                fastNode = fastNode.next;
+            }
+        }
+
+        return false;
+    }
+
     class ListNode {
         int val;
         ListNode next;
@@ -9,29 +32,5 @@ public class LinkedListCheckCycle {
             val = x;
             next = null;
         }
-    }
-    
-
-    public boolean hasCycle(ListNode head) {
-
-        ListNode slowNode = head;
-        ListNode fastNode = head;
-        if (head !=null && head.next != null) {
-            fastNode = head.next;
-        } else {
-            return false;
-        }
-                
-        while (slowNode !=null && fastNode!=null){
-            if (slowNode.val == fastNode.val ) return true;
-            
-            slowNode = slowNode.next;
-            fastNode = fastNode.next;
-            if (fastNode!=null){
-                fastNode = fastNode.next;
-            }
-        }
-        
-        return false;
     }
 }

@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a sorted array of integers, find the starting and ending position of a given target value.
 
@@ -23,14 +21,14 @@ public class SearchforARange {
         result[1] = findEndIndex(A, 0, A.length - 1, target);
         return result;
     }
-    
+
     public int findStartIndex(int[] A, int start, int end, int target) {
         if (start > end || start < 0 || end > A.length - 1) return -1;
         if (A[end] < target) {
             if (end == A.length - 1 || A[end + 1] != target) return -1;
             else return end + 1;
         }
-        
+
         int mid = (start + end) / 2;
         if (A[mid] < target) {
             return findStartIndex(A, mid + 1, end, target);
@@ -39,14 +37,14 @@ public class SearchforARange {
             return findStartIndex(A, start, mid - 1, target);
         }
     }
-    
+
     public int findEndIndex(int[] A, int start, int end, int target) {
         if (start > end || start < 0 || end > A.length - 1) return -1;
         if (A[start] > target) {
             if (start == 0 || A[start - 1] != target) return -1;
             else return start - 1;
         }
-        
+
         int mid = (start + end) / 2;
         if (A[mid] <= target) {
             if (A[mid] == target && mid == end) return mid;

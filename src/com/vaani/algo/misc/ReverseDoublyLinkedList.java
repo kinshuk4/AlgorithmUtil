@@ -2,15 +2,14 @@ package com.vaani.algo.misc;
 
 /**
  * Reverse a given Doubly Linked List
- *
  */
 public class ReverseDoublyLinkedList {
-    public static DoublyLinkedList reverse(DoublyLinkedList head){
-        if(head == null) return null;
+    public static DoublyLinkedList reverse(DoublyLinkedList head) {
+        if (head == null) return null;
 
         DoublyLinkedList tmp = null;
         DoublyLinkedList curr = head;
-        while(curr != null){
+        while (curr != null) {
             tmp = curr.prev;
             curr.prev = curr.next;
             curr.next = tmp;
@@ -19,24 +18,14 @@ public class ReverseDoublyLinkedList {
         return tmp.prev;
     }
 
-    public static class DoublyLinkedList{
-        int val;
-        DoublyLinkedList prev;
-        DoublyLinkedList next;
-
-        public DoublyLinkedList(int val){
-            this.val = val;
-        }
-    }
-
-    public static void print(DoublyLinkedList head){
-        while(head != null){
+    public static void print(DoublyLinkedList head) {
+        while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         DoublyLinkedList node1 = new DoublyLinkedList(1);
         DoublyLinkedList node2 = new DoublyLinkedList(2);
         DoublyLinkedList node3 = new DoublyLinkedList(3);
@@ -50,5 +39,15 @@ public class ReverseDoublyLinkedList {
         print(node1);
         System.out.println();
         print(reverse(node1));
+    }
+
+    public static class DoublyLinkedList {
+        int val;
+        DoublyLinkedList prev;
+        DoublyLinkedList next;
+
+        public DoublyLinkedList(int val) {
+            this.val = val;
+        }
     }
 }

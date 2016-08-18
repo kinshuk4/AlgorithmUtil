@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Sort a linked list using insertion sort.
 */
@@ -9,12 +7,12 @@ Sort a linked list using insertion sort.
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class InsertionSortList {
@@ -22,7 +20,7 @@ public class InsertionSortList {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (head == null) return null;
-        
+
         ListNode newHead = null;
         ListNode newTail = null;
         int min = head.val;
@@ -35,7 +33,7 @@ public class InsertionSortList {
                 if (node.val < curMin.val) curMin = node;
                 node = node.next;
             }
-            
+
             if (newHead == null) {
                 newHead = curMin;
                 newTail = curMin;
@@ -43,7 +41,7 @@ public class InsertionSortList {
                 newTail.next = curMin;
                 newTail = curMin;
             }
-            
+
             //remove curMin from original list
             node = head;
             if (curMin == head) {
@@ -57,8 +55,8 @@ public class InsertionSortList {
                     node = node.next;
                 }
             }
-            
+
         }
-        return newHead; 
+        return newHead;
     }
 }

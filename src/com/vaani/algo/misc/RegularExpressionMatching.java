@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Implement regular expression matching with support for '.' and '*'.
 
@@ -30,15 +28,15 @@ public class RegularExpressionMatching {
         if (s == null) return p == null;
         return helper(s, p, 0, 0);
     }
-    
+
     public boolean helper(String s, String p, int i, int j) {
         if (j == p.length()) return i == s.length();
-        
+
         if (j == p.length() - 1 || p.charAt(j + 1) != '*') {
             if (i == s.length()) return false;
             return (p.charAt(j) == '.' || s.charAt(i) == p.charAt(j)) && helper(s, p, ++i, ++j);
         }
-        
+
         while (i < s.length() && (p.charAt(j) == '.' || p.charAt(j) == s.charAt(i))) {
             if (helper(s, p, i++, j + 2)) return true;
         }

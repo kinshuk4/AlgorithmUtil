@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
-import java.util.ArrayList;
 /*
 Given two words (start and end), and a dictionary, find the length of shortest transformation sequence from start to end, such that:
 
@@ -35,36 +34,36 @@ public class WordLadder {
         visited.put(start, true);
 
         while (!queue.isEmpty()) {
-        Count c = queue.poll();
-        // for each character in the string, start new branches
-        for (int i = 0; i < start.length(); i++) {
-            StringBuilder sb = new StringBuilder(c.string);
-            char sc = c.string.charAt(i);
-            // for each different character as new node
-            for (char cc = 'a'; cc <= 'z'; cc++) {
-                if (cc == sc) continue;
-                sb.setCharAt(i, cc);
-                String tmp = sb.toString();
-                // if we haven't visited this node and is in our dictionary
-                // we visit this node
-                if (visited.get(tmp) == null && dict.contains(tmp)) {
-                    if (tmp.equals(end)) return c.count+1;
-                    visited.put(tmp, true);
-                    queue.add(new Count(tmp, c.count+1));
+            Count c = queue.poll();
+            // for each character in the string, start new branches
+            for (int i = 0; i < start.length(); i++) {
+                StringBuilder sb = new StringBuilder(c.string);
+                char sc = c.string.charAt(i);
+                // for each different character as new node
+                for (char cc = 'a'; cc <= 'z'; cc++) {
+                    if (cc == sc) continue;
+                    sb.setCharAt(i, cc);
+                    String tmp = sb.toString();
+                    // if we haven't visited this node and is in our dictionary
+                    // we visit this node
+                    if (visited.get(tmp) == null && dict.contains(tmp)) {
+                        if (tmp.equals(end)) return c.count + 1;
+                        visited.put(tmp, true);
+                        queue.add(new Count(tmp, c.count + 1));
+                    }
                 }
             }
         }
+        return 0;
+
     }
-    return 0;
-        
-}
-    
+
     class Count {
         //string
         String string;
         //the counts from start string to current string
         int count;
-        
+
         public Count(String string, int count) {
             this.string = string;
             this.count = count;

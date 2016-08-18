@@ -28,10 +28,10 @@ public class CombinationSum2 {
         helper(candidates, new ArrayList<Integer>(), -1, 0, target, result);
         return result;
     }
-    
+
     public void helper(int[] candidates, ArrayList<Integer> cur, int curIndex, int curSum, int target, ArrayList<ArrayList<Integer>> result) {
         if (curSum == target) {
-            result.add(cur); 
+            result.add(cur);
         } else if (curSum < target) {
             for (int i = curIndex + 1; i < candidates.length; i++) {
                 if (i > curIndex + 1 && candidates[i] == candidates[i - 1]) continue;

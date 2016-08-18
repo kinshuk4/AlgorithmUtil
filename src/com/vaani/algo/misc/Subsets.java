@@ -1,7 +1,8 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 /*
 Given a set of distinct integers, S, return all possible subsets.
 
@@ -22,7 +23,6 @@ If S = [1,2,3], a solution is:
   []
 ]
 */
-import java.util.Arrays;
 
 public class Subsets {
     public ArrayList<ArrayList<Integer>> subsets(int[] S) {
@@ -36,12 +36,12 @@ public class Subsets {
             int cur = S[index];
             //copy to current to get rid of concurrentModification exception
             ArrayList<ArrayList<Integer>> current = new ArrayList<ArrayList<Integer>>(results);
-            for(ArrayList<Integer> arr : current) {
+            for (ArrayList<Integer> arr : current) {
                 ArrayList<Integer> newList = new ArrayList<Integer>(arr);
                 newList.add(cur);
                 results.add(newList);
             }
-            index ++;
+            index++;
         }
         return results;
     }

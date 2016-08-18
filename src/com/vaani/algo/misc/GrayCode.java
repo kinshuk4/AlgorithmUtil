@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 The gray code is a binary numeral system where two successive values differ in only one bit.
@@ -27,11 +26,11 @@ public class GrayCode {
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
         result.add(0);
-        
+
         if (n == 0) return result;
-        
+
         result.add(1);
-        
+
         for (int i = 1; i < n; i++) {
             ArrayList<Integer> temp = result;
             int m = 1 << i;
@@ -40,7 +39,7 @@ public class GrayCode {
             }
             result = temp;
         }
-        
+
         return result;
     }
 }

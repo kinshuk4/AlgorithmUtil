@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 The set [1,2,3,…,n] contains a total of n! unique permutations.
@@ -27,7 +26,7 @@ public class PermutationSequence {
         for (int i = 1; i <= n; i++) {
             nums.add(i);
         }
-        
+
         int[] index = new int[n];
         int i = 0;
         //IMPORTANT: there are k - 1 permutations before
@@ -38,7 +37,7 @@ public class PermutationSequence {
             n--;
             i++;
         }
-        
+
         String result = "";
         for (int j = 0; j < index.length; j++) {
             result += nums.get(index[j]);
@@ -46,7 +45,7 @@ public class PermutationSequence {
         }
         return result;
     }
-    
+
     public int getFact(int x) {
         int result = 1;
         for (int i = x; i > 1; i--) {

@@ -1,6 +1,4 @@
-
 package com.vaani.algo.paradigm.dp;
-
 
 
 /*
@@ -14,7 +12,7 @@ public class ContainerWithMostWater {
         // the same Solution instance will be reused for each test case.
         int max = 0;
         int length = height.length;
-        
+
         //O(N2) exceeds time limit
         // for(int i = 0; i < length - 1; i++) {
         //     int leftHeight = height[i];
@@ -26,8 +24,8 @@ public class ContainerWithMostWater {
         //     }
         // }
         // return max;
-        
-        
+
+
         //O(N)
         int left = 0;
         int right = length - 1;

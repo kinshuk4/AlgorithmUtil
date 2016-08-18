@@ -1,6 +1,8 @@
 package com.vaani.algo.paradigm.dp;
+
 import java.util.Arrays;
 import java.util.Stack;
+
 //https://github.com/xiaoningning/algorithm/blob/master/FindLargestSubMatrix/src/FindLargestSubMatrix.java
 /*
 * http://tech-queries.blogspot.com/2011/09/find-largest-sub-matrix-with-all-1s-not.html
@@ -38,29 +40,29 @@ public class FindLargestSubMatrixWith1s {
     }
 
     // convert it to histogram
-    public static void largestMatrix(int[][] m){
+    public static void largestMatrix(int[][] m) {
 
-        if(m.length == 0 || m[0].length == 0)
+        if (m.length == 0 || m[0].length == 0)
             System.out.println("empty matrix");
 
         int max = 0;
         int end_row = 0;
         int left_col = 0;
         int right_col = 0;
-        int h = 0 ;
+        int h = 0;
 
-        int[] height= new int[m[0].length];
+        int[] height = new int[m[0].length];
 
-        for(int i =0; i < m.length; i++){
-            for(int j =0; j < m[0].length; j++){
-                if(m[i][j]==1)
-                    height[j] ++;
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[0].length; j++) {
+                if (m[i][j] == 1)
+                    height[j]++;
                 else
                     height[j] = 0;
             }
 
             int[] tmp = largestAreaArray(height);
-            if(tmp[0] > max){
+            if (tmp[0] > max) {
 
                 max = tmp[0];
                 end_row = i;
@@ -72,8 +74,8 @@ public class FindLargestSubMatrixWith1s {
         }
 
         System.out.println("max area : " + max
-                + " start " + (end_row - h +1) + "," + left_col
-                + " end " + (end_row) +","+right_col);
+                + " start " + (end_row - h + 1) + "," + left_col
+                + " end " + (end_row) + "," + right_col);
 
     }
 
@@ -202,7 +204,7 @@ public class FindLargestSubMatrixWith1s {
         for (int i = 0; i <= h.length - 1; i++) {
 
             int tmp = h[i] * (right[i] - left[i] + 1);
-            if (tmp > max){
+            if (tmp > max) {
                 max = tmp;
                 arr[0] = tmp; // max area
                 arr[1] = h[i]; // max area of height

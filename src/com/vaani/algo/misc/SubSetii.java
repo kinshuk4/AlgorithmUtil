@@ -1,8 +1,8 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Arrays;
+
 /*
 Given a collection of integers that might contain duplicates, S, return all possible subsets.
 
@@ -33,15 +33,15 @@ public class SubSetii {
             int cur = num[index];
             //copy to current to get rid of concurrentModification exception
             ArrayList<ArrayList<Integer>> current = new ArrayList<ArrayList<Integer>>(results);
-            for(ArrayList<Integer> arr : current) {
+            for (ArrayList<Integer> arr : current) {
                 ArrayList<Integer> newList = new ArrayList<Integer>(arr);
                 newList.add(cur);
                 if (!results.contains(newList)) {
                     results.add(newList);
                 }
-                
+
             }
-            index ++;
+            index++;
         }
         return results;
     }

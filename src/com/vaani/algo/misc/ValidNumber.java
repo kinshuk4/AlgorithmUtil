@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Validate if a given string is numeric.
 
@@ -36,7 +34,7 @@ public class ValidNumber {
                 //space is allowed at the end of the string. if space is not followed by space, return false
                 return false;
             }
-            
+
             if (c == '+' || c == '-') {
                 if (!canSign) return false;
                 canSign = false;

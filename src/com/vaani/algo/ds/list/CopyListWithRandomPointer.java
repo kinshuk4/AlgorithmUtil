@@ -28,56 +28,56 @@ Return a deep copy of the list.
  */
 
 class RandomListNode {
-	int label;
-	RandomListNode next, random;
+    int label;
+    RandomListNode next, random;
 
-	RandomListNode(int x) {
-		this.label = x;
-	}
+    RandomListNode(int x) {
+        this.label = x;
+    }
 };
 
 public class CopyListWithRandomPointer {
-	public RandomListNode copyRandomList(RandomListNode head) {
-		// IMPORTANT: Please reset any member data you declared, as
-		// the same Solution instance will be reused for each test case.
-		if (head == null) {
-			return null;
-		}
+    public RandomListNode copyRandomList(RandomListNode head) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        if (head == null) {
+            return null;
+        }
 
-		RandomListNode node = head;
-		while (node != null) {
-			RandomListNode copy = new RandomListNode(node.label);
-			copy.next = node.next;
-			node.next = copy;
-			node = copy.next;
-		}
+        RandomListNode node = head;
+        while (node != null) {
+            RandomListNode copy = new RandomListNode(node.label);
+            copy.next = node.next;
+            node.next = copy;
+            node = copy.next;
+        }
 
-		node = head;
-		while (node != null) {
-			if (node.random != null) {
-				node.next.random = node.random.next;
-			} else {
-				node.next.random = null;
-			}
+        node = head;
+        while (node != null) {
+            if (node.random != null) {
+                node.next.random = node.random.next;
+            } else {
+                node.next.random = null;
+            }
 
-			node = node.next.next;
-		}
+            node = node.next.next;
+        }
 
-		RandomListNode newHead = head;
-		newHead = newHead.next;
-		node = newHead.next;
-		RandomListNode copy = newHead;
+        RandomListNode newHead = head;
+        newHead = newHead.next;
+        node = newHead.next;
+        RandomListNode copy = newHead;
 
-		head.next = node;
+        head.next = node;
 
-		while (node != null) {
-			copy.next = node.next;
-			copy = copy.next;
-			node.next = node.next.next;
-			node = node.next;
-		}
+        while (node != null) {
+            copy.next = node.next;
+            copy = copy.next;
+            node.next = node.next.next;
+            node = node.next;
+        }
 
-		return newHead;
+        return newHead;
 
-	}
+    }
 }

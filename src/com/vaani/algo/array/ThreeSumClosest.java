@@ -11,30 +11,30 @@ import java.util.Arrays;
 public class ThreeSumClosest {
     public int threeSumClosest(int[] num, int target) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
-        if(num.length < 3)
+        if (num.length < 3)
             return 0;
-        
+
         Arrays.sort(num);
         int res = num[0] + num[1] + num[2];
-        for(int i = 0; i < num.length; i++) {
+        for (int i = 0; i < num.length; i++) {
             int start = i + 1;
             int end = num.length - 1;
-            while(start < end) {
+            while (start < end) {
                 int temp = num[i] + num[start] + num[end];
-                if(temp == target) {
+                if (temp == target) {
                     return temp;
                 }
-                
-                if(Math.abs(temp - target) < Math.abs(res - target)) {
+
+                if (Math.abs(temp - target) < Math.abs(res - target)) {
                     res = temp;
                 }
-                
-                if(temp < target)
+
+                if (temp < target)
                     start++;
                 else
                     end--;
             }
         }
         return res;
-}
+    }
 }

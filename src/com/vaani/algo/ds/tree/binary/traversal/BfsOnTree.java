@@ -26,6 +26,7 @@ public class BfsOnTree {
 
         bfsIterative(root);
     }
+
     public static void bfsIterative(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);

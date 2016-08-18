@@ -4,48 +4,9 @@ import com.vaani.algo.ds.core.TreeNodeWithParent;
 
 /**
  * Given a binary tree, find the lowest common ancestor of two given nodes in the tree. Each node contains a parent pointer which links to its parent.
- *
  */
 public class LowestCommonAncestor3 {
-    /**
-     * Time: O(h) - h is the height of the binary tree
-     * Space: O(1)
-     *
-     * Note: The two given nodes might not come from the same tree
-     *
-     */
-    public TreeNodeWithParent getLCA(TreeNodeWithParent root, TreeNodeWithParent p, TreeNodeWithParent q){
-        if(root == null || q == null || q == null) return null;
-        if(root == p || root == q) return root;
-
-        int pHeight = getHeight(p);
-        int qHeight = getHeight(q);
-        if(pHeight > qHeight) return getLCA(root, q, p);
-
-        int diff = qHeight - pHeight;
-        while(diff > 0){
-            q = q.parent;
-            diff--;
-        }
-
-        while(q != null && p != null){
-            if(p == q) return p;
-            q = q.parent;
-            p = p.parent;
-        }
-        return null;
-    }
-
-    public int getHeight(TreeNodeWithParent node){
-        int count = 0;
-        while(node != null){
-            node = node.parent;
-            count++;
-        }
-        return count;
-    }
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         TreeNodeWithParent root = new TreeNodeWithParent(6);
         root.left = new TreeNodeWithParent(2);
         root.left.parent = root;
@@ -66,5 +27,42 @@ public class LowestCommonAncestor3 {
 
         LowestCommonAncestor3 test = new LowestCommonAncestor3();
         System.out.println(test.getLCA(root, root.left, root.left.right.right).val);
+    }
+
+    /**
+     * Time: O(h) - h is the height of the binary tree
+     * Space: O(1)
+     * <p>
+     * Note: The two given nodes might not come from the same tree
+     */
+    public TreeNodeWithParent getLCA(TreeNodeWithParent root, TreeNodeWithParent p, TreeNodeWithParent q) {
+        if (root == null || q == null || q == null) return null;
+        if (root == p || root == q) return root;
+
+        int pHeight = getHeight(p);
+        int qHeight = getHeight(q);
+        if (pHeight > qHeight) return getLCA(root, q, p);
+
+        int diff = qHeight - pHeight;
+        while (diff > 0) {
+            q = q.parent;
+            diff--;
+        }
+
+        while (q != null && p != null) {
+            if (p == q) return p;
+            q = q.parent;
+            p = p.parent;
+        }
+        return null;
+    }
+
+    public int getHeight(TreeNodeWithParent node) {
+        int count = 0;
+        while (node != null) {
+            node = node.parent;
+            count++;
+        }
+        return count;
     }
 }

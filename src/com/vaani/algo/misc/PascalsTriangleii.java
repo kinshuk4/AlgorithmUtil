@@ -1,14 +1,14 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+
 public class PascalsTriangleii {
     public ArrayList<Integer> getRow(int rowIndex) {
         ArrayList<Integer> list = new ArrayList<Integer>();
         if (rowIndex < 0) return list;
         list.add(1);
         if (rowIndex == 0) return list;
-        
+
         list.add(1);
         for (int i = 2; i <= rowIndex; i++) {
             list.add(1, list.get(0) + list.get(1));
@@ -16,7 +16,7 @@ public class PascalsTriangleii {
                 list.set(j, list.get(j) + list.get(j + 1));
             }
         }
-        
+
         return list;
     }
 }

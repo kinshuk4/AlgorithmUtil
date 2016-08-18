@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Follow up for problem "Populating Next Right Pointers in Each Node".
 
@@ -28,9 +26,9 @@ After calling your function, the tree should look like:
 /**
  * Definition for binary tree with next pointer.
  * public class TreeLinkNode {
- *     int val;
- *     TreeLinkNode left, right, next;
- *     TreeLinkNode(int x) { val = x; }
+ * int val;
+ * TreeLinkNode left, right, next;
+ * TreeLinkNode(int x) { val = x; }
  * }
  */
 public class PopulatingNextRightPointersinEachNodeII {
@@ -41,7 +39,7 @@ public class PopulatingNextRightPointersinEachNodeII {
             TreeLinkNode next = null; //first node of next level
             TreeLinkNode prev = null; //previous node on the same level
             while (root != null) {
-                if (next == null) next = root.left == null? root.right : root.left;
+                if (next == null) next = root.left == null ? root.right : root.left;
                 if (root.left != null) {
                     if (prev != null) prev.next = root.left;
                     prev = root.left;

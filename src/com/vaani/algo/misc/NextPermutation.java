@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
 
@@ -25,8 +23,8 @@ public class NextPermutation {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         int length = num.length;
-        if (length == 0  || length == 1) return;
-        
+        if (length == 0 || length == 1) return;
+
         int partitionIndex = length, changeIndex = length;
         for (int i = length - 1; i > 0; i--) {
             if (num[i] > num[i - 1]) {
@@ -34,9 +32,9 @@ public class NextPermutation {
                 break;
             }
         }
-        
+
         if (partitionIndex == length) {
-            for (int i = 0; i < length/2; i++) {
+            for (int i = 0; i < length / 2; i++) {
                 int temp = num[i];
                 num[i] = num[length - 1 - i];
                 num[length - 1 - i] = temp;
@@ -47,7 +45,7 @@ public class NextPermutation {
                     changeIndex = i;
                     int temp = num[changeIndex];
                     num[changeIndex] = num[partitionIndex];
-                    num[partitionIndex]= temp;
+                    num[partitionIndex] = temp;
                     break;
                 }
             }
@@ -55,16 +53,16 @@ public class NextPermutation {
                 changeIndex = partitionIndex - 1;
                 int temp = num[changeIndex];
                 num[changeIndex] = num[partitionIndex];
-                num[partitionIndex]= temp;
+                num[partitionIndex] = temp;
             } else {
-                for (int i = partitionIndex + 1; i < (length + partitionIndex + 1)/2; i++) {
+                for (int i = partitionIndex + 1; i < (length + partitionIndex + 1) / 2; i++) {
                     int temp = num[i];
                     num[i] = num[length + partitionIndex - i];
                     num[length + partitionIndex - i] = temp;
                 }
             }
-            
+
         }
-        
+
     }
 }

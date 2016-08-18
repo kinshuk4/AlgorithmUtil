@@ -4,30 +4,30 @@ import com.vaani.algo.ds.core.TreeLinkNode;
 
 /**
  * Follow up for problem "Populating Next Right Pointers in Each Node".
- *
+ * <p>
  * What if the given tree could be any binary tree? Would your previous solution still work?
- *
+ * <p>
  * Note:
- *
+ * <p>
  * You may only use constant extra space.
- *
+ * <p>
  * For example,
  * Given the following binary tree,
- *
- *        1
- *       /  \
- *      2    3
- *     / \    \
- *    4   5    7
- *
+ * <p>
+ * 1
+ * /  \
+ * 2    3
+ * / \    \
+ * 4   5    7
+ * <p>
  * After calling your function, the tree should look like:
- *
- *        1 -> NULL
- *       /  \
- *      2 -> 3 -> NULL
- *     / \    \
- *    4-> 5 -> 7 -> NULL
- *
+ * <p>
+ * 1 -> NULL
+ * /  \
+ * 2 -> 3 -> NULL
+ * / \    \
+ * 4-> 5 -> 7 -> NULL
+ * <p>
  * Created by Xiaomeng on 8/11/2014.
  */
 public class PopulatingNextRightPointers2 {
@@ -46,20 +46,20 @@ public class PopulatingNextRightPointers2 {
     *
     * */
     public void connect(TreeLinkNode root) {
-        if(root == null) return;
+        if (root == null) return;
 
         TreeLinkNode node = root.next;
-        while(node != null && node.left == null && node.right == null){
+        while (node != null && node.left == null && node.right == null) {
             node = node.next;
         }
 
         TreeLinkNode next = node == null ? null : node.left != null ? node.left : node.right;
 
-        if(root.left != null){
+        if (root.left != null) {
             root.left.next = root.right != null ? root.right : next;
         }
 
-        if(root.right != null){
+        if (root.right != null) {
             root.right.next = next;
         }
 

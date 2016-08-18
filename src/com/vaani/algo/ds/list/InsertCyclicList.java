@@ -7,29 +7,6 @@ package com.vaani.algo.ds.list;
  * The given node can be any single node in the list.
  */
 public class InsertCyclicList {
-    private static class LinkedNode {
-        public int value;
-        public LinkedNode next;
-
-        public LinkedNode() {
-        }
-
-        public LinkedNode(int v) {
-            value = v;
-            next = null;
-        }
-
-        public String toString() {
-            return String.valueOf(value);
-        }
-
-        public LinkedNode clone() {
-            LinkedNode n = new LinkedNode(value);
-            n.next = next;
-            return n;
-        }
-    }  // end of linkednode class
-
     public static void main(String[] args) {
         LinkedNode n1 = new LinkedNode(1);
         LinkedNode n2 = new LinkedNode(2);
@@ -72,4 +49,27 @@ public class InsertCyclicList {
         prev.next = n;
         n.next = p;
     }
+
+    private static class LinkedNode {
+        public int value;
+        public LinkedNode next;
+
+        public LinkedNode() {
+        }
+
+        public LinkedNode(int v) {
+            value = v;
+            next = null;
+        }
+
+        public String toString() {
+            return String.valueOf(value);
+        }
+
+        public LinkedNode clone() {
+            LinkedNode n = new LinkedNode(value);
+            n.next = next;
+            return n;
+        }
+    }  // end of linkednode class
 }

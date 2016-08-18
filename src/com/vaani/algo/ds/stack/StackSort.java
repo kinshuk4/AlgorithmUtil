@@ -4,51 +4,53 @@ import java.util.Stack;
 
 /**
  * Sorts a stack using operations push,pop,peek and isEmpty
- *
  */
 public class StackSort {
 
-	public void sort(Stack<Integer> s){
+    public static void main(String[] a) {
 
-		int x=0;
-		if (!s.isEmpty()){
-			x=s.pop();
-			sort(s);
-			insert(s,x);
-		}
+        StackSort ss = new StackSort();
 
-	}
+        //initiate the stack of integers
+        Stack<Integer> stack = new Stack<Integer>();
+        //push the elements
+        stack.push(3);
+        stack.push(4);
+        stack.push(1);
+        stack.push(2);
 
-	//At each step check if stack.peek < x, and insert below top recursively
-	public void insert(Stack<Integer> s,int x){
+        //sort the stack
+        ss.sort(stack);
+        for (int val : stack) {
+            System.out.print(val + " ");
+        }
 
-		if (!s.isEmpty() && s.peek()>= x){
+    }
 
-			int y=s.pop();
-			insert(s, x);
-			s.push(y);
+    public void sort(Stack<Integer> s) {
 
-		}else {
-			s.push(x);
-		}
+        int x = 0;
+        if (!s.isEmpty()) {
+            x = s.pop();
+            sort(s);
+            insert(s, x);
+        }
 
-	}
+    }
 
-	public static void main(String[] a){
+    //At each step check if stack.peek < x, and insert below top recursively
+    public void insert(Stack<Integer> s, int x) {
 
-		StackSort ss=new StackSort();
+        if (!s.isEmpty() && s.peek() >= x) {
 
-		//initiate the stack of integers
-		Stack<Integer> stack=new Stack<Integer>();
-		//push the elements
-		stack.push(3);stack.push(4);stack.push(1);stack.push(2);
+            int y = s.pop();
+            insert(s, x);
+            s.push(y);
 
-		//sort the stack
-		ss.sort(stack);
-		for(int val: stack){
-			System.out.print(val+" ");
-		}
+        } else {
+            s.push(x);
+        }
 
-	}
+    }
 
 }

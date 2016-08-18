@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.tree.binary.traversal;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Stack;
-
-import com.vaani.algo.ds.core.TreeNode;
 
 /*
 Given a binary tree, return the preorder traversal of its nodes' values.
@@ -19,13 +19,14 @@ Note: Recursive solution is trivial, could you do it iteratively?
 */
 
 //recursive
+
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class PreorderTraversal {
@@ -36,7 +37,7 @@ public class PreorderTraversal {
         helper(root, result);
         return result;
     }
-    
+
     public void helper(TreeNode root, ArrayList<Integer> result) {
         if (root == null) {
             return;
@@ -45,8 +46,8 @@ public class PreorderTraversal {
         helper(root.left, result);
         helper(root.right, result);
     }
-    
-  //iterative
+
+    //iterative
     public ArrayList<Integer> preorderTraversalIter(TreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
@@ -56,7 +57,7 @@ public class PreorderTraversal {
         }
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             result.add(node.val);
             if (node.right != null) {

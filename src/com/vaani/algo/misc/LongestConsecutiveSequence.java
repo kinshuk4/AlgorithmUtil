@@ -1,7 +1,6 @@
 package com.vaani.algo.misc;
 
 import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 
@@ -18,15 +17,15 @@ public class LongestConsecutiveSequence {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         int length = num.length;
-        
+
         //Key: value, Value: index
         HashMap<Integer, Integer> numMap = new HashMap<Integer, Integer>();
         boolean[] visited = new boolean[length];
-        
+
         for (int i = 0; i < length; i++) {
             numMap.put(num[i], i);
         }
-        
+
         int maxLength = 0;
         for (int cur : numMap.keySet()) {
             int index = numMap.get(cur);
@@ -39,7 +38,7 @@ public class LongestConsecutiveSequence {
             while (numMap.containsKey(left)) {
                 int leftIndex = numMap.get(left);
                 visited[leftIndex] = true;
-                left --;
+                left--;
                 curLength++;
             }
             while (numMap.containsKey(right)) {
@@ -48,12 +47,12 @@ public class LongestConsecutiveSequence {
                 right++;
                 curLength++;
             }
-            
+
             if (curLength > maxLength) {
                 maxLength = curLength;
             }
         }
-        
+
         return maxLength;
     }
 }

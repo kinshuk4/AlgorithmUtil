@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 Given a digit string, return all possible letter combinations that the number could represent.
@@ -14,6 +13,8 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 */
 
 public class LetterCombinationsofaPhoneNumber {
+    private char[][] map = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}, {'j', 'k', 'l'}, {'m', 'n', 'o'}, {'p', 'q', 'r', 's'}, {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}};
+
     public ArrayList<String> letterCombinations(String digits) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         char[] digitChars = digits.toCharArray();
@@ -22,14 +23,11 @@ public class LetterCombinationsofaPhoneNumber {
         letterCombinationHelper(0, digitChars, s, result);
         return result;
     }
-    
-    private char[][] map = {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}, {'j', 'k', 'l'}, {'m', 'n', 'o'}, {'p', 'q', 'r', 's'}, {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}};
-    
+
     private void letterCombinationHelper(int index, char[] digits, StringBuilder s, ArrayList<String> result) {
         if (index >= digits.length) {
             result.add(s.toString());
-        }
-        else {
+        } else {
             int curNum = digits[index] - '1' - 1;
             char[] digitString = map[curNum];
             for (int i = 0; i < digitString.length; i++) {

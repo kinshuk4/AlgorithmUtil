@@ -62,7 +62,7 @@ public class LongestPalindrome {
 
     }
 
-    public static String longestPalindrome1(String s){
+    public static String longestPalindrome1(String s) {
         String longPalindromicString = s.substring(0, 1);
 
         for (int i = 0; i < s.length(); i++) {
@@ -86,7 +86,7 @@ public class LongestPalindrome {
                 break;
         }
         //left = (left < 0) ? 0 : left + 1;
-        left = left+1;
+        left = left + 1;
         return s.substring(left, right);
 
 

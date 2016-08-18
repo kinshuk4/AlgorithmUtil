@@ -1,4 +1,5 @@
 package com.vaani.algo.array.matrix;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,6 +73,6 @@ public class ClockwiseSpiralMatrixPrint {
         } else {
             moveRight(curRow, ++curCol, rows, cols, temp, size);
         }
-}
+    }
 
 }

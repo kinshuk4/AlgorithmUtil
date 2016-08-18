@@ -1,7 +1,7 @@
 package com.vaani.algo.array.sorted.twoarrays;
 
 public class MedianOfSortedArrays {
-	
+
     public static double findMedianSortedArrays(int[] a, int[] b) {
         if (a.length > b.length)
             return findMedianSortedArrays(b, a, 0, b.length - 1);
@@ -32,6 +32,6 @@ public class MedianOfSortedArrays {
                 return (double) (a[i] + b[j]) / 2;
         }
 
-}
+    }
 
 }

@@ -1,7 +1,5 @@
 package com.vaani.algo.math;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Implement int sqrt(int x).
 
@@ -19,16 +17,16 @@ public class Sqrt {
         int end = x;
         int mid;
         while (end >= start) {
-                mid = (start + end) / 2;
-                int div = x / mid;
-                if (div < mid) {
-                    end = mid - 1;
-                } else if (div == mid) {
-                    return mid;
-                } else {
-                    start = mid + 1;
-                }
-            
+            mid = (start + end) / 2;
+            int div = x / mid;
+            if (div < mid) {
+                end = mid - 1;
+            } else if (div == mid) {
+                return mid;
+            } else {
+                start = mid + 1;
+            }
+
         }
         return (start + end) / 2;
     }

@@ -12,6 +12,29 @@ public class PostfixEvaluator {
         input = s;
     }
 
+    public static void main(String[] args) throws Exception {
+        String input;
+        int output;
+        while (true) {
+            System.out.print("Enter postfix:");
+            System.out.flush();
+            input = getString();
+            if (input.equals("")) {
+                break;
+            }
+            PostfixEvaluator aParse = new PostfixEvaluator(input);
+            output = aParse.doParse();
+            System.out.println("Evaluates to " + output);
+        }
+    }
+
+    public static String getString() throws Exception {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader buf = new BufferedReader(isr);
+        String s = buf.readLine();
+        return s;
+    }
+
     public int doParse() {
         theStack = new Stack<Integer>();
         char ch;
@@ -46,28 +69,5 @@ public class PostfixEvaluator {
         }
         interAns = theStack.pop();
         return interAns;
-}
-	
-    public static void main(String[] args) throws Exception {
-        String input;
-        int output;
-        while (true) {
-            System.out.print("Enter postfix:");
-            System.out.flush();
-            input = getString();
-            if (input.equals("")) {
-                break;
-            }
-            PostfixEvaluator aParse = new PostfixEvaluator(input);
-            output = aParse.doParse();
-            System.out.println("Evaluates to " + output);
-        }
     }
-
-    public static String getString() throws Exception {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader buf = new BufferedReader(isr);
-        String s = buf.readLine();
-        return s;
-}
 }

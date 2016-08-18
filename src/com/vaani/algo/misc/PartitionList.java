@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
 
@@ -15,12 +13,12 @@ return 1->2->2->4->3->5.
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class PartitionList {
@@ -31,7 +29,7 @@ public class PartitionList {
         ListNode beforeEnd = null;
         ListNode afterStart = null;
         ListNode afterEnd = null;
-        
+
         if (head == null) return null;
         ListNode node = head;
         while (node != null) {
@@ -62,6 +60,6 @@ public class PartitionList {
             beforeEnd.next = afterStart;
             return beforeStart;
         }
-        
+
     }
 }

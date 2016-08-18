@@ -2,7 +2,7 @@ package com.vaani.algo.array.matrix;
 
 /*https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fmatrix%2FMatrix.java
  * */
- 
+
 public class MatrixMultiplication {
     static int[][] a = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     static int[][] b = new int[][]{{1, 2, 3}, {1, 2, 3}, {1, 2, 3}};
@@ -22,5 +22,5 @@ public class MatrixMultiplication {
             }
             System.out.println();
         }
-}
+    }
 }

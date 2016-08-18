@@ -24,18 +24,18 @@ public class Combination {
         // the same Solution instance will be reused for each test case.
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (n <= 0 || k <= 0 || n < k) return result;
-        
+
         for (int i = 1; i <= n; i++) {
             ArrayList<Integer> init = new ArrayList<Integer>();
             init.add(i);
             helper(init, n, k, result);
         }
-        
+
         return result;
     }
-    
+
     public void helper(ArrayList<Integer> cur, int n, int k, ArrayList<ArrayList<Integer>> result) {
-        
+
         if (cur.size() == k) {
             result.add(cur);
             return;
@@ -46,6 +46,6 @@ public class Combination {
             res.add(++curMax);
             helper(res, n, k, result);
         }
-        
+
     }
 }

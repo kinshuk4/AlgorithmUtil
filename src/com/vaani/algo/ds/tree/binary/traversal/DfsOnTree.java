@@ -27,7 +27,7 @@ public class DfsOnTree {
      *
      */
 // @formatter:on
-    public static TreeNode getABinaryTree(){
+    public static TreeNode getABinaryTree() {
         TreeNode root = new TreeNode(1);
         TreeNode l1 = new TreeNode(3);
         TreeNode r1 = new TreeNode(5);

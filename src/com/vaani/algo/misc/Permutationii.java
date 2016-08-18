@@ -1,7 +1,7 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+
 /*
 Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 
@@ -17,7 +17,7 @@ public class Permutationii {
         permuteUnique(num, 0, result);
         return result;
     }
-    
+
     public void permuteUnique(int[] num, int begin, ArrayList<ArrayList<Integer>> result) {
         if (begin == num.length) {
             ArrayList<Integer> list = new ArrayList<Integer>();
@@ -31,16 +31,16 @@ public class Permutationii {
                 int temp = num[end];
                 num[end] = num[begin];
                 num[begin] = temp;
-                
+
                 permuteUnique(num, begin + 1, result);
-                
+
                 temp = num[end];
                 num[end] = num[begin];
                 num[begin] = temp;
             }
         }
     }
-    
+
     public boolean isSwap(int[] arr, int i, int j) {
         for (int k = i; k < j; k++) {
             if (arr[k] == arr[j]) {

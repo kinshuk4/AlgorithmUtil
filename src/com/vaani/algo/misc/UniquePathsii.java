@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Follow up for "Unique Paths":
 
@@ -28,9 +26,9 @@ public class UniquePathsii {
         // the same Solution instance will be reused for each test case.
         int row = obstacleGrid.length;
         int col = obstacleGrid[0].length;
-        
+
         int[][] path = new int[row][col];
-        
+
         //initialize
         for (int i = 0; i < row; i++) {
             if (obstacleGrid[i][0] == 1) {
@@ -38,14 +36,14 @@ public class UniquePathsii {
             }
             path[i][0] = 1;
         }
-        
+
         for (int j = 0; j < col; j++) {
             if (obstacleGrid[0][j] == 1) {
                 break;
             }
             path[0][j] = 1;
         }
-        
+
         for (int i = 1; i < row; i++) {
             for (int j = 1; j < col; j++) {
                 if (obstacleGrid[i][j] == 1) {
@@ -53,7 +51,7 @@ public class UniquePathsii {
                 } else {
                     path[i][j] = path[i - 1][j] + path[i][j - 1];
                 }
-                
+
             }
         }
         return path[row - 1][col - 1];

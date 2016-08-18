@@ -1,6 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
 import java.util.ArrayList;
 /*
 Given a string containing only digits, restore it by returning all possible valid IP address combinations.
@@ -20,15 +19,16 @@ public class RestoreIPAddress {
         helper(s, 0, 0, new StringBuilder(), result);
         return result;
     }
+
     public void helper(String s, int index, int k, StringBuilder sb, ArrayList<String> result) {
         if (index == s.length() && k == 4) {
             result.add(sb.toString());
             return;
         }
-        
+
         if (s.length() - index > (4 - k) * 3) return;
         if (s.length() - index < 4 - k) return;
-        
+
         int num = 0;
         for (int i = index; i < index + 3 && i < s.length(); i++) {
             num = num * 10 + s.charAt(i) - '0';
@@ -39,7 +39,7 @@ public class RestoreIPAddress {
                     cur.append(".");
                     cur.append(num);
                 }
-                
+
                 helper(s, i + 1, k + 1, cur, result);
             }
             if (num == 0) break;

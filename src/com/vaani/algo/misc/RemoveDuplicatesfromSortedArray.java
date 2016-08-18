@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
 
@@ -16,20 +14,20 @@ Your function should return length = 2, and A is now [1,2].
 public class RemoveDuplicatesfromSortedArray {
     public int removeDuplicates(int[] A) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
-        
-        if(A.length == 0)
+
+        if (A.length == 0)
             return 0;
-        else if(A.length == 1)
+        else if (A.length == 1)
             return 1;
         else {
             int writeSeq = 0;
-            for(int readSeq = 1; readSeq < A.length; readSeq++) {
-                if(A[readSeq - 1] != A[readSeq]) {
+            for (int readSeq = 1; readSeq < A.length; readSeq++) {
+                if (A[readSeq - 1] != A[readSeq]) {
                     A[++writeSeq] = A[readSeq];
                 }
             }
             return writeSeq + 1;
         }
-        
+
     }
 }

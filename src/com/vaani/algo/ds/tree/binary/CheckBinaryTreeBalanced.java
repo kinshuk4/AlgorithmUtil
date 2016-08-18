@@ -10,10 +10,10 @@ For this problem, a height-balanced binary tree is defined as a binary tree in w
 /**
  * Definition for binary tree
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class CheckBinaryTreeBalanced {
@@ -30,13 +30,13 @@ public class CheckBinaryTreeBalanced {
             return isBalanced(root.left) && isBalanced(root.right);
         }
     }
-    
+
     public int getHeight(TreeNode node) {
         if (node == null) {
             return 0;
         }
         int left = getHeight(node.left) + 1;
         int right = getHeight(node.right) + 1;
-        return left > right? left : right;
+        return left > right ? left : right;
     }
 }

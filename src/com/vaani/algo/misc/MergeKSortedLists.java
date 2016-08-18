@@ -1,18 +1,18 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.PriorityQueue;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 
@@ -30,7 +30,7 @@ public class MergeKSortedLists {
         }
         return l;
     }
-    
+
     public ListNode mergeTwoList(ListNode n1, ListNode n2) {
         if (n1 == null) {
             return n2;
@@ -38,7 +38,7 @@ public class MergeKSortedLists {
         if (n2 == null) {
             return n1;
         }
-        
+
         if (n1.val < n2.val) {
             n1.next = mergeTwoList(n1.next, n2);
             return n1;
@@ -46,8 +46,9 @@ public class MergeKSortedLists {
             n2.next = mergeTwoList(n2.next, n1);
             return n2;
         }
-        
+
     }
+
     //Solution 2 - //heap sort
     public ListNode mergeKLists2(ArrayList<ListNode> lists) {
         // IMPORTANT: Please reset any member data you declared, as
@@ -55,7 +56,7 @@ public class MergeKSortedLists {
         if (lists == null || lists.size() == 0) {
             return null;
         }
-        
+
         PriorityQueue<ListNode> heap = new PriorityQueue(lists.size(), new Comparator<ListNode>() {
             public int compare(ListNode n1, ListNode n2) {
                 if (n1.val < n2.val) return -1;
@@ -63,26 +64,26 @@ public class MergeKSortedLists {
                 return 0;
             }
         });
-        
+
         for (ListNode n : lists) {
             if (n != null) {
                 heap.add(n);
             }
         }
-        
+
         ListNode head = heap.poll();
         ListNode cur = head;
         while (!heap.isEmpty()) {
             if (cur.next != null) {
                 heap.add(cur.next);
             }
-            
+
             cur.next = heap.poll();
             cur = cur.next;
         }
         return head;
     }
-    
+
 }
 
 

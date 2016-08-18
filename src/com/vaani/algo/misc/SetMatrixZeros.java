@@ -1,7 +1,5 @@
 package com.vaani.algo.misc;
 
-import java.util.HashMap;
-import java.util.ArrayList;
 /*
 Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
 
@@ -17,10 +15,10 @@ Could you devise a constant space solution?
 public class SetMatrixZeros {
     public void setZeroes(int[][] matrix) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
-        
+
         boolean[] row = new boolean[matrix.length];
         boolean[] column = new boolean[matrix[0].length];
-        
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
                 if (matrix[i][j] == 0) {
@@ -29,7 +27,7 @@ public class SetMatrixZeros {
                 }
             }
         }
-        
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
                 if (row[i] || column[j]) {
@@ -40,28 +38,28 @@ public class SetMatrixZeros {
     }
 }
 
-class SetMatrixZeros2{
+class SetMatrixZeros2 {
     public void setZeroes(int[][] matrix) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
-        
+
         boolean firstRowHasZero = false;
         boolean firstColumnHasZero = false;
-        
+
         int rowLength = matrix.length;
         int columnLength = matrix[0].length;
-        
+
         for (int i = 0; i < columnLength; i++) {
             if (matrix[0][i] == 0) {
                 firstRowHasZero = true;
             }
         }
-        
+
         for (int j = 0; j < rowLength; j++) {
             if (matrix[j][0] == 0) {
                 firstColumnHasZero = true;
             }
         }
-        
+
         for (int i = 1; i < columnLength; i++) {
             for (int j = 1; j < rowLength; j++) {
                 if (matrix[j][i] == 0) {
@@ -70,7 +68,7 @@ class SetMatrixZeros2{
                 }
             }
         }
-        
+
         for (int i = 1; i < columnLength; i++) {
             if (matrix[0][i] == 0) {
                 for (int j = 1; j < rowLength; j++) {
@@ -78,7 +76,7 @@ class SetMatrixZeros2{
                 }
             }
         }
-        
+
         for (int j = 1; j < rowLength; j++) {
             if (matrix[j][0] == 0) {
                 for (int i = 1; i < columnLength; i++) {
@@ -86,13 +84,13 @@ class SetMatrixZeros2{
                 }
             }
         }
-        
+
         if (firstRowHasZero) {
             for (int i = 0; i < columnLength; i++) {
                 matrix[0][i] = 0;
             }
         }
-        
+
         if (firstColumnHasZero) {
             for (int j = 0; j < rowLength; j++) {
                 matrix[j][0] = 0;
