@@ -11,9 +11,51 @@ import com.vaani.algo.ds.core.ListNode;
  * Given 1->4->3->2->5->2 and x = 3,
  * return 1->2->2->4->3->5.
  * <p>
- * Created by Xiaomeng on 7/14/2014.
+ * 
  */
 public class PartitionList {
+	
+    public static ListNode partition2(ListNode head, int x) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        ListNode beforeStart = null;
+        ListNode beforeEnd = null;
+        ListNode afterStart = null;
+        ListNode afterEnd = null;
+
+        if (head == null) return null;
+        ListNode node = head;
+        while (node != null) {
+            ListNode next = node.next;
+            node.next = null;
+            if (node.val < x) {
+                if (beforeStart == null) {
+                    beforeStart = node;
+                    beforeEnd = node;
+                } else {
+                    beforeEnd.next = node;
+                    beforeEnd = node;
+                }
+            } else {
+                if (afterStart == null) {
+                    afterStart = node;
+                    afterEnd = node;
+                } else {
+                    afterEnd.next = node;
+                    afterEnd = node;
+                }
+            }
+            node = next;
+        }
+        if (beforeEnd == null) {
+            return afterStart;
+        } else {
+            beforeEnd.next = afterStart;
+            return beforeStart;
+        }
+
+    }
+    
     public static ListNode partition(ListNode head, int x) {
         ListNode dummyHead1 = new ListNode(-1);
         ListNode dummyHead2 = new ListNode(-1);

@@ -2,10 +2,11 @@ package com.vaani.algo.ds.list.linked;
 
 import com.vaani.algo.ds.core.ListNode;
 
+
 /**
  * Sort a linked list in O(n log n) time using constant space complexity.
  * <p>
- * Created by Xiaomeng on 8/4/2014.
+ * 
  */
 public class SortList {
     public static void main(String[] args) {
@@ -21,16 +22,17 @@ public class SortList {
 
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode partition = getMidNode(head);
+        ListNode partition = FindMidNode.getMidNode(head);
         ListNode mid = partition.next;
         partition.next = null;
 
         ListNode first = sortList(head);
         ListNode second = sortList(mid);
-        return merge(first, second);
+        return mergeIterative(first, second);
+//        return mergeRecursive(first, second);
     }
 
-    public ListNode merge(ListNode first, ListNode second) {
+    public ListNode mergeIterative(ListNode first, ListNode second) {
         ListNode dummy = new ListNode(-1);
         ListNode dummyHead = dummy;
         while (first != null && second != null) {
@@ -47,14 +49,19 @@ public class SortList {
         return dummyHead.next;
     }
 
-    public ListNode getMidNode(ListNode head) {
-        if (head == null || head.next == null) return head;
-        ListNode slow = head;
-        ListNode fast = head.next.next;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+    public ListNode mergeRecursive(ListNode l1, ListNode l2) {
+        if (l1 == null)
+            return l2;
+        if (l2 == null)
+            return l1;
+
+        if (l1.val < l2.val) {
+            l1.next = mergeRecursive(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeRecursive(l1, l2.next);
+            return l2;
         }
-        return slow;
     }
+
 }

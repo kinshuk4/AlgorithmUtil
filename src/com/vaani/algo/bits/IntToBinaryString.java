@@ -12,7 +12,7 @@ public class IntToBinaryString {
             temp = integer;
             integer = (temp >> 1);
             builder.append(String.valueOf(temp % 2));
-            // if insert at 0, no need to reverse
+            // if insert at 0, no need to reverseIterative
             // builder.insert(0, String.valueOf(temp % 2));
             if (integer == 0)
                 break;

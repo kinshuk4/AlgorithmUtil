@@ -77,13 +77,13 @@ public class LargeNumber {
         return largeNumber;
     }
     //	public void sum(Node num1, Node num2) {
-    //		Node n1 = reverse(num1);
-    //		Node n2 = reverse(num2);
+    //		Node n1 = reverseIterative(num1);
+    //		Node n2 = reverseIterative(num2);
     //
     //		int carry = 0;
     //		Node sum = sum(n1, n2, carry);
     //
-    //		sum = reverse(sum);
+    //		sum = reverseIterative(sum);
     //
     //		return sum;
     //	}

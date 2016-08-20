@@ -10,6 +10,8 @@ Your algorithm should use only constant space. You may not modify the values in 
 Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.
 */
 
+import com.vaani.algo.ds.core.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -21,15 +23,15 @@ Your algorithm should use only constant space. You may not modify the values in 
  * }
  * }
  */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
+//class ListNode {
+//    int val;
+//    ListNode next;
+//
+//    ListNode(int x) {
+//        val = x;
+//        next = null;
+//    }
+//}
 
 public class SwapNodesinPairs {
     public ListNode swapPairs(ListNode head) {

@@ -2,6 +2,8 @@ package com.vaani.algo.misc;
 
 import java.util.ArrayList;
 
+import com.vaani.algo.ds.core.ListNode;
+
 /*
 case of four
 

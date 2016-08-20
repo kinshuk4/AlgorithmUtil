@@ -10,7 +10,6 @@ import com.vaani.algo.ds.core.ListNode;
 /**
  * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
  * <p>
- * Created by Xiaomeng on 7/24/2014.
  */
 public class MergeKSortedLists {
     public static ListNode mergeKLists(List<ListNode> lists) {
@@ -39,6 +38,53 @@ public class MergeKSortedLists {
         return dummyHead.next;
     }
 
+    public static ListNode mergeKLists2(ArrayList<ListNode> lists) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        if (lists == null || lists.size() == 0) {
+            return null;
+        }
+        ListNode l = lists.get(0);
+        for (int i = 1; i < lists.size(); i++) {
+            l = MergeTwoSortedLists.mergeTwoLists(l, lists.get(i));
+        }
+        return l;
+    }
+
+    //Solution 2 - //heap sort
+    public static ListNode mergeKLists3(ArrayList<ListNode> lists) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        if (lists == null || lists.size() == 0) {
+            return null;
+        }
+
+        PriorityQueue<ListNode> heap = new PriorityQueue(lists.size(), new Comparator<ListNode>() {
+            public int compare(ListNode n1, ListNode n2) {
+                if (n1.val < n2.val) return -1;
+                if (n1.val > n2.val) return 1;
+                return 0;
+            }
+        });
+
+        for (ListNode n : lists) {
+            if (n != null) {
+                heap.add(n);
+            }
+        }
+
+        ListNode head = heap.poll();
+        ListNode cur = head;
+        while (!heap.isEmpty()) {
+            if (cur.next != null) {
+                heap.add(cur.next);
+            }
+
+            cur.next = heap.poll();
+            cur = cur.next;
+        }
+        return head;
+    }
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(5);

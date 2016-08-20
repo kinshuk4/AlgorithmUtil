@@ -5,13 +5,13 @@ import java.util.Collections;
 
 /**
  * Given a set of non overlapping intervals
- * Example 1 :(1,4) (6,10) (14, 19) and another interval (13, 17) merge them as (1,4) (6,10) (13,19)
+ * Example 1 :(1,4) (6,10) (14, 19) and another interval (13, 17) mergeIterative them as (1,4) (6,10) (13,19)
  * <p/>
  * Example 2: (1,5) (6, 15) (20, 21) (23, 26) (27, 30) (35, 40),  and the new interval is (14, 33). The
  * output should be (1,5) (6, 33) (35, 40).
  * This is because the new interval overlaps with (6, 15) (20, 21) (23, 26) (27, 30)
  * <p/>
- * Given a collection of intervals, merge all overlapping intervals.
+ * Given a collection of intervals, mergeIterative all overlapping intervals.
  * <p/>
  * For example,
  * Given [1,3],[2,6],[8,10],[15,18],

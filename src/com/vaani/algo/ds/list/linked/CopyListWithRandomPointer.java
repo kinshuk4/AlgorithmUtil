@@ -7,7 +7,6 @@ import com.vaani.algo.ds.core.RandomListNode;
  * <p>
  * Return a deep copy of the list.
  * <p>
- * Created by Xiaomeng on 7/16/2014.
  */
 public class CopyListWithRandomPointer {
     public RandomListNode copyRandomList(RandomListNode head) {

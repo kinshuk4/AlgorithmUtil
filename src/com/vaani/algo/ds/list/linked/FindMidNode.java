@@ -2,23 +2,17 @@ package com.vaani.algo.ds.list.linked;
 
 import com.vaani.algo.ds.core.ListNode;
 
-/**
- * Created by Xiaomeng on 10/9/2014.
- */
 public class FindMidNode {
 
-    public static ListNode findMid(ListNode head) {
+    public static ListNode getMidNode(ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode first = head;
-        ListNode second = head;
-        while (second.next != null) {
-            second = second.next;
-            if (second.next != null) {
-                second = second.next;
-                first = first.next;
-            }
+        ListNode slow = head;
+        ListNode fast = head.next.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
-        return first;
+        return slow;
     }
 
     public static void main(String[] args) {
@@ -27,6 +21,6 @@ public class FindMidNode {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode((4));
         head.next.next.next.next = new ListNode((5));
-        System.out.println(findMid(head).val);
+        System.out.println(getMidNode(head).val);
     }
 }
