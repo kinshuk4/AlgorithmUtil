@@ -7,17 +7,17 @@ public class NumberOfDiscIntersections {
 	static final int LIMIT = 10000000;
 
 	public int solution(int[] A) {
-		Point[] points = new Point[A.length * 2];
+		Point1[] points = new Point1[A.length * 2];
 		for (int i = 0; i < A.length; i++) {
-			points[i * 2] = new Point((long) i - A[i], Type.LOWER);
-			points[i * 2 + 1] = new Point((long) i + A[i], Type.UPPER);
+			points[i * 2] = new Point1((long) i - A[i], Type.LOWER);
+			points[i * 2 + 1] = new Point1((long) i + A[i], Type.UPPER);
 		}
 
 		Arrays.sort(points, new PointComparator());
 
 		int intersectNum = 0;
 		int openedNum = 0;
-		for (Point point : points) {
+		for (Point1 point : points) {
 			if (point.type.equals(Type.LOWER)) {
 				intersectNum += openedNum;
 				if (intersectNum > LIMIT) {
@@ -32,9 +32,9 @@ public class NumberOfDiscIntersections {
 	}
 }
 
-class PointComparator implements Comparator<Point> {
+class PointComparator implements Comparator<Point1> {
 	@Override
-	public int compare(Point p1, Point p2) {
+	public int compare(Point1 p1, Point1 p2) {
 		if (p1.y != p2.y) {
 			return (int) Math.signum(p1.y - p2.y);
 		}
@@ -42,11 +42,11 @@ class PointComparator implements Comparator<Point> {
 	}
 }
 
-class Point {
+class Point1 {
 	long y;
 	Type type;
 
-	Point(long y, Type type) {
+	Point1(long y, Type type) {
 		this.y = y;
 		this.type = type;
 	}
