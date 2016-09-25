@@ -31,17 +31,17 @@ public class InorderTraversal {
         System.out.println(test.inorderTraversal(root));
     }
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode<Integer> root) {
         List<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
 
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode<Integer>> stack = new Stack<TreeNode<Integer>>();
         while (!stack.isEmpty() || root != null) {
             if (root != null) {
                 stack.push(root);
                 root = root.left;
             } else {
-                TreeNode node = stack.pop();
+                TreeNode<Integer> node = stack.pop();
                 result.add(node.val);
                 if (node.right != null) {
                     root = node.right;

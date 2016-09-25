@@ -24,7 +24,7 @@ class BST {
         }
     }
 
-    private TreeNode insert(TreeNode node, int val) {
+    private TreeNode insert(TreeNode<Integer> node, int val) {
         if (node == null) {
             return new TreeNode(val);
         } else if (node.val <= val) {
@@ -53,7 +53,7 @@ public class MostRepeatedKeyInBST {
         return max;
     }
 
-    private void mostRepeatedBST(TreeNode node, Map<Integer, Integer> counts) {
+    private void mostRepeatedBST(TreeNode<Integer> node, Map<Integer, Integer> counts) {
         if (node == null) {
             return;
         } else {

@@ -38,7 +38,7 @@ public class LevelOrderTraversal2 {
         queue1.add(root);
 
         while (!queue1.isEmpty()) {
-            TreeNode node = queue1.poll();
+            TreeNode<Integer> node = queue1.poll();
             level.add(node.val);
 
             if (node.left != null) queue2.add(node.left);
@@ -66,7 +66,7 @@ public class LevelOrderTraversal2 {
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
             for (int i = 0; i < currLevel; i++) {
-                TreeNode node = queue.poll();
+                TreeNode<Integer> node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);

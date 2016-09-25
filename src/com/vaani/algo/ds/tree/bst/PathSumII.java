@@ -46,7 +46,7 @@ public class PathSumII {
         return result;
     }
 
-    public void helper(TreeNode root, int curSum, int target, ArrayList<Integer> list) {
+    public void helper(TreeNode<Integer> root, int curSum, int target, ArrayList<Integer> list) {
         ArrayList<Integer> curList = new ArrayList<Integer>(list);
         if (root == null) {
             return;

@@ -37,7 +37,7 @@ public class BinaryTreeMaximumPathSum {
         return max;
     }
 
-    public int dfs1(TreeNode root) {
+    public int dfs1(TreeNode<Integer> root) {
         if (root == null) return 0;
         int m = root.val;
 
@@ -54,7 +54,7 @@ public class BinaryTreeMaximumPathSum {
     /**
      * My solution, very similar to the first solution
      */
-    public int dfs2(TreeNode root) {
+    public int dfs2(TreeNode<Integer> root) {
         if (root == null) return 0;
 
         int left = dfs2(root.left);

@@ -54,7 +54,7 @@ public class PathSum2 {
         return result;
     }
 
-    public void pathSum(TreeNode root, int sum, int count, List<Integer> single, List<List<Integer>> result) {
+    public void pathSum(TreeNode<Integer> root, int sum, int count, List<Integer> single, List<List<Integer>> result) {
         if (root == null) return;
         count += root.val;
         single.add(root.val);

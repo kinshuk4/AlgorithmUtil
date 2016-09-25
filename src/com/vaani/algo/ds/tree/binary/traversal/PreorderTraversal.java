@@ -38,7 +38,7 @@ public class PreorderTraversal {
         return result;
     }
 
-    public void helper(TreeNode root, ArrayList<Integer> result) {
+    public void helper(TreeNode<Integer> root, ArrayList<Integer> result) {
         if (root == null) {
             return;
         }
@@ -58,7 +58,7 @@ public class PreorderTraversal {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
         while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
+            TreeNode<Integer> node = stack.pop();
             result.add(node.val);
             if (node.right != null) {
                 stack.push(node.right);

@@ -50,7 +50,7 @@ public class IsBST {
         System.out.println();
     }
 
-    public static boolean isBST(TreeNode node, int min, int max) {
+    public static boolean isBST(TreeNode<Integer> node, int min, int max) {
         if (node == null) {
             return true;
         }
@@ -62,7 +62,7 @@ public class IsBST {
         }
     }
 
-    public static boolean isBST1(TreeNode node, int prev) {
+    public static boolean isBST1(TreeNode<Integer> node, int prev) {
         if (node == null) {
             return true;
         }

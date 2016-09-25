@@ -42,7 +42,7 @@ public class PathSum {
         return hasPathSum(root, sum, 0);
     }
 
-    public boolean hasPathSum(TreeNode root, int sum, int count) {
+    public boolean hasPathSum(TreeNode<Integer> root, int sum, int count) {
         if (root == null) return false;
         count += root.val;
 

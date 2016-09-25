@@ -39,7 +39,7 @@ public class SumRootToLeafNumbers {
         return sum;
     }
 
-    public void sumNumbers(TreeNode root, int count) {
+    public void sumNumbers(TreeNode<Integer> root, int count) {
         if (root == null) return;
         count = 10 * count + root.val;
         if (root.left == null && root.right == null) {

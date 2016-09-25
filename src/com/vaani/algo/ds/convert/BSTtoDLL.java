@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.bst;
+package com.vaani.algo.ds.convert;
 
 import com.vaani.algo.ds.core.TreeNode;
 
@@ -47,7 +47,7 @@ public class BSTtoDLL {
 
     }
 
-    public static void printDll(TreeNode n) {
+    public static void printDll(TreeNode<Integer> n) {
         if (n == null) {
             System.out.println("null");
         } else {

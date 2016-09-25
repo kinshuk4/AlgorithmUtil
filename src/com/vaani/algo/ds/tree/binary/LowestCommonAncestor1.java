@@ -12,7 +12,7 @@ public class LowestCommonAncestor1 {
      * O(logN) Time
      * Reference: http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html
      */
-    public static TreeNode getLCA(TreeNode root, TreeNode p, TreeNode q) {
+    public static TreeNode getLCA(TreeNode<Integer> root, TreeNode<Integer> p, TreeNode<Integer> q) {
         if (root == null || p == null || q == null) return null;
         if (root.val > Math.max(p.val, q.val)) {
             return getLCA(root.left, p, q);

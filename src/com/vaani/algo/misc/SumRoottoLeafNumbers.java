@@ -25,7 +25,7 @@ public class SumRoottoLeafNumbers {
         return sum;
     }
 
-    public void helper(TreeNode root, int curSum) {
+    public void helper(TreeNode<Integer> root, int curSum) {
         curSum = curSum * 10 + root.val;
         if (root.left == null && root.right == null) {
             sum = sum + curSum;

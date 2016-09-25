@@ -12,9 +12,9 @@ import com.vaani.algo.ds.core.TreeNode;
  * Created by Xiaomeng on 8/16/2014.
  */
 public class RecoverBinarySearchTree {
-    TreeNode pre;
-    TreeNode first;
-    TreeNode second;
+    TreeNode<Integer> pre;
+    TreeNode<Integer> first;
+    TreeNode<Integer> second;
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(8);
@@ -29,14 +29,14 @@ public class RecoverBinarySearchTree {
         root.display();
     }
 
-    public void recoverTree(TreeNode root) {
+    public void recoverTree(TreeNode<Integer> root) {
         inorder(root);
         int temp = first.val;
         first.val = second.val;
         second.val = temp;
     }
 
-    public void inorder(TreeNode root) {
+    public void inorder(TreeNode<Integer> root) {
         if (root == null) return;
         inorder(root.left);
         if (pre == null) {

@@ -21,7 +21,7 @@ public class PathSum {
         return helper(root, 0, sum);
     }
 
-    public boolean helper(TreeNode root, int curSum, int target) {
+    public boolean helper(TreeNode<Integer> root, int curSum, int target) {
         if (root == null) {
             return curSum == target;
         }

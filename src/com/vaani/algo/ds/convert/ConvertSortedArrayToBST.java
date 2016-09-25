@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.convert;
 
 import com.vaani.algo.ds.core.TreeNode;
 

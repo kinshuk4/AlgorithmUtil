@@ -37,7 +37,7 @@ public class ConstructBinaryTreeFromInPreorder {
             return null;
         }
 
-        TreeNode root = new TreeNode(preorder[preStart]);
+        TreeNode<Integer> root = new TreeNode(preorder[preStart]);
 
         for (int i = inStart; i <= inEnd; i++) {
             if (inorder[i] == root.val) {

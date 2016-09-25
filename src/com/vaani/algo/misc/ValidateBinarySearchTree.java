@@ -12,7 +12,7 @@ import com.vaani.algo.ds.core.TreeNode;
  * }
  */
 public class ValidateBinarySearchTree {
-    TreeNode previous;
+    TreeNode<Integer> previous;
     boolean valid;
 
     public boolean isValidBST(TreeNode root) {
@@ -24,7 +24,7 @@ public class ValidateBinarySearchTree {
         return valid;
     }
 
-    public void isValid(TreeNode root) {
+    public void isValid(TreeNode<Integer> root) {
         if (root == null) {
             return;
         }

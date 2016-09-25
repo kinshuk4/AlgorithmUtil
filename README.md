@@ -456,3 +456,11 @@ Also, I have to improve from:
 - https://github.com/xiaoningning/algorithm-exercise
 - https://github.com/shashi45/DataStructuresAndAlgorithms
 - https://github.com/sudeep91soni/Java-Codes
+- http://www.geeksforgeeks.org/data-structures/
+- http://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/
+- http://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-2/
+- https://github.com/brandonjc24/SchoolCode
+- https://github.com/brandonjc24/Project-Euler
+- https://github.com/algowizards/interview
+- https://github.com/xwang438/geeksforgeeks
+- https://github.com/souyang/algorithm-exercise/tree/master/zh-hans/binary_search

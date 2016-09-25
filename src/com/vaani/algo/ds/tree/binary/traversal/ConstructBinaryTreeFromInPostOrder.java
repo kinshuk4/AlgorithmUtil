@@ -33,7 +33,7 @@ public class ConstructBinaryTreeFromInPostOrder {
             return null;
         }
 
-        TreeNode root = new TreeNode(postorderTree[postEnd]);
+        TreeNode<Integer> root = new TreeNode(postorderTree[postEnd]);
         for (int i = inStart; i <= inEnd; i++) {
             if (inorderTree[i] == root.val) {
                 //inEnd - inStart == postEnd - postStart

@@ -1,7 +1,9 @@
 package com.vaani.algo.ds.list.dll.impl;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 public final class DoubleListNode<T> {
-	T value;
+	public T value;
 	public DoubleListNode<T> prev;
 	public DoubleListNode<T> next;
 
@@ -38,6 +40,22 @@ public final class DoubleListNode<T> {
 	public void setNext(DoubleListNode<T> next) {
 		this.next = next;
 	}
-	
-	
+
+	// A utility function to find last node of linked list
+	public <T>  DoubleListNode lastNode(DoubleListNode<T> node){
+		while(node.next!=null)
+			node = node.next;
+		return node;
+	}
+
+
+//	public T  TreeNode<T> convertDLLNodeToTreeNode(DoubleListNode node) {
+//		if(node!=null){
+//			return new TreeNode<T>(convertDLLNodeToTreeNode(node.prev), node.value, convertDLLNodeToTreeNode(node.next));
+//		}else{
+//			return null;
+//		}
+//	}
+
+
 }

@@ -36,11 +36,11 @@ public class PostorderTraversal {
         if (root == null) return result;
 
         Stack<TreeNode> tmpStack = new Stack<TreeNode>();
-        Stack<TreeNode> outStack = new Stack<TreeNode>();
+        Stack<TreeNode<Integer>> outStack = new Stack<TreeNode<Integer>>();
         tmpStack.push(root);
 
         while (!tmpStack.isEmpty()) {
-            TreeNode node = tmpStack.pop();
+            TreeNode<Integer> node = tmpStack.pop();
             outStack.push(node);
             if (node.left != null) tmpStack.add(node.left);
             if (node.right != null) tmpStack.add(node.right);

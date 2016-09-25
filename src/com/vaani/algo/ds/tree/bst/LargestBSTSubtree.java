@@ -10,7 +10,7 @@ import com.vaani.algo.ds.core.TreeNode;
 public class LargestBSTSubtree {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
+        TreeNode<Integer> root = new TreeNode(10);
         TreeNode node5 = new TreeNode(5);
         TreeNode node15 = new TreeNode(15);
         TreeNode node6 = new TreeNode(6);
@@ -46,32 +46,34 @@ public class LargestBSTSubtree {
     // Given a binary tree, find the largest Binary Search Tree (BST),
     // where largest means BST with largest number of nodes in it.
     // The largest BST may or may not include all of its descendants.
-    public static int largestBSTSubtree(TreeNode node) {
+    public static int largestBSTSubtree(TreeNode<Integer> node) {
         if (node == null)
             return 0;
         if (node.left == null && node.right == null)
             return 1;
+        
+        TreeNode<Integer> left = node.left;
+        TreeNode<Integer> right = node.right;
+        int leftNode = largestBSTSubtree(left);
+        int rightNode = largestBSTSubtree(right);
 
-        int leftNode = largestBSTSubtree(node.left);
-        int rightNode = largestBSTSubtree(node.right);
-
-        if (node.left != null && node.right != null) {
-            if ((node.left.val < node.val) && (node.right.val > node.val)) {
+        if ( left != null && right != null) {
+            if ((left.val < node.val) && (right.val > node.val)) {
                 return leftNode + rightNode + 1;
-            } else if (node.left.val < node.val) {
+            } else if (left.val < node.val) {
                 return leftNode + 1;
-            } else if (node.right.val > node.val) {
+            } else if (right.val > node.val) {
                 return rightNode + 1;
             } else {
                 return Math.max(rightNode, leftNode);
             }
-        } else if (node.left != null) {
-            if (node.left.val < node.val)
+        } else if (left != null) {
+            if (left.val < node.val)
                 return leftNode + 1;
             else
                 return leftNode;
-        } else {// if (node.right != null){
-            if (node.val < node.right.val)
+        } else {// if (right != null){
+            if (node.val < right.val)
                 return rightNode + 1;
             else
                 return rightNode;
@@ -81,7 +83,7 @@ public class LargestBSTSubtree {
     // Given a binary tree, find the largest Binary Search Tree (BST),
     // where largest means BST with largest number of nodes in it.
     // The largest BST may or may not include all of its descendants.
-    public static LargestBST largestBSTSubtree1(TreeNode node) {
+    public static LargestBST largestBSTSubtree1(TreeNode<Integer> node) {
         if (node == null)
             return null;
         if (node.left == null && node.right == null) {
@@ -130,7 +132,7 @@ public class LargestBSTSubtree {
     // Given a binary tree, find the largest Binary Search Tree (BST),
     // where largest means BST with largest number of nodes in it.
     // The largest BST must include all of its descendants.
-    public static LargestBST largestBSTSubtree2(TreeNode node) {
+    public static LargestBST largestBSTSubtree2(TreeNode<Integer> node) {
         if (node == null)
             return null;
         if (node.left == null && node.right == null) {

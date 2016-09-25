@@ -49,7 +49,7 @@ public class LevelOrderTraversalByLevel {
             ArrayList<TreeNode> nextLevelList = new ArrayList<TreeNode>();
             ArrayList<Integer> parentLevelData = new ArrayList<Integer>();
 
-            for (TreeNode s : currentList) {
+            for (TreeNode<Integer> s : currentList) {
                 parentLevelData.add(s.val);
                 if (s.left != null) {
                     nextLevelList.add(s.left);

@@ -6,14 +6,20 @@ import java.util.List;
 import java.util.Queue;
 
 
-public class TreeNode {
+public class TreeNode<T> {
     public TreeNode left;
     public TreeNode right;
-    public int val;
+    public T val;
     public boolean isVisited;
 
-    public TreeNode(int data) {
+    public TreeNode(T data) {
         this.val = data;
+    }
+
+    public TreeNode(TreeNode left, T data, TreeNode right){
+        this.left = left;
+        this.val = data;
+        this.right = right;
     }
 
     public TreeNode getLeft() {
@@ -32,11 +38,11 @@ public class TreeNode {
         this.right = right;
     }
 
-    public int getVal() {
+    public T getVal() {
         return val;
     }
 
-    public void setVal(int val) {
+    public void setVal(T val) {
         this.val = val;
     }
 
@@ -68,10 +74,11 @@ public class TreeNode {
         return builder.append(String.valueOf(root.val)).toString();
     }
 
-    public boolean insertForBst(TreeNode n) {
+    public  boolean insertForBst(TreeNode<Integer> n) {
         if (n == null)
             return false;
-        if (this.val >= n.val) {
+        int val2 = (Integer) val;
+        if (val2 >= n.val) {
             if (this.left == null)
                 this.left = n;
             else
@@ -101,17 +108,17 @@ public class TreeNode {
         return size + 1;
     }
 
-    private List<List<Integer>> levelOrder(TreeNode root) {
+    private List<List<Integer>> levelOrder(TreeNode<Integer> root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
 
-        Queue<TreeNode> queue1 = new LinkedList<TreeNode>();
-        Queue<TreeNode> queue2 = new LinkedList<TreeNode>();
+        Queue<TreeNode<Integer>> queue1 = new LinkedList<TreeNode<Integer>>();
+        Queue<TreeNode<Integer>> queue2 = new LinkedList<TreeNode<Integer>>();
         queue1.add(root);
         List<Integer> level = new ArrayList<Integer>();
 
         while (!queue1.isEmpty()) {
-            TreeNode node = queue1.poll();
+            TreeNode<Integer> node = queue1.poll();
             level.add(node.val);
             if (node.left != null) queue2.add(node.left);
             if (node.right != null) queue2.add(node.right);

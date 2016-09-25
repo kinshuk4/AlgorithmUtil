@@ -31,13 +31,13 @@ if ( current.val < prev.val )
 After traversal, swap the values of first and second node. Only need two pointers, prev and current node. O(1) space.
 */
 public class RecoverBinarySearchTree {
-    ArrayList<TreeNode> track;
-    TreeNode previous;
+    ArrayList<TreeNode<Integer>> track;
+    TreeNode<Integer> previous;
 
-    public void recoverTree(TreeNode root) {
+    public void recoverTree(TreeNode<Integer> root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-        track = new ArrayList<TreeNode>();
+        track = new ArrayList<TreeNode<Integer>>();
         previous = null;
         inorderTraverse(root);
 
@@ -47,7 +47,7 @@ public class RecoverBinarySearchTree {
         track.get(size - 1).val = temp;
     }
 
-    public void inorderTraverse(TreeNode root) {
+    public void inorderTraverse(TreeNode<Integer> root) {
         if (root == null) {
             return;
         }

@@ -23,7 +23,7 @@ public class NthElementInorderTraversal {
         System.out.println(test.getNthIterative(root, 2));
     }
 
-    public int getNth(TreeNode node, int n) {
+    public int getNth(TreeNode<Integer> node, int n) {
         if (node == null) return -1;
         int left = getNth(node.left, n);
         if (left != -1) return left;
@@ -33,7 +33,7 @@ public class NthElementInorderTraversal {
         return right;
     }
 
-    public int getNthIterative(TreeNode root, int n) {
+    public int getNthIterative(TreeNode<Integer> root, int n) {
         if (root == null) return -1;
         Stack<TreeNode> stack = new Stack<TreeNode>();
 
@@ -42,7 +42,7 @@ public class NthElementInorderTraversal {
                 stack.push(root);
                 root = root.left;
             } else {
-                TreeNode node = stack.pop();
+                TreeNode<Integer> node = stack.pop();
                 n--;
                 if (n == 0) return node.val;
                 root = node.right;

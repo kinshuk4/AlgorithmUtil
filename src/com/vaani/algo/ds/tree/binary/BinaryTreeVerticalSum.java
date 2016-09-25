@@ -34,7 +34,7 @@ public class BinaryTreeVerticalSum {
         System.out.println(map.entrySet());
     }
 
-    public static void verticalSum(TreeNode root, int hd, Map<Integer, Integer> map) {
+    public static void verticalSum(TreeNode<Integer> root, int hd, Map<Integer, Integer> map) {
         if (root == null) return;
         int sum = map.get(hd) == null ? 0 : map.get(hd);
         map.put(hd, root.val + sum);

@@ -18,7 +18,7 @@ public class FindRangeInBST {
         return result;
     }
 
-    private static void findElements(TreeNode root, int start, int end, List<Integer> result) {
+    private static void findElements(TreeNode<Integer> root, int start, int end, List<Integer> result) {
         if (root == null) return;
         if (root.val > start) findElements(root.left, start, end, result);
         if (root.val >= start && root.val <= end) result.add(root.val);

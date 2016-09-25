@@ -26,7 +26,7 @@ public class PathsBySum {
 
         for (List<TreeNode> list : pathsList) {
             int temp = 0;
-            for (TreeNode t : list) {
+            for (TreeNode<Integer> t : list) {
                 temp += t.val;
             }
             if (temp == num) {

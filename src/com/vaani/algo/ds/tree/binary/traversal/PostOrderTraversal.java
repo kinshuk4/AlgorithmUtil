@@ -29,7 +29,7 @@ public class PostOrderTraversal {
             return result;
         }
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        Stack<TreeNode> reverse = new Stack<TreeNode>();
+        Stack<TreeNode<Integer>> reverse = new Stack<TreeNode<Integer>>();
         stack.push(root);
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
@@ -80,7 +80,7 @@ public class PostOrderTraversal {
         return result;
     }
 
-    public void helper(TreeNode root, ArrayList<Integer> result) {
+    public void helper(TreeNode<Integer> root, ArrayList<Integer> result) {
         if (root == null) {
             return;
         }

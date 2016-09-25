@@ -48,7 +48,7 @@ public class InorderTraversal {
         ArrayList<Integer> result = new ArrayList<Integer>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
 
-        TreeNode node = root;
+        TreeNode<Integer> node = root;
         while (!stack.isEmpty() || node != null) {
             if (node != null) {
                 stack.push(node);
@@ -71,7 +71,7 @@ public class InorderTraversal {
         return result;
     }
 
-    public void helper(TreeNode root, ArrayList<Integer> result) {
+    public void helper(TreeNode<Integer> root, ArrayList<Integer> result) {
         if (root == null) return;
         helper(root.left, result);
         result.add(root.val);

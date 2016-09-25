@@ -36,7 +36,7 @@ public class MaximumPathSum {
         return curMax.get(0);
     }
 
-    public int subPath(TreeNode root, ArrayList<Integer> curMax) {
+    public int subPath(TreeNode<Integer> root, ArrayList<Integer> curMax) {
         if (root == null) return 0;
         int left = Math.max(0, subPath(root.left, curMax));
         int right = Math.max(0, subPath(root.right, curMax));

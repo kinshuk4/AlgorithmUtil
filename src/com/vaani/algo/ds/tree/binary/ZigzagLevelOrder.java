@@ -37,7 +37,7 @@ public class ZigzagLevelOrder {
         queue1.add(root);
 
         while (!queue1.isEmpty()) {
-            TreeNode node = queue1.poll();
+            TreeNode<Integer> node = queue1.poll();
             level.add(node.val);
 
             if (node.left != null) queue2.add(node.left);
@@ -71,7 +71,7 @@ public class ZigzagLevelOrder {
 
         List<Integer> level = new ArrayList<Integer>();
         while (!currLevel.isEmpty()) {
-            TreeNode node = currLevel.pop();
+            TreeNode<Integer> node = currLevel.pop();
             level.add(node.val);
 
             if (leftToRight) {

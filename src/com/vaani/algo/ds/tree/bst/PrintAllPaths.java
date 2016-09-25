@@ -19,7 +19,7 @@ public class PrintAllPaths {
         printAllPaths(root, path, 0);
     }
 
-    public static void printAllPaths(TreeNode root, int[] path, int pathLen) {
+    public static void printAllPaths(TreeNode<Integer> root, int[] path, int pathLen) {
         if (root == null) return;
 
         path[pathLen] = root.val;

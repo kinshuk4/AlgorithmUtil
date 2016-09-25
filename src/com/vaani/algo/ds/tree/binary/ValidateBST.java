@@ -18,7 +18,7 @@ public class ValidateBST {
         return isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    public boolean isValidBST(TreeNode root, int min, int max) {
+    public boolean isValidBST(TreeNode<Integer> root, int min, int max) {
         if (root == null) return true;
         if (root.val > min && root.val < max
                 && isValidBST(root.left, min, root.val)
