@@ -1,9 +1,10 @@
 package com.vaani.algo.compete.hackerrank.randomchallenges;
 
-import com.positive.chalenges.randomchalanges.PrintBinaryTree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
+
+import com.vaani.algo.ds.core.TreeNode;
 
 /**
  * Created by mykola on 06.05.15.
@@ -28,7 +29,7 @@ public class ConvertTreeToDoubleLinkedList {
     }
 
     public static void main(String... args) {
-        DLLNode<Character> tail = convertToDLLDFS(PrintBinaryTree.createTree());
+        DLLNode<Character> tail = ConvertTreeToDoubleLinkedList.<Character>convertToDLLDFS(new TreeNode(4));
         DLLNode<Character> head = tail;
         while (head.previous != null) {
             head = head.previous;
@@ -53,7 +54,7 @@ public class ConvertTreeToDoubleLinkedList {
         treeNodesQueue.offer(root);
         while (!treeNodesQueue.isEmpty()) {
             TreeNode<E> n = treeNodesQueue.remove();
-            DLLNode<E> dllNode = new DLLNode<>(n.value);
+            DLLNode<E> dllNode = new DLLNode<>(n.val);
             if (currentNode != null) {
                 currentNode.linkNext(dllNode);
             }
@@ -72,7 +73,7 @@ public class ConvertTreeToDoubleLinkedList {
     }
 
     private static <E> DLLNode<E> convertToDLLDFS(TreeNode<E> root, DLLNode<E> currentTail) {
-        DLLNode<E> tail = new DLLNode<>(root.value);
+        DLLNode<E> tail = new DLLNode<>(root.val);
         if (currentTail != null) {
             currentTail.linkNext(tail);
         }
