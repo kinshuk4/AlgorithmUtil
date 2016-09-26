@@ -1,4 +1,4 @@
-package com.vaani.algo.compete.codility;
+package com.vaani.algo.compete.codility.decimalzip;
 
 public class DecimalZip {
     public static int generate(int a, int b) {
