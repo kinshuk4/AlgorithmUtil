@@ -1,13 +1,16 @@
-package battleship_test
+package liftstop_test
 
 import (
 	"testing"
 	"fmt"
-	"vaani/codility/battleship"
+	"vaani/codility/liftstop"
 )
 
 func TestBinaryGap(t *testing.T) {
-	actual := battleship.Solution(4, "1B 2C,2D 4D", "2B 2D 3D 4D 4A")
+	A := [] int{60,80,40}
+	B := [] int{2,3,5}
+
+	actual := liftstop.Solution(A,B,5,2,200)
 	fmt.Println(actual)
 	//actual := lesson01.BinaryGap(1041)
 	//expected := 5
@@ -27,4 +30,3 @@ func TestBinaryGap(t *testing.T) {
 	//	t.Errorf("BinaryGap failed, expected %d, got %d", expected, actual)
 	//}
 }
-

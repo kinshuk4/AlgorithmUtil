@@ -464,3 +464,11 @@ Also, I have to improve from:
 - https://github.com/algowizards/interview
 - https://github.com/xwang438/geeksforgeeks
 - https://github.com/souyang/algorithm-exercise/tree/master/zh-hans/binary_search
+
+## Codility
+https://github.com/Jarcionek/Codility/tree/master/src/main/java/uk/co/jpawlak
+https://github.com/charles-wangkai/codility
+https://github.com/jlhuang/codility-lessons/tree/master/lesson%201%20:%20Time%20Complexity/PermMissingElem
+https://github.com/Jarcionek/Codility/tree/master/src/main/java/uk/co/jpawlak
+https://github.com/andersonkmi/hackerrank-stuff/blob/83ca9e8029b168be0c85db4fab813a6234abb10f/Hackerrank/src/main/java/org/coolstuff/codility/Battleship.java
+https://github.com/tpeczek/Codility
