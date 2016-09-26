@@ -1,3 +1,43 @@
+/*
+ *
+ * This source file is a part of lainexperiment project.
+ * Description for it can be found in ReadMe.txt.
+ *
+ */
+/*
+ *
+ * Date: 05/08/2015
+ *
+ * IMDB Codility
+ * Problem: Task 2
+ * Status: failed
+ *
+ * Problem
+ *
+ * Calculate number of full weeks between given months (inclusive).
+ * Year is leap if it is div by 4.
+ *
+ * Input Format
+ *
+ * Year, starting month, ending month, weekday of 1st of January in
+ * the given year
+ *
+ * Output Format
+ *
+ * Number of full weeks
+ *
+ * Sample Input
+ *
+2014, "April", "May", "Wednesday"
+2014, "April", "April", "Saturday"
+ *
+ * Sample Output
+ *
+7
+3
+ *
+ */
+// asked in imdb
 package com.vaani.algo.compete.codility.fullweeksdiff;
 
 
@@ -5,10 +45,15 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 
+import static org.junit.Assert.assertTrue;
+
 class Solution {
 
     public static void main(String... args) {
-        System.out.print(new Solution().solution(2014, "April", "May", "Wednesday"));
+        System.out.print(solution(2014, "April", "May", "Wednesday"));
+
+        assertTrue(3 == solution(2014, "April", "April", "Saturday"));
+        assertTrue(7 == solution(2014, "April", "May", "Wednesday"));
     }
 
     private static final HashMap<String, Integer> MONTH_MAP = new HashMap<>();
@@ -28,7 +73,7 @@ class Solution {
         MONTH_MAP.put("December", Calendar.DECEMBER);
     }
 
-    public int solution(int Y, String A, String B, String W) {
+    public static int solution(int Y, String A, String B, String W) {
         if (MONTH_MAP.get(A) == null || MONTH_MAP.get(B) == null) {
             throw new IllegalArgumentException("Illegal month string passed");
         }

@@ -2,7 +2,6 @@ package com.vaani.algo.compete.codility.stackmachine;
 
 import org.junit.Test;
 
-import static codility.StackMachine.calc2;
 import static org.junit.Assert.assertEquals;
 
 public class StackMachineTest {

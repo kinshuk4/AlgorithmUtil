@@ -1,0 +1,29 @@
+Define partition function which will split the input array of N on M subarrays and send them to M worker machines
+sequentially so that first subarray will go to first machine, second - to second, and so on.
+Aside from sending subarrays it will send where first dominoe (dominoe F) of the next subarray starts.
+
+On each machine build interval tree and calculate hitDistance[i] per each dominoe i.
+Some hitDistances may be overlapped between two or even more machines, so we need to filter which hitDistances can
+be returned as a results already and which cannot. To do this we check that hitDistance[i] < F and if it does then 
+return it as a result back to master node, otherwise return it as a new dominoe which stands on i and has height 
+hitDistance[i].
+
+From new dominoes master node will build a new problem and will run the calculation again repeating the process 
+until the size of new problem will not get small enough to be solved on master machine.
+
+Analysis
+
+Time to build interval trees is O(n * log(n)).
+Time to calculate hitDistance[i] O(log(n)) and all of them per machine O(n * log(n)).
+
+Where n = N / M.
+
+To find overall time of calculation we need to calculate how many new problems may arise and how many times 
+we will repeat the calculations.
+In the worst case when each dominoe overlaps with all dominoes across all machines we each time will get results
+for dominoes which stands at last machine giving us only n new subproblems overall.
+
+Overall time in worst case:
+
+O(n) * (O(n * log(n)) + O(n * log(n)))) = O(n^2 * log(n))
+
