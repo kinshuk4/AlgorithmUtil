@@ -1,0 +1,28 @@
+--
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-23', 'L' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-23', 'H' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-23', 'L' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-23', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-23', '2016-10-23', 'L' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-23', '2016-10-29', 'M' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-23', '2016-10-28', 'H' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-24', 'M' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-24', '2016-10-24', 'M' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-24', '2016-10-25', 'M' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-24', '2016-10-27', 'M' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-25', 'H' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-25', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-25', '2016-10-25', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-25', '2016-10-26', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-25', '2016-10-27', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-25', '2016-10-28', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-25', '2016-10-29', 'H' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-26', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-26', '2016-10-27', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-27', '2016-10-27', 'L' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-26', 'H' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-27', 'H' );
+INSERT INTO bugs ( open_date, severity ) VALUES ( '2016-10-28', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-28', '2016-11-05', 'H' );
+INSERT INTO bugs ( open_date, close_date, severity ) VALUES ( '2016-10-29', '2016-11-05', 'H' );
+--

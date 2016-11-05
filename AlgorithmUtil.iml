@@ -20,5 +20,6 @@
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.4" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.6" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0-rc2" level="project" />
+    <orderEntry type="library" name="Maven: org.mapdb:mapdb:1.0.9" level="project" />
   </component>
 </module>

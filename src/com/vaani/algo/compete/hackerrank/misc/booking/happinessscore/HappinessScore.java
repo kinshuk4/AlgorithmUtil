@@ -1,3 +1,7 @@
+
+
+import org.apache.commons.lang3.NotImplementedException;
+
 import java.io.*;
 import java.util.*;
 
@@ -15,7 +19,7 @@ public class HappinessScore {
      
         }
     public static int findPrime(int[] score) {
-        
+        throw new NotImplementedException("Not implemented yet.");
 }
         
 }
