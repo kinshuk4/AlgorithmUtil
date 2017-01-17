@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /*
- * Part of Skyscanner Coding Challenge
+ * Part of Launchcode Coding Challenge
  * Program executes in O(nlogn)
  * It sorts the array and arrange the array according to requirement - 
  * largest smallest 2ndLargest 2ndSmallest and so on
