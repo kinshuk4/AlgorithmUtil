@@ -1,9 +1,9 @@
-package com.vaani.algo.compete.company.wallethub.java;
+package com.vaani.algo.compete.company.wallethub.deliverable.answers;
+
 
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
 
-import com.vaani.algo.compete.company.wallethub.java.TopPhrases.Solution1MapReduce.PhraseFrequency;
 
 import java.io.*;
 import java.nio.file.Files;
