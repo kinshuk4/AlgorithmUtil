@@ -1,0 +1,9 @@
+=========================
+Playing with Iris Dataset
+=========================
+
+Instead of using inbuilt iris dataset in scikit-learn, I have downloaded the iris dataset from UCI Machine Learning Repository to actually learn to load the data from data files.
+By plotting the graph between two features at a time, it is observed that "sentosa" class is linearly separable from other two classes, and "versicolor" and "virginica" classes are non-linearly separable from each other. 
+Thought process:
+1. Using Logistic Regression (One vs All scenario), I can achieve a score > 0.85, but < 0.95, if the model is not underfit or overfit.
+2. Using k-nearest Neighbors (k >= 5), I can achieve a score > 0.98 or maybe 1.0

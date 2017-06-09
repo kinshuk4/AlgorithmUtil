@@ -1,0 +1,17 @@
+Observations & Experimentations
+===============================
+
+1. Very small dataset. I'm not sure whether my model will generalise or not. My mind is already running towards Decision Tree as my learning algrithm.
+2. Lot of missing data too.
+3. Just by looking at the attributes, three out of thirteen attributes are not useful at all, and one is derived attribute.
+4. Problem can be defined as both Classification as well as Regression. Predicting feature 1 can be treated as Regression problem, and feature 2 as Classification problem.
+5. Lemme visualise first, then I'll decide which path to follow.
+6. In order to visualise, I better clean the dataset. Removing unwanted features.
+7. Almost, every attribute has missing data.
+8. I thought of using attribute 13 as target feature, but due to large number of missing values, I better not use this.
+9. Such a messy dataset, even it's bugging numpy array.
+10. Removing entry with unknown target.
+11. Filling age feature with mean age.
+12. Before filling feature 5, let me visualise it first.
+13. No pattern as such in feature 5. Let me populate the missing features with mean once again.
+14. Literally so much missing data, I'm not happy with my current approach to fill up the missing features. 

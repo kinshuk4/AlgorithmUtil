@@ -1,0 +1,48 @@
+Distribution of samples in train.csv
+Samples count = 891
+Features count = 11 (Excluding target feature)
+
+Target distribution:
+0 - 549 (61.61 percent)
+1 - 342 (38.38 percent)
+Which means if I guess all passengers doesn't survived, I'm able to reach 61 percent accuracy. In turn, 61 percent makes my lower bound.
+
+PClass distribution:
+1st - 216
+2nd - 184
+3rd - 491
+
+PClass/Survival distribution:
+1st - 136 (62.9 percent)
+2nd - 87 (47.2 percent)
+3rd - 119 (24.2 percent)
+It appears 1st class people got priority over 2nd and 3rd class.
+It's very unlikely that during a disaster, name plays a significant role. Lets come back to this if my model doesn't perform well.
+
+Sex distribution:
+male - 577
+female - 314
+I have to convert this into real valued features if I have to use sex as a feature for my model.
+
+Sex/Survival distribution:
+male - 109 (18 percent)
+female - 233 (74.2 percent)
+
+Age distribution:
+177 missing age
+I need to fill these if I have to use age as a feature for my model.
+
+Embarked distribution:
+S - 644
+C - 168
+Q - 77
+Unknown - 2
+
+Observations during learning:
+1. As expected, logistic regression doesn't generalise good on such small dataset. 79 percent cross validation score.
+2. Even decision tree is giving 79 percent mean cross validation score. No improvement with change in model. But, one cross validation score got upto 84 percent. I wonder if this is due to small size of dataset.
+3. Using LeaveOneOut method, I confirmed Decision Tree was definitely one step above Logistic Regression. Getting 81 percent accuracy on cross validation score.
+4. But, it's still failing on testing set. Only 78 percent accuracy on test set.
+5. Decision Tree is failing 50 percent on recognising a survival.
+6. Adding manual prediction rule to overcome this.
+7. By adding two manual rules, reached upto 85.5 percent.

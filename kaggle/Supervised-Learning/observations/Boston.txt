@@ -1,0 +1,30 @@
+Note: First feature of sample 446 was different in downloaded dataset. I altered it.
+Deductions by plotting the features with respect to price.
+1. CRIM - per capita crime rate by town shows inversely proportional relationship with price.
+2. RM - average number of rooms per dwelling shows somewhat linear proportional relationship with price.
+3. LSTAT - % lower status of the population shows inversely proportional relationship with price.
+
+Model score
+1. SGDRegressor (penalty='l1') with train-test dataset
+Training Score - 73.41%
+Training Score (With CV) - 68.22%
+
+2. Linear Regression with train-test dataset
+Training Score - 74.81%
+Training Score (With CV) - 69.46%
+
+3. SVR with train-test dataset
+Training Score - 68.00%
+Training Score (With CV) - 62.48%
+
+4. KNeighbors(n_neighbors=3, weights='distance', p=1) with train-test dataset 
+Training Score - 100%
+Training Score (With CV) - 79.00%
+
+5. Decision Tree Regressor with train-test dataset
+Training Score - 100%
+Training Score (With CV) - 68.87%
+
+6. Extremely Randomized Tree with train-test dataset
+Training Score - 100%
+Training Score (With CV) - 86.63%

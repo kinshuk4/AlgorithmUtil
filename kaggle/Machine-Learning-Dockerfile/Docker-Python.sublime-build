@@ -1,0 +1,3 @@
+{
+	"shell_cmd": "docker exec ml python2.7 $file_name"
+}

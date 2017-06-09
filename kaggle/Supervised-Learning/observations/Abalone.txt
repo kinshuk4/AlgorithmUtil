@@ -1,0 +1,28 @@
+Dataset: Abalone
+Source: http://archive.ics.uci.edu/ml/datasets/Abalone
+Data types: Multivariate
+Default Task: Classification
+Attribute Type: Categorical, Integer, Real
+# of instances: 4177
+# of attributes: 8
+Missing values: No
+Year: 1995
+
+Observations and experimentations:
+1. Since, we have to predict the age of Abalone(via Rings), and if we consider number of rings as individual class, we have very few examples in almost 10 classes, and number of classes is also going upto 29. We can think of this problem as regression. But, regression will predict real value integers rather than discrete values.
+2. Converting sex feature to numerical value.
+3. No clear indication of age of abalone from sex feature.
+4. Length feature shows promising result after visualisation. More the length, more the age. But, wide range of length shares the same age.
+5. Diameter and height features shows exactly same result as given by length feature. Seems like they are correlated features.
+6. All weights features are also highly correlated. Showing almost same result.
+7. It appears I have only three latent features; sex, dimensions, and weight.
+8. If I split my dataset into training and testing, since dataset is skew, I can end up with test set with classes which I haven't encountered in training set.
+9. Splitting the dataset 90-10 train-test split, doesn't result in problem stated above. Algorithm doesn't choose classes with less samples in test set. This is another problem.
+10. I better do cross validation to make my model robust.
+11. Applying standard scaling method, since I'm about to use distance metric learning algorithm.
+12. KNearestNeighbors failed. Giving only 23 percent cross validation score. The main reason of its failure is lack of samples in classes, i.e skew dataset.
+13. Even SVC is giving 28 percent cross validation score.
+14. By plotting learning curve, I can see the graph going up from 28 percent, and it seems like data is less. Also, Standard Scaler worked as well. Without feature scaling, I'm getting 21 percent.
+15. Using SVC, I'm getting 27.75 percent on test set.
+16. Using PCA reduced the feature size, getting 25.35 percent accuracy on test set with 2 components.
+17. Using standard scaler along with PCA, increased by accuracy to 27.5 percent.

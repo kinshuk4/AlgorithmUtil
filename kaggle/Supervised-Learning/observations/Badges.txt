@@ -1,0 +1,25 @@
+Observations & Experimentations
+===============================
+1. Encoding + as 0 and - as 1 for target classes. 
+2. Using bag of characters method to convert input data to vectors.
+3. Trying Naive Bayes classification algorithm, since it's text classification.
+4. Naive Bayes with default hyperparams gives 67-72 percent accuracy.
+5. Learing Curve on Naive Bayes shows instead of accuracy graph going up, it's going down. Not a good model for these features.
+6. Even Nearest Neighbors and Logistic Regression shows same trend.
+7. It appears that my model is suffering from high bias. I must increase my feature size.
+8. If I make my model complex, then it starts suffering from high variance, but unable to increase my cross-validation score.
+9. Creating more features:
+	a. Total number of characters
+	b. Total number of vowels
+	c. Total number of consonants
+10. Dropping bag of characters features, using only 3 features created in 9.
+11. Decision Tree Classifier trained on 3 features gives 65-71 percent accuracy.
+12. Close examination of samples in both classes concurs the badge assignment is based on second character in the name.
+13. To have more fun, created a feature for first character in the name.
+14. Creating more features:
+	a. Is first character in the name vowel?
+	b. Is second character in the name vowel?
+15. Using Decision Tree Classifier with total 5 features from 9 & 14, getting 100 percent accuracy on training & cross-validation set.
+16. Getting important features from Decision Tree Classifier, confirmed that second character in the name was the deciding factor for the badges distribution.
+
+ 

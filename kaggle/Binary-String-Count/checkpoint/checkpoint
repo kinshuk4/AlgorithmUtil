@@ -1,0 +1,6 @@
+model_checkpoint_path: "rnn-lstm-3130"
+all_model_checkpoint_paths: "rnn-lstm-3110"
+all_model_checkpoint_paths: "rnn-lstm-3115"
+all_model_checkpoint_paths: "rnn-lstm-3120"
+all_model_checkpoint_paths: "rnn-lstm-3125"
+all_model_checkpoint_paths: "rnn-lstm-3130"

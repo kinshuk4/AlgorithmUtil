@@ -1,0 +1,650 @@
+Observations & Experimentations
+===============================
+
+1. Reading the train file, and converting the data into int before pickle to disk, results in formation of 1.05 GB file, in contrast to 51 MB file size of train file.
+
+2. Using string type before pickle to disk, results in formation of 264 MB file.
+
+3. Reading all of train and test data while coding is not optimal.
+
+4. train dataset (42000, 784)
+test dataset (28000, 784)
+
+5. Adding functionality to get subset of dataset.
+
+6. Splitting train dataset into train-validation dataset for cross validation.
+
+7. Experimenting with various ANN architecture:
+	a. Linear Model - 1 Layer (784-10)
+	Input Layer -- Output Layer
+	   (784)		  (10)
+	   
+	Output with various learning rate:
+		i. 0.5
+		Minibatch loss at step 0: 290.819824
+		  Training Accuracy: 16.4%
+		  Validation Accuracy: 34.2%
+		Minibatch loss at step 500: 7488.650879
+		  Training Accuracy: 84.4%
+		  Validation Accuracy: 81.4%
+		Minibatch loss at step 1000: 4111.408203
+		  Training Accuracy: 92.2%
+		  Validation Accuracy: 89.9%
+		Minibatch loss at step 1500: 1973.520874
+		  Training Accuracy: 93.8%
+		  Validation Accuracy: 88.7%
+		Minibatch loss at step 2000: 4977.421875
+		  Training Accuracy: 87.5%
+		  Validation Accuracy: 88.7%
+		Minibatch loss at step 2500: 3449.632812
+		  Training Accuracy: 93.0%
+		  Validation Accuracy: 88.5%
+		Minibatch loss at step 3000: 4594.892578
+		  Training Accuracy: 90.6%
+		  Validation Accuracy: 87.5%
+
+		ii. 0.1
+		Minibatch loss at step 0: 396.500275
+		  Training Accuracy: 6.2%
+		  Validation Accuracy: 20.1%
+		Minibatch loss at step 500: 2282.356689
+		  Training Accuracy: 82.0%
+		  Validation Accuracy: 83.4%
+		Minibatch loss at step 1000: 860.771606
+		  Training Accuracy: 90.6%
+		  Validation Accuracy: 87.7%
+		Minibatch loss at step 1500: 657.445190
+		  Training Accuracy: 89.8%
+		  Validation Accuracy: 86.8%
+		Minibatch loss at step 2000: 2017.726562
+		  Training Accuracy: 85.9%
+		  Validation Accuracy: 89.3%
+		Minibatch loss at step 2500: 867.989563
+		  Training Accuracy: 89.8%
+		  Validation Accuracy: 90.1%
+		Minibatch loss at step 3000: 580.059814
+		  Training Accuracy: 93.0%
+		  Validation Accuracy: 87.9%
+
+		iii. 0.05
+		Minibatch loss at step 0: 312.387268
+		  Training Accuracy: 12.5%
+		  Validation Accuracy: 26.9%
+		Minibatch loss at step 500: 452.893188
+		  Training Accuracy: 89.1%
+		  Validation Accuracy: 90.4%
+		Minibatch loss at step 1000: 445.309418
+		  Training Accuracy: 89.8%
+		  Validation Accuracy: 88.1%
+		Minibatch loss at step 1500: 296.761963
+		  Training Accuracy: 91.4%
+		  Validation Accuracy: 87.5%
+		Minibatch loss at step 2000: 1134.573364
+		  Training Accuracy: 84.4%
+		  Validation Accuracy: 89.2%
+		Minibatch loss at step 2500: 480.196198
+		  Training Accuracy: 92.2%
+		  Validation Accuracy: 87.6%
+		Minibatch loss at step 3000: 268.621826
+		  Training Accuracy: 93.0%
+		  Validation Accuracy: 88.0%
+
+		iv. 0.01
+		Minibatch loss at step 0: 336.872162
+		  Training Accuracy: 7.8%
+		  Validation Accuracy: 25.2%
+		Minibatch loss at step 500: 77.321243
+		  Training Accuracy: 87.5%
+		  Validation Accuracy: 87.7%
+		Minibatch loss at step 1000: 92.064682
+		  Training Accuracy: 86.7%
+		  Validation Accuracy: 88.8%
+		Minibatch loss at step 1500: 69.735123
+		  Training Accuracy: 89.8%
+		  Validation Accuracy: 88.2%
+		Minibatch loss at step 2000: 225.731873
+		  Training Accuracy: 85.2%
+		  Validation Accuracy: 89.0%
+		Minibatch loss at step 2500: 87.068810
+		  Training Accuracy: 89.8%
+		  Validation Accuracy: 87.7%
+		Minibatch loss at step 3000: 96.718430
+		  Training Accuracy: 89.8%
+		  Validation Accuracy: 89.2%
+
+		v. Best
+		Minibatch loss at step 0: 339.297729
+		  Training Accuracy: 0.031
+		  Validation Accuracy: 0.148
+		Minibatch loss at step 500: 447.084900
+		  Training Accuracy: 0.859
+		  Validation Accuracy: 0.884
+		Minibatch loss at step 1000: 417.387726
+		  Training Accuracy: 0.906
+		  Validation Accuracy: 0.880
+		Minibatch loss at step 1500: 263.700958
+		  Training Accuracy: 0.906
+		  Validation Accuracy: 0.895
+		Minibatch loss at step 2000: 592.386292
+		  Training Accuracy: 0.875
+		  Validation Accuracy: 0.856
+		Minibatch loss at step 2500: 449.756134
+		  Training Accuracy: 0.906
+		  Validation Accuracy: 0.864
+		Minibatch loss at step 3000: 276.616699
+		  Training Accuracy: 0.914
+		  Validation Accuracy: 0.870
+
+8. Two layer Neural Network - 2 Layer (784-800-10)
+Input Layer -- Hidden Layer -- Output Layer
+  (784)			  (800)			 (10)
+
+  	a. Learning rate 0.05
+	Minibatch loss at step 0: 559.136353
+	  Training Accuracy: 0.086
+	  Validation Accuracy: 0.196
+	Minibatch loss at step 500: 2.244367
+	  Training Accuracy: 0.156
+	  Validation Accuracy: 0.130
+	Minibatch loss at step 1000: 2.281980
+	  Training Accuracy: 0.133
+	  Validation Accuracy: 0.126
+	Minibatch loss at step 1500: 2.236976
+	  Training Accuracy: 0.141
+	  Validation Accuracy: 0.126
+	Minibatch loss at step 2000: 2.294441
+	  Training Accuracy: 0.109
+	  Validation Accuracy: 0.113
+	Minibatch loss at step 2500: 2.281888
+	  Training Accuracy: 0.102
+	  Validation Accuracy: 0.121
+	Minibatch loss at step 3000: 2.303011
+	  Training Accuracy: 0.109
+	  Validation Accuracy: 0.114
+
+9. Performance degraded.
+
+10. It was a problem with learning rate. Decreased to 0.01.
+
+11. Two layer Neural Network
+Input Layer -- Hidden Layer -- Output Layer
+  (784)			  (800)			 (10)
+
+  Output with various learning rate:
+  a. 0.01
+	Minibatch loss at step 0: 557.609558
+	  Training Accuracy: 0.109
+	  Validation Accuracy: 0.220
+	Minibatch loss at step 500: 0.933479
+	  Training Accuracy: 0.789
+	  Validation Accuracy: 0.779
+	Minibatch loss at step 1000: 0.777967
+	  Training Accuracy: 0.828
+	  Validation Accuracy: 0.842
+	Minibatch loss at step 1500: 0.478578
+	  Training Accuracy: 0.852
+	  Validation Accuracy: 0.808
+	Minibatch loss at step 2000: 0.203143
+	  Training Accuracy: 0.922
+	  Validation Accuracy: 0.879
+	Minibatch loss at step 2500: 0.269549
+	  Training Accuracy: 0.930
+	  Validation Accuracy: 0.890
+	Minibatch loss at step 3000: 0.109903
+	  Training Accuracy: 0.961
+	  Validation Accuracy: 0.905
+
+12. Three layer Neural Network - 3 layer (784-128-32-10)
+Input Layer -- Hidden Layer 1 -- Hidden Layer 2 -- Output Layer
+   (784)			(128)			(32)				(10)
+
+   With learning rate 0.01, again getting low accuracy. Further, reducing the learning rate.
+
+   Output with various learning rate:
+   a. 0.001
+	Minibatch loss at step 0: 64.439827
+	  Training Accuracy: 0.133
+	  Validation Accuracy: 0.153
+	Minibatch loss at step 500: 1.063920
+	  Training Accuracy: 0.602
+	  Validation Accuracy: 0.611
+	Minibatch loss at step 1000: 0.873470
+	  Training Accuracy: 0.758
+	  Validation Accuracy: 0.723
+	Minibatch loss at step 1500: 0.682844
+	  Training Accuracy: 0.758
+	  Validation Accuracy: 0.778
+	Minibatch loss at step 2000: 0.362963
+	  Training Accuracy: 0.898
+	  Validation Accuracy: 0.812
+	Minibatch loss at step 2500: 0.492099
+	  Training Accuracy: 0.859
+	  Validation Accuracy: 0.823
+	Minibatch loss at step 3000: 0.421351
+	  Training Accuracy: 0.867
+	  Validation Accuracy: 0.828
+
+13. Increasing the training epochs with batch data, increases the performance upto 0.93.
+
+	b. 0.005
+	Minibatch loss at step 0: 74.563339
+	  Training Accuracy: 0.172
+	  Validation Accuracy: 0.127
+	Minibatch loss at step 500: 1.559591
+	  Training Accuracy: 0.484
+	  Validation Accuracy: 0.423
+	Minibatch loss at step 1000: 0.796998
+	  Training Accuracy: 0.781
+	  Validation Accuracy: 0.736
+	Minibatch loss at step 1500: 0.518014
+	  Training Accuracy: 0.836
+	  Validation Accuracy: 0.820
+	Minibatch loss at step 2000: 0.280788
+	  Training Accuracy: 0.930
+	  Validation Accuracy: 0.868
+	Minibatch loss at step 2500: 0.365294
+	  Training Accuracy: 0.906
+	  Validation Accuracy: 0.874
+	Minibatch loss at step 3000: 0.229260
+	  Training Accuracy: 0.953
+	  Validation Accuracy: 0.891 
+
+14. With any model, if I leave the model to train for larger epoch, there are high chances that the model will improve with time.
+
+15. Deep Artificial Neural Network - 6 layer (784-2500-2000-1500-1000-500-10)
+
+16. Very slow on CPU. I don't think, I can make any model deep than 6 layers.
+
+17. Batch size of 128 is resulting in getting loss as nan. Either, I have to decrease the batch size, or change the optimizer algorithm.
+
+18. Even decreasing the batch size to 100 is not helping.
+
+19. Changed my optimizer to Adagrad to converge my model.
+
+20. Running time 35 minutes
+	Learning rate 0.005
+	Batch size 128
+	Minibatch loss at step 0: 31736.123047
+	  Training Accuracy: 0.125
+	  Validation Accuracy: 0.120
+	Minibatch loss at step 500: 7.318397
+	  Training Accuracy: 0.961
+	  Validation Accuracy: 0.920
+	Minibatch loss at step 1000: 0.691998
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.928
+	Minibatch loss at step 1500: 0.490349
+	  Training Accuracy: 0.992
+	  Validation Accuracy: 0.930
+	Minibatch loss at step 2000: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.927
+	Minibatch loss at step 2500: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.930
+	Minibatch loss at step 3000: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.928
+
+21. Adagrad worked like a charm, but my model is facing high variance problem, resulting in overfitting to training examples.
+
+22. Heat up my MackBook like hell.
+
+23. Four layer Convolutional Network - 4 layer Convnet (1-32-P-64-P-1024FC-D-10)
+Optimizer - AdamOptimizer
+Learning rate - 1e-4
+Batch size - 50
+Epochs - 20001
+
+	Minibatch loss at step 0: 1688.099976
+	  Training Accuracy: 0.240
+	  Validation Accuracy: 0.150
+	Minibatch loss at step 500: 18.549782
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.937
+	Minibatch loss at step 1000: 7.999212
+	  Training Accuracy: 0.960
+	  Validation Accuracy: 0.956
+	Minibatch loss at step 1500: 10.534188
+	  Training Accuracy: 0.960
+	  Validation Accuracy: 0.958
+	Minibatch loss at step 2000: 15.781995
+	  Training Accuracy: 0.900
+	  Validation Accuracy: 0.968
+	Minibatch loss at step 2500: 6.341954
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.966
+	Minibatch loss at step 3000: 0.169707
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.969
+	Minibatch loss at step 3500: 1.900802
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.973
+	Minibatch loss at step 4000: 1.687655
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.973
+	Minibatch loss at step 4500: 1.540087
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.974
+	Minibatch loss at step 5000: 3.757606
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.978
+	Minibatch loss at step 5500: 0.780345
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.975
+	Minibatch loss at step 6000: 2.879240
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.977
+	Minibatch loss at step 6500: 0.053974
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.979
+	Minibatch loss at step 7000: 1.558678
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.980
+	Minibatch loss at step 7500: 4.285493
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.976
+	Minibatch loss at step 8000: 0.188564
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.980
+	Minibatch loss at step 8500: 1.598145
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.978
+	Minibatch loss at step 9000: 0.710367
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.982
+	Minibatch loss at step 9500: 1.442455
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.980
+	Minibatch loss at step 10000: 1.086818
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.982
+	Minibatch loss at step 10500: 0.557432
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.982
+	Minibatch loss at step 11000: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.983
+	Minibatch loss at step 11500: 0.001239
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.984
+	Minibatch loss at step 12000: 0.628308
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.985
+	Minibatch loss at step 12500: 1.506247
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.986
+	Minibatch loss at step 13000: 0.376341
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.984
+	Minibatch loss at step 13500: 2.209047
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.983
+	Minibatch loss at step 14000: 0.000069
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.986
+	Minibatch loss at step 14500: 0.001157
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.984
+	Minibatch loss at step 15000: 0.000002
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.985
+	Minibatch loss at step 15500: 0.902966
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.985
+	Minibatch loss at step 16000: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.985
+	Minibatch loss at step 16500: 0.517194
+	  Training Accuracy: 0.960
+	  Validation Accuracy: 0.983
+	Minibatch loss at step 17000: 1.464446
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.985
+	Minibatch loss at step 17500: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.986
+	Minibatch loss at step 18000: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.985
+	Minibatch loss at step 18500: 0.860101
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.988
+	Minibatch loss at step 19000: 0.000004
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.986
+	Minibatch loss at step 19500: 0.060972
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.987
+	Minibatch loss at step 20000: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.984
+
+24. Four layer Convolutional Network - 4 layer Convnet (1-20-P-40-P-150FC-10)
+	a. Learning rate 1e-4
+	Batch size 100
+
+	Minibatch loss at step 0: 506.537537
+	  Training Accuracy: 0.030
+	  Validation Accuracy: 0.096
+	Minibatch loss at step 500: 8.180672
+	  Training Accuracy: 0.860
+	  Validation Accuracy: 0.894
+	Minibatch loss at step 1000: 1.410531
+	  Training Accuracy: 0.940
+	  Validation Accuracy: 0.926
+	Minibatch loss at step 1500: 1.043909
+	  Training Accuracy: 0.940
+	  Validation Accuracy: 0.937
+	Minibatch loss at step 2000: 2.740659
+	  Training Accuracy: 0.950
+	  Validation Accuracy: 0.948
+	Minibatch loss at step 2500: 0.935786
+	  Training Accuracy: 0.990
+	  Validation Accuracy: 0.956
+	Minibatch loss at step 3000: 0.273154
+	  Training Accuracy: 0.990
+	  Validation Accuracy: 0.957
+	Minibatch loss at step 3500: 0.000000
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.957
+	Minibatch loss at step 4000: 0.002266
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.957
+
+25. Model is facing overfitting problem.
+
+26. Dropout doesn't work with this model, because number of units in 3rd layer is very small; resulting in accuracy drop.
+
+27. Adding L2 regularization to reduce overfitting.
+
+28. L2 regularization coefficient (1e-3) added only on 3rd layer - 4 layer Convnet (1-20-P-40-P-150FC-10)
+
+	Minibatch loss at step 0: 299.174561
+	  Training Accuracy: 0.120
+	  Validation Accuracy: 0.109
+	Minibatch loss at step 500: 7.513556
+	  Training Accuracy: 0.910
+	  Validation Accuracy: 0.895
+	Minibatch loss at step 1000: 2.160418
+	  Training Accuracy: 0.970
+	  Validation Accuracy: 0.925
+	Minibatch loss at step 1500: 3.258313
+	  Training Accuracy: 0.950
+	  Validation Accuracy: 0.937
+	Minibatch loss at step 2000: 2.338465
+	  Training Accuracy: 0.940
+	  Validation Accuracy: 0.940
+
+29. It appears my model is not facing overfitting problem anymore.
+
+30. Learning rate 1e-4
+
+	Minibatch loss at step 0: 429.267761
+	  Training Accuracy: 0.060
+	  Validation Accuracy: 0.107
+	Minibatch loss at step 500: 5.100085
+	  Training Accuracy: 0.900
+	  Validation Accuracy: 0.885
+	Minibatch loss at step 1000: 2.981204
+	  Training Accuracy: 0.950
+	  Validation Accuracy: 0.924
+	Minibatch loss at step 1500: 1.928199
+	  Training Accuracy: 0.960
+	  Validation Accuracy: 0.936
+	Minibatch loss at step 2000: 2.708090
+	  Training Accuracy: 0.970
+	  Validation Accuracy: 0.947
+	Minibatch loss at step 2500: 1.469514
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.950
+	Minibatch loss at step 3000: 1.752483
+	  Training Accuracy: 0.960
+	  Validation Accuracy: 0.958
+	Minibatch loss at step 3500: 1.258420
+	  Training Accuracy: 0.980
+	  Validation Accuracy: 0.962
+	Minibatch loss at step 4000: 1.160330
+	  Training Accuracy: 0.990
+	  Validation Accuracy: 0.960
+	Minibatch loss at step 4500: 1.014765
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.968
+	Minibatch loss at step 5000: 1.133741
+	  Training Accuracy: 0.990
+	  Validation Accuracy: 0.963
+	Minibatch loss at step 5500: 0.990633
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.965
+	Minibatch loss at step 6000: 0.982010
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.969
+	Minibatch loss at step 6500: 1.055408
+	  Training Accuracy: 0.990
+	  Validation Accuracy: 0.969
+	Minibatch loss at step 7000: 0.951342
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.970
+	Minibatch loss at step 7500: 0.937008
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.974
+	Minibatch loss at step 8000: 1.028546
+	  Training Accuracy: 0.990
+	  Validation Accuracy: 0.969
+
+31. Still not satisfying result.
+
+32. Maybe, I'm not training my model for enough time.
+
+33. Pipeline:
+	a. Validation set is static, make it variable to get proper accuracy of the model.
+	b. Save the model to the disk.
+	c. Generate result of test.csv and submit it to Kaggle.
+
+34. Added l2 regularization to weights and biases in fully connected layers with decay value of 5e-4, along with dropout after first fully connected layer.
+
+35. Increasing the learning rate of the model to converge faster.
+
+36. Final model and hyperparams
+	Four layer Convolutional Network - 4 layer Convnet (1-32-P-64-P-1024FC-D-10)
+	Learning rate - 1e-3
+	Batch size - 64
+	Epochs - 20001
+	l2 regularization - 5e-4
+	Optimizer - AdamOptimizer
+
+	Minibatch loss at step 2000: 6.033628
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.980
+	Minibatch loss at step 2500: 5.184522
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.976
+	Minibatch loss at step 3000: 4.880740
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.978
+	Minibatch loss at step 3500: 4.610085
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.976
+	Minibatch loss at step 4000: 4.350514
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.980
+	Minibatch loss at step 4500: 3.927802
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.980
+	Minibatch loss at step 5000: 3.703960
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.979
+	Minibatch loss at step 5500: 3.830924
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.977
+	Minibatch loss at step 6000: 3.181336
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.982
+	Minibatch loss at step 6500: 3.271714
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.977
+	Minibatch loss at step 7000: 2.508340
+	  Training Accuracy: 0.984
+  	  Validation Accuracy: 0.978
+
+37. Saving the model to the disk for test.csv
+Trained my model for 3.5 hours (40k epochs)
+Using my-model-40000 for predictions.
+
+38. Added function added to make predictions for test.csv
+
+39. Unable to predict all of test.csv in a single batch, due to low memory. I need to make predictions in batches.
+
+40. Even one by one predicting the label is taking lot of time.
+
+41. Adding one fully connected layer to Convnet, along with dropout to increase the accuracy.
+	Five layer Convolutional Network - 5 layer Convnet (1-32-P-64-P-1024FC-D-512FC-D-10)
+	Optimizer - AdamOptimizer
+	Learning rate - 1e-3
+	Batch size - 64
+	Epochs - 40001
+
+42. Stopped learning at 16000. Accuracy reached 0.986 in validation set.
+
+43. With minor changes in training step, started training from 16001 epoch.
+	Minibatch loss at step 16500: 0.214024
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.981
+	Minibatch loss at step 17000: 0.184872
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.976
+	Minibatch loss at step 17500: 0.298961
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.974
+	Minibatch loss at step 18000: 0.186439
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.981
+	Minibatch loss at step 18500: 0.209159
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.976
+	Minibatch loss at step 19000: 0.192672
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.988
+	...
+	...
+	...
+	Minibatch loss at step 38000: 0.186015
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.979
+	Minibatch loss at step 38500: 0.185060
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.976
+	Minibatch loss at step 39000: 0.146895
+	  Training Accuracy: 0.984
+	  Validation Accuracy: 0.983
+	Minibatch loss at step 39500: 0.178539
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.986
+	Minibatch loss at step 40000: 0.139475
+	  Training Accuracy: 1.000
+	  Validation Accuracy: 0.981
+
+44. Training my model for some more epochs, in order to reduce the loss.
+
+45. It seems without increasing training dataset, I can't achieve accuracy more than this.
+

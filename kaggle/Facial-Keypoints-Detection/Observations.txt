@@ -1,0 +1,225 @@
+Observations & Experimentations
+===============================
+
+1. Reading a portion of training image, in order to speed up the code designing process.
+2. Finding the missing target values in dataset.
+3. Lot of missing target values.
+	Target Feature, Missing count
+	1 10
+	2 10
+	3 13
+	4 13
+	5 4778
+	6 4778
+	7 4782
+	8 4782
+	9 4781
+	10 4781
+	11 4781
+	12 4781
+	13 4779
+	14 4779
+	15 4824
+	16 4824
+	17 4779
+	18 4779
+	19 4813
+	20 4813
+	21 0
+	22 0
+	23 4780
+	24 4780
+	25 4779
+	26 4779
+	27 4774
+	28 4774
+	29 33
+	30 33
+4. Plotting the missing target images for first keypoint.
+[1687, 1834, 1866, 1938, 2100, 2137, 2153, 2175, 2186, 2239]
+5. Dropping images with missing targets.
+6. Dataset reduced to 2140 images for training. Only 30 percent of the total training dataset.
+7. Scaling the images in range (0, 1) and targets to (-1, 1).
+8. Building a 2 layer neural network with 100 neurons in hidden layer. (9216-100-30)
+Loss at Epoch 0: 11.234591
+  Training Accuracy: 3.352
+  Validation Accuracy: 1.397
+Loss at Epoch 1: 2.116712
+  Training Accuracy: 1.455
+  Validation Accuracy: 1.530
+Loss at Epoch 2: 2.542514
+  Training Accuracy: 1.595
+  Validation Accuracy: 0.937
+Loss at Epoch 3: 0.878887
+  Training Accuracy: 0.937
+  Validation Accuracy: 0.582
+Loss at Epoch 4: 0.271621
+  Training Accuracy: 0.521
+  Validation Accuracy: 0.451
+Loss at Epoch 5: 0.120528
+  Training Accuracy: 0.347
+  Validation Accuracy: 0.413
+Loss at Epoch 6: 0.087913
+  Training Accuracy: 0.297
+  Validation Accuracy: 0.399
+Loss at Epoch 7: 0.078295
+  Training Accuracy: 0.280
+  Validation Accuracy: 0.393
+Loss at Epoch 8: 0.074098
+  Training Accuracy: 0.272
+  Validation Accuracy: 0.390
+Loss at Epoch 9: 0.071733
+  Training Accuracy: 0.268
+  Validation Accuracy: 0.387
+Loss at Epoch 10: 0.070190
+  Training Accuracy: 0.265
+  Validation Accuracy: 0.386
+9. Plotting train loss and validation loss to check the insights of the model.
+Loss at Epoch 500: 0.042072
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 550: 0.042051
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 600: 0.042037
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 650: 0.042028
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 700: 0.042021
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 750: 0.042015
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 800: 0.042011
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 850: 0.042007
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 900: 0.042003
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 950: 0.041999
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+Loss at Epoch 1000: 0.041996
+  Training Accuracy: 0.205
+  Validation Accuracy: 0.366
+After 400 epochs, training and validation accuracy has saturated.
+10. Plotting train loss and validation loss, shows that loss is not decreasing after 50 epochs.
+11. I can use Tensorboard to get the insights of the model.
+12. Making the model more complex by adding convolutions.
+13. 6 layer Convolutional Neural Network (1-32-P-64-P-128-P-500FC-500FC-30)
+14. Unable to run full batch learning due to memory limitation. Converting the dataset into mini batches.
+15. Using batch size of 64, and running the model for one full epoch, it appears my model is facing gradient exploding problem.
+16. Reducing the learning rate, and running the model for two epochs.
+17. Reducing the learning rate does the trick.
+Loss at Epoch 3: 0.052496
+  Training Accuracy: 0.229
+  Validation Accuracy: 0.375
+Loss at Epoch 4: 0.043467
+  Training Accuracy: 0.208
+  Validation Accuracy: 0.371
+18. Increasing the batch size to 128 to speed up the learning process.
+19. My model is not converging quickly. I better change my training algorithm.
+20. Changing learning algorithm to Adam.
+21. Model is overfitting.
+Loss at Epoch 11: 0.034074
+  Training Accuracy: 0.185
+  Validation Accuracy: 0.332
+Loss at Epoch 12: 0.033729
+  Training Accuracy: 0.184
+  Validation Accuracy: 0.334
+Loss at Epoch 13: 0.027280
+  Training Accuracy: 0.165
+  Validation Accuracy: 0.329
+Loss at Epoch 14: 0.033347
+  Training Accuracy: 0.183
+  Validation Accuracy: 0.325
+Loss at Epoch 15: 0.026673
+  Training Accuracy: 0.163
+  Validation Accuracy: 0.328
+Loss at Epoch 16: 0.024165
+  Training Accuracy: 0.155
+  Validation Accuracy: 0.314
+22. Inspite of getting overfit, the model is improving.
+23. Validation accuracy is somewhat saturated.
+Loss at Epoch 25: 0.019323
+  Training Accuracy: 0.139
+  Validation Accuracy: 0.306
+Loss at Epoch 26: 0.017004
+  Training Accuracy: 0.130
+  Validation Accuracy: 0.305
+Loss at Epoch 27: 0.017614
+  Training Accuracy: 0.133
+  Validation Accuracy: 0.301
+Loss at Epoch 28: 0.017378
+  Training Accuracy: 0.132
+  Validation Accuracy: 0.302
+24. I need to perform some data augmentation to increase the training set.
+25. Performing horizontal flipping to the training dataset.
+26. I have to run the model for more than 3000 epochs. It will take lot of time to generalise, since half the batch will be flipped images.
+27. I better add dropout and l2 regularisation and then train my model overnight.
+28. I can increase the complexity of the model.
+29. Model with data augmentation is converging very slowly.
+30. Maybe Adam is not performing better for this model.
+31. Hardware is restricting me to try out different learning rates and learning algorithm.
+32. Basically, I need to train my model at least 50-100 epochs, in order to see whether my model is converging or not.
+33. This can take hours in my workstation.
+34. Adding dropout and increasing the number of units in fully connected layers.
+35. Using data augmentation and creating the exact number of batch images using horizontal flipping, and appending the flipped images to the batch is not converging.
+36. Model was using 64 normal images, and 64 horizontal flipped images. But, somehow the model was not converging.
+37. Instead, now I'm flipping half of batch images at random. And now, the model is converging.
+Loss at Epoch 0: 114014.250000
+  Training Accuracy: 337.660
+  Validation Accuracy: 2800.474
+Loss at Epoch 1: 301.939484
+  Training Accuracy: 17.376
+  Validation Accuracy: 17.355
+Loss at Epoch 2: 3659.395264
+  Training Accuracy: 60.493
+  Validation Accuracy: 7.948
+Loss at Epoch 3: 70.577835
+  Training Accuracy: 8.401
+  Validation Accuracy: 8.132
+38. Model is overshooting. Reducing the learning rate.
+39. Reducing the learning rate doesn't worked. Changing weight initialisation and the learning algorithm.
+40. Problem was in data augmentation; targets were not getting flipped correctly.
+Loss at Epoch 21: 0.053000
+  Training Accuracy: 0.230
+  Validation Accuracy: 0.347
+Loss at Epoch 22: 0.048028
+  Training Accuracy: 0.219
+  Validation Accuracy: 0.349
+Loss at Epoch 23: 0.042532
+  Training Accuracy: 0.206
+  Validation Accuracy: 0.348
+Loss at Epoch 24: 0.051881
+  Training Accuracy: 0.228
+  Validation Accuracy: 0.348
+Loss at Epoch 25: 0.047118
+  Training Accuracy: 0.217
+  Validation Accuracy: 0.348
+41. Performing data augmentation on full batch.
+42. Model is converging.
+43. Model is overfitting. Adding l2 regularisation on full connected layers.
+44. I haven't implemented dropout correctly. Dropout is only for training. Plus early layers should have low dropout.
+45. Implementing dropout correctly.
+Loss at Epoch 7: 0.059217
+  Training Accuracy: 0.241
+  Validation Accuracy: 0.346
+Loss at Epoch 8: 0.051771
+  Training Accuracy: 0.225
+  Validation Accuracy: 0.346
+Loss at Epoch 9: 0.056378
+  Training Accuracy: 0.236
+  Validation Accuracy: 0.346
+Loss at Epoch 10: 0.049914
+  Training Accuracy: 0.222
+  Validation Accuracy: 0.346
+Loss at Epoch 11: 0.046884
+  Training Accuracy: 0.215
+  Validation Accuracy: 0.347

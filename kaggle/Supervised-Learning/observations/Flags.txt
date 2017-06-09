@@ -1,0 +1,20 @@
+Observations & Experimentations
+===============================
+
+1. Difficult to decide which feature to be considered as target value; hence, reading the data file as raw_data, and deciding later.
+2. Choosing religion(Attribute 7) of a country as a target value.
+3. Taking Attributes(8-30) as features for learning model.
+4. Converting color name into numeric value.
+5. Since, dataset is very slow; hence, directly jumping to Decision Trees as my learning model.
+6. Getting training score as 99 percent, and testing score as 35 percent. Suffering from High Variance.
+7. Train test split results in skew datasets. I need to split the dataset properly.
+8. I need to check number of samples in each target class.
+9. Distribution of samples in target class
+	1: 60 
+	0: 40 
+	2: 36 
+	5: 27 
+	6: 15 
+	3: 8 
+	4: 4 
+	7: 4

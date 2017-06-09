@@ -1,0 +1,10 @@
+Observations & Experimentations
+===============================
+
+1. Filling the missing age with average age. That means 2 percent of my data in age feature is unreliable.
+2. Distribution of target sample are uneven. Better go with Stratified Shuffle Split.
+3. Apart from accuracy score, I have to consider confusion matrix and classification report, since dataset is skew.
+4. Using Decision Tree, getting 95-97 percent accuracy on test dataset(10 percent of total dataset)
+5. Using Logistic Regression, getting 97.2 percent accuracy on test dataset.
+6. Looking at coef of logistic regression model doesn't help.
+7. Even with naive bayes, getting accuracy of 97.2 percent. It's getting problem in predicting class 2 and 4.

@@ -1,0 +1,11 @@
+=================================
+Playing with Seeds(Wheat) dataset
+=================================
+
+Seeds dataset is downloaded from UCI Machine Learning Repository
+Observations:
+By plotting two features at a time, it is observed 90-95 percent of samples are linearly separable.
+Thought process:
+1. Logistic Regression (One vs All) can give score > 0.90
+2. k-nearest neighbor can give score > 0.85
+By plotting the dataset in two dimensions after applying PCA, one can see why logistic regression is better classifier for seeds datasets as compared to k-nearest neighbors.

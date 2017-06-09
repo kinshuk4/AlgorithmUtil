@@ -1,0 +1,20 @@
+Observations & Experimentation
+==============================
+1. I have to convert all the features as well as target into numerical data, before doing anything.
+2. It's the case of skew target classes. I'll be better off doing precision-recall and confusion matrix for evaluation.
+3. Since, features are categorical, data visualisation using scatter points will not do good in this case.
+4. My features are boolean, I better start with a type of naive bayes as my learning algorithm.
+5. Getting high variance.
+6. Due to few samples in classes, I'm unable to cross validate because randomly it's not distributing the classes properly.
+7. Using shuffle split, I'm able to generate learning curve.
+8. Training accuracy with logistic regression with default params is 89 percent, and cross validation score 87 percent.
+9. With the value of C = 0.1, graph is saturating around 87 percent for both training as well as cross validation score.
+10. Bingo, with Decision Tree, I'm getting 97 percent cross validation score.
+11. My learning curve is increasing, that means if I could generate more data, I can improve my score.
+12. But, my dataset is skew, I better check confusion matrix and precision/recall(Classification Report) score.
+13. Testing on random test dataset, getting an accuracy of 95.9 percent.
+14. As expected, precision and recall is low in classes with few samples.
+15. Perhaps during learning, my learning algorithm doesn't incountered much of those skew class samples.
+16. Instead of doing random split, I better do StratifiedShuffleSplit for my skew dataset.
+17. Accuracy on test set is 98 percent. Precision/recall is also 98 percent.
+18. If I reduce my testing set to 0.5 percent, accuracy turns out to be 100 percent.
