@@ -10,6 +10,10 @@ Each solved problem has a program written in Java. Every solution is tested and 
 
 You can check the solution executing tests inside tests directory. Some of this problems have been resolved using TDD.
 
+## Preparation
+
+General notes - [preparation.md](preparation.md).
+
 Problems
 --------
 
@@ -28,16 +32,16 @@ Problems
 
 * [Dijkstra algorithm](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FDijkstra.java)
 * [Directed graph depth first and breadth-first by adjacency table]
-(src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FDirectedGraphByAdjacencyList.java)
+  (src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FDirectedGraphByAdjacencyList.java)
 * [Directed graph depth first and breadth-first by adjacency matrix]
-(src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FDirectedGraphByAdjacencyMatrix.java)
+  (src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FDirectedGraphByAdjacencyMatrix.java)
 * [Floyd warshall](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FFloydWarshall.java)
 * [Kruskal](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FKruskal.java)
 * [Prim](src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FPrim.java)
 * [Undirected graph depth first and breadth-first by adjacency table]
-(src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FUndirectedGraphByAdjacencyList.java)
+  (src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FUndirectedGraphByAdjacencyList.java)
 * [Undirected graph depth first and breadth-first by adjacency matrix]
-(src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FUndirectedGraphByAdjacencyMatrix.java)
+  (src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Fgraph%2FUndirectedGraphByAdjacencyMatrix.java)
 
 ### Matrix
 
