@@ -1,14 +1,23 @@
 package com.vaani.algo.compete.hackerrank.algorithms.strings;
 
 import java.util.Scanner;
-
-/**
- * Created by IntelliJ IDEA.
- * User: ramswaroop
- * Date: 3/18/15
- * Time: 12:27 PM
- * To change this template go to Preferences | IDE Settings | File and Code Templates
- */
+//https://github.com/JoshuaYang36/Java-Exercises/blob/master/Strings/PalindroneIndex.java
+/*  ----------------------------------------------------------------------------------------------------------------/
+/   Problem: Given a string, return the index of the character, which if removed, will leave a palindrone. Return   /
+/            -1 if the string is already a palindrone.                                                              /
+/                                                                                                                   /
+/   Solution: Iteration the given string from both sides, checking if each character is the same. If so move on to  /
+/             next character. Else, check if it is right or left charcter that needs to be removed. Return index    /
+/                                                                                                                   /
+/   Test Case 1: abab                                                                                               /
+/   Returns: 0                                                                                                      /
+/                                                                                                                   /
+/   Test Case 2: bbba                                                                                               /
+/   Returns: 3                                                                                                      /
+/                                                                                                                   /
+/   Test Case 3: a                                                                                                  /
+/   Returns: -1                                                                                                     /
+/   ---------------------------------------------------------------------------------------------------------------*/
 public class PalindromeIndex {
 
     static int makePalindrome(String s) {
