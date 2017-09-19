@@ -3,6 +3,8 @@ package com.vaani.algo.compete.hackerrank.amazon;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.lang.Math.abs;
+
 /**
  * Anagram Difference
  * <p>
@@ -80,6 +82,7 @@ public class AnagramDifference {
         String[] a = {"a", "jk", "abb", "mn", "abc", "hhpddlnnsjfoyxpci"};
         String[] b = {"bb", "kj", "bbc", "op", "def", "ioigvjqzfbpllssuj"};
         System.out.println(Arrays.toString(getMinimumDifference(a, b)));
+        System.out.println(Arrays.toString(getMinimumDifferenceBest(a, b)));
 
         System.out.println(Arrays.toString(simpleButWillNotWorkGetMinimumDifference(a, b)));
 
@@ -110,6 +113,40 @@ public class AnagramDifference {
         return result;
     }
 
+    private static int[] getMinimumDifferenceBest(String[] a, String[] b) {
+
+
+        int[] result = new int[a.length];
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].length() != b[i].length()) {
+                result[i] = -1;
+            } else {
+
+                result[i] = getAnagramDifferenceForStringPair(a[i], b[i])/2;
+            }
+        }
+
+        return result;
+    }
+
+    static int getAnagramDifferenceForStringPair(String str1, String str2) {
+
+        int[] count1 = new int[26];
+        int[] count2 = new int[26];
+
+        for (int i = 0; i < str1.length(); i++)
+            count1[str1.charAt(i) - 'a']++;
+
+        for (int i = 0; i < str2.length(); i++)
+            count2[str2.charAt(i) - 'a']++;
+
+        int result = 0;
+
+        for (int i = 0; i < 26; i++)
+            result += abs(count1[i] - count2[i]);
+        return result;
+    }
+
     private static int[] simpleButWillNotWorkGetMinimumDifference(String[] firstAnagrams, String[] secondAnagrams) {
         int[] anagramsResolution = new int[firstAnagrams.length];
         for (int i = 0; i < firstAnagrams.length; i++) {
@@ -132,15 +169,15 @@ public class AnagramDifference {
             if (a[i].length() != b[i].length()) {
                 result[i] = -1;
             } else {
-                HashMap<Character,Integer> freqency = getFrequencyMap(a[i]);
+                HashMap<Character, Integer> freqency = getFrequencyMap(a[i]);
                 char[] bArr = b[i].toCharArray();
 
-                for(char c: bArr){
-                    if(freqency.containsKey(new Character(c))){
+                for (char c : bArr) {
+                    if (freqency.containsKey(new Character(c))) {
                         freqency.put(c, freqency.get(new Character(c)) - 1);
                     }
                 }
-                int y =0;
+                int y = 0;
                 System.out.println(freqency);
                 result[i] = freqency.entrySet().stream().filter(x -> x.getValue() != y).map(Map.Entry::getKey).collect(Collectors.toSet()).size();
             }
@@ -149,15 +186,15 @@ public class AnagramDifference {
         return result;
     }
 
-    private static HashMap<Character,Integer> getFrequencyMap(String s){
-        HashMap<Character,Integer> map = new HashMap<Character,Integer>();
-        for(int i = 0; i < s.length(); i++){
+    private static HashMap<Character, Integer> getFrequencyMap(String s) {
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             Integer val = map.get(new Character(c));
-            if(val != null){
+            if (val != null) {
                 map.put(c, new Integer(val + 1));
-            }else{
-                map.put(c,1);
+            } else {
+                map.put(c, 1);
             }
         }
         return map;
