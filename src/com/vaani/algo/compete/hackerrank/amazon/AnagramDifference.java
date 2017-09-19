@@ -79,7 +79,6 @@ public class AnagramDifference {
     public static void main(String[] args) {
         String[] a = {"a", "jk", "abb", "mn", "abc", "hhpddlnnsjfoyxpci"};
         String[] b = {"bb", "kj", "bbc", "op", "def", "ioigvjqzfbpllssuj"};
-        String[] b = {"bb", "kj", "bbc", "op", "def", "ioigvjqzfbpllssuj"};
         System.out.println(Arrays.toString(getMinimumDifference(a, b)));
 
         System.out.println(Arrays.toString(simpleButWillNotWorkGetMinimumDifference(a, b)));
