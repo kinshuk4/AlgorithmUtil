@@ -1,14 +1,6 @@
 AlgorithmUtil
 =============
-Just added the coding problems, just keeping it as collection so that i can find them quickly.
-
-Algorithms playground for common questions solved in Java syntax.
-
-This repository contains my solution for some common algorithms. I've created this repository to learn about algorithms and improve solving different common computer science problems. I'll try to add more solutions if I have time :)
-
-Each solved problem has a program written in Java. Every solution is tested and some problems contains more than one solution with different implementations.
-
-You can check the solution executing tests inside tests directory. Some of this problems have been resolved using TDD.
+Algorithms and Datastructure problems I came across, mainly in java and python.
 
 ## Preparation
 
