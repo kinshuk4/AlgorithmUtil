@@ -1,4 +1,4 @@
-package ClosestNumbers;
+package com.vaani.algo.array;
 
 import java.util.Arrays;
 import java.util.Scanner;
