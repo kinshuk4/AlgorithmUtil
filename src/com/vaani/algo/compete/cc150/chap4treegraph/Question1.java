@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * Implement a function to check if a binary tree is balanced. For the purposes
  * of this question, a balanced tree is defined to be a tree such that the
@@ -27,14 +29,4 @@ public class Question1 {
         }
     }
 
-    // this question is available at leetcode, question Balanced Binary Tree
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }
