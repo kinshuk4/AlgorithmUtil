@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * Given a sorted (increasing order) array, write an algorithm to create a
  * binary search tree with minimal height.
@@ -28,13 +30,4 @@ public class Question3 {
         }
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }
