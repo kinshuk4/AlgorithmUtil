@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,14 +57,5 @@ public class Question4 {
         }
     }
 
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
 
 }
