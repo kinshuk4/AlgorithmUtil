@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * Implement a function to check if a binary tree is a binary search tree.
  */
@@ -14,7 +16,7 @@ public class Question5 {
         return validate(root, min, max);
     }
 
-    private boolean validate(TreeNode node, int min, int max) {
+    private boolean validate(TreeNode<Integer> node, int min, int max) {
         if (node == null) {
             return true;
         }
@@ -27,14 +29,6 @@ public class Question5 {
     }
 
     // this question is available at leetcode, Validating Binary Search Tree
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
 }
