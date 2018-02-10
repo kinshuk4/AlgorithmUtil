@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * Design an algorithm and write code to find the first common ancestor of two
  * nodes in a binary tree. Avoid storing additional nodes in a data structure.
@@ -57,15 +59,7 @@ public class Question7 {
         return lcaLeft != null ? lcaLeft : lcaRight; // only one side finds both
     }
 
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
 
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
 
 }
 
