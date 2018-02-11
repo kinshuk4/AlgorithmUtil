@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * You have two very large binary trees: T1, with millions of nodes, and T2,
  * with hundreds of nodes. Create an algorithm to decide if T2 is a subtree of
@@ -36,13 +38,5 @@ public class Question8 {
         return match(haystack.left, needle.left) && match(haystack.right, needle.right);
     }
 
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
 
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
 }
