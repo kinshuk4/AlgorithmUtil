@@ -1,5 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 
 /**
@@ -19,7 +21,7 @@ public class Question9 {
         return paths;
     }
 
-    private void check(TreeNode node, int sum, int curSum,
+    private void check(TreeNode<Integer> node, int sum, int curSum,
                        ArrayList<Integer> curPath, ArrayList<ArrayList<Integer>> paths) {
         if (node == null) {
             return;
@@ -43,14 +45,5 @@ public class Question9 {
         }
     }
 
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
 
-        public TreeNode(int val) {
-            this.val = val;
-        }
-
-    }
 }
