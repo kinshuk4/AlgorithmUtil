@@ -8,16 +8,6 @@ import java.util.Queue;
  */
 public class PrintBinaryTree {
 
-    public static class TreeNode<E> {
-
-        public E value;
-        public TreeNode<E> left;
-        public TreeNode<E> right;
-
-        public TreeNode(E value) {
-            this.value = value;
-        }
-    }
 
     public static void main(String... args) {
         printLevelsComaSeparated(createTree());
