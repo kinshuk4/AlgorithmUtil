@@ -17,13 +17,5 @@ public class MaximumDepthOfBinaryTree {
         return (iRightDepth > iLefttDepth) ? iRightDepth + 1 : iLefttDepth + 1;
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }
