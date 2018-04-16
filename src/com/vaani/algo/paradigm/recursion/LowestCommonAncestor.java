@@ -1,5 +1,7 @@
 package com.vaani.algo.paradigm.recursion;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 public class LowestCommonAncestor {
 
     private int depth(NodeWithParent node) {
@@ -74,14 +76,6 @@ public class LowestCommonAncestor {
         }
     }
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
 
 }
