@@ -1,17 +1,11 @@
 package com.vaani.algo.misc;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    public TreeNode(int val) {
-        this.val = val;
-    }
-}
 
 /**
  * Find the right deepest leaf.
