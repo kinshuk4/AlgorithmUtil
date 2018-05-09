@@ -5,7 +5,7 @@ import com.vaani.algo.ds.core.TreeNode;
 /**
  * Find the closest element in a BST.
  */
-public class CloestInBST {
+public class ClosestInBst {
 
     public int closest(TreeNode<Integer> root, int target) {
         int[] res = {-1};
