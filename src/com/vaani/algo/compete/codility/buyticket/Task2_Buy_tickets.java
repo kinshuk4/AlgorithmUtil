@@ -46,11 +46,11 @@
 
 package com.vaani.algo.compete.codility.buyticket;
 
+import java.util.Arrays;
+
 import static java.lang.Math.abs;
 import static java.lang.Math.min;
 import static org.junit.Assert.assertEquals;
-
-import java.util.Arrays;
 
 public class Task2_Buy_tickets {
 
