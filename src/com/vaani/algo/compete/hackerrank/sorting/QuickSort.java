@@ -1,7 +1,5 @@
 package com.vaani.algo.compete.hackerrank.sorting;
 
-import com.sun.xml.internal.bind.v2.model.annotation.Quick;
-
 /**
  * Created by andersonkmi on 8/28/16.
  */
