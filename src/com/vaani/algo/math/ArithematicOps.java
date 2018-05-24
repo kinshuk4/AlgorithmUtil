@@ -1,4 +1,4 @@
-package com.vaani.algo;
+package com.vaani.algo.math;
 
 public class ArithematicOps {
     public static int getSumProperDivisors(int number) {
