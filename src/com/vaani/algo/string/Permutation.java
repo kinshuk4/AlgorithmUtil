@@ -1,4 +1,4 @@
-package com.vaani.algo;
+package com.vaani.algo.string;
 
 import java.util.ArrayList;
 import java.util.Collections;
