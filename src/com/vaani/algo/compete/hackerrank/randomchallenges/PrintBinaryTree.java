@@ -1,11 +1,11 @@
 package com.vaani.algo.compete.hackerrank.randomchallenges;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- * Created by mykola on 06.05.15.
- */
+
 public class PrintBinaryTree {
 
 
@@ -23,7 +23,7 @@ public class PrintBinaryTree {
             Queue<TreeNode> nextLevel = new LinkedList<>();
             while (!currentLevel.isEmpty()) {
                 TreeNode<E> n = currentLevel.remove();
-                System.out.print(n.value.toString());
+                System.out.print(n.getVal().toString());
                 if(!currentLevel.isEmpty()){
                     System.out.print(',');
                 }
