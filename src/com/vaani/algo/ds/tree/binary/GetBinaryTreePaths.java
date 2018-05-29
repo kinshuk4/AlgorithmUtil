@@ -1,5 +1,7 @@
 package com.vaani.algo.ds.tree.binary;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class GetBinaryTreePaths {
         return res;
     }
 
-    private void find(TreeNode node, List<Integer> cur, List<List<Integer>> res) {
+    private void find(TreeNode<Integer> node, List<Integer> cur, List<List<Integer>> res) {
         if (node == null) {
             return;
         }
