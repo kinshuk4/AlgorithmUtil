@@ -1,5 +1,7 @@
 package com.vaani.algo.ds.tree.binary;
 
+import com.vaani.algo.ds.core.TreeNode;
+
 /**
  * Given a binary tree, find its maximum depth. </br>
  * The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
