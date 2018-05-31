@@ -3,9 +3,6 @@ package com.vaani.algo.ds.core;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Xiaomeng on 11/12/2014.
- */
 public class TrieNode {
     public final int ALPHABET = 26;
 
