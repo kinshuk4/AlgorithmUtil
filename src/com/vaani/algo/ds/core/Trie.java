@@ -1,8 +1,5 @@
 package com.vaani.algo.ds.core;
 
-/**
- * Created by Xiaomeng on 11/12/2014.
- */
 public class Trie {
     public TrieNode root;
     public int minLevDist;
@@ -34,5 +31,31 @@ public class Trie {
                 current.isWord = true;
             }
         }
+    }
+
+    public boolean search(String word) {
+        TrieNode node = root;
+        for (char c : word.toCharArray()) {
+            TrieNode child = node.getChild(c);
+            if (child == null)
+                return false;
+            node = child;
+        }
+        if (node.isWord) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean startsWith(String prefix){
+        TrieNode node = root;
+        for(char c: prefix.toCharArray()){
+            TrieNode child = node.getChild(c);
+            if(child==null)
+                return false;
+            node = child;
+        }
+        return true;
     }
 }
