@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.core;
+package com.vaani.algo.ds.core.graph;
 
 import java.util.ArrayList;
 import java.util.List;
