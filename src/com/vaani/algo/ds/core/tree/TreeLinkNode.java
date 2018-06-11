@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.core;
+package com.vaani.algo.ds.core.tree;
 
 /**
  * Created by Xiaomeng on 8/11/2014.

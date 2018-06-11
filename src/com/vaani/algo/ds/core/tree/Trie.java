@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.core;
+package com.vaani.algo.ds.core.tree;
 
 public class Trie {
     public TrieNode root;
