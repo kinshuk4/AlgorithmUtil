@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.core;
+package com.vaani.algo.ds.core.list;
 
 public class RandomListNode {
     public int label;
