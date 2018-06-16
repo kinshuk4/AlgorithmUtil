@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap2;
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Write code to partition a linked list around a value x, such that all nodes
