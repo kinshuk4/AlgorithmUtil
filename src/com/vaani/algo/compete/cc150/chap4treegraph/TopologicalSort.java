@@ -1,8 +1,8 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
 
-import com.vaani.algo.ds.core.DirectedGraph;
-import com.vaani.algo.ds.core.Vertex;
+import com.vaani.algo.ds.core.graph.DirectedGraph;
+import com.vaani.algo.ds.core.graph.Vertex;
 
 import java.util.*;
 
