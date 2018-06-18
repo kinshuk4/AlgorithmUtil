@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.convert;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 
 

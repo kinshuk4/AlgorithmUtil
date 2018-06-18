@@ -1,7 +1,5 @@
 package com.vaani.algo.ds.list.dll.impl;
 
-import com.vaani.algo.ds.core.TreeNode;
-
 public final class DoubleListNode<T> {
 	public T value;
 	public DoubleListNode<T> prev;

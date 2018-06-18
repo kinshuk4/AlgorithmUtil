@@ -4,7 +4,7 @@ package com.vaani.algo.compete.hackerrank.randomchallenges;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Created by mykola on 06.05.15.

@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.hackerrank.randomchallenges;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
