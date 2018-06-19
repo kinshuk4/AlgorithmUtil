@@ -1,8 +1,5 @@
 package com.vaani.algo.ds.convert;
 
-import com.vaani.algo.ds.core.TreeNode;
-import com.vaani.algo.ds.list.dll.impl.DoubleListNode;
-
 /**
  * Created by kchandra on 21/08/16.
  * http://www.geeksforgeeks.org/in-place-convert-a-given-binary-tree-to-doubly-linked-list/

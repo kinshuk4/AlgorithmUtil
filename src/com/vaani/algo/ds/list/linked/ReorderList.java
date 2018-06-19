@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Given a singly linked list L: L0→L1→…→Ln-1→Ln,

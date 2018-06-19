@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.stack.impl;
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Created by kchandra on 18/08/16.

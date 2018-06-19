@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Given a linked list, reverseIterative the nodes of a linked list k at a time and return its modified list.

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.list.linked;
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Given a sorted linked list, delete all duplicates such that each element appear only once.

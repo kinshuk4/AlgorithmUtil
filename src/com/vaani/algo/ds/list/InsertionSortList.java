@@ -4,7 +4,7 @@ package com.vaani.algo.ds.list;
 Sort a linked list using insertion sort.
 */
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Definition for singly-linked list.

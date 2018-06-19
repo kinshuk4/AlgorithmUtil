@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.list.linked;
 
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Reverse a linked list from position m to n. Do it in-place and in one-pass.
