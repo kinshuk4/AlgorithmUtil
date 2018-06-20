@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.graph;
 
-import com.vaani.algo.ds.core.UndirectedGraphNode;
+import com.vaani.algo.ds.core.graph.UndirectedGraphNode;
 
 import java.util.*;
 
@@ -73,24 +73,24 @@ public class CloneGraph {
 
     }
 
-    public com.vaani.algo.ds.core.UndirectedGraphNode cloneGraph2(UndirectedGraphNode node) {
+    public UndirectedGraphNode cloneGraph2(UndirectedGraphNode node) {
         if (node == null) return null;
-        Queue<com.vaani.algo.ds.core.UndirectedGraphNode> queue = new LinkedList<com.vaani.algo.ds.core.UndirectedGraphNode>();
-        Map<com.vaani.algo.ds.core.UndirectedGraphNode, com.vaani.algo.ds.core.UndirectedGraphNode> map = new HashMap<com.vaani.algo.ds.core.UndirectedGraphNode, com.vaani.algo.ds.core.UndirectedGraphNode>();
+        Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
+        Map<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
         queue.add(node);
         while (!queue.isEmpty()) {
-            com.vaani.algo.ds.core.UndirectedGraphNode oldNode = queue.poll();
-            com.vaani.algo.ds.core.UndirectedGraphNode newNode;
+            UndirectedGraphNode oldNode = queue.poll();
+            UndirectedGraphNode newNode;
             if (!map.containsKey(oldNode)) {
-                newNode = new com.vaani.algo.ds.core.UndirectedGraphNode(oldNode.label);
+                newNode = new UndirectedGraphNode(oldNode.label);
                 map.put(oldNode, newNode);
             } else {
                 newNode = map.get(oldNode);
             }
-            for (com.vaani.algo.ds.core.UndirectedGraphNode oldNeighbor : oldNode.neighbors) {
-                com.vaani.algo.ds.core.UndirectedGraphNode newNeighbor;
+            for (UndirectedGraphNode oldNeighbor : oldNode.neighbors) {
+                UndirectedGraphNode newNeighbor;
                 if (!map.containsKey(oldNeighbor)) {
-                    newNeighbor = new com.vaani.algo.ds.core.UndirectedGraphNode(oldNeighbor.label);
+                    newNeighbor = new UndirectedGraphNode(oldNeighbor.label);
                     queue.add(oldNeighbor);
                     map.put(oldNeighbor, newNeighbor);
                 } else {
