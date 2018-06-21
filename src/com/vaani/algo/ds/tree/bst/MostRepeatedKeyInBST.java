@@ -3,7 +3,7 @@ package com.vaani.algo.ds.tree.bst;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /* class TreeNode { */
 /*   int val; */

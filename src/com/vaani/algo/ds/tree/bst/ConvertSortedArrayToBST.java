@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.bst;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Given an array where elements are sorted in ascending order, convert it to a height balanced BST.

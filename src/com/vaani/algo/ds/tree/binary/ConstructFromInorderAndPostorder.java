@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.binary;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Given inorder and postorder traversal of a tree, construct the binary tree.

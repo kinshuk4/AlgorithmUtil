@@ -8,7 +8,7 @@ Note:
 You may assume that duplicates do not exist in the tree.
 */
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Definition for binary tree

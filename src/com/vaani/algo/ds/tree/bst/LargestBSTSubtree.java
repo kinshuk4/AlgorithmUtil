@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.tree.bst;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Given a binary tree,
