@@ -1,8 +1,7 @@
 package com.vaani.algo.game;
 
 
-import com.vaani.algo.ds.core.Trie;
-import com.vaani.algo.ds.core.TrieNode;
+import com.vaani.algo.ds.core.tree.Trie;
 
 import java.util.*;
 
