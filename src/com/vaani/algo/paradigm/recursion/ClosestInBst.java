@@ -1,6 +1,6 @@
 package com.vaani.algo.paradigm.recursion;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Find the closest element in a BST.

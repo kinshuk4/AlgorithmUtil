@@ -1,6 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.core.TreeNode;
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 /**
  * Check if two binary trees are Isomorphic
