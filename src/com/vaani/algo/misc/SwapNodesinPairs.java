@@ -10,7 +10,7 @@ Your algorithm should use only constant space. You may not modify the values in 
 Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.
 */
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 /**
  * Definition for singly-linked list.

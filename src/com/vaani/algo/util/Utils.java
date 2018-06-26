@@ -1,6 +1,6 @@
 package com.vaani.algo.util;
 
-import com.vaani.algo.ds.core.ListNode;
+import com.vaani.algo.ds.core.list.ListNode;
 
 public class Utils {
 
