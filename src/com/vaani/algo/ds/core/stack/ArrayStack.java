@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.stack.impl;
+package com.vaani.algo.ds.core.stack;
 
 public class ArrayStack implements IStack {
     private static final int DEFAULT_CAPACITY = 10;

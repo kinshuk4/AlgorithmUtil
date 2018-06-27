@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.stack.impl;
+package com.vaani.algo.ds.core.stack;
 
 import com.vaani.algo.ds.core.list.ListNode;
 

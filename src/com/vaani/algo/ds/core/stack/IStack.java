@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.stack.impl;
+package com.vaani.algo.ds.core.stack;
 
 public interface IStack {
     void push(Object x);
