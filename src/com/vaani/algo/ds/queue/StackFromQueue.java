@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.queue;
 
-import com.vaani.algo.ds.stack.impl.IStack;
+import com.vaani.algo.ds.core.stack.IStack;
 
 import java.util.LinkedList;
 import java.util.Queue;
