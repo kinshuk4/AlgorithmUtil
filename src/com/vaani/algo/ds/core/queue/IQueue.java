@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.queue.impl;
+package com.vaani.algo.ds.core.queue;
 
 /**
  * Created by kchandra on 19/08/16.
