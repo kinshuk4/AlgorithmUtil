@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.core.list.visual;
+package com.vaani.algo.ds.core.visual;
 
 /**
  * Created by Xiaomeng on 9/18/2014.

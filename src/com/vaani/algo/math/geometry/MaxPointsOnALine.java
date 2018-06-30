@@ -1,6 +1,6 @@
 package com.vaani.algo.math.geometry;
 
-import com.vaani.algo.ds.core.list.visual.Point;
+import com.vaani.algo.ds.core.visual.Point;
 
 import java.util.HashMap;
 import java.util.Map;
