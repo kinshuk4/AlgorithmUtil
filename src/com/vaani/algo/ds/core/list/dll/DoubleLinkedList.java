@@ -1,12 +1,7 @@
-package com.vaani.algo.ds.list.dll.impl;
+package com.vaani.algo.ds.core.list.dll;
 
 
-
-import java.util.Enumeration;
-
-
-
-public class DoubleLinkedList <E>{   
+public class DoubleLinkedList <E>{
 	public DoubleListNode<E> head;
 	private DoubleListNode<E> tail;
 	private int size=0;

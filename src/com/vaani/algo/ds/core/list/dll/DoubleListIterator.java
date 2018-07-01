@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.dll.impl;
+package com.vaani.algo.ds.core.list.dll;
 
 
 final class DoubleListIterator {
