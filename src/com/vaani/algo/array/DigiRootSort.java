@@ -1,7 +1,7 @@
 package com.vaani.algo.array;
 
 
-import com.vaani.algo.math.number.DigitUtils;
+import com.vaani.algo.ds.utils.DigitUtils;
 
 import java.util.*;
 
