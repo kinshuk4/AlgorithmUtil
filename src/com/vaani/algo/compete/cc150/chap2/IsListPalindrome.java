@@ -9,13 +9,13 @@ import java.util.Stack;
  * Implement a function to check if a linked list is a palindrome.
  */
 // O(n) space, O(n) time
-public class Question7 {
+public class IsListPalindrome {
 
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome(ListNode<Integer> head) {
         // write implementation here
         Stack<Integer> stack = new Stack<Integer>();
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNode<Integer> slow = head;
+        ListNode<Integer> fast = head;
 
         while (fast != null && fast.next != null) {
             stack.push(slow.val);

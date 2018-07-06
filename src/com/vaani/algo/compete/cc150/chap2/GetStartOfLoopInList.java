@@ -13,7 +13,7 @@ import com.vaani.algo.util.Utils;
  * EXAMPLE Input: A-> B -> C -> D -> E -> C [the same C as earlier Output: C
  */
 // O(1) space, O(n) time
-public class Question6 {
+public class GetStartOfLoopInList {
     // two pointer problem
     public ListNode findLoop(ListNode head) {
         // write implementation here

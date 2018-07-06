@@ -8,7 +8,7 @@ import com.vaani.algo.ds.core.list.ListNode;
  * is at the head of the list. Write a function that adds the two numbers and
  * return the sum as a linked list.
  */
-public class Question5 {
+public class AddTwoLists {
 
     // this question is available at leetcode, question Add Two Numbers
   /*
@@ -30,7 +30,7 @@ public class Question5 {
      */
     // O(1) space, O(n) time
     public class Solution {
-        public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        public ListNode addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2) {
             // Start typing your Java solution below
             // DO NOT write main() function
             int borrow = 0;

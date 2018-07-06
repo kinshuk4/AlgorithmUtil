@@ -7,7 +7,7 @@ import com.vaani.algo.ds.core.list.ListNode;
  * less than x come before all nodes greater than or equal to x.
  */
 // O(n) space, O(n) time
-public class Question4 {
+public class PartitionList {
 
     /**
      * Return a pair of lists, where the first list contains the nodes whose
@@ -18,17 +18,17 @@ public class Question4 {
      * @param x
      * @return
      */
-    public ListNode partition(ListNode head, int x) {
+    public ListNode partition(ListNode<Integer> head, int x) {
         // write implementation here
         if (head == null) {
             return null;
         }
 
-        ListNode headL = new ListNode(0);
-        ListNode headGe = new ListNode(0);
-        ListNode headLCur = headL;
-        ListNode headGeCur = headGe;
-        ListNode cur = head;
+        ListNode<Integer> headL = new ListNode(0);
+        ListNode<Integer> headGe = new ListNode(0);
+        ListNode<Integer> headLCur = headL;
+        ListNode<Integer> headGeCur = headGe;
+        ListNode<Integer> cur = head;
         while (cur != null) {
             if (cur.val < x) {
                 headLCur.next = new ListNode(cur.val);

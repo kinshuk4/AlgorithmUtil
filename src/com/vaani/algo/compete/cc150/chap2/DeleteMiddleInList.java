@@ -13,7 +13,7 @@ import com.vaani.algo.ds.core.list.ListNode;
  * <p>
  * Result: nothing is returned, but the new linked list looks like a ->b ->d ->e
  */
-public class Question3 {
+public class DeleteMiddleInList {
 
     public ListNode deleteMiddle(ListNode head) {
         // write implementation here
