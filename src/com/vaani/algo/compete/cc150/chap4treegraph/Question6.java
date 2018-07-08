@@ -49,7 +49,7 @@ public class Question6 {
     }
 
     // this question is available at leetcode, question Populating Next Right
-    // Pointers in Each Node I and II
+    // Pointers in Each ListNode I and II
     public class TreeLinkNode {
         int val;
         TreeLinkNode left, right, next;

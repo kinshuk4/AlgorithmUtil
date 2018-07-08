@@ -1,62 +1,59 @@
 package com.vaani.algo.compete.codeeval;
 
+import com.vaani.algo.ds.core.list.ListNode;
+
 import java.io.File;
 import java.util.*;
 
 public class CycleDetection {
 
-    private static class Node {
-        private int value;
-        private Node next;
-    }
-
     public static void main(String... args) throws Exception {
         Scanner sc = new Scanner(new File(args[0]));
         while (sc.hasNextLine()) {
-            Node node = convertToCycledList(sc.nextLine());
-            System.out.println(findCycleStart(node).value);
+            ListNode listNode = convertToCycledList(sc.nextLine());
+            System.out.println(findCycleStart(listNode).val);
         }
     }
 
-    private static Node findCycleStart(Node head) {
-        Node tortoise = head.next;
-        Node hare = head.next.next;
-        while (hare.value != tortoise.value) {
+    private static ListNode findCycleStart(ListNode head) {
+        ListNode tortoise = head.next;
+        ListNode hare = head.next.next;
+        while (hare.val != tortoise.val) {
             hare = hare.next.next;
             tortoise = tortoise.next;
         }
         hare = head.next;
         tortoise = tortoise.next;
-        while (hare.value != tortoise.value) {
+        while (hare.val != tortoise.val) {
             hare = hare.next;
             tortoise = tortoise.next;
         }
         return hare;
     }
 
-    private static Node convertToCycledList(String line) {
+    private static ListNode convertToCycledList(String line) {
         Scanner lineScanner = new Scanner(line);
         Set<Integer> integersSet = new HashSet<>();
-        Node previous = new Node();
-        Node root = previous;
+        ListNode previous = new ListNode(0);//dummyNode
+        ListNode root = previous;
         while (lineScanner.hasNextInt()) {
             int currentValue = lineScanner.nextInt();
-            Node node = new Node();
-            node.value = currentValue;
+            ListNode listNode = new ListNode(currentValue);
+
             if (!integersSet.add(currentValue)) {
-                Node cycleStartNode;
-                cycleStartNode = root.next;
-                while (cycleStartNode != null) {
-                    if (cycleStartNode.value == currentValue) {
+                ListNode<Integer> cycleStartListNode;
+                cycleStartListNode = root.next;
+                while (cycleStartListNode != null) {
+                    if (cycleStartListNode.val == currentValue) {
                         break;
                     }
-                    cycleStartNode = cycleStartNode.next;
+                    cycleStartListNode = cycleStartListNode.next;
                 }
-                previous.next = cycleStartNode;
+                previous.next = cycleStartListNode;
                 break;
             } else {
-                previous.next = node;
-                previous = node;
+                previous.next = listNode;
+                previous = listNode;
             }
         }
         return root;
