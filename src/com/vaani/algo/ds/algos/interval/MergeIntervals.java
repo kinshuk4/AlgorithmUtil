@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.interval;
+package com.vaani.algo.ds.algos.interval;
 
 import java.util.ArrayList;
 import java.util.Collections;
