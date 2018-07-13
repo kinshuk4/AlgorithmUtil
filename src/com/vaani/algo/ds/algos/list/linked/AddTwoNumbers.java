@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
@@ -13,9 +13,9 @@ import com.vaani.algo.ds.core.list.ListNode;
  * 
  */
 public class AddTwoNumbers {
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummy = new ListNode(-1);
-        ListNode dummyHead = dummy;
+    public static ListNode addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2) {
+        ListNode<Integer> dummy = new ListNode(-1);
+        ListNode<Integer> dummyHead = dummy;
         int extra = 0;
         while (l1 != null && l2 != null) {
             dummy.next = new ListNode((l1.val + l2.val + extra) % 10);
@@ -24,25 +24,25 @@ public class AddTwoNumbers {
             l1 = l1.next;
             l2 = l2.next;
         }
-        ListNode n = l1 != null ? l1 : l2;
+        ListNode<Integer> n = l1 != null ? l1 : l2;
         while (n != null) {
-            dummy.next = new ListNode((n.val + extra) % 10);
+            dummy.next = new ListNode<Integer>((n.val + extra) % 10);
             extra = n.val + extra > 9 ? 1 : 0;
             n = n.next;
             dummy = dummy.next;
         }
-        if (extra == 1) dummy.next = new ListNode(1);
+        if (extra == 1) dummy.next = new ListNode<Integer>(1);
         return dummyHead.next;
     }
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2);
-        l1.next = new ListNode(4);
-        l1.next.next = new ListNode(3);
+        ListNode<Integer> l1 = new ListNode<Integer>(2);
+        l1.next = new ListNode<Integer>(4);
+        l1.next.next = new ListNode<Integer>(3);
 
-        ListNode l2 = new ListNode(5);
-        l2.next = new ListNode(6);
-        l2.next.next = new ListNode(4);
+        ListNode l2 = new ListNode<Integer>(5);
+        l2.next = new ListNode<Integer>(6);
+        l2.next.next = new ListNode<Integer>(4);
 
         addTwoNumbers(l1, l2).display();
     }

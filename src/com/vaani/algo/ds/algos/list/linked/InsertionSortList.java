@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
@@ -11,25 +11,25 @@ import com.vaani.algo.ds.core.list.ListNode;
  */
 public class InsertionSortList {
     public static void main(String[] args) {
-        ListNode head = new ListNode(3);
-        head.next = new ListNode(1);
-        head.next.next = new ListNode(5);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(2);
+        ListNode head = new ListNode<Integer>(3);
+        head.next = new ListNode<Integer>(1);
+        head.next.next = new ListNode<Integer>(5);
+        head.next.next.next = new ListNode<Integer>(4);
+        head.next.next.next.next = new ListNode<Integer>(2);
 
         InsertionSortList test = new InsertionSortList();
         test.insertionSortList(head).display();
     }
 
-    public ListNode insertionSortList(ListNode head) {
+    public ListNode insertionSortList(ListNode<Integer> head) {
         if (head == null || head.next == null) return head;
 
-        ListNode dummy = new ListNode(Integer.MIN_VALUE);
-        ListNode curr = head;
+        ListNode<Integer> dummy = new ListNode<Integer>(Integer.MIN_VALUE);
+        ListNode<Integer> curr = head;
 
         while (curr != null) {
-            ListNode prev = dummy;
-            ListNode next = curr.next;
+            ListNode<Integer> prev = dummy;
+            ListNode<Integer> next = curr.next;
 
             while (prev.next != null && prev.next.val < curr.val) {
                 prev = prev.next;

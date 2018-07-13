@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.dll;
+package com.vaani.algo.ds.algos.list.dll;
 
 import com.vaani.algo.ds.core.list.dll.DoubleListNode;
 

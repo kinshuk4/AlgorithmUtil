@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 /**
  * Given a node from a cyclic linked list which has been sorted,

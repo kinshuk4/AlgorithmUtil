@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -76,39 +76,39 @@ public class LargeNumber {
     public List<Integer> getList() {
         return largeNumber;
     }
-    //	public void sum(Node num1, Node num2) {
-    //		Node n1 = reverseIterative(num1);
-    //		Node n2 = reverseIterative(num2);
+    //	public void sum(ListNode num1, ListNode num2) {
+    //		ListNode n1 = reverseIterative(num1);
+    //		ListNode n2 = reverseIterative(num2);
     //
     //		int carry = 0;
-    //		Node sum = sum(n1, n2, carry);
+    //		ListNode sum = sum(n1, n2, carry);
     //
     //		sum = reverseIterative(sum);
     //
     //		return sum;
     //	}
     //
-    //	private static Node<Integer> sum(Node<Integer> num1, Node<Integer> num2, int carry) {
-    //		Node<Integer> result;
+    //	private static ListNode<Integer> sum(ListNode<Integer> num1, ListNode<Integer> num2, int carry) {
+    //		ListNode<Integer> result;
     //		if(num1 == null && num2 == null) {
     //			if(carry == 0)
     //				result = null;
     //			else
-    //				result = new Node<Integer>(carry);
+    //				result = new ListNode<Integer>(carry);
     //
     //		}else if(num1 != null && num2 != null) {
     //			int temp = num1.data + num2.data + carry;
     //			int digit = temp % 10;
     //			carry = temp / 10;
     //
-    //			result = new Node<Integer>(digit);
+    //			result = new ListNode<Integer>(digit);
     //			result.next = sum(num1.next, num2.next, carry);
     //		} else if(num1 != null) {
     //			int temp = num1.data + carry;
     //			int digit = num1.data % 10;
     //			carry = temp / 10;
     //
-    //			result = new Node(digit);
+    //			result = new ListNode(digit);
     //			result.next = sum(num1.next, null, carry);
     //		} else {
     //			// only num2 is not null here
@@ -116,7 +116,7 @@ public class LargeNumber {
     //			int digit = num2.data % 10;
     //			carry = temp / 10;
     //
-    //			result = new Node(digit);
+    //			result = new ListNode(digit);
     //			result.next = sum(null, num2.next, carry);
     //		}
     //

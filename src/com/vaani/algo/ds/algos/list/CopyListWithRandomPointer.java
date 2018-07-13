@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list;
+package com.vaani.algo.ds.algos.list;
 
 /*
 

@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list;
+package com.vaani.algo.ds.algos.list;
 
 /*
 Sort a linked list using insertion sort.
@@ -18,18 +18,18 @@ import com.vaani.algo.ds.core.list.ListNode;
  * }
  */
 public class InsertionSortList {
-    public ListNode insertionSortList(ListNode head) {
+    public ListNode insertionSortList(ListNode<Integer> head) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (head == null) return null;
 
-        ListNode newHead = null;
-        ListNode newTail = null;
+        ListNode<Integer> newHead = null;
+        ListNode<Integer> newTail = null;
         int min = head.val;
         while (head != null) {
-            ListNode next = head.next;
-            ListNode node = head;
-            ListNode curMin = null;
+            ListNode<Integer> next = head.next;
+            ListNode<Integer> node = head;
+            ListNode<Integer> curMin = null;
             while (node != null) {
                 if (curMin == null) curMin = node;
                 if (node.val < curMin.val) curMin = node;

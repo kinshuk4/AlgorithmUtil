@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
@@ -20,12 +20,12 @@ Output: 7 -> 0 -> 8
  * }
  */
 public class AddTwoNumber {
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode<Integer> l1, ListNode<Integer> l2) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         int carry = 0;
-        ListNode node = null;
-        ListNode head = null;
+        ListNode<Integer> node = null;
+        ListNode<Integer> head = null;
         while (l1 != null || l2 != null || carry != 0) {
             int val = carry;
             val += l1 == null ? 0 : l1.val;
