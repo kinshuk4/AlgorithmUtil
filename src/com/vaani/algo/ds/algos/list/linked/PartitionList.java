@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
@@ -15,18 +15,18 @@ import com.vaani.algo.ds.core.list.ListNode;
  */
 public class PartitionList {
 	
-    public static ListNode partition2(ListNode head, int x) {
+    public static ListNode partition2(ListNode<Integer> head, int x) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
-        ListNode beforeStart = null;
-        ListNode beforeEnd = null;
-        ListNode afterStart = null;
-        ListNode afterEnd = null;
+        ListNode<Integer> beforeStart = null;
+        ListNode<Integer> beforeEnd = null;
+        ListNode<Integer> afterStart = null;
+        ListNode<Integer> afterEnd = null;
 
         if (head == null) return null;
-        ListNode node = head;
+        ListNode<Integer> node = head;
         while (node != null) {
-            ListNode next = node.next;
+            ListNode<Integer> next = node.next;
             node.next = null;
             if (node.val < x) {
                 if (beforeStart == null) {
@@ -56,13 +56,13 @@ public class PartitionList {
 
     }
     
-    public static ListNode partition(ListNode head, int x) {
-        ListNode dummyHead1 = new ListNode(-1);
-        ListNode dummyHead2 = new ListNode(-1);
-        ListNode dummy1 = dummyHead1;
-        ListNode dummy2 = dummyHead2;
+    public static ListNode partition(ListNode<Integer> head, int x) {
+        ListNode<Integer> dummyHead1 = new ListNode(-1);
+        ListNode<Integer> dummyHead2 = new ListNode(-1);
+        ListNode<Integer> dummy1 = dummyHead1;
+        ListNode<Integer> dummy2 = dummyHead2;
 
-        ListNode node = head;
+        ListNode<Integer> node = head;
         while (node != null) {
             if (node.val < x) {
                 dummy1.next = node;
@@ -79,12 +79,12 @@ public class PartitionList {
     }
 
     public static void main(String[] args) {
-        ListNode l = new ListNode(1);
-        l.next = new ListNode(4);
-        l.next.next = new ListNode(3);
-        l.next.next.next = new ListNode(2);
-        l.next.next.next.next = new ListNode(5);
-        l.next.next.next.next.next = new ListNode(2);
+        ListNode l = new ListNode<Integer>(1);
+        l.next = new ListNode<Integer>(4);
+        l.next.next = new ListNode<Integer>(3);
+        l.next.next.next = new ListNode<Integer>(2);
+        l.next.next.next.next = new ListNode<Integer>(5);
+        l.next.next.next.next.next = new ListNode<Integer>(2);
         l.display();
 
         ListNode n = partition(l, 3);

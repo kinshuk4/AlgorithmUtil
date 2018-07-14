@@ -1,6 +1,8 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
+
+import static com.vaani.algo.ds.core.list.ListUtil.reverseIterative;
 
 /**
  * Given a singly linked list L: L0→L1→…→Ln-1→Ln,
@@ -11,7 +13,6 @@ import com.vaani.algo.ds.core.list.ListNode;
  * For example,
  * Given {1,2,3,4}, reorder it to {1,4,2,3}.
  * <p>
- * Created by Xiaomeng on 7/14/2014.
  */
 public class ReorderList {
     public static void reorderList(ListNode head) {
@@ -28,7 +29,7 @@ public class ReorderList {
         for (int i = 0; i < len / 2 - 1; i++) partition = partition.next;
         ListNode second = partition.next;
         partition.next = null;
-        second = reverse(second);
+        second = reverseIterative(second);
 
         ListNode first = head;
         ListNode dummy = new ListNode(-1);
@@ -42,18 +43,7 @@ public class ReorderList {
         dummy.next = first == null ? second : first;
     }
 
-    public static ListNode reverse(ListNode head) {
-        if (head == null || head.next == null) return head;
-        ListNode prev = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
-        return prev;
-    }
+
 
     public static void main(String[] args) {
         ListNode l = new ListNode(1);

@@ -1,6 +1,7 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
+import com.vaani.algo.ds.core.list.ListUtil;
 
 
 /**
@@ -22,7 +23,7 @@ public class SortList {
 
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode partition = FindMidNode.getMidNode(head);
+        ListNode partition = ListUtil.getMidNode(head);
         ListNode mid = partition.next;
         partition.next = null;
 
@@ -32,7 +33,7 @@ public class SortList {
 //        return mergeRecursive(first, second);
     }
 
-    public ListNode mergeIterative(ListNode first, ListNode second) {
+    public ListNode mergeIterative(ListNode<Integer> first, ListNode<Integer> second) {
         ListNode dummy = new ListNode(-1);
         ListNode dummyHead = dummy;
         while (first != null && second != null) {
@@ -49,7 +50,7 @@ public class SortList {
         return dummyHead.next;
     }
 
-    public ListNode mergeRecursive(ListNode l1, ListNode l2) {
+    public ListNode mergeRecursive(ListNode<Integer> l1, ListNode<Integer> l2) {
         if (l1 == null)
             return l2;
         if (l2 == null)

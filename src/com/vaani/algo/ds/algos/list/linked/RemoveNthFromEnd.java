@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
@@ -15,7 +15,7 @@ import com.vaani.algo.ds.core.list.ListNode;
  * Given n will always be valid.
  * Try to do this in one pass.
  * <p>
- * Created by Xiaomeng on 7/11/2014.
+ *
  */
 public class RemoveNthFromEnd {
     public static ListNode removeNthFromEnd(ListNode head, int n) {

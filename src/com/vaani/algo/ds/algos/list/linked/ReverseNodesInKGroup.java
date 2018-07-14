@@ -1,6 +1,9 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
+
+import static com.vaani.algo.ds.core.list.ListUtil.display;
+import static com.vaani.algo.ds.core.list.ListUtil.reverseIterative;
 
 /**
  * Given a linked list, reverseIterative the nodes of a linked list k at a time and return its modified list.
@@ -28,10 +31,64 @@ public class ReverseNodesInKGroup {
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
         head.display();
-        test.reverseKGroup(head, 2).display();
-        test.reverseKGroupIter(head, 2).display();
+        test.kReverseALinkedList(head, 2).display();
+//        test.reverseKGroup(head, 2).display();
+//        test.reverseKGroupIter(head, 2).display();
+
     }
-    
+
+
+    public ListNode kReverseALinkedList(ListNode l, int k) {
+        // Take 3 pointers startNode, endNode, nextNode pointing to headerNode
+        ListNode nextNode = l;
+        ListNode startNode = null;
+        ListNode endNode = null;
+        l = null;
+        ListNode newListCurrEndNode = null;
+        ListNode newListPrevEndNode = null;
+        while (nextNode != null) {
+            //  startNode and endNode points to nextNode
+            startNode = nextNode;
+            endNode = nextNode;
+            //  Move endNode pointing towards node after k elements from startNode
+            for (int i = 1; i < k; i++) {
+                endNode = endNode.next;
+                if (endNode == null) {
+                    break;
+                }
+            }
+
+            // If endNode is not null, then reverse the list starting from startNode to endNode
+            // eles if endNode is null, then there is nothing to reverse
+
+            if (endNode != null) {
+                // Save the node next to endNode
+                nextNode = endNode.next;
+                //  Unlink the endNode
+                endNode.next = null;
+                // Reverse the list starting from startNode
+                newListCurrEndNode = startNode;
+                startNode = reverseIterative(startNode);
+
+            } else {
+                nextNode = null;
+            }
+
+            //  Point headerNode to the startNode of the first iteration.
+            //  If the headerNode is set, append the list startNode to the headerNode
+            if (l == null) {
+                l = startNode;
+                newListPrevEndNode = newListCurrEndNode;
+            } else {
+                newListPrevEndNode.next = startNode;
+                newListPrevEndNode = newListCurrEndNode;
+            }
+        }
+
+        return l;
+    }
+
+
     public ListNode reverseKGroupIter(ListNode head, int k) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
@@ -56,12 +113,12 @@ public class ReverseNodesInKGroup {
 
     public ListNode reverseKGroup(ListNode head, int k) {
         int len = findLength(head);
-        if (head == null || k == 0 || len < k){
-        	return head;
+        if (head == null || k == 0 || len < k) {
+            return head;
         }
         ListNode next = head;
-        for (int i = 0; i < k; i++){
-        	next = next.next;
+        for (int i = 0; i < k; i++) {
+            next = next.next;
         }
         ListNode node = reverse(head, k);
         head.next = reverseKGroup(next, k);
