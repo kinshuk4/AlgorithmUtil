@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.list.linked;
+package com.vaani.algo.ds.algos.list.linked;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +11,9 @@ import com.vaani.algo.ds.core.list.ListNode;
 public class UnionOfSortedLinkedList {
 
     // O(n + m) space, O(m + n) time
-    public List<Integer> unionOfSortedLinkedList(ListNode l1, ListNode l2) {
-        ListNode curL1 = l1;
-        ListNode curL2 = l2;
+    public List<Integer> unionOfSortedLinkedList(ListNode<Integer> l1, ListNode<Integer> l2) {
+        ListNode<Integer> curL1 = l1;
+        ListNode<Integer> curL2 = l2;
 
         List<Integer> res = new ArrayList<Integer>();
 
