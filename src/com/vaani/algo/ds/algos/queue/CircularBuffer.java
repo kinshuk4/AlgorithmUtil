@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.queue;
+package com.vaani.algo.ds.algos.queue;
 
 public class CircularBuffer {
 
