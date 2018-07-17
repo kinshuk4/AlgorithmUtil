@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.queue;
+package com.vaani.algo.ds.algos.queue;
 import com.vaani.algo.ds.core.queue.IQueue;
 
 import java.util.Stack;
