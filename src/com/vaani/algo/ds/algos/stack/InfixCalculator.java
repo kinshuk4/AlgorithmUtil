@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.stack;
+package com.vaani.algo.ds.algos.stack;
 
 import java.util.*;
 

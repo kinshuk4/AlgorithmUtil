@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.stack;
+package com.vaani.algo.ds.algos.stack;
 
 /**
  * Created by kchandra on 18/08/16.
