@@ -1,16 +1,13 @@
 package com.vaani.algo.compete.codility;
 
-class Tree {
-	public int x;
-	public Tree l;
-	public Tree r;
-}
+
+import com.vaani.algo.ds.core.tree.TreeNode;
 
 public class TreeHeight {
-	public int solution(Tree T) {
+	public static int getTreeHeight(TreeNode<Integer> T) {
 		if (T == null) {
 			return -1;
 		}
-		return 1 + Math.max(solution(T.l), solution(T.r));
+		return 1 + Math.max(getTreeHeight(T.left), getTreeHeight(T.right));
 	}
 }

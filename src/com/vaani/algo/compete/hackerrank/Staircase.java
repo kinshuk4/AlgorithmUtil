@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Created by andersonkmi on 7/23/16.
+
  * Ref: Staircase exercise.
  */
 public class Staircase {
