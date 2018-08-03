@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary;
 
 import com.vaani.algo.ds.core.tree.TreeNode;
 
@@ -8,7 +8,6 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  * Note:
  * You may assume that duplicates do not exist in the tree.
  * <p>
- * Created by Xiaomeng on 8/12/2014.
  */
 public class ConstructFromInorderAndPostorder {
     public static void main(String[] args) {
