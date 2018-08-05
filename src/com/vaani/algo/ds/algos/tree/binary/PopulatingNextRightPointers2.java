@@ -1,11 +1,11 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary;
 
 import com.vaani.algo.ds.core.tree.TreeLinkNode;
 
 /**
- * Follow up for problem "Populating Next Right Pointers in Each Node".
+ * Follow up for problem "Populating Next Right Pointers in Each ListNode".
  * <p>
- * What if the given tree could be any binary tree? Would your previous solution still work?
+ * What if the given tree could be any binary tree? Would your previous getTreeHeight still work?
  * <p>
  * Note:
  * <p>

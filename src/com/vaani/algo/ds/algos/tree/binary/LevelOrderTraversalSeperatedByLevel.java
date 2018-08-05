@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary;
 
 import com.vaani.algo.ds.core.tree.TreeNode;
 
@@ -27,10 +27,9 @@ import java.util.Queue;
  * [15,7]
  * ]
  * <p>
- * Created by Xiaomeng on 8/6/2014.
+ *
  */
-public class LevelOrderTraversal {
-    ;
+public class LevelOrderTraversalSeperatedByLevel {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
@@ -39,14 +38,14 @@ public class LevelOrderTraversal {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
 
-        LevelOrderTraversal test = new LevelOrderTraversal();
+        LevelOrderTraversalSeperatedByLevel test = new LevelOrderTraversalSeperatedByLevel();
         for (List<Integer> level : test.levelOrder(root)) {
             System.out.println(level);
         }
 
     }
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
 

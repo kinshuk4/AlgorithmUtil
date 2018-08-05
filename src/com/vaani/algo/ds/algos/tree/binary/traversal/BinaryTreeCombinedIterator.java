@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary.traversal;
+package com.vaani.algo.ds.algos.tree.binary.traversal;
 
 import com.vaani.algo.ds.core.tree.TreeNode;
 

@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary;
 
 import com.vaani.algo.ds.core.tree.TreeNode;
 
@@ -7,7 +7,7 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  * <p>
  * Recover the tree without changing its structure.
  * Note:
- * A solution using O(n) space is pretty straight forward. Could you devise a constant space solution?
+ * A getTreeHeight using O(n) space is pretty straight forward. Could you devise a constant space getTreeHeight?
  * <p>
  * Created by Xiaomeng on 8/16/2014.
  */

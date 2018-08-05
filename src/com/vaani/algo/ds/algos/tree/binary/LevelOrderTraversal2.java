@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary;
 
 import com.vaani.algo.ds.core.tree.TreeNode;
 
@@ -24,7 +24,6 @@ import java.util.*;
  * [3]
  * ]
  * <p>
- * Created by Xiaomeng on 8/7/2014.
  */
 public class LevelOrderTraversal2 {
     List<List<Integer>> result = new ArrayList<List<Integer>>();

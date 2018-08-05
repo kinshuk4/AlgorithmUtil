@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary;
 
 import com.vaani.algo.ds.core.tree.TreeNode;
 
@@ -24,7 +24,7 @@ public class SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null)
             return true;
-        else if (p == null || q == null || p.val != q.val)
+        else if (p == null || q == null || p.val.equals(q.val))
             return false;
         else
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
