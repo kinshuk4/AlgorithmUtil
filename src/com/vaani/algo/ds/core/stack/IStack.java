@@ -1,11 +1,9 @@
 package com.vaani.algo.ds.core.stack;
 
-public interface IStack {
-    void push(Object x);
-
-    Object pop();
-
-    Object top();
+public interface IStack<T> {
+    void push(T x);
+    T pop();
+    T top();
 
     boolean isEmpty();
 

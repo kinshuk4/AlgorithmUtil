@@ -6,36 +6,36 @@ import com.vaani.algo.ds.core.list.ListNode;
  * Created by kchandra on 18/08/16.
  */
 
-public class ListStack {
-    private ListNode m_head;
+public class ListStack<T> {
+    private ListNode<T> mHead;
 
     public ListStack() {
-        m_head = null;
+        mHead = null;
     }
 
     public void push(int n) {
         ListNode tmp = getNewNode(n);
         tmp.val = n;
 
-        ListNode oHead = m_head;
-        m_head = tmp;
-        m_head.next = oHead;
+        ListNode oHead = mHead;
+        mHead = tmp;
+        mHead.next = oHead;
     }
 
-    public int pop() {
+    public T pop() {
         if (isEmpty())
-            return -1;
-        int retVal = m_head.val;
-        m_head = m_head.next;
+            return null;
+        T retVal = mHead.val;
+        mHead = mHead.next;
         return retVal;
     }
 
-    public int top() {
-        return m_head.val;
+    public T top() {
+        return mHead.val;
     }
 
     public boolean isEmpty() {
-        return m_head == null;
+        return mHead == null;
     }
 
     private ListNode getNewNode(int n) {
