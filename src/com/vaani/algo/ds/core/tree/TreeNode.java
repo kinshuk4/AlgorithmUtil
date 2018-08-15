@@ -1,14 +1,13 @@
 package com.vaani.algo.ds.core.tree;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import com.vaani.algo.ds.utils.BstUtil;
+
+import java.util.*;
 
 
 public class TreeNode<T> {
-    public TreeNode left;
-    public TreeNode right;
+    public TreeNode<T> left;
+    public TreeNode<T> right;
     public T val;
     public boolean isVisited;
 
@@ -16,25 +15,25 @@ public class TreeNode<T> {
         this.val = data;
     }
 
-    public TreeNode(TreeNode left, T data, TreeNode right){
+    public TreeNode(TreeNode<T> left, T data, TreeNode<T> right) {
         this.left = left;
         this.val = data;
         this.right = right;
     }
 
-    public TreeNode getLeft() {
+    public TreeNode<T> getLeft() {
         return left;
     }
 
-    public void setLeft(TreeNode left) {
+    public void setLeft(TreeNode<T> left) {
         this.left = left;
     }
 
-    public TreeNode getRight() {
+    public TreeNode<T> getRight() {
         return right;
     }
 
-    public void setRight(TreeNode right) {
+    public void setRight(TreeNode<T> right) {
         this.right = right;
     }
 
@@ -74,24 +73,6 @@ public class TreeNode<T> {
         return builder.append(String.valueOf(root.val)).toString();
     }
 
-    public  boolean insertForBst(TreeNode<Integer> n) {
-        if (n == null)
-            return false;
-        int val2 = (Integer) val;
-        if (val2 >= n.val) {
-            if (this.left == null)
-                this.left = n;
-            else
-                this.left.insertForBst(n);
-        } else {
-            if (this.right == null)
-                this.right = n;
-            else
-                this.right.insertForBst(n);
-        }
-        return true;
-
-    }
 
     public void display() {
         System.out.println(this.detailedToString());
@@ -108,28 +89,25 @@ public class TreeNode<T> {
         return size + 1;
     }
 
-    private List<List<Integer>> levelOrder(TreeNode<Integer> root) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        if (root == null) return result;
 
-        Queue<TreeNode<Integer>> queue1 = new LinkedList<TreeNode<Integer>>();
-        Queue<TreeNode<Integer>> queue2 = new LinkedList<TreeNode<Integer>>();
-        queue1.add(root);
-        List<Integer> level = new ArrayList<Integer>();
+    public String toString2() {
+        return "Tree{" +
+                "value=" + val +
+                ", left=" + (left != null ? left.val + "..." : "null") +
+                ", right=" + (right != null ? right.val + "..." : "null") +
+                '}';
+    }
 
-        while (!queue1.isEmpty()) {
-            TreeNode<Integer> node = queue1.poll();
-            level.add(node.val);
-            if (node.left != null) queue2.add(node.left);
-            if (node.right != null) queue2.add(node.right);
-            if (queue1.isEmpty()) {
-                result.add(level);
-                level = new ArrayList<Integer>();
-                queue1.addAll(queue2);
-                queue2.clear();
-            }
+     boolean equalTrees(TreeNode<T> t1, TreeNode<T> t2) {
+        if (t1 == null && t2 == null) {
+            return true;
         }
-        return result;
+        if (t1 == null || t2 == null) {
+            return false;
+        }
+        return Objects.equals(t1.val, t2.val)
+                && equalTrees(t1.left, t2.left)
+                && equalTrees(t1.right, t2.right);
     }
 
 
