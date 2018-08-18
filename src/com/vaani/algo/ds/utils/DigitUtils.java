@@ -1,4 +1,4 @@
-package com.vaani.algo.math.number;
+package com.vaani.algo.ds.utils;
 
 public class DigitUtils {
 
@@ -11,7 +11,7 @@ public class DigitUtils {
         return sum;
     }
 
-    static int numDigits(int n) {
+    public static int numDigits(int n) {
         if (n < 100000) {
             // 5 or less
             if (n < 100) {
