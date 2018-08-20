@@ -11,18 +11,23 @@ public class NoAdjacentMaxSum {
      * Time: O(n)
      * Space: O(n)
      */
-    public static int getMaxSum(int[] nums) {
-        int len = nums.length;
-        if (len == 1) return nums[0];
+    public static int getMaxNonAdjacentSum(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int n = nums.length;
+        if (n == 1) {
+            return nums[0];
+        }
 
-        int[] memo = new int[len];
+        int[] memo = new int[n];
         memo[0] = nums[0];
         memo[1] = Math.max(nums[1], memo[0]);
 
-        for (int i = 2; i < len; i++) {
+        for (int i = 2; i < n; i++) {
             memo[i] = Math.max(memo[i - 1], memo[i - 2] + nums[i]);
         }
-        return memo[len - 1];
+        return memo[n - 1];
     }
 
     /**
@@ -47,9 +52,9 @@ public class NoAdjacentMaxSum {
         int[] num1 = {3, 2, 7, 10};
         int[] num2 = {3, 2, 5, 10, 7};
         int[] num3 = {5, 5, 10, 40, 50, 35};
-        System.out.println(getMaxSum(num1));
-        System.out.println(getMaxSum(num2));
-        System.out.println(getMaxSum(num3));
+        System.out.println(getMaxNonAdjacentSum(num1));
+        System.out.println(getMaxNonAdjacentSum(num2));
+        System.out.println(getMaxNonAdjacentSum(num3));
 
         System.out.println(getMaxSum2(num1));
         System.out.println(getMaxSum2(num2));
