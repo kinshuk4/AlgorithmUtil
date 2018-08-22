@@ -22,11 +22,11 @@ Sort the value list and update the treenode list's values one by one.
 Inorder traverse, keep the previous tree node,
 Find first misplaced node by
 if ( current.val < prev.val )
-   Node first = prev;
+   ListNode first = prev;
 
 Find second by
 if ( current.val < prev.val )
-   Node second = current;
+   ListNode second = current;
 
 After traversal, swap the values of first and second node. Only need two pointers, prev and current node. O(1) space.
 */
