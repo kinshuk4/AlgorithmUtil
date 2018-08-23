@@ -19,7 +19,7 @@ package com.vaani.algo.paradigm.dp;
  * http://www.mitbbs.com/article_t1/JobHunting/32838067_0_1.html
  */
 public class FindSubarrayWithGivenSum {
-    public static boolean subArraySum(int[] arr, int sum) {
+    public static boolean hasSubArraySum(int[] arr, int sum) {
         int currSum = 0;
         for (int start = 0, end = 0; end < arr.length; end++) {
             currSum += arr[end];
@@ -43,9 +43,49 @@ public class FindSubarrayWithGivenSum {
     }
 
     /**
-     * Generic solution!
+     * returns array as pair - start and end of subarray with given sum
+     *
+     * @param arr
+     * @param s
+     * @return
+     */
+    public static int[] findSubArraySum(int[] arr, int s) {
+        int currSum = arr[0];
+        int startIdx = 0;
+
+        int n = arr.length;
+
+        // Pick a starting point
+        for (int i = 1; i <= n; i++) {
+            // If curr_sum exceeds the sum, then remove the starting elements
+            while (currSum > s && startIdx < i - 1) {
+                currSum = currSum - arr[startIdx];
+                startIdx++;
+            }
+
+            // If curr_sum becomes equal to sum, then return true
+            if (currSum == s) {
+                int p = i - 1;
+                return new int[]{startIdx, p};
+            }
+
+            // Add this element to curr_sum
+            if (i < n) {
+                currSum = currSum + arr[i];
+            }
+
+
+        }
+
+        //No subarray found"
+        return new int[]{-1, -1};
+    }
+
+
+    /**
+     * Generic getTreeHeight!
      * <p>
-     * : O(n) solution for unsorted array with negative numbers
+     * : O(n) getTreeHeight for unsorted array with negative numbers
      * : An example
      * : arr=[-1 4 1 0 -2 -3 7],
      * : sum = 2
@@ -65,10 +105,10 @@ public class FindSubarrayWithGivenSum {
 
     public static void main(String[] args) {
         int[] arr1 = {1, 4, 20, 3, 10, 5};
-        System.out.println(subArraySum(arr1, 33));
+        System.out.println(hasSubArraySum(arr1, 33));
         int[] arr2 = {1, 4, 0, 0, 3, 10, 5};
-        System.out.println(subArraySum(arr2, 7));
+        System.out.println(hasSubArraySum(arr2, 7));
         int[] arr3 = {1, 4};
-        System.out.println(subArraySum(arr3, 0));
+        System.out.println(hasSubArraySum(arr3, 0));
     }
 }
