@@ -19,7 +19,7 @@ public class ClimbingStairs {
         }
     }
 
-    public int climbStairs(int n) {
+    public int climbStairsRecursive(int n) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         // if (n < 0) {
         //     return 0;
@@ -28,9 +28,28 @@ public class ClimbingStairs {
         //     return 1;
         // }
         // else {
-        //     return climbStairs(n - 1) + climbStairs(n - 2);
+        //     return climbStairsRecursive(n - 1) + climbStairsRecursive(n - 2);
         // }
         int[] c = new int[n + 1];
         return climbStairsHelper(n, c);
+    }
+
+
+    public int climbStairsDP(int n) {
+        if (n == 1)
+            return 1;
+        else if (n == 2)
+            return 2;
+
+        int[] table = new int[n + 1];
+
+        table[0] = 1;
+        table[1] = 1;
+        table[2] = 2;
+
+        for (int i = 3; i < n + 1; i++) {
+            table[i] = table[i - 1] + table[i - 2];
+        }
+        return table[n];
     }
 }
