@@ -12,6 +12,13 @@ BEGIN
     order by birthday asc;
 
 END
+
+-- Another approach:
+select concat(title, " ", name) as name from (select name,
+                                         case
+                                            WHEN gender='F' then 'Queen'
+                                            WHEN gender='M' then 'King'
+                                         end as title from Successors order by birthday) as Successors2;
 ---------------------------------------------------------------
 -- 2. orderingEmails
 CREATE PROCEDURE orderingEmails()
