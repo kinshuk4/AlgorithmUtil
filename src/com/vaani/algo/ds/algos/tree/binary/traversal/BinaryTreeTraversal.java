@@ -1,17 +1,17 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 //https://github.com/shijiebei2009/Algorithms/blob/master/src%2Fmain%2Fjava%2Fcn%2Fcodepub%2Falgorithms%2Ftrees%2FTraverseBinaryTree.java
 public class BinaryTreeTraversal {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        TreeNode l1 = new TreeNode(3);
-        TreeNode l2 = new TreeNode(9);
-        TreeNode l3 = new TreeNode(11);
-        TreeNode r1 = new TreeNode(5);
-        TreeNode r2 = new TreeNode(12);
-        TreeNode r3 = new TreeNode(13);
+        BinaryTreeNode root = new BinaryTreeNode(1);
+        BinaryTreeNode l1 = new BinaryTreeNode(3);
+        BinaryTreeNode l2 = new BinaryTreeNode(9);
+        BinaryTreeNode l3 = new BinaryTreeNode(11);
+        BinaryTreeNode r1 = new BinaryTreeNode(5);
+        BinaryTreeNode r2 = new BinaryTreeNode(12);
+        BinaryTreeNode r3 = new BinaryTreeNode(13);
         root.left = l1;
         root.right = r1;
         l1.left = l2;
@@ -23,7 +23,7 @@ public class BinaryTreeTraversal {
         postOrder(root);
     }
 
-    public static void preOrder(TreeNode root) {
+    public static void preOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
@@ -36,7 +36,7 @@ public class BinaryTreeTraversal {
         }
     }
 
-    public static void inOrder(TreeNode root) {
+    public static void inOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
@@ -49,7 +49,7 @@ public class BinaryTreeTraversal {
         }
     }
 
-    public static void postOrder(TreeNode root) {
+    public static void postOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }

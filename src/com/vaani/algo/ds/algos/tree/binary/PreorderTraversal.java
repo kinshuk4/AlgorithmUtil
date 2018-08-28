@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,19 +26,19 @@ public class PreorderTraversal {
 
     public static void main(String[] args) {
         PreorderTraversal test = new PreorderTraversal();
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
+        BinaryTreeNode root = new BinaryTreeNode(1);
+        root.left = new BinaryTreeNode(2);
+        root.right = new BinaryTreeNode(3);
 
         System.out.println(test.preorderTraversal(root));
     }
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(BinaryTreeNode root) {
         if (root == null) return result;
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
         stack.push(root);
         while (!stack.isEmpty()) {
-            TreeNode<Integer> node = stack.pop();
+            BinaryTreeNode<Integer> node = stack.pop();
             result.add(node.val);
             if (node.right != null) stack.push(node.right);
             if (node.left != null) stack.push(node.left);

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Stack;
 
@@ -36,13 +36,13 @@ If you notice carefully in the flattened tree, each node's right child points to
 
 // @formatter:on
 public class FlattenBinaryTreeToLinkedList {
-    public void flatten(TreeNode root) {
+    public void flatten(BinaryTreeNode root) {
         if (root == null) return;
         if (root.left == null && root.right == null) return;
 
         flatten(root.left);
         flatten(root.right);
-        TreeNode right = root.right;
+        BinaryTreeNode right = root.right;
         root.right = root.left;
         root.left = null;
         while (root.right != null)
@@ -50,28 +50,28 @@ public class FlattenBinaryTreeToLinkedList {
         root.right = right;
     }
 
-    public void flatten2(TreeNode root) {
+    public void flatten2(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (root == null) {
             return;
         }
 
-        Stack<TreeNode> rightStack = new Stack<TreeNode>();
+        Stack<BinaryTreeNode> rightStack = new Stack<BinaryTreeNode>();
 
         root = nextNode(root, rightStack);
     }
 
-    public TreeNode nextNode(TreeNode node, Stack<TreeNode> rightStack) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack = (Stack<TreeNode>) rightStack.clone();
+    public BinaryTreeNode nextNode(BinaryTreeNode node, Stack<BinaryTreeNode> rightStack) {
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+        stack = (Stack<BinaryTreeNode>) rightStack.clone();
         if (node.right != null) {
             stack.push(node.right);
         }
 
         if (node.left == null) {
             if (!stack.isEmpty()) {
-                TreeNode temp = stack.pop();
+                BinaryTreeNode temp = stack.pop();
                 node.right = nextNode(temp, stack);
             }
         } else {

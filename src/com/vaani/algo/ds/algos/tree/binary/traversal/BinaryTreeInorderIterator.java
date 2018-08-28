@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Stack;
 
@@ -14,11 +14,11 @@ import java.util.Stack;
  */
 public class BinaryTreeInorderIterator {
 
-    private Stack<TreeNode> stack;
+    private Stack<BinaryTreeNode> stack;
 
-    public BinaryTreeInorderIterator(TreeNode node) {
-        this.stack = new Stack<TreeNode>();
-        TreeNode cur = node;
+    public BinaryTreeInorderIterator(BinaryTreeNode node) {
+        this.stack = new Stack<BinaryTreeNode>();
+        BinaryTreeNode cur = node;
         while (cur != null) {
             this.stack.push(node);
             node = node.left;
@@ -29,12 +29,12 @@ public class BinaryTreeInorderIterator {
         return !stack.isEmpty();
     }
 
-    public TreeNode next() {
+    public BinaryTreeNode next() {
         if (stack.isEmpty()) {
             return null;
         }
-        TreeNode cur = stack.pop();
-        TreeNode node = cur.right;
+        BinaryTreeNode cur = stack.pop();
+        BinaryTreeNode node = cur.right;
         while (node != null) {
             this.stack.push(node);
             node = node.left;

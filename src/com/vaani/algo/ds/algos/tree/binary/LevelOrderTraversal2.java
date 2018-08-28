@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.*;
 
@@ -28,16 +28,16 @@ import java.util.*;
 public class LevelOrderTraversal2 {
     List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(BinaryTreeNode root) {
         if (root == null) return result;
 
-        Queue<TreeNode> queue1 = new LinkedList<TreeNode>();
-        Queue<TreeNode> queue2 = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue1 = new LinkedList<BinaryTreeNode>();
+        Queue<BinaryTreeNode> queue2 = new LinkedList<BinaryTreeNode>();
         List<Integer> level = new ArrayList<Integer>();
         queue1.add(root);
 
         while (!queue1.isEmpty()) {
-            TreeNode<Integer> node = queue1.poll();
+            BinaryTreeNode<Integer> node = queue1.poll();
             level.add(node.val);
 
             if (node.left != null) queue2.add(node.left);
@@ -54,10 +54,10 @@ public class LevelOrderTraversal2 {
         return result;
     }
 
-    public List<List<Integer>> levelOrderBottom2(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom2(BinaryTreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
         queue.add(root);
         int currLevel = 1;
         int nextLevel = 0;
@@ -65,7 +65,7 @@ public class LevelOrderTraversal2 {
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
             for (int i = 0; i < currLevel; i++) {
-                TreeNode<Integer> node = queue.poll();
+                BinaryTreeNode<Integer> node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) {
                     queue.add(node.left);

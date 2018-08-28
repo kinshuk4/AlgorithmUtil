@@ -1,12 +1,12 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import static com.vaani.algo.ds.utils.BinaryTreeUtil.arrayToBinaryTree;
 
 public class MaximumRootToLeafSum {
 
-    public static int maximumPathSum(TreeNode<Integer> root) {
+    public static int maximumPathSum(BinaryTreeNode<Integer> root) {
         if (root == null){
             return 0;
         }
@@ -14,7 +14,7 @@ public class MaximumRootToLeafSum {
         return maximumPathSumHelper(root, 0);
     }
 
-    public static int maximumPathSumHelper(TreeNode<Integer> root, int currPathSum) {
+    public static int maximumPathSumHelper(BinaryTreeNode<Integer> root, int currPathSum) {
         if (root == null) {
             return currPathSum;
         }

@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
@@ -25,7 +25,7 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  */
 public class SymmetricTree {
 
-    public boolean isSymmetric(TreeNode root) {
+    public boolean isSymmetric(BinaryTreeNode root) {
         if (root == null) {
             return true;
         }
@@ -33,7 +33,7 @@ public class SymmetricTree {
         return isSymmetricHelper(root.left, root.right);
     }
 
-    public boolean isSymmetricHelper(TreeNode left, TreeNode right) {
+    public boolean isSymmetricHelper(BinaryTreeNode left, BinaryTreeNode right) {
         if (right == null && left == null)
             return true;
         if (right == null || left == null)
@@ -47,7 +47,7 @@ public class SymmetricTree {
     }
 
 
-    public boolean isSymmetricHelper2(TreeNode n1, TreeNode n2) {
+    public boolean isSymmetricHelper2(BinaryTreeNode n1, BinaryTreeNode n2) {
         if (n1 == null && n2 == null) {
             return true;
         } else if (n1 == null || n2 == null || n1.val != n2.val) {

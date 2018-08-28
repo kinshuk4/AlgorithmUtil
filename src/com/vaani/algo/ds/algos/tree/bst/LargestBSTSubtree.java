@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree,
@@ -10,17 +10,17 @@ import com.vaani.algo.ds.core.tree.TreeNode;
 public class LargestBSTSubtree {
 
     public static void main(String[] args) {
-        TreeNode<Integer> root = new TreeNode(10);
-        TreeNode node5 = new TreeNode(5);
-        TreeNode node15 = new TreeNode(15);
-        TreeNode node6 = new TreeNode(6);
-        TreeNode node7 = new TreeNode(7);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode(10);
+        BinaryTreeNode node5 = new BinaryTreeNode(5);
+        BinaryTreeNode node15 = new BinaryTreeNode(15);
+        BinaryTreeNode node6 = new BinaryTreeNode(6);
+        BinaryTreeNode node7 = new BinaryTreeNode(7);
         node15.right = node7;
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node12 = new TreeNode(12);
-        TreeNode node11 = new TreeNode(11);
-        TreeNode node13 = new TreeNode(13);
-        TreeNode node14 = new TreeNode(14);
+        BinaryTreeNode node3 = new BinaryTreeNode(3);
+        BinaryTreeNode node12 = new BinaryTreeNode(12);
+        BinaryTreeNode node11 = new BinaryTreeNode(11);
+        BinaryTreeNode node13 = new BinaryTreeNode(13);
+        BinaryTreeNode node14 = new BinaryTreeNode(14);
 
 //        root.insertForBst(node5);
 //        root.insertForBst(node6);
@@ -46,14 +46,14 @@ public class LargestBSTSubtree {
     // Given a binary tree, find the largest Binary Search Tree (BST),
     // where largest means BST with largest number of nodes in it.
     // The largest BST may or may not include all of its descendants.
-    public static int largestBSTSubtree(TreeNode<Integer> node) {
+    public static int largestBSTSubtree(BinaryTreeNode<Integer> node) {
         if (node == null)
             return 0;
         if (node.left == null && node.right == null)
             return 1;
         
-        TreeNode<Integer> left = node.left;
-        TreeNode<Integer> right = node.right;
+        BinaryTreeNode<Integer> left = node.left;
+        BinaryTreeNode<Integer> right = node.right;
         int leftNode = largestBSTSubtree(left);
         int rightNode = largestBSTSubtree(right);
 
@@ -83,7 +83,7 @@ public class LargestBSTSubtree {
     // Given a binary tree, find the largest Binary Search Tree (BST),
     // where largest means BST with largest number of nodes in it.
     // The largest BST may or may not include all of its descendants.
-    public static LargestBST largestBSTSubtree1(TreeNode<Integer> node) {
+    public static LargestBST largestBSTSubtree1(BinaryTreeNode<Integer> node) {
         if (node == null)
             return null;
         if (node.left == null && node.right == null) {
@@ -132,7 +132,7 @@ public class LargestBSTSubtree {
     // Given a binary tree, find the largest Binary Search Tree (BST),
     // where largest means BST with largest number of nodes in it.
     // The largest BST must include all of its descendants.
-    public static LargestBST largestBSTSubtree2(TreeNode<Integer> node) {
+    public static LargestBST largestBSTSubtree2(BinaryTreeNode<Integer> node) {
         if (node == null)
             return null;
         if (node.left == null && node.right == null) {
@@ -173,12 +173,12 @@ public class LargestBSTSubtree {
     }
 
     public static class LargestBST {
-        public TreeNode node;
+        public BinaryTreeNode node;
         public int maxNode;
         public int min;
         public int max;
 
-        public LargestBST(TreeNode n, int number, int min_value, int max_value) {
+        public LargestBST(BinaryTreeNode n, int number, int min_value, int max_value) {
             node = n;
             max = max_value;
             min = min_value;

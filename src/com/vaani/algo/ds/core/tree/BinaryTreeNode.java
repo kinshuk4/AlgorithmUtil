@@ -1,39 +1,37 @@
 package com.vaani.algo.ds.core.tree;
 
-import com.vaani.algo.ds.utils.BstUtil;
-
 import java.util.*;
 
 
-public class TreeNode<T> {
-    public TreeNode<T> left;
-    public TreeNode<T> right;
+public class BinaryTreeNode<T> {
+    public BinaryTreeNode<T> left;
+    public BinaryTreeNode<T> right;
     public T val;
     public boolean isVisited;
 
-    public TreeNode(T data) {
+    public BinaryTreeNode(T data) {
         this.val = data;
     }
 
-    public TreeNode(TreeNode<T> left, T data, TreeNode<T> right) {
+    public BinaryTreeNode(BinaryTreeNode<T> left, T data, BinaryTreeNode<T> right) {
         this.left = left;
         this.val = data;
         this.right = right;
     }
 
-    public TreeNode<T> getLeft() {
+    public BinaryTreeNode<T> getLeft() {
         return left;
     }
 
-    public void setLeft(TreeNode<T> left) {
+    public void setLeft(BinaryTreeNode<T> left) {
         this.left = left;
     }
 
-    public TreeNode<T> getRight() {
+    public BinaryTreeNode<T> getRight() {
         return right;
     }
 
-    public void setRight(TreeNode<T> right) {
+    public void setRight(BinaryTreeNode<T> right) {
         this.right = right;
     }
 
@@ -64,7 +62,7 @@ public class TreeNode<T> {
     }
 
     //Using the logic from here : http://stackoverflow.com/questions/20489834/binary-search-tree-recursive-tostring
-    public String detailedToStringHelper(TreeNode root) {
+    public String detailedToStringHelper(BinaryTreeNode root) {
         StringBuilder builder = new StringBuilder();
         if (root == null)
             return "";
@@ -98,7 +96,7 @@ public class TreeNode<T> {
                 '}';
     }
 
-     boolean equalTrees(TreeNode<T> t1, TreeNode<T> t2) {
+     boolean equalTrees(BinaryTreeNode<T> t1, BinaryTreeNode<T> t2) {
         if (t1 == null && t2 == null) {
             return true;
         }

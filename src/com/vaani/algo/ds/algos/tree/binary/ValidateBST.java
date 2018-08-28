@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree, determine if it is a valid binary search tree (BST).
@@ -14,11 +14,11 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  * Created by Xiaomeng on 8/9/2014.
  */
 public class ValidateBST {
-    public boolean isValidBST(TreeNode root) {
+    public boolean isValidBST(BinaryTreeNode root) {
         return isValidBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
-    public boolean isValidBST(TreeNode<Integer> root, int min, int max) {
+    public boolean isValidBST(BinaryTreeNode<Integer> root, int min, int max) {
         if (root == null) return true;
         if (root.val > min && root.val < max
                 && isValidBST(root.left, min, root.val)

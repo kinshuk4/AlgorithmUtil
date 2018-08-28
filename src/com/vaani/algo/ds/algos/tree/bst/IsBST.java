@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 import com.vaani.algo.ds.algos.tree.binary.traversal.BinaryTreeInorderIterator;
 import com.vaani.algo.ds.algos.tree.binary.traversal.BinaryTreePostorderIterator;
 import com.vaani.algo.ds.algos.tree.binary.traversal.BinaryTreePreOrderIterator;
@@ -10,13 +10,13 @@ import com.vaani.algo.ds.algos.tree.binary.traversal.BinaryTreePreOrderIterator;
  */
 public class IsBST {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
-        TreeNode node5 = new TreeNode(5);
-        TreeNode node15 = new TreeNode(15);
-        TreeNode node6 = new TreeNode(6);
-        TreeNode node20 = new TreeNode(20);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node12 = new TreeNode(12);
+        BinaryTreeNode root = new BinaryTreeNode(10);
+        BinaryTreeNode node5 = new BinaryTreeNode(5);
+        BinaryTreeNode node15 = new BinaryTreeNode(15);
+        BinaryTreeNode node6 = new BinaryTreeNode(6);
+        BinaryTreeNode node20 = new BinaryTreeNode(20);
+        BinaryTreeNode node3 = new BinaryTreeNode(3);
+        BinaryTreeNode node12 = new BinaryTreeNode(12);
 //
 //        root.insertForBst(node5);
 //        root.insertForBst(node6);
@@ -30,27 +30,27 @@ public class IsBST {
 
         BinaryTreeInorderIterator treeIterator = new BinaryTreeInorderIterator(root);
         while (treeIterator.hasNext()) {
-            TreeNode next = treeIterator.next();
+            BinaryTreeNode next = treeIterator.next();
             System.out.print(next.val + " ");
         }
         System.out.println();
 
         BinaryTreePostorderIterator postOrderIter = new BinaryTreePostorderIterator(root);
         while (postOrderIter.hasNext()) {
-            TreeNode next = treeIterator.next();
+            BinaryTreeNode next = treeIterator.next();
             System.out.print(next.val + " ");
         }
         System.out.println();
 
         BinaryTreePreOrderIterator preOrderIter = new BinaryTreePreOrderIterator(root);
         while (preOrderIter.hasNext()) {
-            TreeNode next = preOrderIter.next();
+            BinaryTreeNode next = preOrderIter.next();
             System.out.print(next.val + " ");
         }
         System.out.println();
     }
 
-    public static boolean isBST(TreeNode<Integer> node, int min, int max) {
+    public static boolean isBST(BinaryTreeNode<Integer> node, int min, int max) {
         if (node == null) {
             return true;
         }
@@ -62,7 +62,7 @@ public class IsBST {
         }
     }
 
-    public static boolean isBST1(TreeNode<Integer> node, int prev) {
+    public static boolean isBST1(BinaryTreeNode<Integer> node, int prev) {
         if (node == null) {
             return true;
         }

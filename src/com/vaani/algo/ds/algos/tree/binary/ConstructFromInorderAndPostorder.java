@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given inorder and postorder traversal of a tree, construct the binary tree.
@@ -18,18 +18,18 @@ public class ConstructFromInorderAndPostorder {
         test.buildTree(inorder, postorder).display();
     }
 
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
+    public BinaryTreeNode buildTree(int[] inorder, int[] postorder) {
         return buildTree(inorder, 0, inorder.length - 1, postorder, 0, postorder.length - 1);
     }
 
-    public TreeNode buildTree(int[] inorder, int iStart, int iEnd, int[] postorder, int pStart, int pEnd) {
+    public BinaryTreeNode buildTree(int[] inorder, int iStart, int iEnd, int[] postorder, int pStart, int pEnd) {
         if (iStart > iEnd || pStart > pEnd) return null;
 
         int rootVal = postorder[pEnd];
         int index = iStart;
         while (index <= iEnd && inorder[index] != rootVal) index++;
 
-        TreeNode root = new TreeNode(rootVal);
+        BinaryTreeNode root = new BinaryTreeNode(rootVal);
 
         int leftLen = index - iStart;
 

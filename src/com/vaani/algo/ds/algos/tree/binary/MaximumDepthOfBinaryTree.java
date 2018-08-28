@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree, find its maximum depth. </br>
@@ -8,7 +8,7 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  * https://github.com/xiaoningning/LeetCode-1/blob/master/Java/src/net/kenyang/algorithm/MaximumDepthOfBinaryTree.java
  */
 public class MaximumDepthOfBinaryTree {
-    public int maxDepth(TreeNode root) {
+    public int maxDepth(BinaryTreeNode root) {
 
         if (root == null) {
             return 0;

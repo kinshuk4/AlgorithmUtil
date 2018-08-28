@@ -1,18 +1,18 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class SameTree {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(BinaryTreeNode p, BinaryTreeNode q) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         if (p == null && q == null)
             return true;

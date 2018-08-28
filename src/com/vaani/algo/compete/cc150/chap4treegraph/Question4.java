@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,40 +13,40 @@ import java.util.List;
 // O(n) space, O(1) time
 public class Question4 {
 
-    public List<List<TreeNode>> createLists(TreeNode root) {
+    public List<List<BinaryTreeNode>> createLists(BinaryTreeNode root) {
         //  write implementation here
-        List<List<TreeNode>> lists = new ArrayList<List<TreeNode>>();
+        List<List<BinaryTreeNode>> lists = new ArrayList<List<BinaryTreeNode>>();
         createListsIterative(root, lists);
         return lists;
     }
 
-    private void createListsRecursive(TreeNode node, List<List<TreeNode>> lists, int level) {
+    private void createListsRecursive(BinaryTreeNode node, List<List<BinaryTreeNode>> lists, int level) {
         if (node == null) {
             return;
         }
         if (lists.size() == level) {
-            List<TreeNode> list = new ArrayList<TreeNode>();
+            List<BinaryTreeNode> list = new ArrayList<BinaryTreeNode>();
             lists.add(list);
         }
-        List<TreeNode> list = lists.get(level);
+        List<BinaryTreeNode> list = lists.get(level);
         list.add(node);
         createListsRecursive(node.left, lists, level + 1);
         createListsRecursive(node.right, lists, level + 1);
     }
 
-    private void createListsIterative(TreeNode root, List<List<TreeNode>> lists) {
+    private void createListsIterative(BinaryTreeNode root, List<List<BinaryTreeNode>> lists) {
         if (root == null) {
             return;
         }
-        List<TreeNode> list = new ArrayList<TreeNode>();
+        List<BinaryTreeNode> list = new ArrayList<BinaryTreeNode>();
         list.add(root);
 
         while (list.size() > 0) {
-            List<TreeNode> parents = list;
+            List<BinaryTreeNode> parents = list;
             lists.add(parents);
-            list = new ArrayList<TreeNode>();
+            list = new ArrayList<BinaryTreeNode>();
             for (int i = 0; i < parents.size(); ++i) {
-                TreeNode parent = parents.get(i);
+                BinaryTreeNode parent = parents.get(i);
                 if (parent.left != null) {
                     list.add(parent.left);
                 }

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import static com.vaani.algo.ds.utils.BstUtil.*;
 
@@ -45,7 +45,7 @@ import static com.vaani.algo.ds.utils.BstUtil.*;
  */
 public class DeleteFromBst1 {
     //Instead of adding next inorder element , we add the right most child of left parent
-    static TreeNode<Integer> deleteFromBST(TreeNode<Integer> t, int[] queries) {
+    static BinaryTreeNode<Integer> deleteFromBST(BinaryTreeNode<Integer> t, int[] queries) {
         if(t==null || queries==null || queries.length==0){
             return t;
         }
@@ -53,9 +53,9 @@ public class DeleteFromBst1 {
             if(t==null){
                 return null;
             }
-            TreeNode<Integer>[] searchedResult = searchWithParent(t, key, null);
-            TreeNode<Integer> searched = searchedResult[0];
-            TreeNode<Integer> parent = searchedResult[1];
+            BinaryTreeNode<Integer>[] searchedResult = searchWithParent(t, key, null);
+            BinaryTreeNode<Integer> searched = searchedResult[0];
+            BinaryTreeNode<Integer> parent = searchedResult[1];
             if (searched != null) {
 
 
@@ -71,8 +71,8 @@ public class DeleteFromBst1 {
                 } else if (searched.right == null) {
                     t = setParentPtr(parent, searched, searched.left, t);
                 } else {
-                    TreeNode<Integer> curr = searched.left;
-                    TreeNode<Integer> currParent = null;
+                    BinaryTreeNode<Integer> curr = searched.left;
+                    BinaryTreeNode<Integer> currParent = null;
                     while(curr.right!=null){
                         currParent = curr;
                         curr = curr.right;
@@ -97,7 +97,7 @@ public class DeleteFromBst1 {
         return t;
     }
 
-    static TreeNode<Integer> setParentPtr(TreeNode<Integer> parent, TreeNode<Integer> searched, TreeNode<Integer> newChild, TreeNode<Integer> root){
+    static BinaryTreeNode<Integer> setParentPtr(BinaryTreeNode<Integer> parent, BinaryTreeNode<Integer> searched, BinaryTreeNode<Integer> newChild, BinaryTreeNode<Integer> root){
         if(parent == null){
             root = newChild;
             return root;
@@ -113,34 +113,34 @@ public class DeleteFromBst1 {
 
 
     public static void main(String[] args) {
-//        TreeNode<Integer> root = new TreeNode<>(5);
-//        root.setLeft(new TreeNode<>(2));
-//        root.setRight(new TreeNode<>(6));
+//        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(5);
+//        root.setLeft(new BinaryTreeNode<>(2));
+//        root.setRight(new BinaryTreeNode<>(6));
 //
-//        root.getLeft().setLeft(new TreeNode<>(1));
-//        root.getLeft().setRight(new TreeNode<>(3));
+//        root.getLeft().setLeft(new BinaryTreeNode<>(1));
+//        root.getLeft().setRight(new BinaryTreeNode<>(3));
 //
-//        root.getRight().setRight(new TreeNode<>(8));
-//        root.getRight().getRight().setLeft(new TreeNode<>(7));
-        TreeNode<Integer> root = new TreeNode<>(3);
-        root.setLeft(new TreeNode<>(2));
-        root.setRight(new TreeNode<>(5));
+//        root.getRight().setRight(new BinaryTreeNode<>(8));
+//        root.getRight().getRight().setLeft(new BinaryTreeNode<>(7));
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(3);
+        root.setLeft(new BinaryTreeNode<>(2));
+        root.setRight(new BinaryTreeNode<>(5));
 
-        root.getLeft().setLeft(new TreeNode<>(1));
+        root.getLeft().setLeft(new BinaryTreeNode<>(1));
 
 
         deleteFromBST(root, new int[] {3,2,1});
     }
 
 
-    static TreeNode<Integer> deleteFromBST2(TreeNode<Integer> tree, int[] queries) {
+    static BinaryTreeNode<Integer> deleteFromBST2(BinaryTreeNode<Integer> tree, int[] queries) {
         for (int query : queries) {
             tree = deleteFromBstHelper(tree, query);
         }
         return tree;
     }
 
-    private static TreeNode<Integer> deleteFromBstHelper(TreeNode<Integer> root, int value) {
+    private static BinaryTreeNode<Integer> deleteFromBstHelper(BinaryTreeNode<Integer> root, int value) {
         if (root == null) {
             return null;
         }
@@ -148,7 +148,7 @@ public class DeleteFromBst1 {
             if (root.left == null) {
                 return root.right;
             } else {
-                TreeNode<Integer> m = findMaxInBst(root.left);
+                BinaryTreeNode<Integer> m = findMaxInBst(root.left);
                 m.left = deleteMaxInBst(root.left);
                 m.right = root.right;
                 return m;

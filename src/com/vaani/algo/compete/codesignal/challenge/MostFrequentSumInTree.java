@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.codesignal.challenge;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.*;
 
@@ -49,7 +49,7 @@ import java.util.*;
  * mostFrequentSum(t) = [-3].
  */
 public class MostFrequentSumInTree {
-    static int[] mostFrequentSum(TreeNode<Integer> t) {
+    static int[] mostFrequentSum(BinaryTreeNode<Integer> t) {
         if(t==null){
             return new int[]{};
         }
@@ -81,7 +81,7 @@ public class MostFrequentSumInTree {
 
     }
 
-    private static int mostFrequentSumHelper(TreeNode<Integer> root, HashMap<Integer, Integer> sumFrequency) {
+    private static int mostFrequentSumHelper(BinaryTreeNode<Integer> root, HashMap<Integer, Integer> sumFrequency) {
         if (root.left == null && root.right == null) {
             sumFrequency.merge(root.val, 1, (val, acc) -> val + acc);
             return root.val;

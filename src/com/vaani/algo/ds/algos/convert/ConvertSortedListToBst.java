@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.convert;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 import com.vaani.algo.ds.core.list.ListNode;
 
 /*
@@ -18,11 +18,11 @@ Given a singly linked list where elements are sorted in ascending order, convert
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     BinaryTreeNode left;
+ *     BinaryTreeNode right;
+ *     BinaryTreeNode(int x) { val = x; }
  * }
  */
 
@@ -47,7 +47,7 @@ BinaryTree* sortedListToBST(ListNode *head, int n) {
 
 */
 public class ConvertSortedListToBst {
-    public TreeNode sortedListToBST(ListNode head) {
+    public BinaryTreeNode sortedListToBST(ListNode head) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (head == null) {
@@ -60,7 +60,7 @@ public class ConvertSortedListToBst {
         return getNode(head, end);
     }
 
-    public TreeNode getNode(ListNode start, ListNode end) {
+    public BinaryTreeNode getNode(ListNode start, ListNode end) {
         ListNode fast = start;
         ListNode slow = start;
         if (start == end) {
@@ -70,7 +70,7 @@ public class ConvertSortedListToBst {
             slow = slow.next;
             fast = fast.next.next;
         }
-        TreeNode root = new TreeNode(slow.val);
+        BinaryTreeNode root = new BinaryTreeNode(slow.val);
         root.left = getNode(start, slow);
         root.right = getNode(slow.next, end);
         return root;

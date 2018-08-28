@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary search tree (BST), find the lowest common ancestor of two given nodes in the BST.
@@ -12,7 +12,7 @@ public class LowestCommonAncestor1 {
      * O(logN) Time
      * Reference: http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-search-tree.html
      */
-    public static TreeNode getLCA(TreeNode<Integer> root, TreeNode<Integer> p, TreeNode<Integer> q) {
+    public static BinaryTreeNode getLCA(BinaryTreeNode<Integer> root, BinaryTreeNode<Integer> p, BinaryTreeNode<Integer> q) {
         if (root == null || p == null || q == null) return null;
         if (root.val > Math.max(p.val, q.val)) {
             return getLCA(root.left, p, q);
@@ -24,18 +24,18 @@ public class LowestCommonAncestor1 {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(6);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(8);
-        root.left.left = new TreeNode(0);
-        root.left.right = new TreeNode(4);
-        root.right.left = new TreeNode(7);
-        root.right.right = new TreeNode(9);
-        root.left.right.left = new TreeNode(3);
-        root.left.right.right = new TreeNode(5);
+        BinaryTreeNode root = new BinaryTreeNode(6);
+        root.left = new BinaryTreeNode(2);
+        root.right = new BinaryTreeNode(8);
+        root.left.left = new BinaryTreeNode(0);
+        root.left.right = new BinaryTreeNode(4);
+        root.right.left = new BinaryTreeNode(7);
+        root.right.right = new BinaryTreeNode(9);
+        root.left.right.left = new BinaryTreeNode(3);
+        root.left.right.right = new BinaryTreeNode(5);
 
-        TreeNode p = new TreeNode(2);
-        TreeNode q = new TreeNode(8);
+        BinaryTreeNode p = new BinaryTreeNode(2);
+        BinaryTreeNode q = new BinaryTreeNode(8);
         System.out.println(getLCA(root, p, q).val);
     }
 }

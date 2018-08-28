@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree, find the maximum path sum.
@@ -22,22 +22,22 @@ public class BinaryTreeMaximumPathSum {
     int max = Integer.MIN_VALUE;
 
     public static void main(String[] args) {
-        TreeNode<Integer> root = new TreeNode<>(1);
-        root.left = new TreeNode<Integer>(20);
-        root.right = new TreeNode<Integer>(3);
-        root.left.left = new TreeNode<Integer>(40);
-        root.left.right = new TreeNode<Integer>(50);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(1);
+        root.left = new BinaryTreeNode<Integer>(20);
+        root.right = new BinaryTreeNode<Integer>(3);
+        root.left.left = new BinaryTreeNode<Integer>(40);
+        root.left.right = new BinaryTreeNode<Integer>(50);
 
         BinaryTreeMaximumPathSum pathSum = new BinaryTreeMaximumPathSum();
         System.out.println(pathSum.maxPathSum(root));
     }
 
-    public int maxPathSum(TreeNode root) {
+    public int maxPathSum(BinaryTreeNode root) {
         dfs1(root);
         return max;
     }
 
-    public int dfs1(TreeNode<Integer> root) {
+    public int dfs1(BinaryTreeNode<Integer> root) {
         if (root == null) return 0;
         int m = root.val;
 
@@ -54,7 +54,7 @@ public class BinaryTreeMaximumPathSum {
     /**
      * My getTreeHeight, very similar to the first getTreeHeight
      */
-    public int dfs2(TreeNode<Integer> root) {
+    public int dfs2(BinaryTreeNode<Integer> root) {
         if (root == null) return 0;
 
         int left = dfs2(root.left);

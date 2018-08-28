@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
@@ -26,20 +26,20 @@ public class SumRootToLeafNumbers {
     int sum = 0;
 
     public static void main(String[] args) {
-        TreeNode node = new TreeNode(1);
-        node.left = new TreeNode(2);
-        node.right = new TreeNode(3);
+        BinaryTreeNode node = new BinaryTreeNode(1);
+        node.left = new BinaryTreeNode(2);
+        node.right = new BinaryTreeNode(3);
 
         SumRootToLeafNumbers test = new SumRootToLeafNumbers();
         System.out.println(test.sumNumbers(node));
     }
 
-    public int sumNumbers(TreeNode root) {
+    public int sumNumbers(BinaryTreeNode root) {
         sumNumbers(root, 0);
         return sum;
     }
 
-    public void sumNumbers(TreeNode<Integer> root, int count) {
+    public void sumNumbers(BinaryTreeNode<Integer> root, int count) {
         if (root == null) return;
         count = 10 * count + root.val;
         if (root.left == null && root.right == null) {

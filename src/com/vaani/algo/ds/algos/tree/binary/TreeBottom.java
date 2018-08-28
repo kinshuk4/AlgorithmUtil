@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.*;
 
@@ -38,10 +38,10 @@ import java.util.*;
  */
 public class TreeBottom {
     static int[] treeBottom(String tree) {
-        TreeNode<String> root = null;
-        TreeNode<String> currParent = null;
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode<String> treeNode = null;
+        BinaryTreeNode<String> root = null;
+        BinaryTreeNode<String> currParent = null;
+        Stack<BinaryTreeNode> stack = new Stack<>();
+        BinaryTreeNode<String> treeNode = null;
         for (int i = 0; i < tree.length(); i++) {
             char c = tree.charAt(i);
             char d = ')';
@@ -62,7 +62,7 @@ public class TreeBottom {
                         }
                     }
 
-                    treeNode = new TreeNode<>(sb.toString());
+                    treeNode = new BinaryTreeNode<>(sb.toString());
 
                     if (root == null) {
                         root = treeNode;
@@ -71,7 +71,7 @@ public class TreeBottom {
                     stack.push(treeNode);
                     break;
                 case ')':
-                    TreeNode<String> child = null;
+                    BinaryTreeNode<String> child = null;
                     if(!stack.empty())
                         child= stack.pop();
                     if(!stack.empty()){
@@ -98,18 +98,18 @@ public class TreeBottom {
 
         System.out.println(height);
 
-        Queue<TreeNode> q = new LinkedList<>();
+        Queue<BinaryTreeNode> q = new LinkedList<>();
         q.add(root);
         while(height > 1){
             height--;
-            Queue<TreeNode> q2 = new LinkedList<>();
+            Queue<BinaryTreeNode> q2 = new LinkedList<>();
             while(!q.isEmpty()){
-                TreeNode treeNode1 = q.poll();
+                BinaryTreeNode treeNode1 = q.poll();
                 if(treeNode1.getLeft()!=null){
-                    ((LinkedList<TreeNode>) q2).add(treeNode1.getLeft());
+                    ((LinkedList<BinaryTreeNode>) q2).add(treeNode1.getLeft());
                 }
                 if(treeNode1.getRight()!=null){
-                    ((LinkedList<TreeNode>) q2).add(treeNode1.getRight());
+                    ((LinkedList<BinaryTreeNode>) q2).add(treeNode1.getRight());
                 }
             }
             q = q2;
@@ -124,7 +124,7 @@ public class TreeBottom {
         return result;
     }
 
-    static void fixTree(TreeNode<String> root){
+    static void fixTree(BinaryTreeNode<String> root){
         if(root == null){
             return;
         }
@@ -144,7 +144,7 @@ public class TreeBottom {
         return;
     }
 
-    static int heightOfTree(TreeNode root) {
+    static int heightOfTree(BinaryTreeNode root) {
         if (null == root)
             return 0;
         int hLeftSub = heightOfTree(root.left);

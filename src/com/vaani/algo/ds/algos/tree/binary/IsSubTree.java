@@ -1,12 +1,12 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import static com.vaani.algo.ds.algos.tree.binary.IsSameTree.isSameTree;
 
 //https://app.codesignal.com/interview-practice/task/mDpAJnDQkJqaYYsCg
 public class IsSubTree {
-    static boolean isSubtree(TreeNode<Integer> t1, TreeNode<Integer> t2) {
+    static boolean isSubtree(BinaryTreeNode<Integer> t1, BinaryTreeNode<Integer> t2) {
         if (t2 == null) {
             return true;
         } else if (t1 == null) {
@@ -22,7 +22,7 @@ public class IsSubTree {
 
 
     //This logic will fail
-    boolean isSubtree_Wrong(TreeNode<Integer> t1, TreeNode<Integer> t2) {
+    boolean isSubtree_Wrong(BinaryTreeNode<Integer> t1, BinaryTreeNode<Integer> t2) {
         if (t2 == null) {
             return true;
         } else if (t1 == null) {

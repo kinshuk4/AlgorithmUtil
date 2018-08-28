@@ -3,30 +3,30 @@ package com.vaani.algo.ds.algos.tree.bst;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
-/* class TreeNode { */
+/* class BinaryTreeNode { */
 /*   int val; */
-/*   TreeNode left, right; */
-/*   public TreeNode(int val) { */
+/*   BinaryTreeNode left, right; */
+/*   public BinaryTreeNode(int val) { */
 /*     this.val = val; */
 /*   } */
 /* } */
 
 class BST {
-    private TreeNode root;
+    private BinaryTreeNode root;
 
     public void insert(int val) {
         if (root == null) {
-            root = new TreeNode(val);
+            root = new BinaryTreeNode(val);
         } else {
             insert(root, val);
         }
     }
 
-    private TreeNode insert(TreeNode<Integer> node, int val) {
+    private BinaryTreeNode insert(BinaryTreeNode<Integer> node, int val) {
         if (node == null) {
-            return new TreeNode(val);
+            return new BinaryTreeNode(val);
         } else if (node.val <= val) {
             node.right = insert(node.right, val);
         } else {
@@ -35,7 +35,7 @@ class BST {
         return node;
     }
 
-    public TreeNode root() {
+    public BinaryTreeNode root() {
         return root;
     }
 
@@ -53,7 +53,7 @@ public class MostRepeatedKeyInBST {
         return max;
     }
 
-    private void mostRepeatedBST(TreeNode<Integer> node, Map<Integer, Integer> counts) {
+    private void mostRepeatedBST(BinaryTreeNode<Integer> node, Map<Integer, Integer> counts) {
         if (node == null) {
             return;
         } else {

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.*;
 
@@ -28,16 +28,16 @@ import java.util.*;
 public class ZigzagLevelOrder {
     List<List<Integer>> result = new ArrayList<List<Integer>>();
 
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public List<List<Integer>> zigzagLevelOrder(BinaryTreeNode root) {
         if (root == null) return result;
 
-        Queue<TreeNode> queue1 = new LinkedList<TreeNode>();
-        Queue<TreeNode> queue2 = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue1 = new LinkedList<BinaryTreeNode>();
+        Queue<BinaryTreeNode> queue2 = new LinkedList<BinaryTreeNode>();
         List<Integer> level = new ArrayList<Integer>();
         queue1.add(root);
 
         while (!queue1.isEmpty()) {
-            TreeNode<Integer> node = queue1.poll();
+            BinaryTreeNode<Integer> node = queue1.poll();
             level.add(node.val);
 
             if (node.left != null) queue2.add(node.left);
@@ -59,19 +59,19 @@ public class ZigzagLevelOrder {
     /**
      * Two IStack Solution
      */
-    public List<List<Integer>> zigzagLevelOrder2(TreeNode root) {
+    public List<List<Integer>> zigzagLevelOrder2(BinaryTreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
 
-        Stack<TreeNode> currLevel = new Stack<TreeNode>();
-        Stack<TreeNode> nextLevel = new Stack<TreeNode>();
+        Stack<BinaryTreeNode> currLevel = new Stack<BinaryTreeNode>();
+        Stack<BinaryTreeNode> nextLevel = new Stack<BinaryTreeNode>();
 
         currLevel.add(root);
         boolean leftToRight = true;
 
         List<Integer> level = new ArrayList<Integer>();
         while (!currLevel.isEmpty()) {
-            TreeNode<Integer> node = currLevel.pop();
+            BinaryTreeNode<Integer> node = currLevel.pop();
             level.add(node.val);
 
             if (leftToRight) {
@@ -86,7 +86,7 @@ public class ZigzagLevelOrder {
                 result.add(level);
                 level = new ArrayList<Integer>();
                 currLevel = nextLevel;
-                nextLevel = new Stack<TreeNode>();
+                nextLevel = new Stack<BinaryTreeNode>();
                 leftToRight = !leftToRight;
             }
         }

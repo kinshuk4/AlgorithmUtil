@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,23 +24,23 @@ import java.util.Stack;
 public class PostorderTraversal {
     public static void main(String[] args) {
         PostorderTraversal test = new PostorderTraversal();
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
+        BinaryTreeNode root = new BinaryTreeNode(1);
+        root.left = new BinaryTreeNode(2);
+        root.right = new BinaryTreeNode(3);
 
         System.out.println(test.postorderTraversal(root));
     }
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(BinaryTreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         if (root == null) return result;
 
-        Stack<TreeNode> tmpStack = new Stack<TreeNode>();
-        Stack<TreeNode<Integer>> outStack = new Stack<TreeNode<Integer>>();
+        Stack<BinaryTreeNode> tmpStack = new Stack<BinaryTreeNode>();
+        Stack<BinaryTreeNode<Integer>> outStack = new Stack<BinaryTreeNode<Integer>>();
         tmpStack.push(root);
 
         while (!tmpStack.isEmpty()) {
-            TreeNode<Integer> node = tmpStack.pop();
+            BinaryTreeNode<Integer> node = tmpStack.pop();
             outStack.push(node);
             if (node.left != null) tmpStack.add(node.left);
             if (node.right != null) tmpStack.add(node.right);

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 
@@ -18,15 +18,15 @@ https://github.com/paopao2/Algorithm-Practice/blob/master/Binary%20Tree%20Maximu
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class MaximumPathSum {
-    public int maxPathSum(TreeNode root) {
+    public int maxPathSum(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> curMax = new ArrayList<Integer>(1);
@@ -36,7 +36,7 @@ public class MaximumPathSum {
         return curMax.get(0);
     }
 
-    public int subPath(TreeNode<Integer> root, ArrayList<Integer> curMax) {
+    public int subPath(BinaryTreeNode<Integer> root, ArrayList<Integer> curMax) {
         if (root == null) return 0;
         int left = Math.max(0, subPath(root.left, curMax));
         int right = Math.max(0, subPath(root.right, curMax));

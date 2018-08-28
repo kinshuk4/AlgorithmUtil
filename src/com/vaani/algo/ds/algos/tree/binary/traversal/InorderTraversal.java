@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -32,23 +32,23 @@ The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 
 public class InorderTraversal {
     //iterative
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    public ArrayList<Integer> inorderTraversal(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
 
-        TreeNode<Integer> node = root;
+        BinaryTreeNode<Integer> node = root;
         while (!stack.isEmpty() || node != null) {
             if (node != null) {
                 stack.push(node);
@@ -63,7 +63,7 @@ public class InorderTraversal {
     }
 
     //recursive
-    public ArrayList<Integer> inorderTraversalRecursive(TreeNode root) {
+    public ArrayList<Integer> inorderTraversalRecursive(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
@@ -71,7 +71,7 @@ public class InorderTraversal {
         return result;
     }
 
-    public void helper(TreeNode<Integer> root, ArrayList<Integer> result) {
+    public void helper(BinaryTreeNode<Integer> root, ArrayList<Integer> result) {
         if (root == null) return;
         helper(root.left, result);
         result.add(root.val);

@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.utils;
 
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 import com.vaani.algo.ds.core.tree.BstNode;
-import com.vaani.algo.ds.core.tree.TreeNode;
 
 public class BstUtil {
     private BstUtil() {
@@ -20,13 +20,13 @@ public class BstUtil {
         return null;
     }
 
-    public static <T extends Comparable> boolean insert(TreeNode<T> root, T n) {
+    public static <T extends Comparable> boolean insert(BinaryTreeNode<T> root, T n) {
 
         if (n == null)
             return false;
         if (root.val.compareTo(n) <= 0) {
             if (root.left == null) {
-                TreeNode<T> node = new TreeNode<>(n);
+                BinaryTreeNode<T> node = new BinaryTreeNode<>(n);
                 root.left = node;
                 return true;
             } else {
@@ -34,7 +34,7 @@ public class BstUtil {
             }
         } else {
             if (root.right == null) {
-                TreeNode<T> node = new TreeNode<>(n);
+                BinaryTreeNode<T> node = new BinaryTreeNode<>(n);
                 root.right = node;
                 return true;
             } else {
@@ -43,7 +43,7 @@ public class BstUtil {
         }
     }
 
-    public static <T extends Comparable> TreeNode<T> search(TreeNode<T> root, T key) {
+    public static <T extends Comparable> BinaryTreeNode<T> search(BinaryTreeNode<T> root, T key) {
         // Base Cases: root is null or key is present at root
         if (root == null || root.val == key)
             return root;
@@ -56,10 +56,10 @@ public class BstUtil {
         return search(root.right, key);
     }
 
-    public static <T extends Comparable> TreeNode<T>[] searchWithParent(TreeNode<T> root, T key, TreeNode<T> parent) {
+    public static <T extends Comparable> BinaryTreeNode<T>[] searchWithParent(BinaryTreeNode<T> root, T key, BinaryTreeNode<T> parent) {
         // Base Cases: root is null or key is present at root
         if (root == null || root.val == key)
-            return new TreeNode[]{root, parent};
+            return new BinaryTreeNode[]{root, parent};
         parent = root;
         // val is greater than root's key
         if (root.val.compareTo(key) > 0)
@@ -70,25 +70,25 @@ public class BstUtil {
     }
 
 
-    public static <T extends Comparable> TreeNode<T> findMaxInBst(TreeNode<T> root) {
-        TreeNode<T> x = root;
+    public static <T extends Comparable> BinaryTreeNode<T> findMaxInBst(BinaryTreeNode<T> root) {
+        BinaryTreeNode<T> x = root;
         while (x.right != null) {
             x = x.right;
         }
         return x;
     }
 
-    public static <T extends Comparable> TreeNode<T> findMin(TreeNode<T> root) {
-        TreeNode<T> x = root;
+    public static <T extends Comparable> BinaryTreeNode<T> findMin(BinaryTreeNode<T> root) {
+        BinaryTreeNode<T> x = root;
         while (x.left != null) {
             x = x.left;
         }
         return x;
     }
 
-    public static<T extends Comparable> TreeNode<T> deleteMaxInBst(TreeNode<T> root) {
-        TreeNode<T> prev = null;
-        TreeNode<T> curr = root;
+    public static<T extends Comparable> BinaryTreeNode<T> deleteMaxInBst(BinaryTreeNode<T> root) {
+        BinaryTreeNode<T> prev = null;
+        BinaryTreeNode<T> curr = root;
         while (curr.right != null) {
             prev = curr;
             curr = curr.right;

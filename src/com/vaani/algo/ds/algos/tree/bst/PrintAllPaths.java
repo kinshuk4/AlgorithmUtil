@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,12 +14,12 @@ public class PrintAllPaths {
      * Time: O(n)
      * Space: O(n)
      */
-    public static void printAllPaths(TreeNode root) {
+    public static void printAllPaths(BinaryTreeNode root) {
         int[] path = new int[1000];
         printAllPaths(root, path, 0);
     }
 
-    public static void printAllPaths(TreeNode<Integer> root, int[] path, int pathLen) {
+    public static void printAllPaths(BinaryTreeNode<Integer> root, int[] path, int pathLen) {
         if (root == null) return;
 
         path[pathLen] = root.val;
@@ -43,7 +43,7 @@ public class PrintAllPaths {
     /**
      * Iterative: Level-order traversal
      */
-    public static void printAllPathToLeafNonRecursive(TreeNode root) {
+    public static void printAllPathToLeafNonRecursive(BinaryTreeNode root) {
         if (root == null) return;
 
         Queue<Object> q = new LinkedList<Object>();
@@ -51,7 +51,7 @@ public class PrintAllPaths {
         q.add(root.val + "");
 
         while (!q.isEmpty()) {
-            TreeNode head = (TreeNode) q.poll();
+            BinaryTreeNode head = (BinaryTreeNode) q.poll();
             String headPath = (String) q.poll();
 
             if (head.left == null && head.right == null) {
@@ -74,12 +74,12 @@ public class PrintAllPaths {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
-        root.left = new TreeNode(8);
-        root.right = new TreeNode(2);
-        root.left.left = new TreeNode(3);
-        root.left.right = new TreeNode(5);
-        root.right.left = new TreeNode(2);
+        BinaryTreeNode root = new BinaryTreeNode(10);
+        root.left = new BinaryTreeNode(8);
+        root.right = new BinaryTreeNode(2);
+        root.left.left = new BinaryTreeNode(3);
+        root.left.right = new BinaryTreeNode(5);
+        root.right.left = new BinaryTreeNode(2);
         printAllPaths(root);
         System.out.println();
         printAllPathToLeafNonRecursive(root);

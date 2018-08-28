@@ -1,9 +1,9 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 public class IsSameTree {
-    static boolean isSameTree(TreeNode<Integer> t1, TreeNode<Integer> t2) {
+    static boolean isSameTree(BinaryTreeNode<Integer> t1, BinaryTreeNode<Integer> t2) {
         if (t1 == null && t2 == null) {
             return true;
         }

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import static com.vaani.algo.compete.codility.TreeHeight.getTreeHeight;
 
@@ -8,7 +8,7 @@ public class TreeDiameter {
     /**
      * Time Complexity: O(n^2) - so bad
      */
-    int getDiameterBad(TreeNode<Integer> root)
+    int getDiameterBad(BinaryTreeNode<Integer> root)
     {
         /* base case if tree is empty */
         if (root == null)
@@ -31,7 +31,7 @@ public class TreeDiameter {
 
     }
 
-    private static int[] getDiameter(TreeNode root) {
+    private static int[] getDiameter(BinaryTreeNode root) {
         int[] result = new int[]{0,0};    //1st element: diameter, 2nd: height
         if (root == null)  {
             return result;
@@ -51,7 +51,7 @@ public class TreeDiameter {
         return result;
     }
 
-    public static int getBinaryTreeDiameter(TreeNode root)
+    public static int getBinaryTreeDiameter(BinaryTreeNode root)
     {
         return getDiameter(root)[0];
     }

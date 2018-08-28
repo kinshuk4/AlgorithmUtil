@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Implement a function to check if a binary tree is balanced. For the purposes
@@ -10,13 +10,13 @@ import com.vaani.algo.ds.core.tree.TreeNode;
 // O(1) space, O(n) time
 public class Question1 {
 
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalanced(BinaryTreeNode root) {
         // Start typing your Java solution below
         // DO NOT write main() function
         return check(root) >= 0;
     }
 
-    private int check(TreeNode node) {
+    private int check(BinaryTreeNode node) {
         if (node == null) {
             return 0;
         }

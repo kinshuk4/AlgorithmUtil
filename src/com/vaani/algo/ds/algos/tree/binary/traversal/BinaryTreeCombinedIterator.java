@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
@@ -8,21 +8,21 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class BinaryTreeCombinedIterator {
-    private TreeNode root;
-    private Stack<TreeNode> stack;
-    private Stack<TreeNode> preOrderStack;
-    private Queue<TreeNode> postOrderQueue;
+    private BinaryTreeNode root;
+    private Stack<BinaryTreeNode> stack;
+    private Stack<BinaryTreeNode> preOrderStack;
+    private Queue<BinaryTreeNode> postOrderQueue;
 
-    public BinaryTreeCombinedIterator(TreeNode n) {
+    public BinaryTreeCombinedIterator(BinaryTreeNode n) {
         root = n;
-        stack = new Stack<TreeNode>();
+        stack = new Stack<BinaryTreeNode>();
         pushLeft(root);
 
         // for post-order, no need for in-order
-        postOrderQueue = new LinkedList<TreeNode>();
+        postOrderQueue = new LinkedList<BinaryTreeNode>();
         pushPostOrder(root);
         // for pre-order
-        preOrderStack = new Stack<TreeNode>();
+        preOrderStack = new Stack<BinaryTreeNode>();
         preOrderStack.push(root);
     }
 
@@ -41,14 +41,14 @@ public class BinaryTreeCombinedIterator {
         throw new UnsupportedOperationException("remove");
     }
 
-    public TreeNode next() {
+    public BinaryTreeNode next() {
         return inOrderNext();
     }
 
     // in-order : left, root, right
-    public TreeNode inOrderNext() {
+    public BinaryTreeNode inOrderNext() {
         if (hasNext()) {
-            TreeNode node = stack.pop();
+            BinaryTreeNode node = stack.pop();
             pushLeft(node.right);
             return node;
         } else {
@@ -56,7 +56,7 @@ public class BinaryTreeCombinedIterator {
         }
     }
 
-    private void pushLeft(TreeNode node) {
+    private void pushLeft(BinaryTreeNode node) {
         if (node != null) {
             stack.push(node);
             pushLeft(node.left);
@@ -68,9 +68,9 @@ public class BinaryTreeCombinedIterator {
     }
 
     //pre-order: root, left, right
-    public TreeNode preOrderNext() {
+    public BinaryTreeNode preOrderNext() {
         if (!preOrderStack.isEmpty()) {
-            TreeNode node = preOrderStack.pop();
+            BinaryTreeNode node = preOrderStack.pop();
 
             if (node.right != null)
                 preOrderStack.push(node.right);
@@ -83,7 +83,7 @@ public class BinaryTreeCombinedIterator {
         }
     }
 
-    public void pushPostOrder(TreeNode n) {
+    public void pushPostOrder(BinaryTreeNode n) {
         if (n == null)
             return;
         if (n.left != null)
@@ -99,7 +99,7 @@ public class BinaryTreeCombinedIterator {
     }
 
     //post-order: left, right, root
-    public TreeNode postOrderNext() {
+    public BinaryTreeNode postOrderNext() {
         if (!postOrderQueue.isEmpty()) {
             return postOrderQueue.poll();
         } else {

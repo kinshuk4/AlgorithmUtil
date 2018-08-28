@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 
@@ -35,29 +35,29 @@ The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class LevelOrderTraversalBottomUp {
-    public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
+    public ArrayList<ArrayList<Integer>> levelOrderBottom(BinaryTreeNode root) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
 
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;
         }
-        ArrayList<TreeNode> list = new ArrayList<TreeNode>();
+        ArrayList<BinaryTreeNode> list = new ArrayList<BinaryTreeNode>();
         list.add(root);
-        ArrayList<TreeNode> parent = list;
+        ArrayList<BinaryTreeNode> parent = list;
         while (!parent.isEmpty()) {
 
-            ArrayList<TreeNode> cur = new ArrayList<TreeNode>();
+            ArrayList<BinaryTreeNode> cur = new ArrayList<BinaryTreeNode>();
             ArrayList<Integer> parentData = new ArrayList<Integer>();
-            for (TreeNode<Integer> n : parent) {
+            for (BinaryTreeNode<Integer> n : parent) {
                 parentData.add(n.val);
                 if (n.left != null) {
                     cur.add(n.left);

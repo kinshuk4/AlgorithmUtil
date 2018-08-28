@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Stack;
 
@@ -10,10 +10,10 @@ import static java.lang.System.out;
 
 public class ZigZagLevelOrder {
 
-    public static void ZigZagLevelOrder(TreeNode root) {
-        Stack<TreeNode> stack1 = new Stack<TreeNode>();
-        Stack<TreeNode> stack2 = new Stack<TreeNode>();
-        Stack<TreeNode> cur_level, next_level, temp;
+    public static void ZigZagLevelOrder(BinaryTreeNode root) {
+        Stack<BinaryTreeNode> stack1 = new Stack<BinaryTreeNode>();
+        Stack<BinaryTreeNode> stack2 = new Stack<BinaryTreeNode>();
+        Stack<BinaryTreeNode> cur_level, next_level, temp;
 
         boolean left2right = true;
 
@@ -24,7 +24,7 @@ public class ZigZagLevelOrder {
         cur_level.push(root);
 
         while (!cur_level.empty()) {
-            TreeNode node = cur_level.firstElement(); //top();
+            BinaryTreeNode node = cur_level.firstElement(); //top();
             cur_level.pop();
             if (node != null) {
                 out.println(node.val + " ");

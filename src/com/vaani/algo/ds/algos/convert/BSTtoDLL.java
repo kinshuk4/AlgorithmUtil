@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.convert;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -19,17 +19,17 @@ import java.util.Stack;
  */
 public class BSTtoDLL {
     // in place approach
-    static TreeNode prev, head;
+    static BinaryTreeNode prev, head;
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
-        TreeNode node5 = new TreeNode(5);
-        TreeNode node15 = new TreeNode(15);
-        TreeNode node6 = new TreeNode(6);
-        TreeNode node20 = new TreeNode(20);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node12 = new TreeNode(12);
-        TreeNode node14 = new TreeNode(14);
+        BinaryTreeNode root = new BinaryTreeNode(10);
+        BinaryTreeNode node5 = new BinaryTreeNode(5);
+        BinaryTreeNode node15 = new BinaryTreeNode(15);
+        BinaryTreeNode node6 = new BinaryTreeNode(6);
+        BinaryTreeNode node20 = new BinaryTreeNode(20);
+        BinaryTreeNode node3 = new BinaryTreeNode(3);
+        BinaryTreeNode node12 = new BinaryTreeNode(12);
+        BinaryTreeNode node14 = new BinaryTreeNode(14);
 
 //        root.insertForBst(node5);
 //        root.insertForBst(node6);
@@ -39,7 +39,7 @@ public class BSTtoDLL {
 //        root.insertForBst(node12);
 //        root.insertForBst(node14);
 
-        ArrayList<TreeNode> dll = bstToDLL(root);
+        ArrayList<BinaryTreeNode> dll = bstToDLL(root);
         printDll(dll);
 
         bstToDllinPlace(root);
@@ -47,7 +47,7 @@ public class BSTtoDLL {
 
     }
 
-    public static void printDll(TreeNode<Integer> n) {
+    public static void printDll(BinaryTreeNode<Integer> n) {
         if (n == null) {
             System.out.println("null");
         } else {
@@ -62,9 +62,9 @@ public class BSTtoDLL {
         System.out.println();
     }
 
-    public static void printDll(ArrayList<TreeNode> dll) {
+    public static void printDll(ArrayList<BinaryTreeNode> dll) {
         if (dll.size() != 0) {
-            for (TreeNode n : dll) {
+            for (BinaryTreeNode n : dll) {
                 System.out.print(n.val + " ");
             }
         }
@@ -72,13 +72,13 @@ public class BSTtoDLL {
     }
 
     // not in place
-    public static ArrayList<TreeNode> bstToDLL(TreeNode node) {
+    public static ArrayList<BinaryTreeNode> bstToDLL(BinaryTreeNode node) {
         if (node == null)
             return null;
 
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        ArrayList<TreeNode> dll = new ArrayList<TreeNode>();
-        TreeNode current = node;
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+        ArrayList<BinaryTreeNode> dll = new ArrayList<BinaryTreeNode>();
+        BinaryTreeNode current = node;
         boolean done = false;
         while (!done) {
             if (current != null) {
@@ -97,7 +97,7 @@ public class BSTtoDLL {
         return dll;
     }
 
-    public static void bstToDllinPlace(TreeNode p) {
+    public static void bstToDllinPlace(BinaryTreeNode p) {
         if (p == null)
             return;
 
@@ -120,7 +120,7 @@ public class BSTtoDLL {
         // points to the last node, and the last node's right pointer
         // points to the head pointer.
 
-        TreeNode rightTreeNode = p.right;
+        BinaryTreeNode rightTreeNode = p.right;
         head.left = p;
         p.right = head;
         prev = p;
@@ -134,7 +134,7 @@ public class BSTtoDLL {
 
     }
 
-    public static void nodeToString(TreeNode n) {
+    public static void nodeToString(BinaryTreeNode n) {
         if (n == null) {
             System.out.println("null");
         } else {

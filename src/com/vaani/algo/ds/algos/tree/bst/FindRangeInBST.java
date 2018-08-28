@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +12,13 @@ import java.util.List;
  * Print all the keys in increasing order.
  */
 public class FindRangeInBST {
-    public static List<Integer> findElements(TreeNode root, int start, int end) {
+    public static List<Integer> findElements(BinaryTreeNode root, int start, int end) {
         List<Integer> result = new ArrayList<Integer>();
         findElements(root, start, end, result);
         return result;
     }
 
-    private static void findElements(TreeNode<Integer> root, int start, int end, List<Integer> result) {
+    private static void findElements(BinaryTreeNode<Integer> root, int start, int end, List<Integer> result) {
         if (root == null) return;
         if (root.val > start) findElements(root.left, start, end, result);
         if (root.val >= start && root.val <= end) result.add(root.val);
@@ -26,11 +26,11 @@ public class FindRangeInBST {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(20);
-        root.left = new TreeNode(8);
-        root.right = new TreeNode(22);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(12);
+        BinaryTreeNode root = new BinaryTreeNode(20);
+        root.left = new BinaryTreeNode(8);
+        root.right = new BinaryTreeNode(22);
+        root.left.left = new BinaryTreeNode(4);
+        root.left.right = new BinaryTreeNode(12);
         System.out.println(findElements(root, 10, 22));
     }
 }

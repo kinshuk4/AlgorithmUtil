@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -32,11 +32,11 @@ import java.util.Queue;
 public class LevelOrderTraversalSeperatedByLevel {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
+        BinaryTreeNode root = new BinaryTreeNode(3);
+        root.left = new BinaryTreeNode(9);
+        root.right = new BinaryTreeNode(20);
+        root.right.left = new BinaryTreeNode(15);
+        root.right.right = new BinaryTreeNode(7);
 
         LevelOrderTraversalSeperatedByLevel test = new LevelOrderTraversalSeperatedByLevel();
         for (List<Integer> level : test.levelOrder(root)) {
@@ -45,18 +45,18 @@ public class LevelOrderTraversalSeperatedByLevel {
 
     }
 
-    public static List<List<Integer>> levelOrder(TreeNode root) {
+    public static List<List<Integer>> levelOrder(BinaryTreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
 
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                TreeNode<Integer> node = queue.poll();
+                BinaryTreeNode<Integer> node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) queue.add(node.left);
                 if (node.right != null) queue.add(node.right);
@@ -66,11 +66,11 @@ public class LevelOrderTraversalSeperatedByLevel {
         return result;
     }
 
-    public List<List<Integer>> levelOrder2(TreeNode root) {
+    public List<List<Integer>> levelOrder2(BinaryTreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
 
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
         queue.add(root);
 
         int currentLevel = 1;
@@ -78,7 +78,7 @@ public class LevelOrderTraversalSeperatedByLevel {
         List<Integer> level = new ArrayList<Integer>();
 
         while (!queue.isEmpty()) {
-            TreeNode<Integer> node = queue.poll();
+            BinaryTreeNode<Integer> node = queue.poll();
             currentLevel--;
             level.add(node.val);
             if (node.left != null) {

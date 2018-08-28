@@ -1,9 +1,6 @@
 package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
-import com.vaani.algo.ds.core.tree.TreeNode;
-
-import java.util.List;
 
 import static com.vaani.algo.ds.core.list.ListUtil.arrayToList;
 import static com.vaani.algo.ds.core.list.ListUtil.display;

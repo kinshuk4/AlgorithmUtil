@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /*
 Given a binary tree, determine if it is height-balanced.
@@ -9,15 +9,15 @@ For this problem, a height-balanced binary tree is defined as a binary tree in w
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class CheckBinaryTreeBalanced {
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalanced(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (root == null) {
@@ -31,7 +31,7 @@ public class CheckBinaryTreeBalanced {
         }
     }
 
-    public int getHeight(TreeNode node) {
+    public int getHeight(BinaryTreeNode node) {
         if (node == null) {
             return 0;
         }

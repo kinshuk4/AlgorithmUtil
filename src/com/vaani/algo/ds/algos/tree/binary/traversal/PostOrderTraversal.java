@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -21,18 +21,18 @@ Note: Recursive getTreeHeight is trivial, could you do it iteratively?
 
 public class PostOrderTraversal {
     //iterative, two stacks
-    public ArrayList<Integer> postorderTraversal(TreeNode root) {
+    public ArrayList<Integer> postorderTraversal(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
         if (root == null) {
             return result;
         }
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        Stack<TreeNode<Integer>> reverse = new Stack<TreeNode<Integer>>();
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+        Stack<BinaryTreeNode<Integer>> reverse = new Stack<BinaryTreeNode<Integer>>();
         stack.push(root);
         while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
+            BinaryTreeNode node = stack.pop();
             reverse.add(node);
             if (node.left != null) {
                 stack.push(node.left);
@@ -48,13 +48,13 @@ public class PostOrderTraversal {
     }
 
     //iterative, one stack
-    void postOrderTraversalIterative2(TreeNode root) {
+    void postOrderTraversalIterative2(BinaryTreeNode root) {
         if (root == null) return;
-        Stack<TreeNode> s = new Stack<>();
+        Stack<BinaryTreeNode> s = new Stack<>();
         s.push(root);
-        TreeNode prev = null;
+        BinaryTreeNode prev = null;
         while (!s.isEmpty()) {
-            TreeNode curr = s.peek();
+            BinaryTreeNode curr = s.peek();
             if (prev != null || prev.left == curr || prev.right == curr) {
                 if (curr.left != null)
                     s.push(curr.left);
@@ -72,7 +72,7 @@ public class PostOrderTraversal {
     }
 
     //Recursive
-    public ArrayList<Integer> postorderTraversal3(TreeNode root) {
+    public ArrayList<Integer> postorderTraversal3(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
@@ -80,7 +80,7 @@ public class PostOrderTraversal {
         return result;
     }
 
-    public void helper(TreeNode<Integer> root, ArrayList<Integer> result) {
+    public void helper(BinaryTreeNode<Integer> root, ArrayList<Integer> result) {
         if (root == null) {
             return;
         }

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given preorder and inorder traversal of a tree, construct the binary tree.
@@ -19,11 +19,11 @@ public class ConstructFromPreorderAndInorder {
         test.buildTree(preorder, inorder).display();
     }
 
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public BinaryTreeNode buildTree(int[] preorder, int[] inorder) {
         return buildTree(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
     }
 
-    public TreeNode buildTree(int[] preorder, int pStart, int pEnd, int[] inorder, int iStart, int iEnd) {
+    public BinaryTreeNode buildTree(int[] preorder, int pStart, int pEnd, int[] inorder, int iStart, int iEnd) {
         if (pStart > pEnd || iStart > iEnd) return null;
 
         int rootVal = preorder[pStart];
@@ -31,7 +31,7 @@ public class ConstructFromPreorderAndInorder {
         int index = iStart;
         while (index <= iEnd && inorder[index] != rootVal) index++;
 
-        TreeNode root = new TreeNode(rootVal);
+        BinaryTreeNode root = new BinaryTreeNode(rootVal);
         int leftLen = index - iStart;
         int rightLen = iEnd - index;
 

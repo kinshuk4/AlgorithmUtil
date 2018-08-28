@@ -7,7 +7,7 @@ package com.vaani.algo.ds.algos.convert;
  */
 public class ConvertBinaryTreeToDLL {
 
-//    TreeNode bintree2listUtil(DoubleListNode node)
+//    BinaryTreeNode bintree2listUtil(DoubleListNode node)
 //    {
 //        // Base case
 //        if (node == null)
@@ -17,7 +17,7 @@ public class ConvertBinaryTreeToDLL {
 //        if (node.prev != null)
 //        {
 //            // Convert the left subtree
-//            TreeNode left = bintree2listUtil(node.prev);
+//            BinaryTreeNode left = bintree2listUtil(node.prev);
 //
 //            // Find inorder predecessor. After this loop, left
 //            // will point to the inorder predecessor
@@ -53,14 +53,14 @@ public class ConvertBinaryTreeToDLL {
 //    // The main function that first calls bintree2listUtil(), then follows
 //    // step 3 of the above algorithm
 //
-//    TreeNode bintree2list(DoubleListNode node)
+//    BinaryTreeNode bintree2list(DoubleListNode node)
 //    {
 //        // Base case
 //        if (node == null)
 //            return null;
 //
 //        // Convert to DLL using bintree2listUtil()
-//        TreeNode treeNode = bintree2listUtil(node);
+//        BinaryTreeNode treeNode = bintree2listUtil(node);
 //
 //        // bintree2listUtil() returns root node of the converted
 //        // DLL.  We need pointer to the leftmost node which is

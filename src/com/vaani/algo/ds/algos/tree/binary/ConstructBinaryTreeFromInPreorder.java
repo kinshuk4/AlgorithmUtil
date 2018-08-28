@@ -23,10 +23,10 @@ Given the inorder and preorder traversals of a binary tree t, but not t itself, 
 
 */
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 public class ConstructBinaryTreeFromInPreorder {
-    public static TreeNode<Integer> buildTree(int[] preorder, int[] inorder) {
+    public static BinaryTreeNode<Integer> buildTree(int[] preorder, int[] inorder) {
         int preLength = preorder.length;
         int inLength = inorder.length;
 
@@ -37,12 +37,12 @@ public class ConstructBinaryTreeFromInPreorder {
         return buildTreeHelper(preorder, inorder, 0, preLength - 1, 0, inLength - 1);
     }
 
-    public static TreeNode<Integer> buildTreeHelper(int[] preorder, int[] inorder, int preStart, int preEnd, int inStart, int inEnd) {
+    public static BinaryTreeNode<Integer> buildTreeHelper(int[] preorder, int[] inorder, int preStart, int preEnd, int inStart, int inEnd) {
         if (preEnd < preStart || inEnd < inStart) {
             return null;
         }
 
-        TreeNode<Integer> root = new TreeNode<>(preorder[preStart]);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<>(preorder[preStart]);
 
         for (int i = inStart; i <= inEnd; i++) {
             if (inorder[i] == root.val) {
@@ -57,14 +57,14 @@ public class ConstructBinaryTreeFromInPreorder {
         return root;
     }
 
-    TreeNode<Integer> buildTree2(int in[], int pre[], int inStrt, int inEnd, Integer preIndex)
+    BinaryTreeNode<Integer> buildTree2(int in[], int pre[], int inStrt, int inEnd, Integer preIndex)
     {
         if (inStrt > inEnd)
             return null;
 
         /* Pick current node from Preorder traversal using preIndex
            and increment preIndex */
-        TreeNode<Integer> tNode = new TreeNode<Integer>(pre[preIndex++]);
+        BinaryTreeNode<Integer> tNode = new BinaryTreeNode<Integer>(pre[preIndex++]);
 
         /* If this node has no children then return */
         if (inStrt == inEnd)

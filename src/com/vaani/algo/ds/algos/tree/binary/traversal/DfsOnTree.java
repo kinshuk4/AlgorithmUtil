@@ -1,16 +1,16 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Stack;
 
 //https://github.com/paopao2/Algorithm-Practice/blob/master/Breadth:Depth%20First%20Search.java
 public class DfsOnTree {
-    static Stack<TreeNode> stack = new Stack<>();
+    static Stack<BinaryTreeNode> stack = new Stack<>();
 
     public static void main(String[] args) {
-        TreeNode root = getABinaryTree();
+        BinaryTreeNode root = getABinaryTree();
 
         dfsRecursive(root);
     }
@@ -27,36 +27,36 @@ public class DfsOnTree {
      *
      */
 // @formatter:on
-    public static TreeNode getABinaryTree() {
-        TreeNode root = new TreeNode(1);
-        TreeNode l1 = new TreeNode(3);
-        TreeNode r1 = new TreeNode(5);
+    public static BinaryTreeNode getABinaryTree() {
+        BinaryTreeNode root = new BinaryTreeNode(1);
+        BinaryTreeNode l1 = new BinaryTreeNode(3);
+        BinaryTreeNode r1 = new BinaryTreeNode(5);
 
         root.left = l1;
         root.right = r1;
 
-        TreeNode l2 = new TreeNode(9);
+        BinaryTreeNode l2 = new BinaryTreeNode(9);
         l1.left = l2;
 
-        TreeNode l3 = new TreeNode(11);
+        BinaryTreeNode l3 = new BinaryTreeNode(11);
         l2.left = l3;
 
 
-        TreeNode r2 = new TreeNode(12);
-        l3.left = new TreeNode(14);
+        BinaryTreeNode r2 = new BinaryTreeNode(12);
+        l3.left = new BinaryTreeNode(14);
         l3.right = r2;
 
 
-        TreeNode r3 = new TreeNode(13);
+        BinaryTreeNode r3 = new BinaryTreeNode(13);
         r2.right = r3;
 
-        TreeNode r4 = new TreeNode(88);
+        BinaryTreeNode r4 = new BinaryTreeNode(88);
         r1.right = r4;
 
         return root;
     }
 
-    public static void dfsRecursive(TreeNode root) {
+    public static void dfsRecursive(BinaryTreeNode root) {
         if (null == root) {
             return;
         }
@@ -64,7 +64,7 @@ public class DfsOnTree {
         stack.push(root);
 
         if (!stack.isEmpty()) {
-            TreeNode pop = stack.pop();
+            BinaryTreeNode pop = stack.pop();
             System.out.print(pop.val + "\t");
             if (pop.left != null && !pop.left.isVisited) {
                 dfsRecursive(pop.left);
@@ -75,14 +75,14 @@ public class DfsOnTree {
         }
     }
 
-    public static void dfs(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<>();
+    public static void dfs(BinaryTreeNode root) {
+        Stack<BinaryTreeNode> stack = new Stack<>();
         stack.push(root);
         root.isVisited = true;
         System.out.println(root);
         while (!stack.isEmpty()) {
-            TreeNode node = (TreeNode) stack.peek();
-            TreeNode child = getUnvisitedChildNode(node);
+            BinaryTreeNode node = (BinaryTreeNode) stack.peek();
+            BinaryTreeNode child = getUnvisitedChildNode(node);
             if (child != null) {
                 child.isVisited = true;
                 System.out.println(child);
@@ -94,7 +94,7 @@ public class DfsOnTree {
 
     }
 
-    public static TreeNode getUnvisitedChildNode(TreeNode node) {
+    public static BinaryTreeNode getUnvisitedChildNode(BinaryTreeNode node) {
         if (node.left != null && !node.left.isVisited) {
             return node.left;
         } else if (node.right != null && !node.left.isVisited) {

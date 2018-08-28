@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * You have two very large binary trees: T1, with millions of nodes, and T2,
@@ -12,7 +12,7 @@ import com.vaani.algo.ds.core.tree.TreeNode;
 // O(1) space, O(mn) time
 public class Question8 {
 
-    public boolean isSub(TreeNode haystack, TreeNode needle) {
+    public boolean isSub(BinaryTreeNode haystack, BinaryTreeNode needle) {
         if (haystack == null) {
             return false;
         }
@@ -27,7 +27,7 @@ public class Question8 {
         return isSub(haystack.left, needle) || isSub(haystack.right, needle);
     }
 
-    private boolean match(TreeNode haystack, TreeNode needle) {
+    private boolean match(BinaryTreeNode haystack, BinaryTreeNode needle) {
         if (haystack == null && needle == null) {
             return true;
         }

@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -22,15 +22,15 @@ Note: Recursive getTreeHeight is trivial, could you do it iteratively?
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class PreorderTraversal {
-    public ArrayList<Integer> preorderTraversal(TreeNode root) {
+    public ArrayList<Integer> preorderTraversal(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
@@ -38,7 +38,7 @@ public class PreorderTraversal {
         return result;
     }
 
-    public void helper(TreeNode<Integer> root, ArrayList<Integer> result) {
+    public void helper(BinaryTreeNode<Integer> root, ArrayList<Integer> result) {
         if (root == null) {
             return;
         }
@@ -48,17 +48,17 @@ public class PreorderTraversal {
     }
 
     //iterative
-    public ArrayList<Integer> preorderTraversalIter(TreeNode root) {
+    public ArrayList<Integer> preorderTraversalIter(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
         if (root == null) {
             return result;
         }
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
         stack.push(root);
         while (!stack.isEmpty()) {
-            TreeNode<Integer> node = stack.pop();
+            BinaryTreeNode<Integer> node = stack.pop();
             result.add(node.val);
             if (node.right != null) {
                 stack.push(node.right);

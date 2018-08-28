@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -14,8 +14,8 @@ import java.util.Queue;
  */
 public class MinimumDepthBinaryTree {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-//        root.left = new TreeNode(2);
+        BinaryTreeNode root = new BinaryTreeNode(1);
+//        root.left = new BinaryTreeNode(2);
 
         MinimumDepthBinaryTree test = new MinimumDepthBinaryTree();
         System.out.println(test.minDepth(root));
@@ -24,7 +24,7 @@ public class MinimumDepthBinaryTree {
     /**
      * DFS
      */
-    public int minDepth(TreeNode root) {
+    public int minDepth(BinaryTreeNode root) {
         if (root == null) return 0;
         if (root.left == null) return minDepth(root.right) + 1;
         if (root.right == null) return minDepth(root.left) + 1;
@@ -34,15 +34,15 @@ public class MinimumDepthBinaryTree {
     /**
      * Level-first traversal
      */
-    public int minDepth2(TreeNode root) {
+    public int minDepth2(BinaryTreeNode root) {
         if (root == null) return 0;
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
         queue.add(root);
         int level = 1;
         while (!queue.isEmpty()) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                TreeNode node = queue.poll();
+                BinaryTreeNode node = queue.poll();
                 if (node.left == null && node.right == null) {
                     return level;
                 }

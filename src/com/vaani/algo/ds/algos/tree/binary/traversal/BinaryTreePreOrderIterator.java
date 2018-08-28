@@ -1,17 +1,17 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Stack;
 
 public class BinaryTreePreOrderIterator {
 
 
-    private Stack<TreeNode> stack;
-    private TreeNode current;
+    private Stack<BinaryTreeNode> stack;
+    private BinaryTreeNode current;
 
-    public BinaryTreePreOrderIterator(TreeNode node) {
-        stack = new Stack<TreeNode>();
+    public BinaryTreePreOrderIterator(BinaryTreeNode node) {
+        stack = new Stack<BinaryTreeNode>();
         stack.push(node);
     }
 
@@ -19,9 +19,9 @@ public class BinaryTreePreOrderIterator {
         return !stack.isEmpty();
     }
 
-    public TreeNode next() {
+    public BinaryTreeNode next() {
         if (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
+            BinaryTreeNode node = stack.pop();
 
             if (node.right != null)
                 stack.push(node.right);

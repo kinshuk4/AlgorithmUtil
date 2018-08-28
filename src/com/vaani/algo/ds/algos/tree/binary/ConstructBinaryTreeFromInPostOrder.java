@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 
 
@@ -13,27 +13,27 @@ You may assume that duplicates do not exist in the tree.
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class ConstructBinaryTreeFromInPostOrder {
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
+    public BinaryTreeNode buildTree(int[] inorder, int[] postorder) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         int length = inorder.length;
         return buildTreeHelper(inorder, postorder, 0, length - 1, 0, length - 1);
     }
 
-    public TreeNode buildTreeHelper(int[] inorderTree, int[] postorderTree, int inStart, int inEnd, int postStart, int postEnd) {
+    public BinaryTreeNode buildTreeHelper(int[] inorderTree, int[] postorderTree, int inStart, int inEnd, int postStart, int postEnd) {
         if (inEnd < inStart || postEnd < postStart) {
             return null;
         }
 
-        TreeNode<Integer> root = new TreeNode(postorderTree[postEnd]);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode(postorderTree[postEnd]);
         for (int i = inStart; i <= inEnd; i++) {
             if (inorderTree[i] == root.val) {
                 //inEnd - inStart == postEnd - postStart

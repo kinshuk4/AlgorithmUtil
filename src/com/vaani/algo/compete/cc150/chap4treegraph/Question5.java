@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Implement a function to check if a binary tree is a binary search tree.
@@ -8,7 +8,7 @@ import com.vaani.algo.ds.core.tree.TreeNode;
 // O(1) space, O(n) time
 public class Question5 {
 
-    public boolean isValidBST(TreeNode root) {
+    public boolean isValidBST(BinaryTreeNode root) {
         // Start typing your Java solution below
         // DO NOT write main() function
         int min = Integer.MIN_VALUE;
@@ -16,7 +16,7 @@ public class Question5 {
         return validate(root, min, max);
     }
 
-    private boolean validate(TreeNode<Integer> node, int min, int max) {
+    private boolean validate(BinaryTreeNode<Integer> node, int min, int max) {
         if (node == null) {
             return true;
         }

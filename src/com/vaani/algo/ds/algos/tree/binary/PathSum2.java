@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,16 +30,16 @@ import java.util.List;
 public class PathSum2 {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(5);
-        root.left = new TreeNode(4);
-        root.right = new TreeNode(8);
-        root.left.left = new TreeNode(11);
-        root.right.left = new TreeNode(13);
-        root.right.right = new TreeNode(4);
-        root.left.left.left = new TreeNode(7);
-        root.left.left.right = new TreeNode(2);
-        root.right.right.left = new TreeNode(5);
-        root.right.right.right = new TreeNode(1);
+        BinaryTreeNode root = new BinaryTreeNode(5);
+        root.left = new BinaryTreeNode(4);
+        root.right = new BinaryTreeNode(8);
+        root.left.left = new BinaryTreeNode(11);
+        root.right.left = new BinaryTreeNode(13);
+        root.right.right = new BinaryTreeNode(4);
+        root.left.left.left = new BinaryTreeNode(7);
+        root.left.left.right = new BinaryTreeNode(2);
+        root.right.right.left = new BinaryTreeNode(5);
+        root.right.right.right = new BinaryTreeNode(1);
 
         PathSum2 test = new PathSum2();
         for (List<Integer> path : test.pathSum(root, 22)) {
@@ -47,14 +47,14 @@ public class PathSum2 {
         }
     }
 
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public List<List<Integer>> pathSum(BinaryTreeNode root, int sum) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> single = new ArrayList<Integer>();
         pathSum(root, sum, 0, single, result);
         return result;
     }
 
-    public void pathSum(TreeNode<Integer> root, int sum, int count, List<Integer> single, List<List<Integer>> result) {
+    public void pathSum(BinaryTreeNode<Integer> root, int sum, int count, List<Integer> single, List<List<Integer>> result) {
         if (root == null) return;
         count += root.val;
         single.add(root.val);

@@ -1,20 +1,20 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class SumRoottoLeafNumbers {
     int sum;
 
-    public int sumNumbers(TreeNode root) {
+    public int sumNumbers(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         sum = 0;
@@ -25,7 +25,7 @@ public class SumRoottoLeafNumbers {
         return sum;
     }
 
-    public void helper(TreeNode<Integer> root, int curSum) {
+    public void helper(BinaryTreeNode<Integer> root, int curSum) {
         curSum = curSum * 10 + root.val;
         if (root.left == null && root.right == null) {
             sum = sum + curSum;

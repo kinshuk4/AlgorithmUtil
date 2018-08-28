@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Design an algorithm and write code to find the first common ancestor of two
@@ -9,12 +9,12 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  */
 public class Question7 {
 
-    public TreeNode lca(TreeNode root, TreeNode first, TreeNode second) {
+    public BinaryTreeNode lca(BinaryTreeNode root, BinaryTreeNode first, BinaryTreeNode second) {
         return lcaBottomUp(root, first, second);
     }
 
     // top-down: O(n^2) time, O(1) space
-    public TreeNode lcaTopDown(TreeNode root, TreeNode first, TreeNode second) {
+    public BinaryTreeNode lcaTopDown(BinaryTreeNode root, BinaryTreeNode first, BinaryTreeNode second) {
         // write implementation here
         if (root == null || first == null || second == null) {
             return null;
@@ -32,7 +32,7 @@ public class Question7 {
         }
     }
 
-    private int countMatch(TreeNode node, TreeNode first, TreeNode second) {
+    private int countMatch(BinaryTreeNode node, BinaryTreeNode first, BinaryTreeNode second) {
         if (node == null) {
             return 0;
         }
@@ -44,15 +44,15 @@ public class Question7 {
         }
     }
 
-    public TreeNode lcaBottomUp(TreeNode root, TreeNode first, TreeNode second) {
+    public BinaryTreeNode lcaBottomUp(BinaryTreeNode root, BinaryTreeNode first, BinaryTreeNode second) {
         if (root == null) {
             return null;
         }
         if (root == first || root == second) {
             return root;
         }
-        TreeNode lcaLeft = lca(root.left, first, second);
-        TreeNode lcaRight = lca(root.right, first, second);
+        BinaryTreeNode lcaLeft = lca(root.left, first, second);
+        BinaryTreeNode lcaRight = lca(root.right, first, second);
         if (lcaLeft != null && lcaRight != null) { // each side finds one node
             return root;
         }

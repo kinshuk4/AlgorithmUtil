@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 
@@ -25,17 +25,17 @@ return
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class PathSumII {
     ArrayList<ArrayList<Integer>> result;
 
-    public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
+    public ArrayList<ArrayList<Integer>> pathSum(BinaryTreeNode root, int sum) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         result = new ArrayList<ArrayList<Integer>>();
@@ -46,7 +46,7 @@ public class PathSumII {
         return result;
     }
 
-    public void helper(TreeNode<Integer> root, int curSum, int target, ArrayList<Integer> list) {
+    public void helper(BinaryTreeNode<Integer> root, int curSum, int target, ArrayList<Integer> list) {
         ArrayList<Integer> curList = new ArrayList<Integer>(list);
         if (root == null) {
             return;

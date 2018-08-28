@@ -1,18 +1,18 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class PathSum {
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSum(BinaryTreeNode root, int sum) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (root == null) {
@@ -21,7 +21,7 @@ public class PathSum {
         return helper(root, 0, sum);
     }
 
-    public boolean helper(TreeNode<Integer> root, int curSum, int target) {
+    public boolean helper(BinaryTreeNode<Integer> root, int curSum, int target) {
         if (root == null) {
             return curSum == target;
         }

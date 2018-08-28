@@ -1,6 +1,6 @@
 package com.vaani.algo.misc;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -13,14 +13,14 @@ import java.util.Queue;
  */
 public class RightDeepestLeaf {
 
-    public TreeNode findRightDeepestLeaf(TreeNode root) {
+    public BinaryTreeNode findRightDeepestLeaf(BinaryTreeNode root) {
         if (root == null) {
             return null;
         }
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
         queue.offer(root);
 
-        TreeNode cur = null;
+        BinaryTreeNode cur = null;
         while (!queue.isEmpty()) {
             cur = queue.poll();
             if (cur.left != null) {

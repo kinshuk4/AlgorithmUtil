@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Question9 {
 
-    public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
+    public ArrayList<ArrayList<Integer>> pathSum(BinaryTreeNode root, int sum) {
         // Start typing your Java solution below
         // DO NOT write main() function
         ArrayList<ArrayList<Integer>> paths = new ArrayList<ArrayList<Integer>>();
@@ -21,7 +21,7 @@ public class Question9 {
         return paths;
     }
 
-    private void check(TreeNode<Integer> node, int sum, int curSum,
+    private void check(BinaryTreeNode<Integer> node, int sum, int curSum,
                        ArrayList<Integer> curPath, ArrayList<ArrayList<Integer>> paths) {
         if (node == null) {
             return;

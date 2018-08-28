@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -27,14 +27,14 @@ import java.util.TreeMap;
  * So expected output is 4, 2, 12, 3 and 7
  */
 public class BinaryTreeVerticalSum {
-    public static void verticalSum(TreeNode root) {
+    public static void verticalSum(BinaryTreeNode root) {
         if (root == null) return;
         Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
         verticalSum(root, 0, map);
         System.out.println(map.entrySet());
     }
 
-    public static void verticalSum(TreeNode<Integer> root, int hd, Map<Integer, Integer> map) {
+    public static void verticalSum(BinaryTreeNode<Integer> root, int hd, Map<Integer, Integer> map) {
         if (root == null) return;
         int sum = map.get(hd) == null ? 0 : map.get(hd);
         map.put(hd, root.val + sum);
@@ -44,13 +44,13 @@ public class BinaryTreeVerticalSum {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(7);
+        BinaryTreeNode root = new BinaryTreeNode(1);
+        root.left = new BinaryTreeNode(2);
+        root.right = new BinaryTreeNode(3);
+        root.left.left = new BinaryTreeNode(4);
+        root.left.right = new BinaryTreeNode(5);
+        root.right.left = new BinaryTreeNode(6);
+        root.right.right = new BinaryTreeNode(7);
         verticalSum(root);
     }
 }

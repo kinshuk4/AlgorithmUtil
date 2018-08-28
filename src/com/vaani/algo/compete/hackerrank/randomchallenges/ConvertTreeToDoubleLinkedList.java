@@ -4,7 +4,7 @@ package com.vaani.algo.compete.hackerrank.randomchallenges;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Created by mykola on 06.05.15.
@@ -29,7 +29,7 @@ public class ConvertTreeToDoubleLinkedList {
     }
 
     public static void main(String... args) {
-        DLLNode<Character> tail = ConvertTreeToDoubleLinkedList.<Character>convertToDLLDFS(new TreeNode(4));
+        DLLNode<Character> tail = ConvertTreeToDoubleLinkedList.<Character>convertToDLLDFS(new BinaryTreeNode(4));
         DLLNode<Character> head = tail;
         while (head.previous != null) {
             head = head.previous;
@@ -45,15 +45,15 @@ public class ConvertTreeToDoubleLinkedList {
      * @param <E>
      * @return
      */
-    private static <E> DLLNode<E> convertToDLLBFS(TreeNode<E> root) {
+    private static <E> DLLNode<E> convertToDLLBFS(BinaryTreeNode<E> root) {
         if (root == null) {
             return null;
         }
         DLLNode<E> currentNode = null;
-        Queue<TreeNode<E>> treeNodesQueue = new LinkedList<>();
+        Queue<BinaryTreeNode<E>> treeNodesQueue = new LinkedList<>();
         treeNodesQueue.offer(root);
         while (!treeNodesQueue.isEmpty()) {
-            TreeNode<E> n = treeNodesQueue.remove();
+            BinaryTreeNode<E> n = treeNodesQueue.remove();
             DLLNode<E> dllNode = new DLLNode<>(n.val);
             if (currentNode != null) {
                 currentNode.linkNext(dllNode);
@@ -65,14 +65,14 @@ public class ConvertTreeToDoubleLinkedList {
         return currentNode;
     }
 
-    private static <E> DLLNode<E> convertToDLLDFS(TreeNode<E> root) {
+    private static <E> DLLNode<E> convertToDLLDFS(BinaryTreeNode<E> root) {
         if (root == null) {
             return null;
         }
         return convertToDLLDFS(root, null);
     }
 
-    private static <E> DLLNode<E> convertToDLLDFS(TreeNode<E> root, DLLNode<E> currentTail) {
+    private static <E> DLLNode<E> convertToDLLDFS(BinaryTreeNode<E> root, DLLNode<E> currentTail) {
         DLLNode<E> tail = new DLLNode<>(root.val);
         if (currentTail != null) {
             currentTail.linkNext(tail);

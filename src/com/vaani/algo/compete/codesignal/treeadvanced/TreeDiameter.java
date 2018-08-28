@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.codesignal.treeadvanced;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.*;
 
@@ -43,20 +43,20 @@ import static com.vaani.algo.ds.algos.tree.binary.TreeDiameter.getBinaryTreeDiam
  */
 public class TreeDiameter {
     static int treeDiameter(int n, int[][] tree) {
-        Map<Integer, TreeNode<Integer>> map = new HashMap<>();
-        TreeNode<Integer> root = null;
+        Map<Integer, BinaryTreeNode<Integer>> map = new HashMap<>();
+        BinaryTreeNode<Integer> root = null;
         for(int[] edge: tree){
-            TreeNode<Integer> node = new TreeNode<>(edge[1]);
+            BinaryTreeNode<Integer> node = new BinaryTreeNode<>(edge[1]);
             map.put(edge[1], node);
             if(map.containsKey(edge[0])){
-                TreeNode<Integer> parent = map.get(edge[0]);
+                BinaryTreeNode<Integer> parent = map.get(edge[0]);
                 if(parent.left!=null){
                     parent.right = node;
                 }else{
                     parent.left = node;
                 }
             }else{
-                TreeNode<Integer> parent = new TreeNode<>(edge[0]);
+                BinaryTreeNode<Integer> parent = new BinaryTreeNode<>(edge[0]);
                 if(root == null){
                     root = parent;
                 }

@@ -1,7 +1,7 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
 import com.vaani.algo.ds.core.list.ListNode;
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
@@ -29,14 +29,14 @@ public class ConvertSortedListToBST {
      * @param head
      * @return
      */
-    public TreeNode sortedListToBST(ListNode head) {
+    public BinaryTreeNode sortedListToBST(ListNode head) {
         if (head == null) return null;
-        if (head.next == null) return new TreeNode(head.val);
+        if (head.next == null) return new BinaryTreeNode(head.val);
         ListNode preMid = getPreMid(head);
         ListNode mid = preMid.next;
         preMid.next = null;
         ListNode first = head, second = mid.next;
-        TreeNode root = new TreeNode(mid.val);
+        BinaryTreeNode root = new BinaryTreeNode(mid.val);
         root.left = sortedListToBST(first);
         root.right = sortedListToBST(second);
         return root;
@@ -60,7 +60,7 @@ public class ConvertSortedListToBST {
      * @param head
      * @return
      */
-    public TreeNode sortedListToBST2(ListNode head) {
+    public BinaryTreeNode sortedListToBST2(ListNode head) {
         ListNode node = head;
         this.head = head;
         int len = 0;
@@ -71,11 +71,11 @@ public class ConvertSortedListToBST {
         return sortedListToBST2(0, len - 1);
     }
 
-    public TreeNode sortedListToBST2(int start, int end) {
+    public BinaryTreeNode sortedListToBST2(int start, int end) {
         if (start > end) return null;
         int mid = start + (end - start) / 2;
-        TreeNode left = sortedListToBST2(start, mid - 1);
-        TreeNode root = new TreeNode(head.val);
+        BinaryTreeNode left = sortedListToBST2(start, mid - 1);
+        BinaryTreeNode root = new BinaryTreeNode(head.val);
         head = head.next;
         root.left = left;
         root.right = sortedListToBST2(mid + 1, end);

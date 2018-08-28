@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given two binary trees, write a function to check if they are equal or not.
@@ -9,19 +9,19 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  */
 public class SameTree {
     public static void main(String[] args) {
-        TreeNode root1 = new TreeNode(1);
-        root1.left = new TreeNode(2);
-        root1.right = new TreeNode(3);
+        BinaryTreeNode root1 = new BinaryTreeNode(1);
+        root1.left = new BinaryTreeNode(2);
+        root1.right = new BinaryTreeNode(3);
 
-        TreeNode root2 = new TreeNode(1);
-        root2.left = new TreeNode(2);
-        root2.right = new TreeNode(3);
+        BinaryTreeNode root2 = new BinaryTreeNode(1);
+        root2.left = new BinaryTreeNode(2);
+        root2.right = new BinaryTreeNode(3);
 
         SameTree test = new SameTree();
         System.out.println(test.isSameTree(root1, root2));
     }
 
-    public boolean isSameTree(TreeNode p, TreeNode q) {
+    public boolean isSameTree(BinaryTreeNode p, BinaryTreeNode q) {
         if (p == null && q == null)
             return true;
         else if (p == null || q == null || p.val.equals(q.val))

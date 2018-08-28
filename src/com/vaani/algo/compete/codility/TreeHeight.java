@@ -1,10 +1,10 @@
 package com.vaani.algo.compete.codility;
 
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 public class TreeHeight {
-	public static int getTreeHeight(TreeNode<Integer> T) {
+	public static int getTreeHeight(BinaryTreeNode<Integer> T) {
 		if (T == null) {
 			return -1;
 		}

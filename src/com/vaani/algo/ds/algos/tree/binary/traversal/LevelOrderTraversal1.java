@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.ArrayDeque;
 import java.util.LinkedList;
@@ -10,13 +10,13 @@ import java.util.Queue;
 
 public class LevelOrderTraversal1 {
     public static void main(String[] args) {
-                TreeNode root = new TreeNode(1);
-        TreeNode l1 = new TreeNode(3);
-        TreeNode l2 = new TreeNode(9);
-        TreeNode l3 = new TreeNode(11);
-        TreeNode r1 = new TreeNode(5);
-        TreeNode r2 = new TreeNode(12);
-        TreeNode r3 = new TreeNode(13);
+                BinaryTreeNode root = new BinaryTreeNode(1);
+        BinaryTreeNode l1 = new BinaryTreeNode(3);
+        BinaryTreeNode l2 = new BinaryTreeNode(9);
+        BinaryTreeNode l3 = new BinaryTreeNode(11);
+        BinaryTreeNode r1 = new BinaryTreeNode(5);
+        BinaryTreeNode r2 = new BinaryTreeNode(12);
+        BinaryTreeNode r3 = new BinaryTreeNode(13);
         root.left = l1;
         root.right = r1;
         l1.left = l2;
@@ -28,16 +28,16 @@ public class LevelOrderTraversal1 {
         List<Integer> traversal = levelOrderTraversal(root);
     }
 
-    public static <T> List<T> levelOrderTraversal(TreeNode<T> root) {
+    public static <T> List<T> levelOrderTraversal(BinaryTreeNode<T> root) {
         List<T> result = new LinkedList<>();
         if (root == null) {
             return result;
         }
-        Queue<TreeNode<T>> queue = new ArrayDeque<>();
+        Queue<BinaryTreeNode<T>> queue = new ArrayDeque<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            TreeNode<T> remove = queue.remove();
+            BinaryTreeNode<T> remove = queue.remove();
             result.add(remove.val);
             if (remove.left != null) {
                 queue.add(remove.left);

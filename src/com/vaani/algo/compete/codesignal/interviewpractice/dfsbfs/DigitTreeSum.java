@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.codesignal.interviewpractice.dfsbfs;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 
 import java.util.*;
@@ -46,7 +46,7 @@ import static com.vaani.algo.ds.utils.BinaryTreeUtil.arrayToBinaryTree;
  * and their sum is 103 + 101 + 14 = 218
  */
 public class DigitTreeSum {
-    static long digitTreeSum(TreeNode<Integer> root) {
+    static long digitTreeSum(BinaryTreeNode<Integer> root) {
         if (root == null) return 0;
         if (root.left == null && root.right == null) {
             return root.val;
@@ -58,7 +58,7 @@ public class DigitTreeSum {
         return leaves.stream().mapToLong(Long::longValue).sum();
     }
 
-    static void digitTreeSumHelper(TreeNode<Integer> root, long currParent, List<Long> leaves) {
+    static void digitTreeSumHelper(BinaryTreeNode<Integer> root, long currParent, List<Long> leaves) {
         if (root == null) {
             return;
         }

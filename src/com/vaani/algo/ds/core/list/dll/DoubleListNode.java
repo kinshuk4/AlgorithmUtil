@@ -47,9 +47,9 @@ public final class DoubleListNode<T> {
     }
 
 
-//	public T  TreeNode<T> convertDLLNodeToTreeNode(DoubleListNode node) {
+//	public T  BinaryTreeNode<T> convertDLLNodeToTreeNode(DoubleListNode node) {
 //		if(node!=null){
-//			return new TreeNode<T>(convertDLLNodeToTreeNode(node.prev), node.value, convertDLLNodeToTreeNode(node.next));
+//			return new BinaryTreeNode<T>(convertDLLNodeToTreeNode(node.prev), node.value, convertDLLNodeToTreeNode(node.next));
 //		}else{
 //			return null;
 //		}

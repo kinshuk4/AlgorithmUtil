@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Two elements of a binary search tree (BST) are swapped by mistake.
@@ -12,31 +12,31 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  * Created by Xiaomeng on 8/16/2014.
  */
 public class RecoverBinarySearchTree {
-    TreeNode<Integer> pre;
-    TreeNode<Integer> first;
-    TreeNode<Integer> second;
+    BinaryTreeNode<Integer> pre;
+    BinaryTreeNode<Integer> first;
+    BinaryTreeNode<Integer> second;
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(8);
-        root.left = new TreeNode(5);
-        root.right = new TreeNode(6);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(7);
-        root.left.right.left = new TreeNode(10);
+        BinaryTreeNode root = new BinaryTreeNode(8);
+        root.left = new BinaryTreeNode(5);
+        root.right = new BinaryTreeNode(6);
+        root.left.left = new BinaryTreeNode(4);
+        root.left.right = new BinaryTreeNode(7);
+        root.left.right.left = new BinaryTreeNode(10);
         //root.display();
         RecoverBinarySearchTree recover = new RecoverBinarySearchTree();
         recover.recoverTree(root);
         root.display();
     }
 
-    public void recoverTree(TreeNode<Integer> root) {
+    public void recoverTree(BinaryTreeNode<Integer> root) {
         inorder(root);
         int temp = first.val;
         first.val = second.val;
         second.val = temp;
     }
 
-    public void inorder(TreeNode<Integer> root) {
+    public void inorder(BinaryTreeNode<Integer> root) {
         if (root == null) return;
         inorder(root.left);
         if (pre == null) {

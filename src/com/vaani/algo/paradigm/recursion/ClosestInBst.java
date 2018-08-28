@@ -1,13 +1,13 @@
 package com.vaani.algo.paradigm.recursion;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Find the closest element in a BST.
  */
 public class ClosestInBst {
 
-    public int closest(TreeNode<Integer> root, int target) {
+    public int closest(BinaryTreeNode<Integer> root, int target) {
         int[] res = {-1};
         int[] diff = {Integer.MAX_VALUE};
 
@@ -15,7 +15,7 @@ public class ClosestInBst {
         return res[0];
     }
 
-    private void closest(TreeNode<Integer> node, int target, int[] curRes, int[] diff) {
+    private void closest(BinaryTreeNode<Integer> node, int target, int[] curRes, int[] diff) {
 
         if (node == null) {
             return;

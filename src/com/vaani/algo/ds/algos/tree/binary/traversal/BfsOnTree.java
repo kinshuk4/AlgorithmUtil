@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary.traversal;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -22,20 +22,20 @@ public class BfsOnTree {
      */
 // @formatter:on
     public static void main(String[] args) {
-        TreeNode root = DfsOnTree.getABinaryTree();
+        BinaryTreeNode root = DfsOnTree.getABinaryTree();
 
         bfsIterative(root);
     }
 
-    public static void bfsIterative(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
+    public static void bfsIterative(BinaryTreeNode root) {
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.add(root);
         System.out.println(root);
         root.isVisited = true;
         while (!queue.isEmpty()) {
-            TreeNode node = queue.remove();
+            BinaryTreeNode node = queue.remove();
 
-            TreeNode child = DfsOnTree.getUnvisitedChildNode(node);
+            BinaryTreeNode child = DfsOnTree.getUnvisitedChildNode(node);
 
             while (child != null) {
                 child.isVisited = true;

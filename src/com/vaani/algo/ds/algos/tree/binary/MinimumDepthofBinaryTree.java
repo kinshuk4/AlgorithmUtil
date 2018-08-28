@@ -1,18 +1,18 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Definition for binary tree
- * public class TreeNode {
+ * public class BinaryTreeNode {
  * int val;
- * TreeNode left;
- * TreeNode right;
- * TreeNode(int x) { val = x; }
+ * BinaryTreeNode left;
+ * BinaryTreeNode right;
+ * BinaryTreeNode(int x) { val = x; }
  * }
  */
 public class MinimumDepthofBinaryTree {
-    public int minDepth(TreeNode root) {
+    public int minDepth(BinaryTreeNode root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         if (root == null) {
@@ -21,7 +21,7 @@ public class MinimumDepthofBinaryTree {
         return getDepth(root);
     }
 
-    public int getDepth(TreeNode node) {
+    public int getDepth(BinaryTreeNode node) {
         if (node.left == null && node.right == null) {
             return 1;
         } else if (node.left == null) {

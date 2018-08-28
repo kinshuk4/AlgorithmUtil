@@ -1,6 +1,6 @@
 package com.vaani.algo.compete.hackerrank.randomchallenges;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -13,16 +13,16 @@ public class PrintBinaryTree {
         printLevelsComaSeparated(createTree());
     }
 
-    private static <E> void printLevelsComaSeparated(TreeNode<E> root){
+    private static <E> void printLevelsComaSeparated(BinaryTreeNode<E> root){
         if(root == null){
             return;
         }
-        Queue<TreeNode> currentLevel = new LinkedList<>();
+        Queue<BinaryTreeNode> currentLevel = new LinkedList<>();
         currentLevel.offer(root);
         while (!currentLevel.isEmpty()) {
-            Queue<TreeNode> nextLevel = new LinkedList<>();
+            Queue<BinaryTreeNode> nextLevel = new LinkedList<>();
             while (!currentLevel.isEmpty()) {
-                TreeNode<E> n = currentLevel.remove();
+                BinaryTreeNode<E> n = currentLevel.remove();
                 System.out.print(n.getVal().toString());
                 if(!currentLevel.isEmpty()){
                     System.out.print(',');
@@ -37,18 +37,18 @@ public class PrintBinaryTree {
         }
     }
 
-    public static TreeNode<Character> createTree() {
-        TreeNode<Character> root = new TreeNode<>('A');
+    public static BinaryTreeNode<Character> createTree() {
+        BinaryTreeNode<Character> root = new BinaryTreeNode<>('A');
 
-        root.left = new TreeNode<>('B');
-        root.right = new TreeNode<>('E');
+        root.left = new BinaryTreeNode<>('B');
+        root.right = new BinaryTreeNode<>('E');
 
-        root.left.left = new TreeNode<>('C');
-        root.left.right = new TreeNode<>('D');
-        root.right.right = new TreeNode<>('E');
+        root.left.left = new BinaryTreeNode<>('C');
+        root.left.right = new BinaryTreeNode<>('D');
+        root.right.right = new BinaryTreeNode<>('E');
 
-        root.right.right.right = new TreeNode<>('F');
-        root.left.left.left = new TreeNode<>('G');
+        root.right.right.right = new BinaryTreeNode<>('F');
+        root.left.left.left = new BinaryTreeNode<>('G');
         return root;
     }
 

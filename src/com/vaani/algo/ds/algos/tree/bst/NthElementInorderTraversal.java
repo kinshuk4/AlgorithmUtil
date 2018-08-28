@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.bst;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 import java.util.Stack;
 
@@ -11,18 +11,18 @@ public class NthElementInorderTraversal {
     int order = 0;
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode<Integer>(5);
-        root.left = new TreeNode<Integer>(4);
-        root.left.left = new TreeNode<Integer>(2);
-        root.left.right = new TreeNode<Integer>(1);
-        root.right = new TreeNode<Integer>(3);
-        root.right.right = new TreeNode<Integer>(6);
+        BinaryTreeNode root = new BinaryTreeNode<Integer>(5);
+        root.left = new BinaryTreeNode<Integer>(4);
+        root.left.left = new BinaryTreeNode<Integer>(2);
+        root.left.right = new BinaryTreeNode<Integer>(1);
+        root.right = new BinaryTreeNode<Integer>(3);
+        root.right.right = new BinaryTreeNode<Integer>(6);
 
 
         System.out.println(getNthIterative(root, 2));
     }
 
-    public int getNth(TreeNode<Integer> node, int n) {
+    public int getNth(BinaryTreeNode<Integer> node, int n) {
         if (node == null) return -1;
         int left = getNth(node.left, n);
         if (left != -1) return left;
@@ -32,18 +32,18 @@ public class NthElementInorderTraversal {
         return right;
     }
 
-    public static int getNthIterative(TreeNode<Integer> root, int n) {
+    public static int getNthIterative(BinaryTreeNode<Integer> root, int n) {
         if (root == null) {
             return -1;
         }
-        Stack<TreeNode<Integer>> stack = new Stack<>();
+        Stack<BinaryTreeNode<Integer>> stack = new Stack<>();
 
         while (!stack.isEmpty() || root != null) {
             if (root != null) {
                 stack.push(root);
                 root = root.left;
             } else {
-                TreeNode<Integer> node = stack.pop();
+                BinaryTreeNode<Integer> node = stack.pop();
                 n--;
                 if (n == 0) {
                     return node.val;

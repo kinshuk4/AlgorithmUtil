@@ -1,6 +1,6 @@
 package com.vaani.algo.paradigm.recursion;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 public class LowestCommonAncestor {
 
@@ -52,15 +52,15 @@ public class LowestCommonAncestor {
      * @param right
      * @return
      */
-    public TreeNode lcaRecursive(TreeNode root, TreeNode left, TreeNode right) {
+    public BinaryTreeNode lcaRecursive(BinaryTreeNode root, BinaryTreeNode left, BinaryTreeNode right) {
         if (root == null) {
             return null;
         }
         if (root == left || root == right) {
             return root;
         }
-        TreeNode lcaLeft = lcaRecursive(root.left, left, right);
-        TreeNode lcaRight = lcaRecursive(root.right, left, right);
+        BinaryTreeNode lcaLeft = lcaRecursive(root.left, left, right);
+        BinaryTreeNode lcaRight = lcaRecursive(root.right, left, right);
         if (lcaLeft != null && lcaRight != null) { // both sides find either p or q
             return root;
         }

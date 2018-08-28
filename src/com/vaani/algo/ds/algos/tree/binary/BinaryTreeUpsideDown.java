@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.tree.binary;
 
-import com.vaani.algo.ds.core.tree.TreeNode;
+import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
 /**
  * Given a binary tree where all the right nodes are either leaf nodes with a sibling (a left node that shares the same parent node) or empty,
@@ -23,11 +23,11 @@ import com.vaani.algo.ds.core.tree.TreeNode;
  * 3   1
  */
 public class BinaryTreeUpsideDown {
-    public static TreeNode UpsideDownBinaryTree(TreeNode root) {
+    public static BinaryTreeNode UpsideDownBinaryTree(BinaryTreeNode root) {
         if (root == null || root.left == null) return root;
 
-        TreeNode leftRoot = UpsideDownBinaryTree(root.left);
-        TreeNode node = leftRoot;
+        BinaryTreeNode leftRoot = UpsideDownBinaryTree(root.left);
+        BinaryTreeNode node = leftRoot;
         while (node.right != null) {
             node = node.right;
         }
@@ -40,11 +40,11 @@ public class BinaryTreeUpsideDown {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        BinaryTreeNode root = new BinaryTreeNode(1);
+        root.left = new BinaryTreeNode(2);
+        root.right = new BinaryTreeNode(3);
+        root.left.left = new BinaryTreeNode(4);
+        root.left.right = new BinaryTreeNode(5);
         UpsideDownBinaryTree(root).display();
         //root.display();
     }
