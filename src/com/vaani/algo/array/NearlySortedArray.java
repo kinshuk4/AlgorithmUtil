@@ -2,6 +2,7 @@ package com.vaani.algo.array;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
 
 /**
  * Given an array of n elements, where each element is at most k away from its target position, devise an algorithm that sorts in O(n log k) time.
@@ -61,11 +62,6 @@ public class NearlySortedArray {
         }
     }
 
-    public static void swap(int[] arr, int x, int y) {
-        int tmp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = tmp;
-    }
 
     public static void main(String[] args) {
         int[] arr = {3, 4, 1, 2, 8, 9, 6, 7};

@@ -18,7 +18,7 @@ import java.util.List;
  * (-1, 0, 1)
  * (-1, -1, 2)
  * <p>
- * * Created by Xiaomeng on 7/20/2014.
+
  */
 public class ThreeSum {
     public static List<List<Integer>> threeSum(int[] num) {

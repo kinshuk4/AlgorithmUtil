@@ -1,4 +1,5 @@
 package com.vaani.algo.array;
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
 
 /**
  * Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.
@@ -14,7 +15,6 @@ package com.vaani.algo.array;
  * <p>
  * Could you come up with an one-pass algorithm using only constant space?
  * <p>
- * Created by Xiaomeng on 7/28/2014.
  */
 public class SetColors {
     public static void sortColors(int[] A) {
@@ -40,9 +40,4 @@ public class SetColors {
         }
     }
 
-    public static void swap(int[] arr, int x, int y) {
-        int tmp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = tmp;
-    }
 }

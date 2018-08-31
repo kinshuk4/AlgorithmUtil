@@ -1,11 +1,12 @@
 package com.vaani.algo.array;
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
 
 /**
  * Given an array and a value, remove all instances of that value in place and return the new length.
  * <p>
  * The order of elements can be changed. It doesn't matter what you leave beyond the new length.
  * <p>
- * Created by Xiaomeng on 7/20/2014.
+ *
  */
 public class RemoveElement {
     public static int removeElement2(int[] A, int elem) {
@@ -32,11 +33,6 @@ public class RemoveElement {
         return len == -1 ? 0 : len + 1;
     }
 
-    public static void swap(int[] A, int x, int y) {
-        int temp = A[x];
-        A[x] = A[y];
-        A[y] = temp;
-    }
 
     public static void main(String[] args) {
         int[] A = {2};

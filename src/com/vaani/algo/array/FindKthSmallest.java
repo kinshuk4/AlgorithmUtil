@@ -5,6 +5,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
 
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
+
 /**
  * Given an array and a number k where k is smaller than size of array, we need to find the k’th smallest element in the given array.
  * It is given that ll array elements are distinct.
@@ -61,12 +63,6 @@ public class FindKthSmallest {
         }
         swap(arr, i, end);
         return i;
-    }
-
-    public static void swap(int[] arr, int x, int y) {
-        int tmp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = tmp;
     }
 
     /**

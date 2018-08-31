@@ -1,4 +1,5 @@
 package com.vaani.algo.array;
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
 
 // @formatter:off
 /**
@@ -27,11 +28,6 @@ public class FirstMissingPositive {
         return A.length + 1;
     }
 
-    public static void swap(int[] arr, int x, int y) {
-        int tmp = arr[x];
-        arr[x] = arr[y];
-        arr[y] = tmp;
-    }
 
     public static void main(String[] args) {
         int[] A = {0};
