@@ -2,10 +2,11 @@ package com.vaani.algo.array.matrix;
 
 import java.util.Stack;
 
+import static com.vaani.algo.array.container.LargestRectangleHistogram.largestRectangleArea;
+
 /**
  * Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing all ones and return its area.
  * <p>
- * Created by Xiaomeng on 9/6/2014.
  */
 public class MaximalRectangle {
     public int maximalRectangle(char[][] matrix) {
@@ -28,27 +29,6 @@ public class MaximalRectangle {
         int max = 0;
         for (int i = 0; i < rows; i++) {
             max = Math.max(max, largestRectangleArea(height[i]));
-        }
-        return max;
-    }
-
-    public int largestRectangleArea(int[] height) {
-        Stack<Integer> stack = new Stack<Integer>();
-        int max = 0;
-        for (int i = 0; i < height.length; i++) {
-            if (stack.isEmpty() || height[stack.peek()] < height[i]) {
-                stack.push(i);
-            } else {
-                int index = stack.pop();
-                int area = height[index] * (stack.isEmpty() ? i : i - stack.peek() - 1);
-                max = Math.max(area, max);
-                i--;
-            }
-        }
-        while (!stack.isEmpty()) {
-            int index = stack.pop();
-            int area = height[index] * (stack.isEmpty() ? height.length : height.length - stack.peek() - 1);
-            max = Math.max(area, max);
         }
         return max;
     }
