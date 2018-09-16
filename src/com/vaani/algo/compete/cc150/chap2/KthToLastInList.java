@@ -3,7 +3,7 @@ package com.vaani.algo.compete.cc150.chap2;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
-import static com.vaani.algo.ds.core.list.ListUtil.reverseIterative;
+import static com.vaani.algo.ds.utils.ListUtil.reverseIterative;
 
 /**
  * Implement an algorithm to find the kth to last element of a singly linked

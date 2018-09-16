@@ -1,7 +1,7 @@
 package com.vaani.algo.compete.cc150.chap4treegraph;
 
 
-import com.vaani.algo.ds.core.graph.DirectedGraph;
+import com.vaani.algo.ds.core.graph.AdjacentListGraph;
 import com.vaani.algo.ds.core.graph.Vertex;
 
 import java.util.*;
@@ -10,28 +10,29 @@ import java.util.*;
  * Created by Xiaomeng on 11/25/2014.
  */
 public class TopologicalSort {
-    public static Vertex[] topologicalSort(DirectedGraph graph) {
-        Set<Vertex> vertexSet = graph.getVertexSet();
-        if (vertexSet.size() < 2) {
-            return vertexSet.toArray(new Vertex[0]);
-        }
-
-        LinkedList<Vertex> sortedList = new LinkedList<Vertex>();
-        TimeRecorder recorder = new TimeRecorder();
-
-        for (Vertex vertex : vertexSet) {
-            if (vertex.color == Vertex.Color.WHITE) {
-                visitVertex(graph, vertex, recorder, sortedList);
-            }
-        }
-
-        return sortedList.toArray(new Vertex[0]);
+    public static Vertex[] topologicalSort(AdjacentListGraph graph) {
+//        Set<Vertex> vertexSet = graph.getVertexMap();
+//        if (vertexSet.size() < 2) {
+//            return vertexSet.toArray(new Vertex[0]);
+//        }
+//
+//        LinkedList<Vertex> sortedList = new LinkedList<Vertex>();
+//        TimeRecorder recorder = new TimeRecorder();
+//
+//        for (Vertex vertex : vertexSet) {
+//            if (vertex.color == Vertex.Color.WHITE) {
+//                visitVertex(graph, vertex, recorder, sortedList);
+//            }
+//        }
+//
+//        return sortedList.toArray(new Vertex[0]);
+        return null;
     }
 
     /**
-     * 深度优先搜索(Depth First Search)
+     * (Depth First Search)
      */
-    public static void visitVertex(DirectedGraph graph, Vertex vertex, TimeRecorder recorder, LinkedList<Vertex> sortedList) {
+    public static void visitVertex(AdjacentListGraph graph, Vertex vertex, TimeRecorder recorder, LinkedList<Vertex> sortedList) {
         recorder.time += 1;
         vertex.color = Vertex.Color.GRAY;
         vertex.discover = recorder.time;
@@ -55,38 +56,38 @@ public class TopologicalSort {
 
     public static void printVertex(Vertex[] Vertexs) {
         for (Vertex vertex : Vertexs) {
-            System.out.println(vertex.getName() + "  discover time:"
+            System.out.println(vertex.getValue() + "  discover time:"
                     + vertex.getDiscover() + "  finish time:"
                     + vertex.getFinish());
         }
     }
 
     public static void main(String[] args) {
-        DirectedGraph graph = new DirectedGraph();
-        Set<Vertex> vertexSet = graph.getVertexSet();
-        Map<Vertex, List<Vertex>> edgeMap = graph.getAdjacencys();
-
-        Vertex aVertex = new Vertex('a');
-        Vertex bVertex = new Vertex('b');
-        Vertex cVertex = new Vertex('c');
-        Vertex dVertex = new Vertex('d');
-
-        vertexSet.add(aVertex);
-        vertexSet.add(bVertex);
-        vertexSet.add(cVertex);
-        vertexSet.add(dVertex);
-
-        edgeMap.put(aVertex, new ArrayList<Vertex>());
-        edgeMap.put(bVertex, new ArrayList<Vertex>());
-        edgeMap.put(dVertex, new ArrayList<Vertex>());
-
-        edgeMap.get(bVertex).add(dVertex);
-        edgeMap.get(bVertex).add(aVertex);
-        edgeMap.get(dVertex).add(aVertex);
-        edgeMap.get(aVertex).add(cVertex);
-
-        Vertex[] sortedVertexs = topologicalSort(graph);
-        printVertex(sortedVertexs);
+//        AdjacentListGraph graph = new AdjacentListGraph();
+//        Set<Vertex> vertexSet = graph.getVertexMap();
+//        Map<Vertex, List<Vertex>> edgeMap = graph.getAdjacencys();
+//
+//        Vertex aVertex = new Vertex('a');
+//        Vertex bVertex = new Vertex('b');
+//        Vertex cVertex = new Vertex('c');
+//        Vertex dVertex = new Vertex('d');
+//
+//        vertexSet.add(aVertex);
+//        vertexSet.add(bVertex);
+//        vertexSet.add(cVertex);
+//        vertexSet.add(dVertex);
+//
+//        edgeMap.put(aVertex, new ArrayList<Vertex>());
+//        edgeMap.put(bVertex, new ArrayList<Vertex>());
+//        edgeMap.put(dVertex, new ArrayList<Vertex>());
+//
+//        edgeMap.get(bVertex).add(dVertex);
+//        edgeMap.get(bVertex).add(aVertex);
+//        edgeMap.get(dVertex).add(aVertex);
+//        edgeMap.get(aVertex).add(cVertex);
+//
+//        Vertex[] sortedVertexs = topologicalSort(graph);
+//        printVertex(sortedVertexs);
     }
 
     public static class TimeRecorder {
