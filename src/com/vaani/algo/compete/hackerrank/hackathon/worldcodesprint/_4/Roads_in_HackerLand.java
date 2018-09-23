@@ -54,57 +54,14 @@
 
 package com.vaani.algo.compete.hackerrank.hackathon.worldcodesprint._4;
 
+import com.vaani.algo.ds.core.graph.disjoint.DisjointSet;
+
 import java.io.FileNotFoundException;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
-class DisjointSet {
-    
-    int[] disjointSet;
-
-    DisjointSet(int size) {
-        BT = new int[size];
-        disjointSet = new int[size];
-        for (int i = 0; i < disjointSet.length; i++)
-            disjointSet[i] = i;
-    }
-    
-    /*
-     * Connects j to root of i.
-     * If i and j are in same group false is returned.
-     */
-    int[] BT;
-    boolean connect(int j, int i) {
-        int c = 0;
-        while (disjointSet[i] != i) {
-            BT[c++] = i;
-            i = disjointSet[i];
-        }
-        while (disjointSet[j] != j) {
-            int t = j;
-            j = disjointSet[j];
-            disjointSet[t] = i;
-        }
-        disjointSet[j] = i;
-        for (int k = 0; k < c; k++)
-            disjointSet[BT[k]] = i;
-        return i != j;
-    }
-
-    boolean isConnected(int i, int j) {
-        return getRoot(i) == getRoot(j);
-    }
-    
-    int getRoot(int i) {
-        while (disjointSet[i] != i) {
-            i = disjointSet[i];
-        }
-        return i;
-    }
-}
 
 public class Roads_in_HackerLand {
 
@@ -181,7 +138,7 @@ public class Roads_in_HackerLand {
         List<Pair<Integer, Edge>> mst = new ArrayList<>(G.length);
         for (Pair<Integer, Edge> p: E) {
             Edge e = p.getValue();
-            if (!ds.connect(e.getValue(), e.getKey()))
+            if (!ds.union(e.getValue(), e.getKey()))
                 continue;
             mst.add(p);
         }
