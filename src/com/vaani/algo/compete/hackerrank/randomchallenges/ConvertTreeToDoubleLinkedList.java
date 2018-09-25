@@ -4,35 +4,18 @@ package com.vaani.algo.compete.hackerrank.randomchallenges;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import com.vaani.algo.ds.core.list.dll.DLLNode;
 import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
-/**
- * Created by mykola on 06.05.15.
- */
+
 public class ConvertTreeToDoubleLinkedList {
 
-    private static class DLLNode<E> {
-
-        public E value;
-        public DLLNode<E> next;
-        public DLLNode<E> previous;
-
-        public DLLNode(E value) {
-            this.value = value;
-        }
-
-        public void linkNext(DLLNode<E> n) {
-            next = n;
-            n.previous = this;
-        }
-
-    }
 
     public static void main(String... args) {
         DLLNode<Character> tail = ConvertTreeToDoubleLinkedList.<Character>convertToDLLDFS(new BinaryTreeNode(4));
         DLLNode<Character> head = tail;
-        while (head.previous != null) {
-            head = head.previous;
+        while (head.prev != null) {
+            head = head.prev;
         }
         printLinkedListFromTail(tail);
         System.out.println();
@@ -92,7 +75,7 @@ public class ConvertTreeToDoubleLinkedList {
     private static <E> void printLinkedListFromTail(DLLNode<E> tail) {
         do {
             System.out.print(tail.value.toString() + " ");
-            tail = tail.previous;
+            tail = tail.prev;
         } while (tail != null);
     }
 

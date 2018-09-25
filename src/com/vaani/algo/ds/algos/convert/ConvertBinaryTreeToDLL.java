@@ -7,7 +7,7 @@ package com.vaani.algo.ds.algos.convert;
  */
 public class ConvertBinaryTreeToDLL {
 
-//    BinaryTreeNode bintree2listUtil(DoubleListNode node)
+//    BinaryTreeNode bintree2listUtil(DLLNode node)
 //    {
 //        // Base case
 //        if (node == null)
@@ -24,10 +24,10 @@ public class ConvertBinaryTreeToDLL {
 //            for (; left.right != null; left = left.right);
 //
 //            // Make root as next of the predecessor
-//            left.right = DoubleListNode.convertDLLNodeToTreeNode(node);
+//            left.right = DLLNode.convertDLLNodeToTreeNode(node);
 //
 //            // Make predecssor as previous of root
-//            node.prev = DoubleListNode.convertTreeNodeToDLLNode(node);;
+//            node.prev = DLLNode.convertTreeNodeToDLLNode(node);;
 //        }
 //
 //        // Convert the right subtree and link to root
@@ -53,7 +53,7 @@ public class ConvertBinaryTreeToDLL {
 //    // The main function that first calls bintree2listUtil(), then follows
 //    // step 3 of the above algorithm
 //
-//    BinaryTreeNode bintree2list(DoubleListNode node)
+//    BinaryTreeNode bintree2list(DLLNode node)
 //    {
 //        // Base case
 //        if (node == null)
