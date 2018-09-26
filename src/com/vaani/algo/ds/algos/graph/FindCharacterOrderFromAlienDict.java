@@ -2,7 +2,7 @@ package com.vaani.algo.ds.algos.graph;
 
 
 import com.vaani.algo.compete.cc150.chap4treegraph.TopologicalSort;
-import com.vaani.algo.ds.core.graph.DirectedGraph;
+import com.vaani.algo.ds.core.graph.AdjacentListGraph;
 import com.vaani.algo.ds.core.graph.Vertex;
 
 import java.util.ArrayList;
@@ -25,13 +25,13 @@ import java.util.Map;
  */
 public class FindCharacterOrderFromAlienDict {
     public static void printOrder(String words[]) {
-        DirectedGraph graph = new DirectedGraph();
+        AdjacentListGraph graph = new AdjacentListGraph();
         int size = words.length;
         Map<Vertex, List<Vertex>> edgeMap = graph.getAdjacencys();
-        graph.getVertexSet().add(new Vertex('a'));
-        graph.getVertexSet().add(new Vertex('b'));
-        graph.getVertexSet().add(new Vertex('c'));
-        graph.getVertexSet().add(new Vertex('d'));
+//        graph.getVertexMap().add(new Vertex('a'));
+//        graph.getVertexMap().add(new Vertex('b'));
+//        graph.getVertexMap().add(new Vertex('c'));
+//        graph.getVertexMap().add(new Vertex('d'));
         // Process all adjacent pairs of words and create a graph
         for (int i = 0; i < size - 1; i++) {
             // Take the current two words and find the first mismatching character
@@ -56,7 +56,7 @@ public class FindCharacterOrderFromAlienDict {
         TopologicalSort sortUtil = new TopologicalSort();
         Vertex[] result = sortUtil.topologicalSort(graph);
         for (Vertex vertex : result) {
-            System.out.println(vertex.getName());
+            System.out.println(vertex.getValue());
         }
     }
 
