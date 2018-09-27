@@ -2,6 +2,8 @@ package com.vaani.algo.ds.algos.interval;
 
 
 
+import com.vaani.algo.ds.core.visual.Interval;
+
 import java.util.ArrayList;
 /*
 Given a set of non-overlapping intervals, insert a new interval into the intervals (mergeIterative if necessary).

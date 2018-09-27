@@ -1,5 +1,7 @@
 package com.vaani.algo.ds.algos.interval;
 
+import com.vaani.algo.ds.core.visual.Interval;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -22,20 +24,6 @@ return [1,6],[8,10],[15,18].
  * }
  */
 
-class Interval {
-    int start;
-    int end;
-
-    Interval() {
-        start = 0;
-        end = 0;
-    }
-
-    Interval(int s, int e) {
-        start = s;
-        end = e;
-    }
-}
 
 public class MergeIntervals {
     public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
