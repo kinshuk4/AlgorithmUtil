@@ -2,7 +2,7 @@ package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
-import static com.vaani.algo.ds.core.list.ListUtil.reverseIterative;
+import static com.vaani.algo.ds.utils.ListUtil.reverseIterative;
 
 public class ReverseLinkedList {
 

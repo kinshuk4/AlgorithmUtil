@@ -2,9 +2,7 @@ package com.vaani.algo.ds.algos.list.linked;
 
 import com.vaani.algo.ds.core.list.ListNode;
 
-import java.util.List;
-
-import static com.vaani.algo.ds.core.list.ListUtil.*;
+import static com.vaani.algo.ds.utils.ListUtil.*;
 
 public class IsListPalindrome {
     static boolean isListPalindrome(ListNode<Integer> l) {

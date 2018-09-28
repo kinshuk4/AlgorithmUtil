@@ -1,6 +1,6 @@
 package com.vaani.algo.ds.algos.list.dll;
 
-import com.vaani.algo.ds.core.list.dll.DoubleListNode;
+import com.vaani.algo.ds.core.list.dll.DLLNode;
 
 /**
  * Created by kchandra on 21/08/16.
@@ -10,16 +10,16 @@ public class QuickSortDLL {
     /* Considers last element as pivot, places the pivot element at its
    correct position in sorted array, and places all smaller (smaller than
    pivot) to left of pivot and all greater elements to right of pivot */
-    DoubleListNode partition(DoubleListNode<Integer> l,DoubleListNode<Integer> h)
+    DLLNode partition(DLLNode<Integer> l, DLLNode<Integer> h)
     {
         // set pivot as h element
         int x = h.value;
 
         // similar to i = l-1 for array implementation
-        DoubleListNode<Integer> i = l.prev;
+        DLLNode<Integer> i = l.prev;
 
         // Similar to "for (int j = l; j <= h- 1; j++)"
-        for(DoubleListNode<Integer> j=l; j!=h; j=j.next)
+        for(DLLNode<Integer> j = l; j!=h; j=j.next)
         {
             if(j.value <= x)
             {
@@ -38,20 +38,20 @@ public class QuickSortDLL {
     }
 
     /* A recursive implementation of quicksort for linked list */
-    void _quickSort(DoubleListNode l,DoubleListNode h)
+    void _quickSort(DLLNode l, DLLNode h)
     {
         if(h!=null && l!=h && l!=h.next){
-            DoubleListNode temp = partition(l,h);
+            DLLNode temp = partition(l,h);
             _quickSort(l,temp.prev);
             _quickSort(temp.next,h);
         }
     }
 
     // The main function to sort a linked list. It mainly calls _quickSort()
-    public void quickSort(DoubleListNode node)
+    public void quickSort(DLLNode node)
     {
         // Find last node
-        DoubleListNode head = node.lastNode(node);
+        DLLNode head = node.getLastNode(node);
 
         // Call the recursive QuickSort
         _quickSort(node,head);
