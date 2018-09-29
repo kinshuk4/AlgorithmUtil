@@ -25,11 +25,11 @@ public class BracketMatchChecker {
                 break;
             }
             BracketMatchChecker theChecker = new BracketMatchChecker(input);
-            theChecker.check();
+            theChecker.check(input);
         }
     }
 
-    public boolean check() {
+    public boolean check(String input) {
         Stack<Character> theStack = new Stack<>();
         for (int j = 0; j < input.length(); j++) {
             char ch = input.charAt(j);
@@ -54,7 +54,9 @@ public class BracketMatchChecker {
                         }
                     } else {
                         System.out.println("Error:" + ch + " at " + (j + 1));
-                        break;
+                        //stack is empty, but somehow closing parenthesis came, that means a problem
+                        return false;
+
                     }
                 default:
                     break;

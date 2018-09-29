@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.algos.queue;
+package com.vaani.algo.ds.algos.stack;
 import com.vaani.algo.ds.core.queue.IQueue;
 
 import java.util.Stack;
@@ -58,6 +58,10 @@ public class QueueFrom2Stacks<T> implements IQueue<T> {
         }
         // otherwise, just return the item at the top of the outStack!
         return outStack.peek();
+    }
+
+    public T peek(){
+        return front();
     }
 
 
