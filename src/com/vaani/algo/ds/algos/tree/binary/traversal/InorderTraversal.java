@@ -5,6 +5,7 @@ import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 import java.util.ArrayList;
 import java.util.Stack;
 
+// @formatter:off
 /*
 Given a binary tree, return the inorder traversal of its nodes' values.
 For example:
@@ -30,23 +31,13 @@ Here's an example:
 The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 */
 
-/**
- * Definition for binary tree
- * public class BinaryTreeNode {
- * int val;
- * BinaryTreeNode left;
- * BinaryTreeNode right;
- * BinaryTreeNode(int x) { val = x; }
- * }
- */
+// @formatter:on
 
 public class InorderTraversal {
     //iterative
-    public ArrayList<Integer> inorderTraversal(BinaryTreeNode root) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
+    public static ArrayList<Integer> inorderTraversalIterative(BinaryTreeNode<Integer> root) {
         ArrayList<Integer> result = new ArrayList<Integer>();
-        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
+        Stack<BinaryTreeNode<Integer>> stack = new Stack<>();
 
         BinaryTreeNode<Integer> node = root;
         while (!stack.isEmpty() || node != null) {
@@ -63,18 +54,20 @@ public class InorderTraversal {
     }
 
     //recursive
-    public ArrayList<Integer> inorderTraversalRecursive(BinaryTreeNode root) {
+    public ArrayList<Integer> inorderTraversalRecurive(BinaryTreeNode<Integer> root) {
         // IMPORTANT: Please reset any member data you declared, as
         // the same Solution instance will be reused for each test case.
         ArrayList<Integer> result = new ArrayList<Integer>();
-        helper(root, result);
+        inorderTraversalRecursiveHelper(root, result);
         return result;
     }
 
-    public void helper(BinaryTreeNode<Integer> root, ArrayList<Integer> result) {
-        if (root == null) return;
-        helper(root.left, result);
+    public void inorderTraversalRecursiveHelper(BinaryTreeNode<Integer> root, ArrayList<Integer> result) {
+        if (root == null) {
+            return;
+        }
+        inorderTraversalRecursiveHelper(root.left, result);
         result.add(root.val);
-        helper(root.right, result);
+        inorderTraversalRecursiveHelper(root.right, result);
     }
 }

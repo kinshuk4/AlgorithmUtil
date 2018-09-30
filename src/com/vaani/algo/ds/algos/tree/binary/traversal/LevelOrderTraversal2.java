@@ -1,4 +1,4 @@
-package com.vaani.algo.ds.algos.tree.binary;
+package com.vaani.algo.ds.algos.tree.binary.traversal;
 
 import com.vaani.algo.ds.core.tree.BinaryTreeNode;
 
@@ -59,12 +59,12 @@ public class LevelOrderTraversal2 {
         if (root == null) return result;
         Queue<BinaryTreeNode> queue = new LinkedList<BinaryTreeNode>();
         queue.add(root);
-        int currLevel = 1;
+        int numNodesAtCurrLevel = 1;
         int nextLevel = 0;
 
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<Integer>();
-            for (int i = 0; i < currLevel; i++) {
+            for (int i = 0; i < numNodesAtCurrLevel; i++) {
                 BinaryTreeNode<Integer> node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) {
@@ -78,7 +78,7 @@ public class LevelOrderTraversal2 {
                 }
             }
             result.add(0, level);
-            currLevel = nextLevel;
+            numNodesAtCurrLevel = nextLevel;
             nextLevel = 0;
         }
         return result;

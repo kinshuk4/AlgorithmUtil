@@ -76,7 +76,7 @@ public class ZigZagLevelOrder {
                 pushToStack(nextLevel, node.right);
                 pushToStack(nextLevel, node.left);
             }
-            
+
 
             if (currLevel.isEmpty()) {
                 result.add(level);

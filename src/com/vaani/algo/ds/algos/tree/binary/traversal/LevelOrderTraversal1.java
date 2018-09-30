@@ -10,13 +10,13 @@ import java.util.Queue;
 
 public class LevelOrderTraversal1 {
     public static void main(String[] args) {
-                BinaryTreeNode root = new BinaryTreeNode(1);
-        BinaryTreeNode l1 = new BinaryTreeNode(3);
-        BinaryTreeNode l2 = new BinaryTreeNode(9);
-        BinaryTreeNode l3 = new BinaryTreeNode(11);
-        BinaryTreeNode r1 = new BinaryTreeNode(5);
-        BinaryTreeNode r2 = new BinaryTreeNode(12);
-        BinaryTreeNode r3 = new BinaryTreeNode(13);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode(1);
+        BinaryTreeNode<Integer> l1 = new BinaryTreeNode(3);
+        BinaryTreeNode<Integer> l2 = new BinaryTreeNode(9);
+        BinaryTreeNode<Integer> l3 = new BinaryTreeNode(11);
+        BinaryTreeNode<Integer> r1 = new BinaryTreeNode(5);
+        BinaryTreeNode<Integer> r2 = new BinaryTreeNode(12);
+        BinaryTreeNode<Integer> r3 = new BinaryTreeNode(13);
         root.left = l1;
         root.right = r1;
         l1.left = l2;

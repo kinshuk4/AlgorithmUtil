@@ -34,19 +34,19 @@ The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
 */
 
 public class LevelOrderTraversalByLevel {
-    public ArrayList<ArrayList<Integer>> levelOrder(BinaryTreeNode root) {
+    public static ArrayList<ArrayList<Integer>> levelOrder(BinaryTreeNode<Integer> root) {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;
         }
 
-        ArrayList<BinaryTreeNode> currentList = new ArrayList<BinaryTreeNode>();
+        ArrayList<BinaryTreeNode<Integer>> currentList = new ArrayList<>();
         currentList.add(root);
 
 
         while (currentList.size() != 0) {
-            ArrayList<BinaryTreeNode> nextLevelList = new ArrayList<BinaryTreeNode>();
+            ArrayList<BinaryTreeNode<Integer>> nextLevelList = new ArrayList<>();
             ArrayList<Integer> parentLevelData = new ArrayList<Integer>();
 
             for (BinaryTreeNode<Integer> s : currentList) {
