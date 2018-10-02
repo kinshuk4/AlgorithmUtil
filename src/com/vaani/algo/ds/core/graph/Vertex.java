@@ -1,26 +1,33 @@
 package com.vaani.algo.ds.core.graph;
 
-/**
- * Created by Xiaomeng on 11/25/2014.
- */
-public class Vertex {
-    public Character name;
+import java.util.*;
+
+public class Vertex<T> {
+    public T value;
     public Color color;
     public Vertex parent;
     public int discover;
     public int finish;
+    public boolean isVisited;
+    public List<Edge<T>> neighbours;
 
-    public Vertex(Character name) {
-        this.name = name;
+    public Vertex(T value) {
+        this.value = value;
         this.color = Color.WHITE;
+        neighbours = new LinkedList<Edge<T>>();
     }
 
-    public Character getName() {
-        return name;
+    public Vertex(T value, boolean isVisited) {
+        this(value);
+        this.isVisited = isVisited;
     }
 
-    public void setName(Character name) {
-        this.name = name;
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
     }
 
     public Color getColor() {
@@ -55,11 +62,23 @@ public class Vertex {
         this.finish = finish;
     }
 
+    public boolean isVisited() {
+        return isVisited;
+    }
+
+    public void setVisited(boolean visited) {
+        isVisited = visited;
+    }
+
+    public List<Edge<T>> getNeighbours() {
+        return neighbours;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((value == null) ? 0 : value.hashCode());
         return result;
     }
 
@@ -72,10 +91,10 @@ public class Vertex {
         if (getClass() != obj.getClass())
             return false;
         Vertex other = (Vertex) obj;
-        if (name == null) {
-            if (other.name != null)
+        if (value == null) {
+            if (other.value != null)
                 return false;
-        } else if (!name.equals(other.name))
+        } else if (!value.equals(other.value))
             return false;
         return true;
     }
