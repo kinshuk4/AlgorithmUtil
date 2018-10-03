@@ -3,9 +3,9 @@ package com.vaani.algo.ds.core.list.dll;
 
 final class DoubleListIterator {
 	  DoubleLinkedList owner;
-	  DoubleListNode pos;
+	  DLLNode pos;
 
-	  DoubleListIterator(DoubleLinkedList owner, DoubleListNode pos){
+	  DoubleListIterator(DoubleLinkedList owner, DLLNode pos){
 	    this.owner = owner;
 	    this.pos = pos;
 	  }

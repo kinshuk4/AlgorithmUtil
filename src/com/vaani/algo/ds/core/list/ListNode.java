@@ -32,9 +32,6 @@ public class ListNode<T> {
     }
 
 
-
-
-
     public void display() {
         ListNode head = this;
         while (head != null) {

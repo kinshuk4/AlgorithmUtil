@@ -4,8 +4,8 @@ import java.util.Enumeration;
 import java.util.NoSuchElementException;
 
 final class DoubleListEnumerator<E> implements Enumeration {  
-	  DoubleLinkedList<E> list;
-	  DoubleListIterator cursor;
+	  private DoubleLinkedList<E> list;
+	  private DoubleListIterator cursor;
 
 	
 
