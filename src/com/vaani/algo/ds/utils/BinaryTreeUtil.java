@@ -22,4 +22,26 @@ public class BinaryTreeUtil {
 
         return root;
     }
+
+
+    /**
+     * Tree =
+     *         20
+     *        /
+     *       8
+     *      / \
+     *     4  12
+     *       /  \
+     *      10  14
+     * @return
+     */
+    public static BinaryTreeNode<Integer> getBinaryTree(){
+        BinaryTreeNode root = new BinaryTreeNode(20);
+        root.left = new BinaryTreeNode(8);
+        root.left.left = new BinaryTreeNode(4);
+        root.left.right = new BinaryTreeNode(12);
+        root.left.right.left = new BinaryTreeNode(10);
+        root.left.right.right = new BinaryTreeNode(14);
+        return root;
+    }
 }
