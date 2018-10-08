@@ -2,6 +2,8 @@ package com.vaani.algo.misc;
 
 import java.util.Arrays;
 
+import static com.vaani.algo.ds.utils.ArrayUtils.reverse;
+
 /**
  * Given an array of positive and negative integers,
  * re-arrange it so that positives on one end and negatives on the other,
@@ -49,17 +51,7 @@ public class StablePartition {
 
     }
 
-    public static void reverse(int[] a, int left, int right) {
-        while (left < right) {
-            swap(a, left++, right--);
-        }
-    }
 
-    public static void swap(int[] a, int l, int r) {
-        int tmp = a[r];
-        a[r] = a[l];
-        a[l] = tmp;
-    }
 
 
 }

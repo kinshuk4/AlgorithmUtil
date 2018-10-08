@@ -1,4 +1,5 @@
 package com.vaani.algo.misc;
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
 
 /**
  * Given an array of random numbers, Push all the zero’s of a given array to the end of the array.
@@ -50,11 +51,6 @@ public class PlaceZero {
         }
     }
 
-    public static void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
-    }
 
     public static void main(String[] args) {
         int[] arr1 = {1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0};

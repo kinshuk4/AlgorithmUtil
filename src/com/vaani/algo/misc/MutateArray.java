@@ -1,4 +1,5 @@
 package com.vaani.algo.misc;
+import static com.vaani.algo.ds.utils.ArrayUtils.swap;
 
 /**
  * Given an input array and another array that describes a new index for each element,
@@ -18,12 +19,6 @@ public class MutateArray {
                 swap(B, i, B[i]);
             }
         }
-    }
-
-    public static void swap(int[] A, int i, int j) {
-        int tmp = A[i];
-        A[i] = A[j];
-        A[j] = tmp;
     }
 
     public static void main(String[] args) {
