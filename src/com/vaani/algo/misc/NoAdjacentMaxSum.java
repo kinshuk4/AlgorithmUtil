@@ -30,6 +30,28 @@ public class NoAdjacentMaxSum {
         return memo[n - 1];
     }
 
+    public static int getMaxNonAdjacentSumRecursive(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int n = nums.length;
+        return getMaxNonAdjacentSumRecursiveHelper(nums, n-1);
+    }
+
+    static int getMaxNonAdjacentSumRecursiveHelper(int[] arr, int i){
+        if(i == 0){
+            return arr[0];
+        }
+        if(i == 1){
+            return Math.max(arr[0], arr[1]);
+        }
+
+        int sum1 = getMaxNonAdjacentSumRecursiveHelper(arr, i-1);
+        int sum2 = getMaxNonAdjacentSumRecursiveHelper(arr, i-2) + arr[i];
+        return Math.max(sum1, sum2);
+
+    }
+
     /**
      * DP
      * Time: O(n)
@@ -59,5 +81,9 @@ public class NoAdjacentMaxSum {
         System.out.println(getMaxSum2(num1));
         System.out.println(getMaxSum2(num2));
         System.out.println(getMaxSum2(num3));
+
+        System.out.println(getMaxNonAdjacentSumRecursive(num1));
+        System.out.println(getMaxNonAdjacentSumRecursive(num2));
+        System.out.println(getMaxNonAdjacentSumRecursive(num3));
     }
 }
