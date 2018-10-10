@@ -1,6 +1,6 @@
-package com.vaani.algo.misc;
+package com.vaani.algo.paradigm.backtracking;
 
-public class Nqueensii {
+public class Nqueens2 {
     int count;
 
     public int totalNQueens(int n) {

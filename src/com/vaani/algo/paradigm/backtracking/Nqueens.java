@@ -1,6 +1,7 @@
-package com.vaani.algo.misc;
+package com.vaani.algo.paradigm.backtracking;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 /*
 The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
 
@@ -25,15 +26,15 @@ There exist two distinct solutions to the 4-queens puzzle:
 */
 
 public class Nqueens {
-    public ArrayList<String[]> solveNQueens(int n) {
+    public ArrayList<String[]> solve(int n) {
         // Start typing your Java solution below
         // DO NOT write main() function
         ArrayList<String[]> res = new ArrayList<String[]>();
-        solveNQueens(0, new int[n], res);
+        solve(0, new int[n], res);
         return res;
     }
 
-    public void solveNQueens(int cur, int[] row, ArrayList<String[]> res) {
+    public void solve(int cur, int[] row, ArrayList<String[]> res) {
         int n = row.length;
         if (cur == n)
             res.add(generateSol(row));
@@ -48,7 +49,7 @@ public class Nqueens {
                     }
                 }
                 if (ok)
-                    solveNQueens(cur + 1, row, res);
+                    solve(cur + 1, row, res);
             }
     }
 
@@ -63,5 +64,9 @@ public class Nqueens {
             sol[i] = line;
         }
         return sol;
+    }
+
+    public static void main(String[] args) {
+        new Nqueens().solve(8).stream().forEach(strings -> System.out.println(Arrays.toString(strings)));
     }
 }
