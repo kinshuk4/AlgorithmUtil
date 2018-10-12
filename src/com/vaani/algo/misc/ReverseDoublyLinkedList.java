@@ -1,14 +1,19 @@
 package com.vaani.algo.misc;
 
+import com.vaani.algo.ds.core.list.dll.DLLNode;
+
+import static com.vaani.algo.ds.utils.DLLUtil.display;
+
+
 /**
  * Reverse a given Doubly Linked List
  */
 public class ReverseDoublyLinkedList {
-    public static DoublyLinkedList reverse(DoublyLinkedList head) {
+    public static <T> DLLNode reverse(DLLNode<T> head) {
         if (head == null) return null;
 
-        DoublyLinkedList tmp = null;
-        DoublyLinkedList curr = head;
+        DLLNode tmp = null;
+        DLLNode curr = head;
         while (curr != null) {
             tmp = curr.prev;
             curr.prev = curr.next;
@@ -18,17 +23,12 @@ public class ReverseDoublyLinkedList {
         return tmp.prev;
     }
 
-    public static void print(DoublyLinkedList head) {
-        while (head != null) {
-            System.out.print(head.val + " ");
-            head = head.next;
-        }
-    }
+
 
     public static void main(String[] args) {
-        DoublyLinkedList node1 = new DoublyLinkedList(1);
-        DoublyLinkedList node2 = new DoublyLinkedList(2);
-        DoublyLinkedList node3 = new DoublyLinkedList(3);
+        DLLNode<Integer> node1 = new DLLNode<>(1);
+        DLLNode<Integer> node2 = new DLLNode<>(2);
+        DLLNode<Integer> node3 = new DLLNode<>(3);
         node1.prev = null;
         node1.next = node2;
         node2.prev = node1;
@@ -36,18 +36,9 @@ public class ReverseDoublyLinkedList {
         node3.prev = node2;
         node3.next = null;
 
-        print(node1);
+        display(node1);
         System.out.println();
-        print(reverse(node1));
+        display(reverse(node1));
     }
 
-    public static class DoublyLinkedList {
-        int val;
-        DoublyLinkedList prev;
-        DoublyLinkedList next;
-
-        public DoublyLinkedList(int val) {
-            this.val = val;
-        }
-    }
 }
