@@ -1,7 +1,10 @@
 package com.vaani.algo.paradigm.dp;
 
+import com.vaani.algo.ds.core.visual.Interval;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -36,16 +39,8 @@ public class MaximalOverlap {
         return maxOverlap;
     }
 
-    static class Interval {
-        int start, end;
 
-        public Interval(int start, int end) {
-            this.start = start;
-            this.end = end;
-        }
-    }
-
-    class Endpoint implements Comparable {
+    static class Endpoint implements Comparable {
         int timestamp;
         boolean isStart;
 
@@ -58,11 +53,36 @@ public class MaximalOverlap {
         public int compareTo(Object o) {
             if (o instanceof Endpoint) {
                 Endpoint other = (Endpoint) o;
-                return Integer.compare(timestamp, other.timestamp);
+                int result = Integer.compare(timestamp, other.timestamp);
+                //in case a result is 0, then one which starts early should be returned
+                if(result==0){
+                    return Boolean.compare(((Endpoint) o).isStart, isStart);
+                }else{
+                    return result;
+                }
             }
             return 0;
         }
+
+        @Override
+        public String toString() {
+            return "Endpoint{" +
+                    "timestamp=" + timestamp +
+                    ", isStart=" + isStart +
+                    '}';
+        }
     }
 
+    public static void main(String[] args) {
+        Endpoint e1 = new Endpoint(0, true);
+        Endpoint e2 = new Endpoint(0, false);
+        Endpoint e3 = new Endpoint(0, true);
+        List<Endpoint> list = new LinkedList<>();
+        list.add(e1);
+        list.add(e2);
+        list.add(e3);
+        Collections.sort(list);
+        System.out.println(list);
+    }
 
 }
