@@ -1,1 +1,0 @@
-My collection of all the Kaggle competition
