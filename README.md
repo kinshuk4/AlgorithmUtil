@@ -1,3 +1,6 @@
+## Archiving in favor of: 
+* [agorithms-java](https://github.com/kinshuk4/algorithms-java)
+
 AlgorithmUtil
 =============
 Algorithms and Datastructure problems I came across, mainly in java and python.
