@@ -1,6 +1,7 @@
 ## Archiving in favor of: 
 * [agorithms-java](https://github.com/kinshuk4/algorithms-java)
 * [algorithm-go](https://github.com/kinshuk4/algorithm-go)
+* [algorithm-cpp](https://github.com/kinshuk4/algorithm-cpp)
 * [algorithm-compete](https://github.com/kinshuk4/algorithm-compete)
 AlgorithmUtil
 =============
