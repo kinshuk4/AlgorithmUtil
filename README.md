@@ -3,6 +3,7 @@
 * [algorithm-go](https://github.com/kinshuk4/algorithm-go)
 * [algorithm-cpp](https://github.com/kinshuk4/algorithm-cpp)
 * [algorithm-compete](https://github.com/kinshuk4/algorithm-compete)
+* [kaggle-solutions](https://github.com/kinshuk4/kaggle-solutions)
 AlgorithmUtil
 =============
 Algorithms and Datastructure problems I came across, mainly in java and python.
