@@ -4,6 +4,8 @@
 * [algorithm-cpp](https://github.com/kinshuk4/algorithm-cpp)
 * [algorithm-compete](https://github.com/kinshuk4/algorithm-compete)
 * [kaggle-solutions](https://github.com/kinshuk4/kaggle-solutions)
+* [codesignal-solutions](https://github.com/kinshuk4/codesignal-solutions)
+
 AlgorithmUtil
 =============
 Algorithms and Datastructure problems I came across, mainly in java and python.
