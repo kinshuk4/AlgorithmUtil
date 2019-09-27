@@ -6,6 +6,7 @@
 * [algorithm-compete](https://github.com/kinshuk4/algorithm-compete)
 * [kaggle-solutions](https://github.com/kinshuk4/kaggle-solutions)
 * [codesignal-solutions](https://github.com/kinshuk4/codesignal-solutions)
+* [daily-coding-problem-solutions](https://github.com/kinshuk4/daily-coding-problem-solutions)
 
 AlgorithmUtil
 =============
