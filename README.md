@@ -8,6 +8,8 @@
 * [codesignal-solutions](https://github.com/kinshuk4/codesignal-solutions)
 * [daily-coding-problem-solutions](https://github.com/kinshuk4/daily-coding-problem-solutions)
 * [leetcode-solutions](https://github.com/kinshuk4/leetcode-solutions)
+* [hackerrank-solutions](https://github.com/kinshuk4/hackerrank-solutions)
+
 AlgorithmUtil
 =============
 Algorithms and Datastructure problems I came across, mainly in java and python.
