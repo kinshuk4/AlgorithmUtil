@@ -9,6 +9,7 @@
 * [daily-coding-problem-solutions](https://github.com/kinshuk4/daily-coding-problem-solutions)
 * [leetcode-solutions](https://github.com/kinshuk4/leetcode-solutions)
 * [hackerrank-solutions](https://github.com/kinshuk4/hackerrank-solutions)
+* [hackerearth-solutions](https://github.com/kinshuk4/hackerearth-solutions)
 
 AlgorithmUtil
 =============
