@@ -1,8 +1,11 @@
 ## Archiving in favor of: 
+Language based repos:
 * [agorithms-java](https://github.com/kinshuk4/algorithms-java)
 * [algorithm-go](https://github.com/kinshuk4/algorithm-go)
 * [algorithm-cpp](https://github.com/kinshuk4/algorithm-cpp)
 * [algorithm-py](https://github.com/kinshuk4/algorithm-py)
+
+Coding site based repos:
 * [algorithm-compete](https://github.com/kinshuk4/algorithm-compete)
 * [kaggle-solutions](https://github.com/kinshuk4/kaggle-solutions)
 * [codesignal-solutions](https://github.com/kinshuk4/codesignal-solutions)
