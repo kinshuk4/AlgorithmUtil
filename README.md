@@ -13,6 +13,7 @@ Coding site based repos:
 * [leetcode-solutions](https://github.com/kinshuk4/leetcode-solutions)
 * [hackerrank-solutions](https://github.com/kinshuk4/hackerrank-solutions)
 * [hackerearth-solutions](https://github.com/kinshuk4/hackerearth-solutions)
+* [project-euler-solutions] ()
 
 Coding books:
 * [Cracking the coding interview]()
