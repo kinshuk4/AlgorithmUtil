@@ -1,9 +1,9 @@
 ## Archiving in favor of: 
 Language based repos:
 * [agorithms-java](https://github.com/kinshuk4/algorithms-java)
-* [algorithm-go](https://github.com/kinshuk4/algorithm-go)
-* [algorithm-cpp](https://github.com/kinshuk4/algorithm-cpp)
-* [algorithm-py](https://github.com/kinshuk4/algorithm-py)
+* [algorithms-go](https://github.com/kinshuk4/algorithms-go)
+* [algorithms-cpp](https://github.com/kinshuk4/algorithms-cpp)
+* [algorithms-py](https://github.com/kinshuk4/algorithms-py)
 
 Coding site based repos:
 * [algorithm-compete](https://github.com/kinshuk4/algorithm-compete)
@@ -13,11 +13,11 @@ Coding site based repos:
 * [leetcode-solutions](https://github.com/kinshuk4/leetcode-solutions)
 * [hackerrank-solutions](https://github.com/kinshuk4/hackerrank-solutions)
 * [hackerearth-solutions](https://github.com/kinshuk4/hackerearth-solutions)
-* [project-euler-solutions]()
-* [lintcode-solutions]()
+* [project-euler-solutions](https://github.com/kinshuk4/project-euler-solutions)
+* [lintcode-solutions](https://github.com/kinshuk4/lintcode-solutions)
 
 Coding books:
-* [Cracking the coding interview]()
+* [Cracking the coding interview](https://github.com/kinshuk4/ctci-solutions)
 
 AlgorithmUtil
 =============
